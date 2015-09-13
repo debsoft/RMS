@@ -1,0 +1,98 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using RMS.Common.ObjectModel;
+using Managers.TableInfo;
+using RMS.Common;
+using RMSUI;
+
+namespace RMS.SystemManagement
+{
+    public partial class CVoidTableForm : Form
+    {
+        public CVoidTableForm()
+        {
+            InitializeComponent();            
+        }        
+
+        private void CVoidTableForm_Load(object sender, EventArgs e)
+        {
+           PopulateVoidTableDataGridView();
+           VoidTableDataGridView.CellClick += new DataGridViewCellEventHandler(VoidTableDataGridView_CellClick);
+        }
+
+        public void PopulateVoidTableDataGridView()
+        {
+            try
+            {
+                COrderManager tempVoidTableManager = new COrderManager();
+                List<CTransferOrderShow> tempOrderShowList = new List<CTransferOrderShow>();
+                tempOrderShowList = (List<CTransferOrderShow>)tempVoidTableManager.AvailableTableForVoid().Data;
+
+                if (tempOrderShowList != null)
+                {
+                    CTransferOrderShow[] tempOrderShowArray = tempOrderShowList.ToArray();
+                    VoidTableDataGridView.RowCount = tempOrderShowArray.Length;
+                    VoidTableDataGridView.AllowUserToResizeRows = false;
+                    VoidTableDataGridView.Rows.Clear();
+
+                    for (int rowCounter = 0; rowCounter < tempOrderShowArray.Length; rowCounter++)
+                    {
+                        int sl = rowCounter + 1;
+                        String[] tempString ={ sl.ToString(), tempOrderShowArray[rowCounter].OrderType, tempOrderShowArray[rowCounter].TableNumber.ToString(), tempOrderShowArray[rowCounter].CustomerName, "Void", tempOrderShowArray[rowCounter].OrderID.ToString() };
+                        VoidTableDataGridView.Rows.Add(tempString);
+                    }
+                }
+                if (VoidTableDataGridView.RowCount < 16) VoidTableDataGridView.RowCount = 16;
+            }
+            catch (Exception exp)
+            {
+                throw exp;
+            }
+        }
+        
+        public void VoidTableDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (VoidTableDataGridView.Columns[e.ColumnIndex].Name == "ActionButtonColumn" && e.RowIndex >= 0 && VoidTableDataGridView.Rows[e.RowIndex].Cells["OrderIDColumn"].Value != null)
+                {
+                    DialogResult tempDialogResult = MessageBox.Show("Are you sure you want to void this order?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (tempDialogResult.Equals(DialogResult.No)) return;
+                    else
+                    {
+                        String tempOldOrderID = VoidTableDataGridView.Rows[e.RowIndex].Cells["OrderIDColumn"].Value.ToString();
+                        int tempOldTableNumber = int.Parse(VoidTableDataGridView.Rows[e.RowIndex].Cells["TableNumberColumn"].Value.ToString());
+                        String tempOldTableType = VoidTableDataGridView.Rows[e.RowIndex].Cells["TableTypeColumn"].Value.ToString();
+
+                        COrderManager tempVoidTableManager = new COrderManager();
+                        CResult tempResult = tempVoidTableManager.UpdateForVoidTable(tempOldOrderID, tempOldTableNumber, tempOldTableType, false);
+                        if (tempResult.IsSuccess)
+                        {
+                            this.PopulateVoidTableDataGridView();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+           // Form tempForm = CFormManager.Forms.Pop();
+           // tempForm.Show();
+           // this.Close();
+        }
+
+        private void VoidTableDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+    }
+}

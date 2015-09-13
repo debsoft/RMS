@@ -1,0 +1,9 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <parent_category>
+    <parent_cat_id>31</parent_cat_id>
+    <Parent_Category_Name>THAI CUISINE</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </parent_category>
+</DocumentElement>

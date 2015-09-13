@@ -1,0 +1,5 @@
+SCC = This is a Source Code Control file
+
+[DBSynchronizerSetup.vdproj]
+SCC_Aux_Path = "\\Ibacs-server\Logs"
+SCC_Project_Name = "$/RMSOnlineOrderSynChronizer/DbSynChronizer/DBSynchronizerSetup", ZYBAAAAA

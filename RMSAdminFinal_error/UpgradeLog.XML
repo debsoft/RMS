@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="RMSAdmin">
+</Property><Property Name="Solution File" Value="D:\RMS BD\RMSAdminFinal\RMSAdmin.sln">
+</Property><Property Name="User Options File" Value="D:\RMS BD\RMSAdminFinal\RMSAdmin.suo">
+</Property><Property Name="Date" Value="Friday, July 23, 2010">
+</Property><Property Name="Time" Value="16:14 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="RMSAdmin.sln" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin.sln">
+</Event><Event ErrorLevel="0" Project="" Source="RMSAdmin.suo" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin.suo">
+</Event><Event ErrorLevel="4" Project="RMSAdmin" Source="http://go.microsoft.com/fwlink/?LinkId=159919" Description="Warning: this project requires Crystal Reports, which is no longer included with Visual Studio. Please click here for more information.">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\RMSAdmin.csproj" Description="Project file successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\RMSAdmin.csproj">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\RMSAdmin.csproj.user" Description="Project user file successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\RMSAdmin.csproj.user">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\AuthenticationForm.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\AuthenticationForm.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\AuthenticationForm.designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\AuthenticationForm.designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Button Color\ButtonColorCtl.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Button Color\ButtonColorCtl.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Button Color\ButtonColorCtl.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Button Color\ButtonColorCtl.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Category\AddCategoryCtl.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Category\AddCategoryCtl.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Category\AddCategoryCtl.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Category\AddCategoryCtl.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Category\CategoryDetailsCtl.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Category\CategoryDetailsCtl.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Category\CategoryDetailsCtl.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Category\CategoryDetailsCtl.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Category\UpdateCategoryCtl.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Category\UpdateCategoryCtl.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Category\UpdateCategoryCtl.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Category\UpdateCategoryCtl.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\CCurrentUser.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\CCurrentUser.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Food Item\AddFoodItemCtl.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Food Item\AddFoodItemCtl.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Food Item\AddFoodItemCtl.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Food Item\AddFoodItemCtl.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Food Item\FoodItemCtl.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Food Item\FoodItemCtl.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Food Item\FoodItemCtl.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Food Item\FoodItemCtl.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Food Item\UpdateFoodItemCtl.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Food Item\UpdateFoodItemCtl.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Food Item\UpdateFoodItemCtl.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Food Item\UpdateFoodItemCtl.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\FoodType\AddFoodTypeCtl.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\FoodType\AddFoodTypeCtl.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\FoodType\AddFoodTypeCtl.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\FoodType\AddFoodTypeCtl.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\FoodType\EditFoodTypeCtl.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\FoodType\EditFoodTypeCtl.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\FoodType\EditFoodTypeCtl.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\FoodType\EditFoodTypeCtl.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\FoodType\FoodTypeCtl.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\FoodType\FoodTypeCtl.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\FoodType\FoodTypeCtl.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\FoodType\FoodTypeCtl.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\InventorySalesReport.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\InventorySalesReport.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\LoginForm.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\LoginForm.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\LoginForm.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\LoginForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Parent\AddParentCatCtl.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Parent\AddParentCatCtl.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Parent\AddParentCatCtl.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Parent\AddParentCatCtl.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Parent\ParentDetailsCtl.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Parent\ParentDetailsCtl.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Parent\ParentDetailsCtl.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Parent\ParentDetailsCtl.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Parent\UpdateParentCtl.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Parent\UpdateParentCtl.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Parent\UpdateParentCtl.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Parent\UpdateParentCtl.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Plu\AddProductPluCtl.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Plu\AddProductPluCtl.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Plu\AddProductPluCtl.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Plu\AddProductPluCtl.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Plu\PluListCtl.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Plu\PluListCtl.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Plu\PluListCtl.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Plu\PluListCtl.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Reports\ProductSalesCtl.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Reports\ProductSalesCtl.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Reports\ProductSalesCtl.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Reports\ProductSalesCtl.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Program.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Program.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Properties\Resources.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Properties\Settings.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Receipt Style\ReceiptDetailsCtl.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Receipt Style\ReceiptDetailsCtl.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Receipt Style\ReceiptDetailsCtl.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Receipt Style\ReceiptDetailsCtl.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Receipt Style\UpdateReceiptStyle.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Receipt Style\UpdateReceiptStyle.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Receipt Style\UpdateReceiptStyle.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Receipt Style\UpdateReceiptStyle.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Reports\RecportViewerCtl.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Reports\RecportViewerCtl.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Reports\RecportViewerCtl.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Reports\RecportViewerCtl.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Reports\ReportViewerForm.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Reports\ReportViewerForm.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Reports\ReportViewerForm.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Reports\ReportViewerForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\rmsAdminAboutBox.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\rmsAdminAboutBox.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\rmsAdminAboutBox.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\rmsAdminAboutBox.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\RMSAdminController.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\RMSAdminController.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\RMSAdminMdiForm.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\RMSAdminMdiForm.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\RMSAdminMdiForm.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\RMSAdminMdiForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Reports\rptParentCategory.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Reports\rptParentCategory.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Reports\rptFoodType.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Reports\rptFoodType.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Reports\rptProductCategory.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Reports\rptProductCategory.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Reports\rptCurrentdaySalesReport.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Reports\rptCurrentdaySalesReport.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Reports\rptSalesInterval.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Reports\rptSalesInterval.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Selection Item\AddSelectionItemCtl.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Selection Item\AddSelectionItemCtl.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Selection Item\AddSelectionItemCtl.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Selection Item\AddSelectionItemCtl.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Selection Item\SelectionItemCtl.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Selection Item\SelectionItemCtl.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Selection Item\SelectionItemCtl.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Selection Item\SelectionItemCtl.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Selection Item\UpdateSelectionItemCtl.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Selection Item\UpdateSelectionItemCtl.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Selection Item\UpdateSelectionItemCtl.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Selection Item\UpdateSelectionItemCtl.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\UserButton.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\UserButton.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\UserButton.designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\UserButton.designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\UserControlManager.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\UserControlManager.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Users\AddNewUserCtl.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Users\AddNewUserCtl.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Users\AddNewUserCtl.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Users\AddNewUserCtl.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Users\UpdateUserCtl.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Users\UpdateUserCtl.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Users\UpdateUserCtl.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Users\UpdateUserCtl.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Users\UserDetailsCtl.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Users\UserDetailsCtl.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Users\UserDetailsCtl.Designer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Users\UserDetailsCtl.Designer.cs">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\App.config" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\App.config">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Properties\Settings.settings" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\images\button_color.png" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\images\button_color.png">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\images\button_user.png" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\images\button_user.png">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\images\button_bg_image_common.PNG" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\images\button_bg_image_common.PNG">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\images\button_bg_image.PNG" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\images\button_bg_image.PNG">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\num_button.png" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\num_button.png">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\num_cancel.png" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\num_cancel.png">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\num_clear.png" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\num_clear.png">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\num_enter.png" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\num_enter.png">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\num_hover.png" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\num_hover.png">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\num_button1.png" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\num_button1.png">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\female_user.png" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\female_user.png">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\female_user_hover.png" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\female_user_hover.png">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\male_user.png" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\male_user.png">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\male_user_hover.png" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\male_user_hover.png">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\exit.png" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\exit.png">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\plu.jpg" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\plu.jpg">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\logoff.png" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\logoff.png">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\about_logo.png" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\about_logo.png">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\about.png" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\about.png">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\user_manual.png" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\user_manual.png">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\receipt_style.png" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\receipt_style.png">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\button_color.png" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\button_color.png">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\tools.png" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\tools.png">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\users.png" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\users.png">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\parent_category.png" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\parent_category.png">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\food_item.png" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\food_item.png">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\categories.png" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\categories.png">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\food_type.png" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\food_type.png">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\settings.png" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\settings.png">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\selection_item.png" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\selection_item.png">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\rms_login_logo.jpg" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\rms_login_logo.jpg">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\male.jpg" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\male.jpg">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\male_over.jpg" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\male_over.jpg">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\female.jpg" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\female.jpg">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\female_over.jpg" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\female_over.jpg">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\rms_payment_common.PNG" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\rms_payment_common.PNG">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\payment_blue.PNG" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\payment_blue.PNG">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\images\menuOrderDown.gif" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\images\menuOrderDown.gif">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\images\menuOrderUp.gif" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\images\menuOrderUp.gif">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\images\left_button_01.jpg" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\images\left_button_01.jpg">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\images\left_button_02.jpg" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\images\left_button_02.jpg">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\images\left_button_03.jpg" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\images\left_button_03.jpg">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\images\left_button_04.jpg" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\images\left_button_04.jpg">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\images\left_button_05.jpg" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\images\left_button_05.jpg">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\images\left_button_06.jpg" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\images\left_button_06.jpg">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\images\left_button_over_01.jpg" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\images\left_button_over_01.jpg">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\images\left_button_over_02.jpg" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\images\left_button_over_02.jpg">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\images\left_button_over_03.jpg" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\images\left_button_over_03.jpg">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\images\left_button_over_04.jpg" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\images\left_button_over_04.jpg">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\images\left_button_over_05.jpg" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\images\left_button_over_05.jpg">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\images\left_button_over_06.jpg" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\images\left_button_over_06.jpg">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Resources\rms_administration.jpg" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Resources\rms_administration.jpg">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\AuthenticationForm.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\AuthenticationForm.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Button Color\ButtonColorCtl.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Button Color\ButtonColorCtl.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Category\AddCategoryCtl.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Category\AddCategoryCtl.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Category\CategoryDetailsCtl.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Category\CategoryDetailsCtl.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Category\UpdateCategoryCtl.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Category\UpdateCategoryCtl.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Food Item\AddFoodItemCtl.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Food Item\AddFoodItemCtl.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Food Item\FoodItemCtl.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Food Item\FoodItemCtl.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Food Item\UpdateFoodItemCtl.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Food Item\UpdateFoodItemCtl.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\FoodType\AddFoodTypeCtl.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\FoodType\AddFoodTypeCtl.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\FoodType\EditFoodTypeCtl.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\FoodType\EditFoodTypeCtl.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\FoodType\FoodTypeCtl.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\FoodType\FoodTypeCtl.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\LoginForm.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\LoginForm.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Parent\AddParentCatCtl.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Parent\AddParentCatCtl.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Parent\ParentDetailsCtl.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Parent\ParentDetailsCtl.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Parent\UpdateParentCtl.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Parent\UpdateParentCtl.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Plu\AddProductPluCtl.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Plu\AddProductPluCtl.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Plu\PluListCtl.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Plu\PluListCtl.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Reports\ProductSalesCtl.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Reports\ProductSalesCtl.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Properties\Resources.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Receipt Style\ReceiptDetailsCtl.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Receipt Style\ReceiptDetailsCtl.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Receipt Style\UpdateReceiptStyle.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Receipt Style\UpdateReceiptStyle.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Reports\RecportViewerCtl.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Reports\RecportViewerCtl.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Reports\ReportViewerForm.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Reports\ReportViewerForm.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\rmsAdminAboutBox.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\rmsAdminAboutBox.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\RMSAdminMdiForm.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\RMSAdminMdiForm.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Reports\rptParentCategory.rpt" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Reports\rptParentCategory.rpt">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Reports\rptFoodType.rpt" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Reports\rptFoodType.rpt">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Reports\rptProductCategory.rpt" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Reports\rptProductCategory.rpt">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Reports\rptCurrentdaySalesReport.rpt" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Reports\rptCurrentdaySalesReport.rpt">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Reports\rptSalesInterval.rpt" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Reports\rptSalesInterval.rpt">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Selection Item\AddSelectionItemCtl.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Selection Item\AddSelectionItemCtl.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Selection Item\SelectionItemCtl.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Selection Item\SelectionItemCtl.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Selection Item\UpdateSelectionItemCtl.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Selection Item\UpdateSelectionItemCtl.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\UserButton.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\UserButton.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Users\AddNewUserCtl.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Users\AddNewUserCtl.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Users\UpdateUserCtl.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Users\UpdateUserCtl.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\Users\UserDetailsCtl.resx" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdmin\Users\UserDetailsCtl.resx">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\RMSAdmin.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="RMSAdmin" Source="RMSAdmin\RMSAdmin.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\Common.csproj" Description="Project file successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\Common.csproj">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\Cinstants\CCommonConstants.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\Cinstants\CCommonConstants.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\Cinstants\CErrorStrings.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\Cinstants\CErrorStrings.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\Cinstants\Enumerations.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\Cinstants\Enumerations.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\Cinstants\ObjectComparator.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\Cinstants\ObjectComparator.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\Cinstants\RMSGlobal.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\Cinstants\RMSGlobal.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\Cinstants\YieldMember.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\Cinstants\YieldMember.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\DataAccess\ICategory3DAO.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\DataAccess\ICategory3DAO.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\Config\CDalConfig.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\Config\CDalConfig.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\DataAccess\Base\ADatabase.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\DataAccess\Base\ADatabase.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\DataAccess\ICategory2DAO.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\DataAccess\ICategory2DAO.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\DataAccess\IButtonAccessDAO.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\DataAccess\IButtonAccessDAO.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\DataAccess\IButtonColorDAO.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\DataAccess\IButtonColorDAO.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\DataAccess\ICategory1DAO.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\DataAccess\ICategory1DAO.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\DataAccess\ICategory4DAO.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\DataAccess\ICategory4DAO.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\DataAccess\ICategoryAncestorDAO.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\DataAccess\ICategoryAncestorDAO.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\DataAccess\IInventroySalesReportDAO.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\DataAccess\IInventroySalesReportDAO.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\DataAccess\IItemDAO.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\DataAccess\IItemDAO.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\DataAccess\IParentCategoryDAO.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\DataAccess\IParentCategoryDAO.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\DataAccess\IPrintStyleDAO.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\DataAccess\IPrintStyleDAO.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\DataAccess\IReportDAO.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\DataAccess\IReportDAO.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\DataAccess\IUserInfoDAO.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\DataAccess\IUserInfoDAO.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CButtonAccess.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CButtonAccess.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CButtonColor.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CButtonColor.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CCat2Rank.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CCat2Rank.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CCat3Rank.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CCat3Rank.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CCat4Rank.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CCat4Rank.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CCategory1.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CCategory1.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CCategory2.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CCategory2.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CCategory3.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CCategory3.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CCategory4.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CCategory4.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CCategoryAncestor.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CCategoryAncestor.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CComboBoxItem.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CComboBoxItem.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CCustomerInfo.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CCustomerInfo.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CDelivery.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CDelivery.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CDeposit.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CDeposit.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CExceptionHandler.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CExceptionHandler.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CKitchenPrint.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CKitchenPrint.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\COrderDetails.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\COrderDetails.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\COrderInfo.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\COrderInfo.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CParentCategory.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CParentCategory.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CPayment.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CPayment.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CPaymentSummary.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CPaymentSummary.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CPcInfo.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CPcInfo.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CPrintingFormat.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CPrintingFormat.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CPrintQueue.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CPrintQueue.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CPrintStyle.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CPrintStyle.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CReport.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CReport.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CResult.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CResult.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CStock.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CStock.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CTableInfo.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CTableInfo.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CTerminalPrint.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CTerminalPrint.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CUserAccess.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CUserAccess.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CUserInfo.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CUserInfo.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\CUserLogin.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\CUserLogin.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ObjectModel\StringTokenizer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\ObjectModel\StringTokenizer.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Common\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\Common.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Common" Source="Common\Common.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ConfigService" Source="ConfigService\ConfigService.csproj" Description="Project file successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\ConfigService\ConfigService.csproj">
+</Event><Event ErrorLevel="0" Project="ConfigService" Source="ConfigService\ConfigClasses\ConfigFile.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\ConfigService\ConfigClasses\ConfigFile.cs">
+</Event><Event ErrorLevel="0" Project="ConfigService" Source="ConfigService\ConfigManager.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\ConfigService\ConfigManager.cs">
+</Event><Event ErrorLevel="0" Project="ConfigService" Source="ConfigService\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\ConfigService\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ConfigService" Source="ConfigService\SampleFiles\ConfigTest.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\ConfigService\SampleFiles\ConfigTest.cs">
+</Event><Event ErrorLevel="0" Project="ConfigService" Source="ConfigService\Utils\XMLSerializer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\ConfigService\Utils\XMLSerializer.cs">
+</Event><Event ErrorLevel="0" Project="ConfigService" Source="ConfigService\SampleFiles\Config.xml" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\ConfigService\SampleFiles\Config.xml">
+</Event><Event ErrorLevel="0" Project="ConfigService" Source="ConfigService\SampleFiles\ConfigCollectionTest.xml" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\ConfigService\SampleFiles\ConfigCollectionTest.xml">
+</Event><Event ErrorLevel="0" Project="ConfigService" Source="ConfigService\SampleFiles\ConfigTest.xml" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\ConfigService\SampleFiles\ConfigTest.xml">
+</Event><Event ErrorLevel="0" Project="ConfigService" Source="ConfigService\ConfigService.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ConfigService" Source="ConfigService\ConfigService.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Database" Source="Database\Database.csproj" Description="Project file successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Database\Database.csproj">
+</Event><Event ErrorLevel="0" Project="Database" Source="Database\Base\BaseDAO.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Database\Base\BaseDAO.cs">
+</Event><Event ErrorLevel="0" Project="Database" Source="Database\CButtonAccessDAO.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Database\CButtonAccessDAO.cs">
+</Event><Event ErrorLevel="0" Project="Database" Source="Database\CButtonColorDAO.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Database\CButtonColorDAO.cs">
+</Event><Event ErrorLevel="0" Project="Database" Source="Database\CCategory1DAO.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Database\CCategory1DAO.cs">
+</Event><Event ErrorLevel="0" Project="Database" Source="Database\CCategory2DAO.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Database\CCategory2DAO.cs">
+</Event><Event ErrorLevel="0" Project="Database" Source="Database\CCategory3DAO.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Database\CCategory3DAO.cs">
+</Event><Event ErrorLevel="0" Project="Database" Source="Database\CCategory4DAO.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Database\CCategory4DAO.cs">
+</Event><Event ErrorLevel="0" Project="Database" Source="Database\CCategoryAncestorDAO.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Database\CCategoryAncestorDAO.cs">
+</Event><Event ErrorLevel="0" Project="Database" Source="Database\CDistrictDAO.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Database\CDistrictDAO.cs">
+</Event><Event ErrorLevel="0" Project="Database" Source="Database\CItemDAO.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Database\CItemDAO.cs">
+</Event><Event ErrorLevel="0" Project="Database" Source="Database\CParentCategoryDAO.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Database\CParentCategoryDAO.cs">
+</Event><Event ErrorLevel="0" Project="Database" Source="Database\CPrintStyleDAO.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Database\CPrintStyleDAO.cs">
+</Event><Event ErrorLevel="0" Project="Database" Source="Database\CReportDAO.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Database\CReportDAO.cs">
+</Event><Event ErrorLevel="0" Project="Database" Source="Database\CUserInfoDAO.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Database\CUserInfoDAO.cs">
+</Event><Event ErrorLevel="0" Project="Database" Source="Database\Facade\Database.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Database\Facade\Database.cs">
+</Event><Event ErrorLevel="0" Project="Database" Source="Database\InventroySalesReportDAO.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Database\InventroySalesReportDAO.cs">
+</Event><Event ErrorLevel="0" Project="Database" Source="Database\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Database\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Database" Source="Database\Queries\SqlQueries.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Database\Queries\SqlQueries.cs">
+</Event><Event ErrorLevel="0" Project="Database" Source="Database\Database.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Database" Source="Database\Database.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Logger" Source="Logger\Logger.csproj" Description="Project file successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Logger\Logger.csproj">
+</Event><Event ErrorLevel="0" Project="Logger" Source="Logger\AHandler.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Logger\AHandler.cs">
+</Event><Event ErrorLevel="0" Project="Logger" Source="Logger\Constants.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Logger\Constants.cs">
+</Event><Event ErrorLevel="0" Project="Logger" Source="Logger\Handlers\FileHandler.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Logger\Handlers\FileHandler.cs">
+</Event><Event ErrorLevel="0" Project="Logger" Source="Logger\Handlers\HandlerFactory.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Logger\Handlers\HandlerFactory.cs">
+</Event><Event ErrorLevel="0" Project="Logger" Source="Logger\Handlers\SQLDBHandler.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Logger\Handlers\SQLDBHandler.cs">
+</Event><Event ErrorLevel="0" Project="Logger" Source="Logger\Handlers\WindowsEventHandler.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Logger\Handlers\WindowsEventHandler.cs">
+</Event><Event ErrorLevel="0" Project="Logger" Source="Logger\LogEvent.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Logger\LogEvent.cs">
+</Event><Event ErrorLevel="0" Project="Logger" Source="Logger\Logger.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Logger\Logger.cs">
+</Event><Event ErrorLevel="0" Project="Logger" Source="Logger\LoggerConfig.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Logger\LoggerConfig.cs">
+</Event><Event ErrorLevel="0" Project="Logger" Source="Logger\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Logger\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Logger" Source="Logger\Utils\XMLSerializer.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Logger\Utils\XMLSerializer.cs">
+</Event><Event ErrorLevel="0" Project="Logger" Source="Logger\Config\FileHandlerConfig.xml" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Logger\Config\FileHandlerConfig.xml">
+</Event><Event ErrorLevel="0" Project="Logger" Source="Logger\Config\LoggerConfig.xml" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Logger\Config\LoggerConfig.xml">
+</Event><Event ErrorLevel="0" Project="Logger" Source="Logger\Config\SQLDBHandlerConfig.xml" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Logger\Config\SQLDBHandlerConfig.xml">
+</Event><Event ErrorLevel="0" Project="Logger" Source="Logger\Logger.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Logger" Source="Logger\Logger.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Managers" Source="Managers\Managers.csproj" Description="Project file successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Managers\Managers.csproj">
+</Event><Event ErrorLevel="0" Project="Managers" Source="Managers\Category\CCategoryManager.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Managers\Category\CCategoryManager.cs">
+</Event><Event ErrorLevel="0" Project="Managers" Source="Managers\Item\CItemManager.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Managers\Item\CItemManager.cs">
+</Event><Event ErrorLevel="0" Project="Managers" Source="Managers\Payment\CReportManager.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Managers\Payment\CReportManager.cs">
+</Event><Event ErrorLevel="0" Project="Managers" Source="Managers\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Managers\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Managers" Source="Managers\User\CUserManager.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\Managers\User\CUserManager.cs">
+</Event><Event ErrorLevel="0" Project="Managers" Source="Managers\Managers.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Managers" Source="Managers\Managers.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="RmsRemote" Source="RmsRemote\RmsRemote.csproj" Description="Project file successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RmsRemote\RmsRemote.csproj">
+</Event><Event ErrorLevel="0" Project="RmsRemote" Source="RmsRemote\CLogin.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RmsRemote\CLogin.cs">
+</Event><Event ErrorLevel="0" Project="RmsRemote" Source="RmsRemote\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RmsRemote\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="RmsRemote" Source="RmsRemote\RmsRemote.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="RmsRemote" Source="RmsRemote\RmsRemote.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="RMSAdminInstaller.vdproj" Source="RMSAdminInstaller\RMSAdminInstaller.vdproj" Description="Project file successfully backed up as D:\RMS BD\RMSAdminFinal\Backup\RMSAdminInstaller\RMSAdminInstaller.vdproj">
+</Event><Event ErrorLevel="0" Project="" Source="RMSAdmin.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="RMSAdmin.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="RMSAdmin" Source="RMSAdmin\RMSAdmin.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\Common.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="ConfigService" Source="ConfigService\ConfigService.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Database" Source="Database\Database.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Logger" Source="Logger\Logger.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Managers" Source="Managers\Managers.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="RmsRemote" Source="RmsRemote\RmsRemote.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

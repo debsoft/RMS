@@ -1,0 +1,131 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using Managers.TableInfo;
+using RMS.Common.ObjectModel;
+using RMS.Common;
+using RMSUI;
+
+namespace RMS.SystemManagement
+{
+    public partial class CMergeTableForm : BaseForm
+    {
+        public CMergeTableForm()
+        {
+            InitializeComponent();          
+        }       
+
+        private void CMergeTableForm_Load(object sender, EventArgs e)
+        {
+            this.PopulateMergeTableDataGridView();                                        
+        }      
+
+        public void PopulateMergeTableDataGridView()
+        {
+            try
+            {
+                COrderManager tempMergeTableManager = new COrderManager();
+                List<CTransferOrderShow> inOrderShowList = new List<CTransferOrderShow>();
+                inOrderShowList = (List<CTransferOrderShow>)tempMergeTableManager.OrderListForTransfer(true).Data;// Changed here
+
+                if (inOrderShowList != null)
+                {
+                    CTransferOrderShow[] tempOrderShowArray = inOrderShowList.ToArray();
+                    if (tempOrderShowArray.Length > 0) MergeTableDataGridView.RowCount = tempOrderShowArray.Length;
+                    MergeTableDataGridView.AllowUserToResizeRows = false;
+                    MergeTableDataGridView.AllowUserToAddRows = false;
+                    MergeTableDataGridView.Rows.Clear();
+
+                    for (int arrayIndex = 0; arrayIndex < tempOrderShowArray.Length; arrayIndex++)
+                    {
+                        String[] tempString ={ tempOrderShowArray[arrayIndex].OrderID.ToString(), tempOrderShowArray[arrayIndex].OrderType.ToString(), tempOrderShowArray[arrayIndex].TableNumber.ToString(), tempOrderShowArray[arrayIndex].GuestCount.ToString(), false.ToString() };
+                        MergeTableDataGridView.Rows.Add(tempString);
+                    }
+                }
+               // if (MergeTableDataGridView.RowCount < 17) MergeTableDataGridView.RowCount = 17;
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            Form tempForm=CFormManager.Forms.Pop();
+            tempForm.Show();
+            this.Close();
+        }        
+
+        private void MergeTableButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                COrderManager tempMergeTableManager = new COrderManager();
+
+                List<String> tempOrderIDList = new List<string>();
+                String tempMasterOrderID = String.Empty;
+                List<int> tempTableNumberList = new List<int>();
+                int tempMasterTableNumber = 0;
+                int tempTotalGuestCount = 0;
+                int tempTotalSelectedRows = 0;
+                bool[] tempRowsToDisable = new bool[MergeTableDataGridView.RowCount];
+
+                if (MergeTableDataGridView.RowCount != 0)
+                {
+                    for (int recordCounter = 0; recordCounter < MergeTableDataGridView.RowCount; recordCounter++)
+                    {
+                        if (MergeTableDataGridView.Rows[recordCounter].Cells["OrderIDColumn"].Value != null && MergeTableDataGridView.Rows[recordCounter].Cells["MergeCheckBoxColumn"].Value != null)
+                        {
+                            bool tempResult = bool.Parse(MergeTableDataGridView.Rows[recordCounter].Cells["MergeCheckBoxColumn"].Value.ToString());
+
+                            if (tempResult)
+                            {
+                                tempMasterOrderID = MergeTableDataGridView.Rows[recordCounter].Cells["OrderIDColumn"].Value.ToString();
+                                tempMasterTableNumber = int.Parse(MergeTableDataGridView.Rows[recordCounter].Cells["TableNumberColumn"].Value.ToString());
+                                break;
+                            }
+                        }
+                    }
+
+                    for (int rowCounter = 0; rowCounter < MergeTableDataGridView.RowCount; rowCounter++)
+                    {
+                        tempRowsToDisable[rowCounter] = false;
+                        bool tempResult = true;
+                        if (MergeTableDataGridView.Rows[rowCounter].Cells["OrderIDColumn"].Value != null && MergeTableDataGridView.Rows[rowCounter].Cells["MergeCheckBoxColumn"].Value != null) tempResult = bool.Parse(MergeTableDataGridView.Rows[rowCounter].Cells["MergeCheckBoxColumn"].Value.ToString());
+                        if (MergeTableDataGridView.Rows[rowCounter].Cells["OrderIDColumn"].Value != null && tempResult && MergeTableDataGridView.Rows[rowCounter].Visible == true)
+                        {
+                            String tempOrderID = MergeTableDataGridView.Rows[rowCounter].Cells["OrderIDColumn"].Value.ToString();
+                            int tempTableNumber = int.Parse(MergeTableDataGridView.Rows[rowCounter].Cells["TableNumberColumn"].Value.ToString());
+                            if (tempOrderID.CompareTo(tempMasterOrderID) < 0) tempMasterOrderID = tempOrderID;
+                            if (tempMasterOrderID.Equals(tempOrderID) && tempTableNumber < tempMasterTableNumber) tempMasterTableNumber = tempTableNumber;
+                            tempTotalGuestCount += int.Parse(MergeTableDataGridView.Rows[rowCounter].Cells["GuestQuantityColumn"].Value.ToString());
+                            tempOrderIDList.Add(tempOrderID);
+                            tempTableNumberList.Add(tempTableNumber);
+                            tempRowsToDisable[rowCounter] = true;
+                            tempTotalSelectedRows++;
+                        }
+                    }
+                    CResult tempMResult = new CResult();
+                    if (tempTotalSelectedRows >= 2) tempMResult = tempMergeTableManager.UpdateForMergeTable(tempOrderIDList.ToArray(), tempMasterOrderID, tempTableNumberList.ToArray(), tempMasterTableNumber, tempTotalGuestCount);
+
+                    if (tempMResult.IsSuccess)
+                    {
+                        this.PopulateMergeTableDataGridView();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+            }           
+        }
+
+        private void MergeTableDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }              
+    }
+}

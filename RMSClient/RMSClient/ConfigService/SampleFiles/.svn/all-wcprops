@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/RMSClient/ConfigService/SampleFiles
+END
+ConfigCollectionTest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/RMSClient/ConfigService/SampleFiles/ConfigCollectionTest.xml
+END
+vssver2.scc
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/RMSClient/ConfigService/SampleFiles/vssver2.scc
+END
+Config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/RMSClient/ConfigService/SampleFiles/Config.xml
+END
+ConfigTest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/RMSClient/ConfigService/SampleFiles/ConfigTest.xml
+END
+ConfigTest.cs
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/RMSClient/ConfigService/SampleFiles/ConfigTest.cs
+END

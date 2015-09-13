@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CDalConfig>
+  <ConfigName>database</ConfigName>
+
+  <!-- "SqlServer" or "Oracle" or "OleDb" or "ODBC" -->
+  <Provider>SqlServer</Provider>
+
+  <!-- Provider specific connection string for main application database -->
+  <ConnectionString>User ID=sa;Password=;Database=RMSDB;Data Source=localhost;Pooling=True;Min Pool Size=5;Max Pool Size=50;</ConnectionString>
+ 
+  <!-- Data: "Manual" or "Auto" or blank ("") data as default. Default means 'Auto' -->
+  <PoolType>Auto</PoolType>
+
+</CDalConfig>

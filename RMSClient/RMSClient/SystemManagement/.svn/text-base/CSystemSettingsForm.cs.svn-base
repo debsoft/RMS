@@ -1,0 +1,231 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Diagnostics;
+using System.Text;
+using System.Windows.Forms;
+using RMS.Common.Config;
+using RMS.Common;
+using System.IO;
+using System.Xml;
+using RMSUI;
+
+
+namespace RMS.SystemManagement
+{
+    public partial class CSystemSettingsForm : BaseForm
+    {
+        public static bool showMouse;
+        public CSystemSettingsForm()
+        {
+            InitializeComponent();
+        }
+
+        private void CSystemSettingsForm_Load(object sender, EventArgs e)
+        {
+           // lblVersionNumber.Text = RMSGlobal.m_rmsVersionNumber;
+        }
+
+        private void btnMouseSetting_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ShowMouseForm objMousePointer = new ShowMouseForm();
+                DialogResult result = objMousePointer.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    if (ShowMouseForm.showMouse)
+                        Cursor.Show();
+                    else
+                        Cursor.Hide();
+                }
+            }
+            catch (Exception exp)
+            {
+                throw exp;
+            }
+        }
+
+        private void btnSpecialModify_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                KitchenTextForm objKitchenText = new KitchenTextForm(true, "Special Modification Text");
+                objKitchenText.Show();
+            }
+            catch (Exception exp)
+            {
+                throw exp;
+            }
+        }
+
+        private void btnBarSettings_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                BarSettingsForm objSettings = new BarSettingsForm();
+                objSettings.ShowDialog();
+            }
+            catch (Exception exp)
+            {
+                Console.Write(exp.Message);
+            }
+        }
+
+        private void btnKitchenVoid_Click(object sender, EventArgs e)
+        {
+            KitchenVoidForm tempKTVoidForm = new KitchenVoidForm();
+            tempKTVoidForm.Show();
+            CFormManager.Forms.Push(this);
+            this.Hide();
+        }
+
+        private void btnSetDefaultTime_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DefaultTimeForm objDefault = DefaultTimeForm.CreateInstance();
+                objDefault.ShowDialog();
+            }
+            catch (Exception exp)
+            {
+                Console.Write(exp.Message);
+            }
+        }
+
+        private void btnKitchenCopy_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                KitchenCopySettingForm objSettings = new KitchenCopySettingForm();
+                objSettings.ShowDialog();
+            }
+            catch (Exception exp)
+            {
+                Console.Write(exp.Message);
+            }
+        }
+
+        private void btnWebPageCalling_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OnlineMenuManagementForm objOnlineMenu = new OnlineMenuManagementForm();
+                objOnlineMenu.ShowDialog(this);
+
+            }
+            catch (Exception exp)
+            {
+                throw exp;
+            }
+        }
+
+        private void UserButton_Click(object sender, EventArgs e)
+        {
+            CUsersForm tempUsersForm = new CUsersForm();
+            tempUsersForm.Show();
+            CFormManager.Forms.Push(this);
+            this.Hide();
+        }
+
+        private void btnKitchenText_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                KitchenTextForm objKitchenText = new KitchenTextForm();
+                objKitchenText.Show();
+            }
+            catch (Exception exp)
+            {
+                throw exp;
+            }
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            Form tempForm = CFormManager.Forms.Pop();
+            tempForm.Show();
+            this.Close();
+        }
+
+        private void btnLogRecords_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                LogRegisterForm tempLogForm = new LogRegisterForm();
+                tempLogForm.Show();
+                CFormManager.Forms.Push(this);
+                this.Hide();
+            }
+            catch (Exception exp)
+            {
+                Console.Write(exp.Message);
+            }
+        }
+
+        private void btnAdminAccess_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                XmlDocument xmlDoc = new XmlDocument();
+                string adminDrive = String.Empty;
+                string executableName = System.Reflection.Assembly.GetExecutingAssembly().Location;
+                FileInfo executableFileInfo = new FileInfo(executableName);
+                string currentDirectory = executableFileInfo.DirectoryName + "\\Config";
+                xmlDoc.Load(currentDirectory + "\\CommonConfiguration.xml");
+                XmlNode appSettingsNode =
+                xmlDoc.SelectSingleNode("configuration/admin_directory");
+                adminDrive = appSettingsNode.InnerText;
+                
+                Process proc = new Process();
+                proc.StartInfo.FileName = adminDrive + "RMSAdmin.exe";
+                proc.Start();
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show("Admin module has not been installed.",RMSGlobal.MessageBoxTitle,
+                    MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnSalesReport_Click(object sender, EventArgs e)
+        {
+            SalesReportForm objSalesReport = new SalesReportForm();
+            objSalesReport.Show();
+        }
+
+        private void btnGeneralSettings_Click(object sender, EventArgs e)
+        {
+
+          GeneralSettingsForm GeneralSettingsForm=  new GeneralSettingsForm();
+          DialogResult dr = GeneralSettingsForm.ShowDialog();
+
+          if (dr == DialogResult.OK) 
+          {
+              MessageBox.Show("General Settings has been updated successfully!");
+          }
+          if (dr == DialogResult.Retry)
+          {
+              MessageBox.Show("General Settings has not been updated successfully!");
+          }
+            
+
+        }
+
+        private void btnPrinterSettings_Click(object sender, EventArgs e)
+        {
+            PrinterSettingsForm printerSettingsForm = new PrinterSettingsForm();
+            DialogResult dr = printerSettingsForm.ShowDialog();
+        }
+
+        private void btnEftCard_Click(object sender, EventArgs e)
+        {
+            EFTManagerForm GeneralSettingsForm = new EFTManagerForm();
+            DialogResult dr = GeneralSettingsForm.ShowDialog();
+
+         
+        }
+    }
+}

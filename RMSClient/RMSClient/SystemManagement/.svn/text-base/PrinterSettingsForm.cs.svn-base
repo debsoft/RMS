@@ -1,0 +1,75 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+
+namespace RMS.SystemManagement
+{
+    public partial class PrinterSettingsForm : Form
+    {
+        private PrinterConfig printConfig;
+        public PrinterSettingsForm()
+        {
+           
+            InitializeComponent();
+
+            Init();
+            radioButtonNo.Checked = true;
+            txtBoxBevaragePrinterName.Click += new System.EventHandler(this.txtBox_Click);
+            txtBoxClientPrinterName.Click += new System.EventHandler(this.txtBox_Click);
+            txtBoxKitchenPrinterName.Click += new System.EventHandler(this.txtBox_Click);
+
+        }
+
+        private void Init()
+        {
+            printConfig = new PrinterConfig();
+            txtBoxBevaragePrinterName.Text = printConfig.BeveragePrinterName;
+            txtBoxKitchenPrinterName.Text = printConfig.KitchenPrinterName;
+            txtBoxClientPrinterName.Text = printConfig.ClientPrinterName;
+            radioButtonYex.Checked = printConfig.EnableSerialPortPrinting;
+
+        }
+
+        private void txtBox_Click(object sender, EventArgs e)
+        {
+            keyboard1.ControlToInputText = (TextBox)sender;
+        }
+
+        private void btnSavePrinterSettings_Click(object sender, EventArgs e)
+        {
+            printConfig.BeveragePrinterName = txtBoxBevaragePrinterName.Text;
+            printConfig.KitchenPrinterName=txtBoxKitchenPrinterName.Text;
+            printConfig.ClientPrinterName = txtBoxClientPrinterName.Text;
+            printConfig.EnableSerialPortPrinting=radioButtonYex.Checked;
+
+            if (printConfig.SaveChanges())
+            {
+                MessageBox.Show("Printer Cofiguration has ben saved Successfully");
+            }
+            else
+            {
+                MessageBox.Show("Printer Cofiguration has not ben saved Successfully");
+            }
+
+        }
+
+        private void btnTestClientPrint_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTestKitchenPrint_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTestBevaragePrint_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

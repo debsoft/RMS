@@ -1,0 +1,16 @@
+bin\Release\Config\FileHandlerConfig.xml
+bin\Release\Config\LoggerConfig.xml
+bin\Release\Logger.dll
+bin\Release\Logger.pdb
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\Logger.dll
+obj\Release\Logger.pdb
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\Config\SQLDBHandlerConfig.xml
+bin\Debug\Config\FileHandlerConfig.xml
+bin\Debug\Config\LoggerConfig.xml
+obj\Debug\Logger.dll
+obj\Debug\Logger.pdb
+bin\Debug\Logger.dll
+bin\Debug\Logger.pdb
+bin\Release\Config\SQLDBHandlerConfig.xml

@@ -1,0 +1,105 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using RMSUI;
+using RMS.Common;
+using RMS.Common.ObjectModel;
+using Managers.SystemManagement;
+
+namespace RMS.Reports
+{
+    public partial class OrderDetails : Form
+    {
+        private string strGuestBill = "";
+        CPrintMethodsEXT cPrintMethodsEXT;
+        public OrderDetails()
+        {
+            InitializeComponent();
+            
+        }
+
+        public OrderDetails(CSearchOrderInfo cSearchOrderInfo)
+        {
+            InitializeComponent();
+            //MessageBox.Show(orderID);
+            lelOrderID.Text += cSearchOrderInfo.OrderID;
+            this.showOrderDetails(cSearchOrderInfo.OrderID.ToString());
+
+            lelOrderInfo.Text += "Serial no :" + cSearchOrderInfo.SerialNumber;
+            lelOrderInfo.Text += "\r\nOrder Date: " +cSearchOrderInfo.OrderDateTime.ToString();
+            lelOrderInfo.Text += "\r\nOrder Type: " + cSearchOrderInfo.OrderType;
+            lelOrderInfo.Text += "\r\nCovers: " + cSearchOrderInfo.Covers;
+
+            label2.Text = "Food Price: " + cSearchOrderInfo.FoodTotal.ToString("F02");
+            label2.Text += "\r\nNonFood Price: " + cSearchOrderInfo.NonfoodTotal.ToString("F02");
+            label2.Text += "\r\nOrder Total: " + cSearchOrderInfo.OrderTotal.ToString("F02");
+            label2.Text += "\r\nService Charge: " + cSearchOrderInfo.ServiceChargeCash.ToString("F02");
+            label2.Text += "\r\nDiscount Charge: " + cSearchOrderInfo.Discount.ToString("F02");
+           
+            label3.Text = "Total Paid (ExVat): " + cSearchOrderInfo.TotalPaidExcludingVat.ToString("F02");
+            label3.Text += "\r\nTotal Paid (IncVat): " + cSearchOrderInfo.TotalPaidIncludingVat.ToString("F02");
+            label3.Text += "\r\nVat Total: " + cSearchOrderInfo.VatPaid.ToString("F02");
+            label3.Text += "\r\nVat Impsed: " + cSearchOrderInfo.VatImposed;
+            label3.Text += "\r\nCash: " + cSearchOrderInfo.CashPaid.ToString("F02");
+            label3.Text += "\r\nEFT: " + cSearchOrderInfo.EFTPaid.ToString("F02");
+            label3.Text += "\r\nEFT Card Name: " + cSearchOrderInfo.EFTCardName;
+
+            strGuestBill = cSearchOrderInfo.GuestBill + "\r\n\r\nPrinted from archive\r\n";
+            cPrintMethodsEXT = new CPrintMethodsEXT();
+           
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+        private void showOrderDetails(string orderID)
+        {            
+            SystemManager sysManager = new SystemManager();
+            List<CArchiveItemDetails> oItemList = new List<CArchiveItemDetails>();
+            int p_orderID = int.Parse(orderID);
+            oItemList = sysManager.GetOrderDetailInfo(p_orderID);
+
+            DataTable dtResult = new DataTable();
+            dtResult.Columns.Add("Item name", typeof(string));
+            dtResult.Columns.Add("Quantity", typeof(int));
+            dtResult.Columns.Add("Amount", typeof(double));
+            dtResult.Columns.Add("Remarks", typeof(string));
+            dtResult.Columns.Add("Food type", typeof(string));
+           // dtResult.Columns.Add("Table name", typeof(string));
+           // dtResult.Columns.Add("Guest no", typeof(int));
+            dtResult.Columns.Add("Order time", typeof(DateTime));
+            dtResult.Columns.Add("Order taken by", typeof(string));
+
+            for (int i = 0; i < oItemList.Count; i++)
+            {
+                dtResult.Rows.Add(oItemList[i].ItemName, 
+                    oItemList[i].Quantity,
+                    oItemList[i].Amount,
+                    oItemList[i].Remarks,
+                    oItemList[i].FoodType,
+                    //oItemList[i].TableName,
+                    //oItemList[i].GuestCount, 
+                    new DateTime(Int64.Parse(oItemList[i].ItemOrderTime.ToString())),
+                    oItemList[i].UserName);
+            }
+
+            dgvOrderDetails.DataSource = dtResult;
+
+            
+        }
+
+        private void btnPrintGuestBill_Click(object sender, EventArgs e)
+        {
+            cPrintMethodsEXT.USBPrint(strGuestBill, PrintDestiNation.CLIENT, true);
+        }
+
+
+    }
+}

@@ -1,0 +1,217 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using Managers.SystemManagement;
+using RMS.Common;
+using System.Drawing.Printing;
+
+
+namespace RMS.Reports
+{
+    public partial class ItemReportForm : Form
+    {
+        private StringPrintFormater stringPrintFormater;
+        private DateTime fromDate;
+        private DateTime toDate;
+        private DataTable dtFood;
+        private DataTable dtNonFood;
+        public ItemReportForm(Int64 fromOID, Int64 toOID, DateTime fromDate, DateTime toDate, int orderCount, bool showAll)
+        {
+            InitializeComponent();
+            this.fromDate = fromDate;
+            this.toDate = toDate;
+
+            lblDate.Text += "  " + fromDate.ToLongDateString() + " to: " + toDate.ToLongDateString();
+            lblOrderCount.Text+= orderCount;
+
+
+            SystemManager sysManager = new SystemManager();
+            
+             dtFood = sysManager.GetItemWiseSales(fromOID, toOID, "Food", Convert.ToByte(showAll));
+            gridViewFood.DataSource = dtFood;
+
+             dtNonFood = sysManager.GetItemWiseSales(fromOID, toOID, "NonFood", Convert.ToByte(showAll));
+            gridViewNonFood.DataSource = dtNonFood;
+
+
+           int query =
+           (from order in dtFood.AsEnumerable()
+           select order.Field<Int32>("QuantitySold")).Sum();
+           
+           lblQtySoldFood.Text += " " + query;
+
+           int query2 =
+           (from order in dtNonFood.AsEnumerable()
+           select order.Field<Int32>("QuantitySold")).Sum();
+
+           lblQtySoldNonFood.Text += " " + query2;
+           lblQtySoldTotal.Text += " " + (query2 + query);
+
+
+           Double P1 =0;
+           Double P2 = 0;
+
+           foreach (DataRow row in dtFood.Rows)
+           {
+               P1 += Convert.ToDouble(row["TotalPrice"].ToString());
+           }
+           foreach (DataRow row in dtNonFood.Rows)
+           {
+               P2 += Convert.ToDouble(row["TotalPrice"].ToString());
+           }
+           lblPriceFood.Text += " " + P1.ToString("F02");
+           lblPriceNonFood.Text += " " + P2.ToString("F02");
+           lblPriceTotal.Text += " " + (P1 + P2).ToString("F02");
+
+
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+
+       }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            PrintDocument doc = new TextDocument(PrintReport(dtFood, dtNonFood));
+            doc.PrintPage += this.Doc_PrintPage;
+
+            doc.DefaultPageSettings.Landscape = true;
+            PrintDialog dlgSettings = new PrintDialog();
+            dlgSettings.Document = doc;
+
+            if (dlgSettings.ShowDialog() == DialogResult.OK)
+            {
+                doc.Print();
+            }
+
+
+        }
+        private string PrintReport(DataTable dtFood, DataTable dtNonFood)
+        {
+
+            string strBody = "";
+            stringPrintFormater = new StringPrintFormater(172);
+            strBody += "\r\n";
+            strBody += "\r\n";
+            strBody += "\r\n" + stringPrintFormater.CenterTextWithWhiteSpace("SALES REPORT- ITEM WISE");
+            strBody += "\r\n" + stringPrintFormater.CenterTextWithWhiteSpace("VERBANELLA RESTAURANT");
+            strBody += "\r\n" + stringPrintFormater.CenterTextWithWhiteSpace("Date: From - " + fromDate.ToShortDateString() + " to " + toDate.ToShortDateString());
+            strBody += "\r\n" + stringPrintFormater.CreateDashedLine();
+            strBody += "\r\n" + stringPrintFormater.ItemLabeledText("" + lblOrderCount.Text, "");
+            strBody += "\r\n" + stringPrintFormater.ItemLabeledText("" + lblQtySoldFood.Text, "");
+            strBody += "\r\n" + stringPrintFormater.ItemLabeledText("" + lblQtySoldNonFood.Text, "");
+            strBody += "\r\n" + stringPrintFormater.ItemLabeledText("" + lblQtySoldTotal.Text, "");
+            strBody += "\r\n" + stringPrintFormater.ItemLabeledText("" + lblPriceFood.Text, "");
+            strBody += "\r\n" + stringPrintFormater.ItemLabeledText("" + lblPriceNonFood.Text, "");
+            strBody += "\r\n" + stringPrintFormater.ItemLabeledText("" + lblPriceTotal.Text, "");
+
+            strBody += "\r\n" + stringPrintFormater.CreateDashedLine();
+
+            strBody += "\r\n";
+            strBody += "\r\n";
+            strBody += "\r\n" + stringPrintFormater.CenterTextWithWhiteSpace("DETAILS : FOOD");
+            strBody += "\r\n" + stringPrintFormater.CreateDashedLine();
+
+            strBody += "\r\n" + stringPrintFormater.GridCell("Item ID", 20, false);
+            strBody += stringPrintFormater.GridCell("Item Name", 60, false);
+            strBody += stringPrintFormater.GridCell("Price Per Unit", 25, false);
+            strBody += stringPrintFormater.GridCell("Quantity Sold", 25, false);
+
+            strBody += stringPrintFormater.GridCell("Total Price", 25, false);
+   
+
+            strBody += "\r\n" + stringPrintFormater.CreateDashedLine();
+
+            foreach (DataRow row in dtFood.Rows)
+            {
+
+                strBody += "\r\n" + stringPrintFormater.GridCell(row[0].ToString(), 20, false);
+                strBody += stringPrintFormater.GridCell(row[1].ToString(), 60, false);
+                strBody += stringPrintFormater.GridCell(row[2].ToString(), 25, false);
+                strBody += stringPrintFormater.GridCell(row[3].ToString(), 25, false);
+
+                strBody += stringPrintFormater.GridCell(row[4].ToString(), 25, false);
+              
+        
+                strBody += "\r\n" + stringPrintFormater.CreateDashedLine();
+
+            }
+
+
+            strBody += "\r\n" + stringPrintFormater.CreateDashedLine();
+
+            strBody += "\r\n";
+            strBody += "\r\n";
+            strBody += "\r\n" + stringPrintFormater.CenterTextWithWhiteSpace("DETAILS : NON FOOD");
+            strBody += "\r\n" + stringPrintFormater.CreateDashedLine();
+
+
+            foreach (DataRow row in dtNonFood.Rows)
+            {
+                strBody += "\r\n" + stringPrintFormater.GridCell(row[0].ToString(), 20, false);
+                strBody += stringPrintFormater.GridCell(row[1].ToString(), 60, false);
+                strBody += stringPrintFormater.GridCell(row[2].ToString(), 25, false);
+                strBody += stringPrintFormater.GridCell(row[3].ToString(), 25, false);
+
+                strBody += stringPrintFormater.GridCell(row[4].ToString(), 25, false);
+
+
+                strBody += "\r\n" + stringPrintFormater.CreateDashedLine();
+
+            }
+
+
+            // strBody += "\r\n" + stringPrintFormater.CreateDashedLine();
+
+            strBody += "\r\n";
+            strBody += "\r\n" + stringPrintFormater.CenterTextWithDashed("END REPORT");
+            return strBody;
+
+        }
+        private void Doc_PrintPage(object sender, PrintPageEventArgs e)
+        {
+
+            try
+            {
+
+                TextDocument doc = (TextDocument)sender;
+
+                Font font = new Font("Lucida Console", 7);
+
+                float lineHeight = font.GetHeight(e.Graphics);
+
+                float x = e.MarginBounds.Left;
+                float y = e.MarginBounds.Top;
+
+                doc.PageNumber += 1;
+
+                while ((y + lineHeight) < e.MarginBounds.Bottom && doc.Offset <= doc.Text.GetUpperBound(0))
+                {
+                    e.Graphics.DrawString(doc.Text[doc.Offset], font, Brushes.Black, 0, y);
+                    doc.Offset += 1;
+                    y += lineHeight;
+                }
+
+                if (doc.Offset < doc.Text.GetUpperBound(0))
+                {
+                    e.HasMorePages = true;
+                }
+                else
+                {
+                    doc.Offset = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Sorry! Problem occured." + ex.ToString());
+            }
+
+        }
+    }
+}

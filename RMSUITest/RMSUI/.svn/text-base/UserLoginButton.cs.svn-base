@@ -1,0 +1,42 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.Drawing;
+
+namespace RMSUI
+{
+    public class UserLoginButton: RMSGenericButton
+    {       
+       
+        public UserLoginButton()
+        {
+            
+            base.BackgroundImage = RMSUI.Properties.Resources.user_login_bg_up;
+            base.BackgroundImageLayout = ImageLayout.Center;
+            base.Image=RMSUI.Properties.Resources.user_login_icon_m;
+            base.ImageAlign = ContentAlignment.TopCenter;
+            base.TextImageRelation = TextImageRelation.ImageAboveText;
+            base.Width = 90;
+            base.Height = 90;
+            base.BgImageOnMouseDown = RMSUI.Properties.Resources.user_login_bg_down;
+            base.BgImageOnMouseUp = RMSUI.Properties.Resources.user_login_bg_up;
+          
+        }
+        protected override void OnCreateControl()
+        {
+            base.OnCreateControl();
+           // this.Text=this.Text.Length>10? this.Text.Substring(0, 10) : this.Text;
+            
+        }
+       
+        public void setFemale(bool isFemale) 
+        {
+            if (isFemale)
+            base.Image = RMSUI.Properties.Resources.user_login_icon_f;
+        }
+       
+
+    }
+}

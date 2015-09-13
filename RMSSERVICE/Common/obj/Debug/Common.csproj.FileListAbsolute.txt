@@ -1,0 +1,56 @@
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\Common\bin\Debug\Common.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\Common\bin\Debug\Common.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\Common\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\Common\obj\Debug\RMS.Common.KitchenPrintForm.resources
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\Common\obj\Debug\Common.csproj.GenerateResource.Cache
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\Common\obj\Debug\RdlCompile.cache
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\Common\obj\Debug\RdlCompile.compiled
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\Common\obj\Debug\Common.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\Common\obj\Debug\Common.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\Common\bin\Debug\Common.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\Common\bin\Debug\Common.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\Common\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\Common\obj\Debug\RMS.Common.KitchenPrintForm.resources
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\Common\obj\Debug\Common.csproj.GenerateResource.Cache
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\Common\obj\Debug\RdlCompile.cache
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\Common\obj\Debug\RdlCompile.compiled
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\Common\obj\Debug\Common.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\Common\obj\Debug\Common.pdb
+E:\Projects\RMSSERVICE\Common\bin\Debug\Common.dll
+E:\Projects\RMSSERVICE\Common\bin\Debug\Common.pdb
+E:\Projects\RMSSERVICE\Common\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\RMSSERVICE\Common\obj\Debug\RMS.Common.KitchenPrintForm.resources
+E:\Projects\RMSSERVICE\Common\obj\Debug\Common.csproj.GenerateResource.Cache
+E:\Projects\RMSSERVICE\Common\obj\Debug\RdlCompile.cache
+E:\Projects\RMSSERVICE\Common\obj\Debug\RdlCompile.compiled
+E:\Projects\RMSSERVICE\Common\obj\Debug\Common.dll
+E:\Projects\RMSSERVICE\Common\obj\Debug\Common.pdb
+E:\Projects\RMS\RMSSERVICE\Common\bin\Debug\Common.dll
+E:\Projects\RMS\RMSSERVICE\Common\bin\Debug\Common.pdb
+E:\Projects\RMS\RMSSERVICE\Common\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\RMS\RMSSERVICE\Common\obj\Debug\RMS.Common.KitchenPrintForm.resources
+E:\Projects\RMS\RMSSERVICE\Common\obj\Debug\Common.csproj.GenerateResource.Cache
+E:\Projects\RMS\RMSSERVICE\Common\obj\Debug\RdlCompile.cache
+E:\Projects\RMS\RMSSERVICE\Common\obj\Debug\RdlCompile.compiled
+E:\Projects\RMS\RMSSERVICE\Common\obj\Debug\Common.dll
+E:\Projects\RMS\RMSSERVICE\Common\obj\Debug\Common.pdb
+D:\RMS\RMSSERVICE\Common\bin\Debug\Common.dll
+D:\RMS\RMSSERVICE\Common\bin\Debug\Common.pdb
+D:\RMS\RMSSERVICE\Common\obj\Debug\ResolveAssemblyReference.cache
+D:\RMS\RMSSERVICE\Common\obj\Debug\RMS.Common.KitchenPrintForm.resources
+D:\RMS\RMSSERVICE\Common\obj\Debug\RdlCompile.cache
+D:\RMS\RMSSERVICE\Common\obj\Debug\RdlCompile.compiled
+D:\RMS\RMSSERVICE\Common\obj\Debug\Common.dll
+D:\RMS\RMSSERVICE\Common\obj\Debug\Common.pdb
+D:\rms\RMSSERVICE\Common\obj\Debug\GenerateResource-ResGen.read.1.tlog
+D:\rms\RMSSERVICE\Common\obj\Debug\GenerateResource-ResGen.write.1.tlog
+D:\RMS BD\RMSSERVICE\Common\bin\Debug\Common.dll
+D:\RMS BD\RMSSERVICE\Common\bin\Debug\Common.pdb
+D:\RMS BD\RMSSERVICE\Common\obj\Debug\ResolveAssemblyReference.cache
+D:\RMS BD\RMSSERVICE\Common\obj\Debug\RMS.Common.KitchenPrintForm.resources
+D:\RMS BD\RMSSERVICE\Common\obj\Debug\GenerateResource-ResGen.read.1.tlog
+D:\RMS BD\RMSSERVICE\Common\obj\Debug\GenerateResource-ResGen.write.1.tlog
+D:\RMS BD\RMSSERVICE\Common\obj\Debug\RdlCompile.cache
+D:\RMS BD\RMSSERVICE\Common\obj\Debug\RdlCompile.compiled
+D:\RMS BD\RMSSERVICE\Common\obj\Debug\Common.dll
+D:\RMS BD\RMSSERVICE\Common\obj\Debug\Common.pdb

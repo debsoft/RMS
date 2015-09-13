@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CCommonConstants>
+
+
+  <!-- DMY for day month year format, MDY for month day year format in the database-->
+  <SqlQueryDateFormat>MDY</SqlQueryDateFormat>
+  <RemoteURL>tcp://localhost:8085/RMSSERVER</RemoteURL>
+  <cityname>London</cityname>
+  <ComportName>COM2</ComportName>
+  <ComportBaudRate>9600</ComportBaudRate>
+  <CallerIDCommand>AT#CID=1</CallerIDCommand>
+
+<OnlineUser>admin@la-la-zar.co.uk</OnlineUser>
+<OnlinePassword>123456</OnlinePassword>
+
+<online_location>http://www.la-la-zar.co.uk</online_location>
+
+
+  <!-- ThreadWaitTime in miliseconds -->
+  <ThreadWaitTime>5000</ThreadWaitTime>
+  <ThreadSleepTime>5000</ThreadSleepTime>
+
+
+
+  <!--for normal serial printer,printer type=1-->
+  <LocalPrintingType>1</LocalPrintingType>
+  <!--if local printer type = 1, then must write the printer port name-->
+  <PrinterPortName>COM2</PrinterPortName>
+  <!-- if local printer type=2, then must write the printer name-->
+  <LocalPrinterName>Lexmark</LocalPrinterName>
+
+  <!--if KitchenPrintFlag=1, then sends to server for kitchen print, if KitchenPrintFlag=2, then will try through network printer-->
+  <KitchenPrintFlag>1</KitchenPrintFlag>
+  <!--(if KitchenPrintFlag=2)write network printer name, otherwise leave network printer name blank-->
+  <NetworkPrinterName>Lexmark E120n</NetworkPrinterName>
+
+  <!--  if ServerPrintType=1 , the print will be in raw format, if ServerPrintType=2, the print will be in report format-->
+<ServerPrintingType>2</ServerPrintingType>
+
+
+  <!--for network printer,printer type=1 and for server printer,printer type = 2
+<NetworkPrinterType>1</NetworkPrinterType>
+only write network printer name if you are using network printer, otherwise leave network printer name blank
+<NetworkPrinterName>Canon</NetworkPrinterName> -->
+<PrinterTypeName>TMU220</PrinterTypeName>
+
+</CCommonConstants>

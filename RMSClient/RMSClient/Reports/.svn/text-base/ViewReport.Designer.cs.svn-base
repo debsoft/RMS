@@ -1,0 +1,1038 @@
+﻿using RMSUI;
+
+namespace RMS.Reports
+{
+    partial class ViewReport
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewReport));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.btnViewReport = new RMSUI.FunctionalButton();
+            this.dtpStart = new System.Windows.Forms.DateTimePicker();
+            this.dtpEnd = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnBack = new RMSUI.FunctionalButton();
+            this.lelGuest = new System.Windows.Forms.Label();
+            this.lelGuest_Value = new System.Windows.Forms.Label();
+            this.lelTableFoodPrice = new System.Windows.Forms.Label();
+            this.lelTableFoodPrice_Value = new System.Windows.Forms.Label();
+            this.lelTableNonfoodPrice = new System.Windows.Forms.Label();
+            this.lelTableNonfoodPrice_Value = new System.Windows.Forms.Label();
+            this.lelFoodPrice = new System.Windows.Forms.Label();
+            this.lelNonfoodPrice = new System.Windows.Forms.Label();
+            this.lelFoodPrice_Value = new System.Windows.Forms.Label();
+            this.lelNonfoodPrice_Value = new System.Windows.Forms.Label();
+            this.lelOrderTotal = new System.Windows.Forms.Label();
+            this.lelServiceCharge = new System.Windows.Forms.Label();
+            this.lelDiscount = new System.Windows.Forms.Label();
+            this.lelVat = new System.Windows.Forms.Label();
+            this.lelOrderTotal_Value = new System.Windows.Forms.Label();
+            this.lelServiceCharge_Value = new System.Windows.Forms.Label();
+            this.lelDiscount_Value = new System.Windows.Forms.Label();
+            this.lelVat_Value = new System.Windows.Forms.Label();
+            this.lelTakeAwayFoodPrice = new System.Windows.Forms.Label();
+            this.lelTakeAwayFoodPrice_Value = new System.Windows.Forms.Label();
+            this.lelTakeAwayNonfoodPrice = new System.Windows.Forms.Label();
+            this.lelTabsFoodPrice = new System.Windows.Forms.Label();
+            this.lelTabsNonfoodPrice = new System.Windows.Forms.Label();
+            this.lelTakeAwayNonfoodPrice_Value = new System.Windows.Forms.Label();
+            this.lelTabsFoodPrice_Value = new System.Windows.Forms.Label();
+            this.lelTabsNonfoodPrice_Value = new System.Windows.Forms.Label();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.btnPrint = new RMSUI.FunctionalButton();
+            this.rbtnAll = new System.Windows.Forms.RadioButton();
+            this.rbtnTable = new System.Windows.Forms.RadioButton();
+            this.rbtnTakeAway = new System.Windows.Forms.RadioButton();
+            this.lelOrderType = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lelCashTotal_value = new System.Windows.Forms.Label();
+            this.lelEftTotal_value = new System.Windows.Forms.Label();
+            this.lel = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lelTotalpaidEXVAT_value = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lelTotalpaidIncVAT_value = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.lbl = new System.Windows.Forms.Label();
+            this.radioButtonCheat = new System.Windows.Forms.RadioButton();
+            this.dataGridView1 = new RMSUI.SimpleGrid();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.cheatPanel = new System.Windows.Forms.Panel();
+            this.txtBoxCheatPercent = new System.Windows.Forms.MaskedTextBox();
+            this.radioButtonActualReport = new System.Windows.Forms.RadioButton();
+            this.btn_go = new RMSUI.FunctionalButton();
+            this.txtBoxSerialNumber = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.btnItemWiseReport = new RMSUI.FunctionalButton();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel10.SuspendLayout();
+            this.cheatPanel.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // btnViewReport
+            // 
+            this.btnViewReport.BackColor = System.Drawing.Color.Transparent;
+            this.btnViewReport.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnViewReport.BackgroundImage")));
+            this.btnViewReport.BgImageOnMouseDown = ((System.Drawing.Image)(resources.GetObject("btnViewReport.BgImageOnMouseDown")));
+            this.btnViewReport.BgImageOnMouseUp = ((System.Drawing.Image)(resources.GetObject("btnViewReport.BgImageOnMouseUp")));
+            this.btnViewReport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnViewReport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnViewReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnViewReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewReport.Font = new System.Drawing.Font("Arial", 10F);
+            this.btnViewReport.ForeColorOnMouseDown = System.Drawing.Color.White;
+            this.btnViewReport.ForeColorOnMouseUp = System.Drawing.Color.Black;
+            this.btnViewReport.FunctionType = RMSUI.RMSUIConstants.FunctionType.Normal;
+            this.btnViewReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnViewReport.Location = new System.Drawing.Point(341, 48);
+            this.btnViewReport.Name = "btnViewReport";
+            this.btnViewReport.Size = new System.Drawing.Size(100, 38);
+            this.btnViewReport.TabIndex = 4;
+            this.btnViewReport.Text = "View Report";
+            this.btnViewReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnViewReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnViewReport.UseVisualStyleBackColor = true;
+            this.btnViewReport.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dtpStart
+            // 
+            this.dtpStart.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpStart.Location = new System.Drawing.Point(48, 10);
+            this.dtpStart.Name = "dtpStart";
+            this.dtpStart.Size = new System.Drawing.Size(254, 24);
+            this.dtpStart.TabIndex = 5;
+            // 
+            // dtpEnd
+            // 
+            this.dtpEnd.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpEnd.Location = new System.Drawing.Point(341, 10);
+            this.dtpEnd.Name = "dtpEnd";
+            this.dtpEnd.Size = new System.Drawing.Size(258, 24);
+            this.dtpEnd.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 17);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "From";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(312, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(25, 17);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "To";
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.Transparent;
+            this.btnBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBack.BackgroundImage")));
+            this.btnBack.BgImageOnMouseDown = ((System.Drawing.Image)(resources.GetObject("btnBack.BgImageOnMouseDown")));
+            this.btnBack.BgImageOnMouseUp = ((System.Drawing.Image)(resources.GetObject("btnBack.BgImageOnMouseUp")));
+            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Arial", 10F);
+            this.btnBack.ForeColorOnMouseDown = System.Drawing.Color.White;
+            this.btnBack.ForeColorOnMouseUp = System.Drawing.Color.Black;
+            this.btnBack.FunctionType = RMSUI.RMSUIConstants.FunctionType.NormalCenter;
+            this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBack.Location = new System.Drawing.Point(680, 5);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(100, 40);
+            this.btnBack.TabIndex = 9;
+            this.btnBack.Text = "Back";
+            this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // lelGuest
+            // 
+            this.lelGuest.AutoSize = true;
+            this.lelGuest.BackColor = System.Drawing.Color.Transparent;
+            this.lelGuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelGuest.Location = new System.Drawing.Point(3, 0);
+            this.lelGuest.Name = "lelGuest";
+            this.lelGuest.Size = new System.Drawing.Size(79, 17);
+            this.lelGuest.TabIndex = 10;
+            this.lelGuest.Text = "Total guest";
+            // 
+            // lelGuest_Value
+            // 
+            this.lelGuest_Value.AutoSize = true;
+            this.lelGuest_Value.BackColor = System.Drawing.Color.Transparent;
+            this.lelGuest_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelGuest_Value.Location = new System.Drawing.Point(153, 0);
+            this.lelGuest_Value.Name = "lelGuest_Value";
+            this.lelGuest_Value.Size = new System.Drawing.Size(46, 17);
+            this.lelGuest_Value.TabIndex = 11;
+            this.lelGuest_Value.Text = "label4";
+            // 
+            // lelTableFoodPrice
+            // 
+            this.lelTableFoodPrice.AutoSize = true;
+            this.lelTableFoodPrice.BackColor = System.Drawing.Color.Transparent;
+            this.lelTableFoodPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelTableFoodPrice.Location = new System.Drawing.Point(253, 134);
+            this.lelTableFoodPrice.Name = "lelTableFoodPrice";
+            this.lelTableFoodPrice.Size = new System.Drawing.Size(111, 17);
+            this.lelTableFoodPrice.TabIndex = 12;
+            this.lelTableFoodPrice.Text = "Table food price";
+            // 
+            // lelTableFoodPrice_Value
+            // 
+            this.lelTableFoodPrice_Value.AutoSize = true;
+            this.lelTableFoodPrice_Value.BackColor = System.Drawing.Color.Transparent;
+            this.lelTableFoodPrice_Value.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lelTableFoodPrice_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelTableFoodPrice_Value.Location = new System.Drawing.Point(431, 134);
+            this.lelTableFoodPrice_Value.Name = "lelTableFoodPrice_Value";
+            this.lelTableFoodPrice_Value.Size = new System.Drawing.Size(46, 20);
+            this.lelTableFoodPrice_Value.TabIndex = 13;
+            this.lelTableFoodPrice_Value.Text = "label3";
+            // 
+            // lelTableNonfoodPrice
+            // 
+            this.lelTableNonfoodPrice.AutoSize = true;
+            this.lelTableNonfoodPrice.BackColor = System.Drawing.Color.Transparent;
+            this.lelTableNonfoodPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelTableNonfoodPrice.Location = new System.Drawing.Point(253, 154);
+            this.lelTableNonfoodPrice.Name = "lelTableNonfoodPrice";
+            this.lelTableNonfoodPrice.Size = new System.Drawing.Size(139, 17);
+            this.lelTableNonfoodPrice.TabIndex = 14;
+            this.lelTableNonfoodPrice.Text = "Table non food price";
+            // 
+            // lelTableNonfoodPrice_Value
+            // 
+            this.lelTableNonfoodPrice_Value.AutoSize = true;
+            this.lelTableNonfoodPrice_Value.BackColor = System.Drawing.Color.Transparent;
+            this.lelTableNonfoodPrice_Value.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lelTableNonfoodPrice_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelTableNonfoodPrice_Value.Location = new System.Drawing.Point(431, 154);
+            this.lelTableNonfoodPrice_Value.Name = "lelTableNonfoodPrice_Value";
+            this.lelTableNonfoodPrice_Value.Size = new System.Drawing.Size(46, 20);
+            this.lelTableNonfoodPrice_Value.TabIndex = 15;
+            this.lelTableNonfoodPrice_Value.Text = "label4";
+            // 
+            // lelFoodPrice
+            // 
+            this.lelFoodPrice.AutoSize = true;
+            this.lelFoodPrice.BackColor = System.Drawing.Color.Transparent;
+            this.lelFoodPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelFoodPrice.Location = new System.Drawing.Point(253, 0);
+            this.lelFoodPrice.Name = "lelFoodPrice";
+            this.lelFoodPrice.Size = new System.Drawing.Size(75, 17);
+            this.lelFoodPrice.TabIndex = 16;
+            this.lelFoodPrice.Text = "Food price";
+            // 
+            // lelNonfoodPrice
+            // 
+            this.lelNonfoodPrice.AutoSize = true;
+            this.lelNonfoodPrice.BackColor = System.Drawing.Color.Transparent;
+            this.lelNonfoodPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelNonfoodPrice.Location = new System.Drawing.Point(253, 27);
+            this.lelNonfoodPrice.Name = "lelNonfoodPrice";
+            this.lelNonfoodPrice.Size = new System.Drawing.Size(101, 17);
+            this.lelNonfoodPrice.TabIndex = 17;
+            this.lelNonfoodPrice.Text = "Non food price";
+            // 
+            // lelFoodPrice_Value
+            // 
+            this.lelFoodPrice_Value.AutoSize = true;
+            this.lelFoodPrice_Value.BackColor = System.Drawing.Color.Transparent;
+            this.lelFoodPrice_Value.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lelFoodPrice_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelFoodPrice_Value.Location = new System.Drawing.Point(403, 0);
+            this.lelFoodPrice_Value.Name = "lelFoodPrice_Value";
+            this.lelFoodPrice_Value.Size = new System.Drawing.Size(74, 17);
+            this.lelFoodPrice_Value.TabIndex = 18;
+            this.lelFoodPrice_Value.Text = "label5";
+            this.lelFoodPrice_Value.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lelNonfoodPrice_Value
+            // 
+            this.lelNonfoodPrice_Value.AutoSize = true;
+            this.lelNonfoodPrice_Value.BackColor = System.Drawing.Color.Transparent;
+            this.lelNonfoodPrice_Value.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lelNonfoodPrice_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelNonfoodPrice_Value.Location = new System.Drawing.Point(431, 27);
+            this.lelNonfoodPrice_Value.Name = "lelNonfoodPrice_Value";
+            this.lelNonfoodPrice_Value.Size = new System.Drawing.Size(46, 27);
+            this.lelNonfoodPrice_Value.TabIndex = 19;
+            this.lelNonfoodPrice_Value.Text = "label6";
+            // 
+            // lelOrderTotal
+            // 
+            this.lelOrderTotal.AutoSize = true;
+            this.lelOrderTotal.BackColor = System.Drawing.Color.Transparent;
+            this.lelOrderTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelOrderTotal.Location = new System.Drawing.Point(503, 0);
+            this.lelOrderTotal.Name = "lelOrderTotal";
+            this.lelOrderTotal.Size = new System.Drawing.Size(81, 17);
+            this.lelOrderTotal.TabIndex = 20;
+            this.lelOrderTotal.Text = "Order Total";
+            // 
+            // lelServiceCharge
+            // 
+            this.lelServiceCharge.AutoSize = true;
+            this.lelServiceCharge.BackColor = System.Drawing.Color.Transparent;
+            this.lelServiceCharge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelServiceCharge.Location = new System.Drawing.Point(503, 27);
+            this.lelServiceCharge.Name = "lelServiceCharge";
+            this.lelServiceCharge.Size = new System.Drawing.Size(103, 17);
+            this.lelServiceCharge.TabIndex = 21;
+            this.lelServiceCharge.Text = "Service charge";
+            // 
+            // lelDiscount
+            // 
+            this.lelDiscount.AutoSize = true;
+            this.lelDiscount.BackColor = System.Drawing.Color.Transparent;
+            this.lelDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelDiscount.Location = new System.Drawing.Point(503, 54);
+            this.lelDiscount.Name = "lelDiscount";
+            this.lelDiscount.Size = new System.Drawing.Size(63, 17);
+            this.lelDiscount.TabIndex = 22;
+            this.lelDiscount.Text = "Discount";
+            // 
+            // lelVat
+            // 
+            this.lelVat.AutoSize = true;
+            this.lelVat.BackColor = System.Drawing.Color.Transparent;
+            this.lelVat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelVat.Location = new System.Drawing.Point(503, 114);
+            this.lelVat.Name = "lelVat";
+            this.lelVat.Size = new System.Drawing.Size(29, 17);
+            this.lelVat.TabIndex = 23;
+            this.lelVat.Text = "Vat";
+            // 
+            // lelOrderTotal_Value
+            // 
+            this.lelOrderTotal_Value.AutoSize = true;
+            this.lelOrderTotal_Value.BackColor = System.Drawing.Color.Transparent;
+            this.lelOrderTotal_Value.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lelOrderTotal_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelOrderTotal_Value.Location = new System.Drawing.Point(696, 0);
+            this.lelOrderTotal_Value.Name = "lelOrderTotal_Value";
+            this.lelOrderTotal_Value.Size = new System.Drawing.Size(46, 27);
+            this.lelOrderTotal_Value.TabIndex = 25;
+            this.lelOrderTotal_Value.Text = "label8";
+            // 
+            // lelServiceCharge_Value
+            // 
+            this.lelServiceCharge_Value.AutoSize = true;
+            this.lelServiceCharge_Value.BackColor = System.Drawing.Color.Transparent;
+            this.lelServiceCharge_Value.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lelServiceCharge_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelServiceCharge_Value.Location = new System.Drawing.Point(696, 27);
+            this.lelServiceCharge_Value.Name = "lelServiceCharge_Value";
+            this.lelServiceCharge_Value.Size = new System.Drawing.Size(46, 27);
+            this.lelServiceCharge_Value.TabIndex = 26;
+            this.lelServiceCharge_Value.Text = "label9";
+            // 
+            // lelDiscount_Value
+            // 
+            this.lelDiscount_Value.AutoSize = true;
+            this.lelDiscount_Value.BackColor = System.Drawing.Color.Transparent;
+            this.lelDiscount_Value.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lelDiscount_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelDiscount_Value.Location = new System.Drawing.Point(688, 54);
+            this.lelDiscount_Value.Name = "lelDiscount_Value";
+            this.lelDiscount_Value.Size = new System.Drawing.Size(54, 20);
+            this.lelDiscount_Value.TabIndex = 27;
+            this.lelDiscount_Value.Text = "label10";
+            // 
+            // lelVat_Value
+            // 
+            this.lelVat_Value.AutoSize = true;
+            this.lelVat_Value.BackColor = System.Drawing.Color.Transparent;
+            this.lelVat_Value.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lelVat_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelVat_Value.Location = new System.Drawing.Point(688, 114);
+            this.lelVat_Value.Name = "lelVat_Value";
+            this.lelVat_Value.Size = new System.Drawing.Size(54, 20);
+            this.lelVat_Value.TabIndex = 28;
+            this.lelVat_Value.Text = "label11";
+            // 
+            // lelTakeAwayFoodPrice
+            // 
+            this.lelTakeAwayFoodPrice.AutoSize = true;
+            this.lelTakeAwayFoodPrice.BackColor = System.Drawing.Color.Transparent;
+            this.lelTakeAwayFoodPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelTakeAwayFoodPrice.Location = new System.Drawing.Point(253, 54);
+            this.lelTakeAwayFoodPrice.Name = "lelTakeAwayFoodPrice";
+            this.lelTakeAwayFoodPrice.Size = new System.Drawing.Size(112, 20);
+            this.lelTakeAwayFoodPrice.TabIndex = 30;
+            this.lelTakeAwayFoodPrice.Text = "Take away food price:";
+            // 
+            // lelTakeAwayFoodPrice_Value
+            // 
+            this.lelTakeAwayFoodPrice_Value.AutoSize = true;
+            this.lelTakeAwayFoodPrice_Value.BackColor = System.Drawing.Color.Transparent;
+            this.lelTakeAwayFoodPrice_Value.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lelTakeAwayFoodPrice_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelTakeAwayFoodPrice_Value.Location = new System.Drawing.Point(431, 54);
+            this.lelTakeAwayFoodPrice_Value.Name = "lelTakeAwayFoodPrice_Value";
+            this.lelTakeAwayFoodPrice_Value.Size = new System.Drawing.Size(46, 20);
+            this.lelTakeAwayFoodPrice_Value.TabIndex = 31;
+            this.lelTakeAwayFoodPrice_Value.Text = "label4";
+            // 
+            // lelTakeAwayNonfoodPrice
+            // 
+            this.lelTakeAwayNonfoodPrice.AutoSize = true;
+            this.lelTakeAwayNonfoodPrice.BackColor = System.Drawing.Color.Transparent;
+            this.lelTakeAwayNonfoodPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelTakeAwayNonfoodPrice.Location = new System.Drawing.Point(253, 74);
+            this.lelTakeAwayNonfoodPrice.Name = "lelTakeAwayNonfoodPrice";
+            this.lelTakeAwayNonfoodPrice.Size = new System.Drawing.Size(140, 20);
+            this.lelTakeAwayNonfoodPrice.TabIndex = 32;
+            this.lelTakeAwayNonfoodPrice.Text = "Take away non food price";
+            // 
+            // lelTabsFoodPrice
+            // 
+            this.lelTabsFoodPrice.AutoSize = true;
+            this.lelTabsFoodPrice.BackColor = System.Drawing.Color.Transparent;
+            this.lelTabsFoodPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelTabsFoodPrice.Location = new System.Drawing.Point(253, 94);
+            this.lelTabsFoodPrice.Name = "lelTabsFoodPrice";
+            this.lelTabsFoodPrice.Size = new System.Drawing.Size(97, 17);
+            this.lelTabsFoodPrice.TabIndex = 33;
+            this.lelTabsFoodPrice.Text = "Bar food price";
+            // 
+            // lelTabsNonfoodPrice
+            // 
+            this.lelTabsNonfoodPrice.AutoSize = true;
+            this.lelTabsNonfoodPrice.BackColor = System.Drawing.Color.Transparent;
+            this.lelTabsNonfoodPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelTabsNonfoodPrice.Location = new System.Drawing.Point(253, 114);
+            this.lelTabsNonfoodPrice.Name = "lelTabsNonfoodPrice";
+            this.lelTabsNonfoodPrice.Size = new System.Drawing.Size(125, 17);
+            this.lelTabsNonfoodPrice.TabIndex = 34;
+            this.lelTabsNonfoodPrice.Text = "Bar non food price";
+            // 
+            // lelTakeAwayNonfoodPrice_Value
+            // 
+            this.lelTakeAwayNonfoodPrice_Value.AutoSize = true;
+            this.lelTakeAwayNonfoodPrice_Value.BackColor = System.Drawing.Color.Transparent;
+            this.lelTakeAwayNonfoodPrice_Value.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lelTakeAwayNonfoodPrice_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelTakeAwayNonfoodPrice_Value.Location = new System.Drawing.Point(431, 74);
+            this.lelTakeAwayNonfoodPrice_Value.Name = "lelTakeAwayNonfoodPrice_Value";
+            this.lelTakeAwayNonfoodPrice_Value.Size = new System.Drawing.Size(46, 20);
+            this.lelTakeAwayNonfoodPrice_Value.TabIndex = 35;
+            this.lelTakeAwayNonfoodPrice_Value.Text = "label8";
+            // 
+            // lelTabsFoodPrice_Value
+            // 
+            this.lelTabsFoodPrice_Value.AutoSize = true;
+            this.lelTabsFoodPrice_Value.BackColor = System.Drawing.Color.Transparent;
+            this.lelTabsFoodPrice_Value.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lelTabsFoodPrice_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelTabsFoodPrice_Value.Location = new System.Drawing.Point(431, 94);
+            this.lelTabsFoodPrice_Value.Name = "lelTabsFoodPrice_Value";
+            this.lelTabsFoodPrice_Value.Size = new System.Drawing.Size(46, 20);
+            this.lelTabsFoodPrice_Value.TabIndex = 36;
+            this.lelTabsFoodPrice_Value.Text = "label9";
+            // 
+            // lelTabsNonfoodPrice_Value
+            // 
+            this.lelTabsNonfoodPrice_Value.AutoSize = true;
+            this.lelTabsNonfoodPrice_Value.BackColor = System.Drawing.Color.Transparent;
+            this.lelTabsNonfoodPrice_Value.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lelTabsNonfoodPrice_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelTabsNonfoodPrice_Value.Location = new System.Drawing.Point(423, 114);
+            this.lelTabsNonfoodPrice_Value.Name = "lelTabsNonfoodPrice_Value";
+            this.lelTabsNonfoodPrice_Value.Size = new System.Drawing.Size(54, 20);
+            this.lelTabsNonfoodPrice_Value.TabIndex = 37;
+            this.lelTabsNonfoodPrice_Value.Text = "label10";
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.BackColor = System.Drawing.Color.Transparent;
+            this.btnPrint.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPrint.BackgroundImage")));
+            this.btnPrint.BgImageOnMouseDown = ((System.Drawing.Image)(resources.GetObject("btnPrint.BgImageOnMouseDown")));
+            this.btnPrint.BgImageOnMouseUp = ((System.Drawing.Image)(resources.GetObject("btnPrint.BgImageOnMouseUp")));
+            this.btnPrint.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Font = new System.Drawing.Font("Arial", 10F);
+            this.btnPrint.ForeColorOnMouseDown = System.Drawing.Color.White;
+            this.btnPrint.ForeColorOnMouseUp = System.Drawing.Color.Black;
+            this.btnPrint.FunctionType = RMSUI.RMSUIConstants.FunctionType.Print;
+            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
+            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.Location = new System.Drawing.Point(680, 49);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(100, 38);
+            this.btnPrint.TabIndex = 38;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // rbtnAll
+            // 
+            this.rbtnAll.AutoSize = true;
+            this.rbtnAll.BackColor = System.Drawing.Color.Transparent;
+            this.rbtnAll.Checked = true;
+            this.rbtnAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnAll.Location = new System.Drawing.Point(98, 51);
+            this.rbtnAll.Name = "rbtnAll";
+            this.rbtnAll.Size = new System.Drawing.Size(41, 21);
+            this.rbtnAll.TabIndex = 39;
+            this.rbtnAll.TabStop = true;
+            this.rbtnAll.Text = "All";
+            this.rbtnAll.UseVisualStyleBackColor = false;
+            // 
+            // rbtnTable
+            // 
+            this.rbtnTable.AutoSize = true;
+            this.rbtnTable.BackColor = System.Drawing.Color.Transparent;
+            this.rbtnTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.rbtnTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnTable.Location = new System.Drawing.Point(146, 51);
+            this.rbtnTable.Name = "rbtnTable";
+            this.rbtnTable.Size = new System.Drawing.Size(62, 21);
+            this.rbtnTable.TabIndex = 40;
+            this.rbtnTable.Text = "Table";
+            this.rbtnTable.UseVisualStyleBackColor = false;
+            // 
+            // rbtnTakeAway
+            // 
+            this.rbtnTakeAway.AutoSize = true;
+            this.rbtnTakeAway.BackColor = System.Drawing.Color.Transparent;
+            this.rbtnTakeAway.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnTakeAway.Location = new System.Drawing.Point(217, 52);
+            this.rbtnTakeAway.Name = "rbtnTakeAway";
+            this.rbtnTakeAway.Size = new System.Drawing.Size(95, 21);
+            this.rbtnTakeAway.TabIndex = 41;
+            this.rbtnTakeAway.Text = "Take Away";
+            this.rbtnTakeAway.UseVisualStyleBackColor = false;
+            // 
+            // lelOrderType
+            // 
+            this.lelOrderType.AutoSize = true;
+            this.lelOrderType.BackColor = System.Drawing.Color.Transparent;
+            this.lelOrderType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelOrderType.Location = new System.Drawing.Point(3, 52);
+            this.lelOrderType.Name = "lelOrderType";
+            this.lelOrderType.Size = new System.Drawing.Size(84, 17);
+            this.lelOrderType.TabIndex = 42;
+            this.lelOrderType.Text = "Order type :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(503, 134);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 17);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "Cash Total:";
+            // 
+            // lelCashTotal_value
+            // 
+            this.lelCashTotal_value.AutoSize = true;
+            this.lelCashTotal_value.BackColor = System.Drawing.Color.Transparent;
+            this.lelCashTotal_value.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lelCashTotal_value.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelCashTotal_value.Location = new System.Drawing.Point(688, 134);
+            this.lelCashTotal_value.Name = "lelCashTotal_value";
+            this.lelCashTotal_value.Size = new System.Drawing.Size(54, 20);
+            this.lelCashTotal_value.TabIndex = 44;
+            this.lelCashTotal_value.Text = "label10";
+            // 
+            // lelEftTotal_value
+            // 
+            this.lelEftTotal_value.AutoSize = true;
+            this.lelEftTotal_value.BackColor = System.Drawing.Color.Transparent;
+            this.lelEftTotal_value.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lelEftTotal_value.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelEftTotal_value.Location = new System.Drawing.Point(688, 154);
+            this.lelEftTotal_value.Name = "lelEftTotal_value";
+            this.lelEftTotal_value.Size = new System.Drawing.Size(54, 20);
+            this.lelEftTotal_value.TabIndex = 46;
+            this.lelEftTotal_value.Text = "label10";
+            // 
+            // lel
+            // 
+            this.lel.AutoSize = true;
+            this.lel.BackColor = System.Drawing.Color.Transparent;
+            this.lel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lel.Location = new System.Drawing.Point(503, 154);
+            this.lel.Name = "lel";
+            this.lel.Size = new System.Drawing.Size(74, 17);
+            this.lel.TabIndex = 45;
+            this.lel.Text = "EFT Total:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(503, 74);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(126, 17);
+            this.label4.TabIndex = 47;
+            this.label4.Text = "Total Paid(Ex. Vat)";
+            // 
+            // lelTotalpaidEXVAT_value
+            // 
+            this.lelTotalpaidEXVAT_value.AutoSize = true;
+            this.lelTotalpaidEXVAT_value.BackColor = System.Drawing.Color.Transparent;
+            this.lelTotalpaidEXVAT_value.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lelTotalpaidEXVAT_value.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelTotalpaidEXVAT_value.Location = new System.Drawing.Point(688, 74);
+            this.lelTotalpaidEXVAT_value.Name = "lelTotalpaidEXVAT_value";
+            this.lelTotalpaidEXVAT_value.Size = new System.Drawing.Size(54, 20);
+            this.lelTotalpaidEXVAT_value.TabIndex = 48;
+            this.lelTotalpaidEXVAT_value.Text = "label10";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(503, 94);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(129, 17);
+            this.label5.TabIndex = 49;
+            this.label5.Text = "Total Paid(Inc. Vat)";
+            // 
+            // lelTotalpaidIncVAT_value
+            // 
+            this.lelTotalpaidIncVAT_value.AutoSize = true;
+            this.lelTotalpaidIncVAT_value.BackColor = System.Drawing.Color.Transparent;
+            this.lelTotalpaidIncVAT_value.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lelTotalpaidIncVAT_value.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lelTotalpaidIncVAT_value.Location = new System.Drawing.Point(688, 94);
+            this.lelTotalpaidIncVAT_value.Name = "lelTotalpaidIncVAT_value";
+            this.lelTotalpaidIncVAT_value.Size = new System.Drawing.Size(54, 20);
+            this.lelTotalpaidIncVAT_value.TabIndex = 50;
+            this.lelTotalpaidIncVAT_value.Text = "label10";
+            // 
+            // panel9
+            // 
+            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel9.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.btnItemWiseReport);
+            this.panel9.Controls.Add(this.lbl);
+            this.panel9.Controls.Add(this.dtpStart);
+            this.panel9.Controls.Add(this.label1);
+            this.panel9.Controls.Add(this.label2);
+            this.panel9.Controls.Add(this.btnBack);
+            this.panel9.Controls.Add(this.btnPrint);
+            this.panel9.Controls.Add(this.dtpEnd);
+            this.panel9.Controls.Add(this.lelOrderType);
+            this.panel9.Controls.Add(this.rbtnAll);
+            this.panel9.Controls.Add(this.rbtnTable);
+            this.panel9.Controls.Add(this.rbtnTakeAway);
+            this.panel9.Controls.Add(this.btnViewReport);
+            this.panel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel9.Location = new System.Drawing.Point(7, 52);
+            this.panel9.Margin = new System.Windows.Forms.Padding(3, 50, 3, 3);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(786, 92);
+            this.panel9.TabIndex = 51;
+            // 
+            // lbl
+            // 
+            this.lbl.AutoSize = true;
+            this.lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.Location = new System.Drawing.Point(6, 70);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(35, 13);
+            this.lbl.TabIndex = 43;
+            this.lbl.Text = "label7";
+            // 
+            // radioButtonCheat
+            // 
+            this.radioButtonCheat.AutoSize = true;
+            this.radioButtonCheat.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonCheat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.radioButtonCheat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCheat.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.radioButtonCheat.Location = new System.Drawing.Point(60, 2);
+            this.radioButtonCheat.Name = "radioButtonCheat";
+            this.radioButtonCheat.Size = new System.Drawing.Size(130, 21);
+            this.radioButtonCheat.TabIndex = 43;
+            this.radioButtonCheat.Text = "Reduced Report";
+            this.radioButtonCheat.UseVisualStyleBackColor = false;
+            this.radioButtonCheat.Click += new System.EventHandler(this.radioButtonCheat_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.GridColor = System.Drawing.Color.Gray;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 30);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(777, 230);
+            this.dataGridView1.TabIndex = 52;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
+            this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
+            // 
+            // panel10
+            // 
+            this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel10.BackColor = System.Drawing.SystemColors.Desktop;
+            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel10.Controls.Add(this.cheatPanel);
+            this.panel10.Controls.Add(this.btn_go);
+            this.panel10.Controls.Add(this.txtBoxSerialNumber);
+            this.panel10.Controls.Add(this.label6);
+            this.panel10.Controls.Add(this.dataGridView1);
+            this.panel10.Location = new System.Drawing.Point(7, 151);
+            this.panel10.Name = "panel10";
+            this.panel10.Padding = new System.Windows.Forms.Padding(3, 30, 3, 3);
+            this.panel10.Size = new System.Drawing.Size(785, 265);
+            this.panel10.TabIndex = 53;
+            // 
+            // cheatPanel
+            // 
+            this.cheatPanel.Controls.Add(this.txtBoxCheatPercent);
+            this.cheatPanel.Controls.Add(this.radioButtonCheat);
+            this.cheatPanel.Controls.Add(this.radioButtonActualReport);
+            this.cheatPanel.Location = new System.Drawing.Point(426, 0);
+            this.cheatPanel.Name = "cheatPanel";
+            this.cheatPanel.Size = new System.Drawing.Size(352, 27);
+            this.cheatPanel.TabIndex = 56;
+            // 
+            // txtBoxCheatPercent
+            // 
+            this.txtBoxCheatPercent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBoxCheatPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxCheatPercent.Location = new System.Drawing.Point(3, 1);
+            this.txtBoxCheatPercent.Mask = "00%";
+            this.txtBoxCheatPercent.Name = "txtBoxCheatPercent";
+            this.txtBoxCheatPercent.Size = new System.Drawing.Size(50, 26);
+            this.txtBoxCheatPercent.TabIndex = 55;
+            this.txtBoxCheatPercent.Text = "60";
+            // 
+            // radioButtonActualReport
+            // 
+            this.radioButtonActualReport.AutoSize = true;
+            this.radioButtonActualReport.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonActualReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.radioButtonActualReport.Checked = true;
+            this.radioButtonActualReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonActualReport.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.radioButtonActualReport.Location = new System.Drawing.Point(190, 3);
+            this.radioButtonActualReport.Name = "radioButtonActualReport";
+            this.radioButtonActualReport.Size = new System.Drawing.Size(112, 21);
+            this.radioButtonActualReport.TabIndex = 51;
+            this.radioButtonActualReport.TabStop = true;
+            this.radioButtonActualReport.Text = "Actual Report";
+            this.radioButtonActualReport.UseVisualStyleBackColor = false;
+            // 
+            // btn_go
+            // 
+            this.btn_go.BackColor = System.Drawing.Color.Transparent;
+            this.btn_go.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_go.BackgroundImage")));
+            this.btn_go.BgImageOnMouseDown = ((System.Drawing.Image)(resources.GetObject("btn_go.BgImageOnMouseDown")));
+            this.btn_go.BgImageOnMouseUp = ((System.Drawing.Image)(resources.GetObject("btn_go.BgImageOnMouseUp")));
+            this.btn_go.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btn_go.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_go.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_go.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_go.Font = new System.Drawing.Font("Arial", 10F);
+            this.btn_go.ForeColorOnMouseDown = System.Drawing.Color.White;
+            this.btn_go.ForeColorOnMouseUp = System.Drawing.Color.Black;
+            this.btn_go.FunctionType = RMSUI.RMSUIConstants.FunctionType.NormalCenter;
+            this.btn_go.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_go.Location = new System.Drawing.Point(305, 2);
+            this.btn_go.Name = "btn_go";
+            this.btn_go.Size = new System.Drawing.Size(50, 25);
+            this.btn_go.TabIndex = 54;
+            this.btn_go.Text = "Go";
+            this.btn_go.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_go.UseVisualStyleBackColor = true;
+            this.btn_go.Click += new System.EventHandler(this.btn_go_Click);
+            // 
+            // txtBoxSerialNumber
+            // 
+            this.txtBoxSerialNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBoxSerialNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxSerialNumber.Location = new System.Drawing.Point(146, 3);
+            this.txtBoxSerialNumber.Name = "txtBoxSerialNumber";
+            this.txtBoxSerialNumber.Size = new System.Drawing.Size(150, 23);
+            this.txtBoxSerialNumber.TabIndex = 54;
+            this.txtBoxSerialNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBoxSerialNumber_KeyDown);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Location = new System.Drawing.Point(3, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(142, 13);
+            this.label6.TabIndex = 53;
+            this.label6.Text = "Search with Serial No.  ";
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.SystemColors.Desktop;
+            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel11.Controls.Add(this.tableLayoutPanel1);
+            this.panel11.Location = new System.Drawing.Point(7, 422);
+            this.panel11.Name = "panel11";
+            this.panel11.Padding = new System.Windows.Forms.Padding(15);
+            this.panel11.Size = new System.Drawing.Size(782, 196);
+            this.panel11.TabIndex = 54;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 8;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel1.Controls.Add(this.lelGuest_Value, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lelGuest, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lelEftTotal_value, 7, 7);
+            this.tableLayoutPanel1.Controls.Add(this.lelTotalpaidIncVAT_value, 7, 4);
+            this.tableLayoutPanel1.Controls.Add(this.lel, 6, 7);
+            this.tableLayoutPanel1.Controls.Add(this.lelCashTotal_value, 7, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 6, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 6, 6);
+            this.tableLayoutPanel1.Controls.Add(this.lelTotalpaidEXVAT_value, 7, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lelVat_Value, 7, 5);
+            this.tableLayoutPanel1.Controls.Add(this.lelVat, 6, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 6, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lelFoodPrice_Value, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lelFoodPrice, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lelNonfoodPrice, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lelNonfoodPrice_Value, 4, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lelTakeAwayFoodPrice_Value, 4, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lelTabsNonfoodPrice_Value, 4, 5);
+            this.tableLayoutPanel1.Controls.Add(this.lelDiscount_Value, 7, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lelTakeAwayFoodPrice, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lelTabsFoodPrice_Value, 4, 4);
+            this.tableLayoutPanel1.Controls.Add(this.lelTakeAwayNonfoodPrice, 3, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lelTabsNonfoodPrice, 3, 5);
+            this.tableLayoutPanel1.Controls.Add(this.lelTakeAwayNonfoodPrice_Value, 4, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lelTabsFoodPrice, 3, 4);
+            this.tableLayoutPanel1.Controls.Add(this.lelOrderTotal_Value, 7, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lelServiceCharge_Value, 7, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lelOrderTotal, 6, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lelServiceCharge, 6, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lelDiscount, 6, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lelTableFoodPrice, 3, 6);
+            this.tableLayoutPanel1.Controls.Add(this.lelTableFoodPrice_Value, 4, 6);
+            this.tableLayoutPanel1.Controls.Add(this.lelTableNonfoodPrice, 3, 7);
+            this.tableLayoutPanel1.Controls.Add(this.lelTableNonfoodPrice_Value, 4, 7);
+            this.tableLayoutPanel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(19, 11);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 8;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(745, 174);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.Document = this.printDocument1;
+            this.printDialog1.UseEXDialog = true;
+            // 
+            // btnItemWiseReport
+            // 
+            this.btnItemWiseReport.BackColor = System.Drawing.Color.Transparent;
+            this.btnItemWiseReport.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnItemWiseReport.BackgroundImage")));
+            this.btnItemWiseReport.BgImageOnMouseDown = ((System.Drawing.Image)(resources.GetObject("btnItemWiseReport.BgImageOnMouseDown")));
+            this.btnItemWiseReport.BgImageOnMouseUp = ((System.Drawing.Image)(resources.GetObject("btnItemWiseReport.BgImageOnMouseUp")));
+            this.btnItemWiseReport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnItemWiseReport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnItemWiseReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnItemWiseReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnItemWiseReport.Font = new System.Drawing.Font("Arial", 10F);
+            this.btnItemWiseReport.ForeColorOnMouseDown = System.Drawing.Color.White;
+            this.btnItemWiseReport.ForeColorOnMouseUp = System.Drawing.Color.Black;
+            this.btnItemWiseReport.FunctionType = RMSUI.RMSUIConstants.FunctionType.Normal;
+            this.btnItemWiseReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnItemWiseReport.Location = new System.Drawing.Point(447, 48);
+            this.btnItemWiseReport.Name = "btnItemWiseReport";
+            this.btnItemWiseReport.Size = new System.Drawing.Size(180, 38);
+            this.btnItemWiseReport.TabIndex = 44;
+            this.btnItemWiseReport.Text = "View Item Wise Report";
+            this.btnItemWiseReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnItemWiseReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnItemWiseReport.UseVisualStyleBackColor = true;
+            this.btnItemWiseReport.Click += new System.EventHandler(this.btnItemWiseReport_Click);
+            // 
+            // ViewReport
+            // 
+            this.ClientSize = new System.Drawing.Size(800, 620);
+            this.Controls.Add(this.panel11);
+            this.Controls.Add(this.panel10);
+            this.Controls.Add(this.panel9);
+            this.Name = "ViewReport";
+            this.ScreenTitle = "View Report";
+            this.Text = "ViewReport";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ViewReport_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ViewReport_KeyPress);
+            this.Controls.SetChildIndex(this.panel9, 0);
+            this.Controls.SetChildIndex(this.panel10, 0);
+            this.Controls.SetChildIndex(this.panel11, 0);
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.cheatPanel.ResumeLayout(false);
+            this.cheatPanel.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private RMSUI.FunctionalButton btnViewReport;
+        private System.Windows.Forms.DateTimePicker dtpStart;
+        private System.Windows.Forms.DateTimePicker dtpEnd;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private RMSUI.FunctionalButton btnBack;
+        private System.Windows.Forms.Label lelGuest;
+        private System.Windows.Forms.Label lelGuest_Value;
+        private System.Windows.Forms.Label lelTableFoodPrice;
+        private System.Windows.Forms.Label lelTableFoodPrice_Value;
+        private System.Windows.Forms.Label lelTableNonfoodPrice;
+        private System.Windows.Forms.Label lelTableNonfoodPrice_Value;
+        private System.Windows.Forms.Label lelFoodPrice;
+        private System.Windows.Forms.Label lelNonfoodPrice;
+        private System.Windows.Forms.Label lelFoodPrice_Value;
+        private System.Windows.Forms.Label lelNonfoodPrice_Value;
+        private System.Windows.Forms.Label lelOrderTotal;
+        private System.Windows.Forms.Label lelServiceCharge;
+        private System.Windows.Forms.Label lelDiscount;
+        private System.Windows.Forms.Label lelVat;
+        private System.Windows.Forms.Label lelOrderTotal_Value;
+        private System.Windows.Forms.Label lelServiceCharge_Value;
+        private System.Windows.Forms.Label lelDiscount_Value;
+        private System.Windows.Forms.Label lelVat_Value;
+        private System.Windows.Forms.Label lelTakeAwayFoodPrice;
+        private System.Windows.Forms.Label lelTakeAwayFoodPrice_Value;
+        private System.Windows.Forms.Label lelTakeAwayNonfoodPrice;
+        private System.Windows.Forms.Label lelTabsFoodPrice;
+        private System.Windows.Forms.Label lelTabsNonfoodPrice;
+        private System.Windows.Forms.Label lelTakeAwayNonfoodPrice_Value;
+        private System.Windows.Forms.Label lelTabsFoodPrice_Value;
+        private System.Windows.Forms.Label lelTabsNonfoodPrice_Value;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private RMSUI.FunctionalButton btnPrint;
+        private System.Windows.Forms.RadioButton rbtnAll;
+        private System.Windows.Forms.RadioButton rbtnTable;
+        private System.Windows.Forms.RadioButton rbtnTakeAway;
+        private System.Windows.Forms.Label lelOrderType;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lelCashTotal_value;
+        private System.Windows.Forms.Label lelEftTotal_value;
+        private System.Windows.Forms.Label lel;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lelTotalpaidEXVAT_value;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lelTotalpaidIncVAT_value;
+        private System.Windows.Forms.Panel panel9;
+        private SimpleGrid dataGridView1;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Label label6;
+        private FunctionalButton btn_go;
+        private System.Windows.Forms.TextBox txtBoxSerialNumber;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.RadioButton radioButtonCheat;
+        private System.Windows.Forms.RadioButton radioButtonActualReport;
+        private System.Windows.Forms.MaskedTextBox txtBoxCheatPercent;
+        private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.Panel cheatPanel;
+        private System.Windows.Forms.PrintDialog printDialog1;
+        private FunctionalButton btnItemWiseReport;
+        //private System.Windows.Forms.Button btnBack;
+    }
+}

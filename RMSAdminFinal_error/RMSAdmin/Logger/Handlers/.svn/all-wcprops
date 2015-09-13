@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/RMSAdmin/Logger/Handlers
+END
+FileHandler.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/RMSAdmin/Logger/Handlers/FileHandler.cs
+END
+vssver2.scc
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/RMSAdmin/Logger/Handlers/vssver2.scc
+END
+SQLDBHandler.cs
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/RMSAdmin/Logger/Handlers/SQLDBHandler.cs
+END
+HandlerFactory.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/RMSAdmin/Logger/Handlers/HandlerFactory.cs
+END
+WindowsEventHandler.cs
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/RMSAdmin/Logger/Handlers/WindowsEventHandler.cs
+END

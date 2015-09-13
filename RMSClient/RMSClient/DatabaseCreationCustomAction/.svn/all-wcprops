@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/RMSClient/DatabaseCreationCustomAction
+END
+vssver2.scc
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/RMSClient/DatabaseCreationCustomAction/vssver2.scc
+END
+App_Database.sql
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/RMSClient/DatabaseCreationCustomAction/App_Database.sql
+END
+SetupDBCreationAction.csproj.user
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/RMSClient/DatabaseCreationCustomAction/SetupDBCreationAction.csproj.user
+END
+App_Tables.sql
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/RMSClient/DatabaseCreationCustomAction/App_Tables.sql
+END
+SetupDBCreationAction.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/RMSClient/DatabaseCreationCustomAction/SetupDBCreationAction.csproj
+END
+SetupDBCreationAction.csproj.vspscc
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/RMSClient/DatabaseCreationCustomAction/SetupDBCreationAction.csproj.vspscc
+END
+DatabaseCreationInstaller.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/RMSClient/DatabaseCreationCustomAction/DatabaseCreationInstaller.Designer.cs
+END
+DatabaseCreationInstaller.cs
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/RMSClient/DatabaseCreationCustomAction/DatabaseCreationInstaller.cs
+END
+mssccprj.scc
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/RMSClient/DatabaseCreationCustomAction/mssccprj.scc
+END
+License.rtf
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/RMSClient/DatabaseCreationCustomAction/License.rtf
+END

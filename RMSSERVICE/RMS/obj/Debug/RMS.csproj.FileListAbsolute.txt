@@ -1,0 +1,25 @@
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\RMS\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\RMS\obj\Debug\RMS.Properties.Resources.resources
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\RMS\obj\Debug\RMS.csproj.GenerateResource.Cache
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\RMS\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\RMS\obj\Debug\RMS.Properties.Resources.resources
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\RMS\obj\Debug\RMS.csproj.GenerateResource.Cache
+E:\Projects\RMS\RMSSERVICE\RMS\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\RMS\RMSSERVICE\RMS\obj\Debug\RMS.Properties.Resources.resources
+E:\Projects\RMS\RMSSERVICE\RMS\obj\Debug\RMS.csproj.GenerateResource.Cache
+D:\RMS\RMSSERVICE\RMS\obj\Debug\ResolveAssemblyReference.cache
+D:\RMS\RMSSERVICE\RMS\obj\Debug\RMS.Properties.Resources.resources
+D:\rms\RMSSERVICE\RMS\obj\Debug\GenerateResource-ResGen.read.1.tlog
+D:\rms\RMSSERVICE\RMS\obj\Debug\GenerateResource-ResGen.write.1.tlog
+D:\rms\RMSSERVICE\RMS\bin\Debug\RMS.exe
+D:\rms\RMSSERVICE\RMS\bin\Debug\RMS.pdb
+D:\rms\RMSSERVICE\RMS\obj\Debug\RMS.exe
+D:\rms\RMSSERVICE\RMS\obj\Debug\RMS.pdb
+D:\RMS BD\RMSSERVICE\RMS\bin\Debug\RMS.exe
+D:\RMS BD\RMSSERVICE\RMS\bin\Debug\RMS.pdb
+D:\RMS BD\RMSSERVICE\RMS\obj\Debug\ResolveAssemblyReference.cache
+D:\RMS BD\RMSSERVICE\RMS\obj\Debug\RMS.Properties.Resources.resources
+D:\RMS BD\RMSSERVICE\RMS\obj\Debug\GenerateResource-ResGen.read.1.tlog
+D:\RMS BD\RMSSERVICE\RMS\obj\Debug\GenerateResource-ResGen.write.1.tlog
+D:\RMS BD\RMSSERVICE\RMS\obj\Debug\RMS.exe
+D:\RMS BD\RMSSERVICE\RMS\obj\Debug\RMS.pdb

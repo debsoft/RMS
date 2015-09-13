@@ -1,0 +1,12 @@
+bin\Debug\RMSServerSetupDBCreationAction.dll
+bin\Debug\RMSServerSetupDBCreationAction.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\RMSServerSetupDBCreationAction.dll
+obj\Debug\RMSServerSetupDBCreationAction.pdb
+obj\Debug\RMSServerSetupDBCreationAction.App_Tables.sql
+obj\Debug\RMSServerSetupDBCreationAction.App_Database.sql
+obj\Debug\RMSServerSetupDBCreationAction.AddDeleteCat1.sql
+obj\Debug\RMSServerSetupDBCreationAction.AddDeleteCat2.sql
+obj\Debug\RMSServerSetupDBCreationAction.AddDeleteCat3.sql
+obj\Debug\RMSServerSetupDBCreationAction.AddDeleteCat4.sql
+obj\Debug\RMSServerSetupDBCreationAction.AddDeleteParentCat.sql

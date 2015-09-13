@@ -1,0 +1,5 @@
+SCC = This is a Source Code Control file
+
+[WindowsApplication1.csproj]
+SCC_Aux_Path = "\\Ibacs-server\Logs"
+SCC_Project_Name = "$/RMSService/RMS/WindowsApplication1", BXBAAAAA

@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Logger
+END
+Constants.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Logger/Constants.cs
+END
+vssver2.scc
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Logger/vssver2.scc
+END
+AHandler.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Logger/AHandler.cs
+END
+Logger.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Logger/Logger.cs
+END
+Logger.suo
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Logger/Logger.suo
+END
+LogEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Logger/LogEvent.cs
+END
+LoggerConfig.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Logger/LoggerConfig.cs
+END
+Logger.sln
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Logger/Logger.sln
+END
+Logger.csproj.user
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Logger/Logger.csproj.user
+END
+mssccprj.scc
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Logger/mssccprj.scc
+END
+Logger.csproj.vspscc
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Logger/Logger.csproj.vspscc
+END
+Logger.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Logger/Logger.csproj
+END

@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace RMSUI
+{
+    public static class RMSUIConstants
+    {
+        public  enum ItemType
+        {
+            SeatedButNoOrdered,
+            Ordered,
+            WaitingForPayment,
+            BarService,
+            Collection,
+            Waiting,
+            Delevery
+        };
+        public enum FunctionType
+        {
+            Normal,
+            NormalCenter,
+            Back,
+            Refresh,
+            Add,
+            Remove,
+            Next,
+            Previous,
+            Print,
+            View,
+            Option,
+            Control,
+            Logoff
+        };
+
+    }
+}

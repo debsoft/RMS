@@ -1,0 +1,8 @@
+<?xml version="1.0" standalone="yes"?>
+<CMouseConfig>
+  <ShowMouse>true</ShowMouse>
+  <KitchenCopyNumber>1</KitchenCopyNumber>
+  <ShowPriceStatus>true</ShowPriceStatus>
+  <BarCopyNumber>1</BarCopyNumber>
+  <BarPriceStatus>true</BarPriceStatus>
+</CMouseConfig>

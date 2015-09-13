@@ -1,0 +1,66 @@
+﻿<RecentFiles>
+  <RecentFiles>
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:UI/f:TransactionForm.cs" caret="13428" fromTop="8" />
+    <File id="2369A141-F9C8-40F3-93DD-0F87352F868C/d:ObjectModel/f:InventoryStockReport.cs" caret="710" fromTop="8" />
+    <File id="17A2A613-6DD4-4501-B9F0-E64F43A224B1/f:LogEvent.cs" caret="1974" fromTop="12" />
+    <File id="17A2A613-6DD4-4501-B9F0-E64F43A224B1/f:Logger.cs" caret="8003" fromTop="11" />
+    <File id="AD11806A-0E5C-4084-9C37-2543A2E772C7/d:Base/f:BaseDAO.cs" caret="8838" fromTop="19" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:Purchase/f:OtherDamageOrStockOut.cs" caret="1392" fromTop="14" />
+    <File id="8882985F-D4BC-4405-B0F6-19FC244B82A2/f:ConfigManager.cs" caret="2543" fromTop="10" />
+    <File id="AD11806A-0E5C-4084-9C37-2543A2E772C7/d:Queries/f:StoreDAO.cs" caret="14199" fromTop="13" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:Purchase/f:OtherTransactionView.Designer.cs" caret="0" fromTop="0" />
+    <File id="2369A141-F9C8-40F3-93DD-0F87352F868C/d:ObjectModel/f:Transaction1.cs" caret="593" fromTop="17" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:Purchase/f:DamageOrStockOut.cs" caret="683" fromTop="7" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:Purchase/f:OtherReturnForm.cs" caret="1598" fromTop="10" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:Purchase/f:OtherPurchaseForm.cs" caret="901" fromTop="12" />
+    <File id="2369A141-F9C8-40F3-93DD-0F87352F868C/d:ObjectModel/f:Store.cs" caret="378" fromTop="13" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:Purchase/f:OtherStockView.cs" caret="1119" fromTop="25" />
+    <File id="AD11806A-0E5C-4084-9C37-2543A2E772C7/d:Queries/f:SqlQueries.cs" caret="46192" fromTop="15" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:Purchase/f:OtherTransactionView.cs" caret="3897" fromTop="14" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/f:Program.cs" caret="4421" fromTop="15" />
+    <File id="AD11806A-0E5C-4084-9C37-2543A2E772C7/f:StockBLL.cs" caret="0" fromTop="0" />
+    <File id="AD11806A-0E5C-4084-9C37-2543A2E772C7/f:InventoryItemBLL.cs" caret="2456" fromTop="19" />
+    <File id="AD11806A-0E5C-4084-9C37-2543A2E772C7/f:InventoryStockReportDAO.cs" caret="3162" fromTop="17" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:UI/f:RawMaterialsItemDetails.cs" caret="5546" fromTop="10" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:UI/f:InventoryPurchaseForm.cs" caret="11795" fromTop="12" />
+    <File id="AD11806A-0E5C-4084-9C37-2543A2E772C7/f:InventoryPurchaseDAO.cs" caret="6126" fromTop="11" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:UI/f:ItemExpireDateShowForm.cs" caret="627" fromTop="6" />
+    <File id="AD11806A-0E5C-4084-9C37-2543A2E772C7/f:InventoryPurchaseBLL.cs" caret="3803" fromTop="12" />
+    <File id="AD11806A-0E5C-4084-9C37-2543A2E772C7/f:InventoryStockReportBLL.cs" caret="1093" fromTop="2" />
+    <File id="AD11806A-0E5C-4084-9C37-2543A2E772C7/f:InventoryKitchenStockReportBLL.cs" caret="0" fromTop="0" />
+    <File id="AD11806A-0E5C-4084-9C37-2543A2E772C7/f:InventoryItemDAO.cs" caret="6468" fromTop="0" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:UI/f:InventoryStockReportForm.cs" caret="5511" fromTop="9" />
+  </RecentFiles>
+  <RecentEdits>
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:Purchase/f:DamageOrStockOut.cs" caret="1770" fromTop="7" />
+    <File id="AD11806A-0E5C-4084-9C37-2543A2E772C7/d:Queries/f:StoreDAO.cs" caret="14789" fromTop="28" />
+    <File id="AD11806A-0E5C-4084-9C37-2543A2E772C7/d:Queries/f:StoreDAO.cs" caret="13939" fromTop="8" />
+    <File id="AD11806A-0E5C-4084-9C37-2543A2E772C7/d:Queries/f:SqlQueries.cs" caret="61273" fromTop="11" />
+    <File id="AD11806A-0E5C-4084-9C37-2543A2E772C7/d:Queries/f:SqlQueries.cs" caret="70813" fromTop="9" />
+    <File id="AD11806A-0E5C-4084-9C37-2543A2E772C7/d:Queries/f:StoreDAO.cs" caret="14199" fromTop="13" />
+    <File id="AD11806A-0E5C-4084-9C37-2543A2E772C7/d:Queries/f:SqlQueries.cs" caret="46323" fromTop="16" />
+    <File id="AD11806A-0E5C-4084-9C37-2543A2E772C7/d:Queries/f:SqlQueries.cs" caret="48332" fromTop="15" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:Purchase/f:OtherTransactionView.cs" caret="7114" fromTop="22" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:Purchase/f:OtherTransactionView.cs" caret="7292" fromTop="15" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:Purchase/f:OtherTransactionView.cs" caret="7483" fromTop="15" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:Purchase/f:OtherTransactionView.cs" caret="1370" fromTop="22" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:Purchase/f:OtherTransactionView.cs" caret="7506" fromTop="21" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:Purchase/f:OtherTransactionView.cs" caret="2273" fromTop="23" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:Purchase/f:OtherTransactionView.cs" caret="4749" fromTop="22" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:Purchase/f:OtherTransactionView.cs" caret="3179" fromTop="9" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:Purchase/f:OtherTransactionView.cs" caret="4657" fromTop="24" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:Purchase/f:OtherTransactionView.cs" caret="3572" fromTop="17" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:Purchase/f:OtherTransactionView.cs" caret="4563" fromTop="23" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:UI/f:ItemExpireDateShowForm.cs" caret="1139" fromTop="16" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:UI/f:ItemExpireDateShowForm.cs" caret="1937" fromTop="23" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:UI/f:ItemExpireDateShowForm.cs" caret="2295" fromTop="24" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:UI/f:ItemExpireDateShowForm.cs" caret="2449" fromTop="27" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:UI/f:ItemExpireDateShowForm.cs" caret="1010" fromTop="12" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:UI/f:RawMaterialsItemDetails.cs" caret="24665" fromTop="10" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:UI/f:InventoryStockReportForm.cs" caret="7174" fromTop="16" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:UI/f:InventoryStockReportForm.cs" caret="7849" fromTop="24" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:UI/f:InventoryStockReportForm.cs" caret="3689" fromTop="13" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:UI/f:InventoryStockReportForm.cs" caret="7872" fromTop="13" />
+    <File id="C99F765F-BB45-4380-A48C-F8473B2DA66B/d:UI/f:InventoryStockReportForm.cs" caret="7565" fromTop="15" />
+  </RecentEdits>
+</RecentFiles>

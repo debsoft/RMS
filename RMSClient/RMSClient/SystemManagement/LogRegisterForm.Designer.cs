@@ -1,0 +1,315 @@
+namespace RMS.SystemManagement
+{
+    partial class LogRegisterForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogRegisterForm));
+            this.label1 = new System.Windows.Forms.Label();
+            this.dtpOrders = new System.Windows.Forms.DateTimePicker();
+            this.dtpckerPayment = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dtpDrawerOpening = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnPrintOrders = new RMSUI.FunctionalButton();
+            this.BackButton = new RMSUI.FunctionalButton();
+            this.btnPayment = new RMSUI.FunctionalButton();
+            this.btnDrawerOpen = new RMSUI.FunctionalButton();
+            this.btnCustomerLog = new RMSUI.FunctionalButton();
+            this.dtpCustomer = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(163, 90);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 15);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Select a date";
+            // 
+            // dtpOrders
+            // 
+            this.dtpOrders.CustomFormat = "dd/MM/yyyy";
+            this.dtpOrders.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpOrders.Location = new System.Drawing.Point(260, 88);
+            this.dtpOrders.Name = "dtpOrders";
+            this.dtpOrders.Size = new System.Drawing.Size(118, 20);
+            this.dtpOrders.TabIndex = 13;
+            // 
+            // dtpckerPayment
+            // 
+            this.dtpckerPayment.CustomFormat = "dd/MM/yyyy";
+            this.dtpckerPayment.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpckerPayment.Location = new System.Drawing.Point(260, 134);
+            this.dtpckerPayment.Name = "dtpckerPayment";
+            this.dtpckerPayment.Size = new System.Drawing.Size(118, 20);
+            this.dtpckerPayment.TabIndex = 16;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(163, 136);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 15);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Select a date";
+            // 
+            // dtpDrawerOpening
+            // 
+            this.dtpDrawerOpening.CustomFormat = "dd/MM/yyyy";
+            this.dtpDrawerOpening.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDrawerOpening.Location = new System.Drawing.Point(260, 180);
+            this.dtpDrawerOpening.Name = "dtpDrawerOpening";
+            this.dtpDrawerOpening.Size = new System.Drawing.Size(118, 20);
+            this.dtpDrawerOpening.TabIndex = 19;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(163, 182);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 15);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Select a date";
+            // 
+            // btnPrintOrders
+            // 
+            this.btnPrintOrders.BackColor = System.Drawing.Color.Transparent;
+            this.btnPrintOrders.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPrintOrders.BackgroundImage")));
+            this.btnPrintOrders.BgImageOnMouseDown = ((System.Drawing.Image)(resources.GetObject("btnPrintOrders.BgImageOnMouseDown")));
+            this.btnPrintOrders.BgImageOnMouseUp = ((System.Drawing.Image)(resources.GetObject("btnPrintOrders.BgImageOnMouseUp")));
+            this.btnPrintOrders.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnPrintOrders.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPrintOrders.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnPrintOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrintOrders.Font = new System.Drawing.Font("Arial", 10F);
+            this.btnPrintOrders.ForeColorOnMouseDown = System.Drawing.Color.White;
+            this.btnPrintOrders.ForeColorOnMouseUp = System.Drawing.Color.Black;
+            this.btnPrintOrders.FunctionType = RMSUI.RMSUIConstants.FunctionType.NormalCenter;
+            this.btnPrintOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrintOrders.Location = new System.Drawing.Point(384, 78);
+            this.btnPrintOrders.Name = "btnPrintOrders";
+            this.btnPrintOrders.Size = new System.Drawing.Size(120, 40);
+            this.btnPrintOrders.TabIndex = 11;
+            this.btnPrintOrders.Text = "Orders";
+            this.btnPrintOrders.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPrintOrders.UseVisualStyleBackColor = false;
+            this.btnPrintOrders.Click += new System.EventHandler(this.btnPrintOrders_Click);
+            // 
+            // BackButton
+            // 
+            this.BackButton.BackColor = System.Drawing.Color.Transparent;
+            this.BackButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BackButton.BackgroundImage")));
+            this.BackButton.BgImageOnMouseDown = ((System.Drawing.Image)(resources.GetObject("BackButton.BgImageOnMouseDown")));
+            this.BackButton.BgImageOnMouseUp = ((System.Drawing.Image)(resources.GetObject("BackButton.BgImageOnMouseUp")));
+            this.BackButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.BackButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BackButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackButton.Font = new System.Drawing.Font("Arial", 10F);
+            this.BackButton.ForeColorOnMouseDown = System.Drawing.Color.White;
+            this.BackButton.ForeColorOnMouseUp = System.Drawing.Color.Black;
+            this.BackButton.FunctionType = RMSUI.RMSUIConstants.FunctionType.Back;
+            this.BackButton.Image = ((System.Drawing.Image)(resources.GetObject("BackButton.Image")));
+            this.BackButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BackButton.Location = new System.Drawing.Point(384, 302);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(120, 40);
+            this.BackButton.TabIndex = 10;
+            this.BackButton.Text = "Back ";
+            this.BackButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BackButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BackButton.UseVisualStyleBackColor = false;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
+            // btnPayment
+            // 
+            this.btnPayment.BackColor = System.Drawing.Color.Transparent;
+            this.btnPayment.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPayment.BackgroundImage")));
+            this.btnPayment.BgImageOnMouseDown = ((System.Drawing.Image)(resources.GetObject("btnPayment.BgImageOnMouseDown")));
+            this.btnPayment.BgImageOnMouseUp = ((System.Drawing.Image)(resources.GetObject("btnPayment.BgImageOnMouseUp")));
+            this.btnPayment.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnPayment.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPayment.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPayment.Font = new System.Drawing.Font("Arial", 10F);
+            this.btnPayment.ForeColorOnMouseDown = System.Drawing.Color.White;
+            this.btnPayment.ForeColorOnMouseUp = System.Drawing.Color.Black;
+            this.btnPayment.FunctionType = RMSUI.RMSUIConstants.FunctionType.NormalCenter;
+            this.btnPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPayment.Location = new System.Drawing.Point(384, 124);
+            this.btnPayment.Name = "btnPayment";
+            this.btnPayment.Size = new System.Drawing.Size(120, 40);
+            this.btnPayment.TabIndex = 20;
+            this.btnPayment.Text = "Payment";
+            this.btnPayment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPayment.UseVisualStyleBackColor = false;
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
+            // 
+            // btnDrawerOpen
+            // 
+            this.btnDrawerOpen.BackColor = System.Drawing.Color.Transparent;
+            this.btnDrawerOpen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDrawerOpen.BackgroundImage")));
+            this.btnDrawerOpen.BgImageOnMouseDown = ((System.Drawing.Image)(resources.GetObject("btnDrawerOpen.BgImageOnMouseDown")));
+            this.btnDrawerOpen.BgImageOnMouseUp = ((System.Drawing.Image)(resources.GetObject("btnDrawerOpen.BgImageOnMouseUp")));
+            this.btnDrawerOpen.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnDrawerOpen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDrawerOpen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnDrawerOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDrawerOpen.Font = new System.Drawing.Font("Arial", 10F);
+            this.btnDrawerOpen.ForeColorOnMouseDown = System.Drawing.Color.White;
+            this.btnDrawerOpen.ForeColorOnMouseUp = System.Drawing.Color.Black;
+            this.btnDrawerOpen.FunctionType = RMSUI.RMSUIConstants.FunctionType.NormalCenter;
+            this.btnDrawerOpen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDrawerOpen.Location = new System.Drawing.Point(384, 170);
+            this.btnDrawerOpen.Name = "btnDrawerOpen";
+            this.btnDrawerOpen.Size = new System.Drawing.Size(120, 40);
+            this.btnDrawerOpen.TabIndex = 21;
+            this.btnDrawerOpen.Text = "Drawer Openings";
+            this.btnDrawerOpen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDrawerOpen.UseVisualStyleBackColor = false;
+            this.btnDrawerOpen.Click += new System.EventHandler(this.btnDrawerOpen_Click);
+            // 
+            // btnCustomerLog
+            // 
+            this.btnCustomerLog.BackColor = System.Drawing.Color.Transparent;
+            this.btnCustomerLog.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCustomerLog.BackgroundImage")));
+            this.btnCustomerLog.BgImageOnMouseDown = ((System.Drawing.Image)(resources.GetObject("btnCustomerLog.BgImageOnMouseDown")));
+            this.btnCustomerLog.BgImageOnMouseUp = ((System.Drawing.Image)(resources.GetObject("btnCustomerLog.BgImageOnMouseUp")));
+            this.btnCustomerLog.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnCustomerLog.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCustomerLog.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCustomerLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomerLog.Font = new System.Drawing.Font("Arial", 10F);
+            this.btnCustomerLog.ForeColorOnMouseDown = System.Drawing.Color.White;
+            this.btnCustomerLog.ForeColorOnMouseUp = System.Drawing.Color.Black;
+            this.btnCustomerLog.FunctionType = RMSUI.RMSUIConstants.FunctionType.NormalCenter;
+            this.btnCustomerLog.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustomerLog.Location = new System.Drawing.Point(384, 217);
+            this.btnCustomerLog.Name = "btnCustomerLog";
+            this.btnCustomerLog.Size = new System.Drawing.Size(120, 40);
+            this.btnCustomerLog.TabIndex = 24;
+            this.btnCustomerLog.Text = "Customer Log";
+            this.btnCustomerLog.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCustomerLog.UseVisualStyleBackColor = false;
+            this.btnCustomerLog.Visible = false;
+            this.btnCustomerLog.Click += new System.EventHandler(this.btnCustomerLog_Click);
+            // 
+            // dtpCustomer
+            // 
+            this.dtpCustomer.CustomFormat = "dd/MM/yyyy";
+            this.dtpCustomer.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpCustomer.Location = new System.Drawing.Point(260, 227);
+            this.dtpCustomer.Name = "dtpCustomer";
+            this.dtpCustomer.Size = new System.Drawing.Size(118, 20);
+            this.dtpCustomer.TabIndex = 23;
+            this.dtpCustomer.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(163, 229);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 15);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Select a date";
+            this.label4.Visible = false;
+            // 
+            // LogRegisterForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.btnCustomerLog);
+            this.Controls.Add(this.dtpCustomer);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnDrawerOpen);
+            this.Controls.Add(this.btnPayment);
+            this.Controls.Add(this.dtpDrawerOpening);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.dtpckerPayment);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dtpOrders);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnPrintOrders);
+            this.Controls.Add(this.BackButton);
+            this.Name = "LogRegisterForm";
+            this.ScreenTitle = "Log Register";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Log Register";
+            this.Controls.SetChildIndex(this.BackButton, 0);
+            this.Controls.SetChildIndex(this.btnPrintOrders, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.dtpOrders, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.dtpckerPayment, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.dtpDrawerOpening, 0);
+            this.Controls.SetChildIndex(this.btnPayment, 0);
+            this.Controls.SetChildIndex(this.btnDrawerOpen, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.dtpCustomer, 0);
+            this.Controls.SetChildIndex(this.btnCustomerLog, 0);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dtpOrders;
+        private System.Windows.Forms.DateTimePicker dtpckerPayment;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dtpDrawerOpening;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dtpCustomer;
+        private System.Windows.Forms.Label label4;
+        private RMSUI.FunctionalButton BackButton;
+        private RMSUI.FunctionalButton btnPrintOrders;
+        private RMSUI.FunctionalButton btnPayment;
+        private RMSUI.FunctionalButton btnDrawerOpen;
+        private RMSUI.FunctionalButton btnCustomerLog;
+    }
+}

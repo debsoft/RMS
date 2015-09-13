@@ -1,0 +1,204 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using Managers.TableInfo;
+using RMS.Common.ObjectModel;
+using Managers.User;
+using System.IO;
+
+namespace RMS.Common
+{
+    public partial class CMultipleSplitForm : Form
+    {
+        private Int64 orderID;
+        private String tableType;
+        private DataTable dtItemList = new DataTable();
+
+        private Double totalAmount = 0;
+        private Double discount = 0;
+        private Double serviceCharge = 0.0;
+        private Double totalVatAmount = 0.0;
+
+        private string userName="";
+         private string terminalName="";
+
+        private COrderInfo tempOrderInfo;
+        private int splitNum = 0;
+        private StringPrintFormater stringPrintFormater;
+
+        public CMultipleSplitForm(Int64 inOrderID, Double inTotalAmount, Double inSerrvice, Double inDiscount, Double vat, String inTableType, DataTable inItemList, string userName, string terminalName)
+        {
+
+            InitializeComponent();
+            lblGuestbillText.Text = "";
+            orderID = inOrderID;
+            totalAmount = inTotalAmount;
+            discount = inDiscount;
+            serviceCharge = inSerrvice;
+            totalVatAmount = vat;
+            tableType = inTableType;
+            dtItemList = inItemList;
+            this.userName = userName;
+            this.terminalName = terminalName;
+
+            COrderManager tempOrderManager = new COrderManager();
+            tempOrderInfo = (COrderInfo)tempOrderManager.OrderInfoByOrderID(orderID).Data;
+            
+            stringPrintFormater = new StringPrintFormater(37);
+        }
+          
+        
+
+        private string getGestBill(int splitNumber)
+        {
+            
+         
+            string strGuestBillBody= "\r\nOrder Information";
+            strGuestBillBody += "\r\n" + stringPrintFormater.CreateDashedLine();
+            strGuestBillBody += "\r\n" + stringPrintFormater.ItemLabeledText("Qty    Item", "Price(" + Program.currency + ")");
+            strGuestBillBody += "\r\n" + stringPrintFormater.CreateDashedLine();
+            string qty="";
+            string itemName="";
+            Double itemPrice=0.0;
+            Double orderTotal = 0.0;
+            Double spliteddiscount = discount / splitNumber;
+            Double splitedServiceCharge = serviceCharge / splitNumber;
+            Double splitedVat = totalVatAmount / splitNumber;
+            Double splitedTotal = totalAmount / splitNumber;
+
+
+            foreach (DataRow row in dtItemList.Rows)
+            {  
+               qty=row[1].ToString();
+               itemName=row[0].ToString();
+               itemPrice= Double.Parse(row[3].ToString());
+
+               double price = itemPrice / splitNumber;
+               orderTotal += price;
+
+               strGuestBillBody += "\r\n" + stringPrintFormater.ItemLabeledText(qty + "/" + splitNumber + "  " + itemName, price.ToString("F02"));
+            }
+            strGuestBillBody += "\r\n" + stringPrintFormater.CreateDashedLine();
+            strGuestBillBody += "\r\n" + stringPrintFormater.SumupLabeledText("Order Total:", orderTotal.ToString("F02"));
+           
+            if (discount>0)
+            strGuestBillBody += "\r\n" + stringPrintFormater.SumupLabeledText("Discount:", spliteddiscount.ToString("F02"));
+
+            if (serviceCharge > 0)
+                strGuestBillBody += "\r\n" + stringPrintFormater.SumupLabeledText("Tips/Ser. Charge:", splitedServiceCharge.ToString("F02"));
+            if(Program.isVatEnabled)
+                strGuestBillBody += "\r\n" + stringPrintFormater.SumupLabeledText("Vat:", splitedVat.ToString("F02"));
+
+            strGuestBillBody += "\r\n" + stringPrintFormater.CreateDashedLine();
+
+            strGuestBillBody += "\r\n" + stringPrintFormater.SumupLabeledText("Total Payable:", splitedTotal.ToString("F02"));
+
+            strGuestBillBody += "\r\n" + stringPrintFormater.CreateDashedLine();
+          
+            return strGuestBillBody;
+        }
+
+        private void btnSplit_Click(object sender, EventArgs e)
+        {
+          
+            if(txtBoxSplit.Text.Trim()!="")
+            {
+                int i = 0; ;
+                bool result = int.TryParse(txtBoxSplit.Text, out i);
+                if (i > 1)
+                {
+                    lblGuestbillText.Text = getGestBill(i);
+                    splitNum = i;
+                    btnPrintGuestBill.Enabled = true;
+                }
+
+                else
+                    MessageBox.Show("You must select more than 1");
+            }
+
+        }
+
+        private void btnGuestBill_Click(object sender, EventArgs e)
+        {
+            CPrintMethodsEXT printMethods = new CPrintMethodsEXT();
+
+            string strGuestBillBody =  stringPrintFormater.CenterTextWithWhiteSpace("Guest Bill [Split# - {0}]"); ;
+
+            if (tableType == "Table")
+            {
+                strGuestBillBody += "\r\nTable Number:" + tempOrderInfo.TableNumber;
+            }
+            else
+            {
+                strGuestBillBody += "\r\nT/W Number:" + tempOrderInfo.TableNumber;
+            }
+            
+
+            strGuestBillBody += "\r\nOreder Type:" + tableType;
+            strGuestBillBody += "\r\nOrder Date:" + tempOrderInfo.OrderTime.ToString("dd/MM/yy hh:mm tt");
+            strGuestBillBody += "\r\nPrint Date:" + DateTime.Now.ToString("dd/MM/yy hh:mm tt");
+            strGuestBillBody += "\r\n";
+
+            strGuestBillBody += lblGuestbillText.Text;
+
+
+            strGuestBillBody += "\r\nServed By:" + userName;
+            strGuestBillBody += "\r\n:" + terminalName;
+      //      strGuestBillBody += "\r\nS/N:" + tempOrderInfo.SerialNo;
+         //   strGuestBillBody += "\r\n";
+         //   strGuestBillBody += "\r\nDeveloped By:";
+         //   strGuestBillBody += "\r\nwww.ibacs.co.uk";
+            strGuestBillBody += "\r\n";
+
+            strGuestBillBody += "\r\n" + stringPrintFormater.CreateDashedLine();
+            //stringPrintFormater
+
+            this.WriteString(strGuestBillBody);
+          
+            if (splitNum > 1)
+            {
+                for (int i = 0; i < splitNum; i++)
+                {
+                   string  str = string.Format(strGuestBillBody, i + 1);
+                   printMethods.USBPrint(str, PrintDestiNation.CLIENT, true);
+                }
+            }
+            else
+            {
+                MessageBox.Show("You must select more than 1");
+            }
+          
+
+        }
+        private void WriteString(string s)
+        {
+            StreamWriter fstr_out;
+
+            // Open the file directly using StreamWriter. 
+            try
+            {
+                fstr_out = new StreamWriter("rms_printedcopy.txt");
+            }
+            catch (IOException exc)
+            {
+                Console.WriteLine(exc.Message + "Cannot open file.");
+                return;
+            }
+
+            try
+            {
+                fstr_out.Write(s);
+            }
+            catch (IOException exc)
+            {
+                Console.WriteLine(exc.Message + "File Error");
+                return;
+            }
+            fstr_out.Close();
+        }     
+    }
+}

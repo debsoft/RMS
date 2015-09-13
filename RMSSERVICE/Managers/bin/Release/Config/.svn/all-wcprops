@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Managers/bin/Release/Config
+END
+FileHandlerConfig.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Managers/bin/Release/Config/FileHandlerConfig.xml
+END
+LoggerConfig.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Managers/bin/Release/Config/LoggerConfig.xml
+END
+SQLDBHandlerConfig.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Managers/bin/Release/Config/SQLDBHandlerConfig.xml
+END

@@ -1,0 +1,174 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <food_category_name>
+    <cat2_id>522</cat2_id>
+    <Category2_Name>HOT &amp; COLD APPETIZER</Category2_Name>
+    <Category1_Name>STEAK HOUSE MENU ITEM</Category1_Name>
+    <Category2_Order>1</Category2_Order>
+    <Parent_Category_Name>STEAK HOUSE MENU</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>523</cat2_id>
+    <Category2_Name>SOUP &amp; SALAD</Category2_Name>
+    <Category1_Name>STEAK HOUSE MENU ITEM</Category1_Name>
+    <Category2_Order>2</Category2_Order>
+    <Parent_Category_Name>STEAK HOUSE MENU</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>524</cat2_id>
+    <Category2_Name>CHICKEN</Category2_Name>
+    <Category1_Name>STEAK HOUSE MENU ITEM</Category1_Name>
+    <Category2_Order>3</Category2_Order>
+    <Parent_Category_Name>STEAK HOUSE MENU</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>525</cat2_id>
+    <Category2_Name>FISH &amp; LOBSTER</Category2_Name>
+    <Category1_Name>STEAK HOUSE MENU ITEM</Category1_Name>
+    <Category2_Order>4</Category2_Order>
+    <Parent_Category_Name>STEAK HOUSE MENU</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>526</cat2_id>
+    <Category2_Name>SPECIALITIES</Category2_Name>
+    <Category1_Name>STEAK HOUSE MENU ITEM</Category1_Name>
+    <Category2_Order>5</Category2_Order>
+    <Parent_Category_Name>STEAK HOUSE MENU</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>527</cat2_id>
+    <Category2_Name>SIGNATURE STEAKS</Category2_Name>
+    <Category1_Name>STEAK HOUSE MENU ITEM</Category1_Name>
+    <Category2_Order>6</Category2_Order>
+    <Parent_Category_Name>STEAK HOUSE MENU</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>528</cat2_id>
+    <Category2_Name>IMPORTED MEAT</Category2_Name>
+    <Category1_Name>STEAK HOUSE MENU ITEM</Category1_Name>
+    <Category2_Order>7</Category2_Order>
+    <Parent_Category_Name>STEAK HOUSE MENU</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>529</cat2_id>
+    <Category2_Name>SIDE DISHES</Category2_Name>
+    <Category1_Name>STEAK HOUSE MENU ITEM</Category1_Name>
+    <Category2_Order>8</Category2_Order>
+    <Parent_Category_Name>STEAK HOUSE MENU</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>530</cat2_id>
+    <Category2_Name>VEGETARIAN</Category2_Name>
+    <Category1_Name>STEAK HOUSE MENU ITEM</Category1_Name>
+    <Category2_Order>9</Category2_Order>
+    <Parent_Category_Name>STEAK HOUSE MENU</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>531</cat2_id>
+    <Category2_Name>HOT APPETIZERS</Category2_Name>
+    <Category1_Name>CHARCOAL MENU</Category1_Name>
+    <Category2_Order>10</Category2_Order>
+    <Parent_Category_Name>CHARCOAL MENU</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>532</cat2_id>
+    <Category2_Name>CHEFS SP ECIALITY</Category2_Name>
+    <Category1_Name>CHARCOAL MENU</Category1_Name>
+    <Category2_Order>11</Category2_Order>
+    <Parent_Category_Name>CHARCOAL MENU</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>533</cat2_id>
+    <Category2_Name>SALADS</Category2_Name>
+    <Category1_Name>CHARCOAL MENU</Category1_Name>
+    <Category2_Order>12</Category2_Order>
+    <Parent_Category_Name>CHARCOAL MENU</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>534</cat2_id>
+    <Category2_Name>SHARING PLATTERS</Category2_Name>
+    <Category1_Name>CHARCOAL MENU</Category1_Name>
+    <Category2_Order>13</Category2_Order>
+    <Parent_Category_Name>CHARCOAL MENU</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>535</cat2_id>
+    <Category2_Name>SOUPS</Category2_Name>
+    <Category1_Name>CHARCOAL MENU</Category1_Name>
+    <Category2_Order>14</Category2_Order>
+    <Parent_Category_Name>CHARCOAL MENU</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>536</cat2_id>
+    <Category2_Name>STEAKS AND GRILL</Category2_Name>
+    <Category1_Name>CHARCOAL MENU</Category1_Name>
+    <Category2_Order>15</Category2_Order>
+    <Parent_Category_Name>CHARCOAL MENU</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>537</cat2_id>
+    <Category2_Name>IMPORTED SIGNATURE STEAKS</Category2_Name>
+    <Category1_Name>CHARCOAL MENU</Category1_Name>
+    <Category2_Order>16</Category2_Order>
+    <Parent_Category_Name>CHARCOAL MENU</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>538</cat2_id>
+    <Category2_Name>SPICE &amp; RICE</Category2_Name>
+    <Category1_Name>CHARCOAL MENU</Category1_Name>
+    <Category2_Order>17</Category2_Order>
+    <Parent_Category_Name>CHARCOAL MENU</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>539</cat2_id>
+    <Category2_Name>CHICKEN AND FISH</Category2_Name>
+    <Category1_Name>CHARCOAL MENU</Category1_Name>
+    <Category2_Order>18</Category2_Order>
+    <Parent_Category_Name>CHARCOAL MENU</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>540</cat2_id>
+    <Category2_Name>SIDE ORDERS</Category2_Name>
+    <Category1_Name>CHARCOAL MENU</Category1_Name>
+    <Category2_Order>19</Category2_Order>
+    <Parent_Category_Name>CHARCOAL MENU</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+</DocumentElement>

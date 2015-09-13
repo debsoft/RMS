@@ -1,0 +1,109 @@
+﻿namespace RMS.Login
+{
+    partial class StartScreen
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.loadingtext = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel2.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::RMS.Properties.Resources.rms_logo_client;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel1.Location = new System.Drawing.Point(76, 10);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(148, 46);
+            this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(102, 73);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Welcome";
+            // 
+            // loadingtext
+            // 
+            this.loadingtext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.loadingtext.AutoSize = true;
+            this.loadingtext.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loadingtext.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.loadingtext.Location = new System.Drawing.Point(12, 7);
+            this.loadingtext.Name = "loadingtext";
+            this.loadingtext.Size = new System.Drawing.Size(50, 13);
+            this.loadingtext.TabIndex = 2;
+            this.loadingtext.Text = "loading...";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.loadingtext);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 112);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(300, 26);
+            this.panel2.TabIndex = 3;
+            // 
+            // StartScreen
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(169)))), ((int)(((byte)(214)))));
+            this.ClientSize = new System.Drawing.Size(300, 138);
+            this.ControlBox = false;
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.Name = "StartScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "StartScreen";
+            this.TopMost = true;
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label loadingtext;
+        private System.Windows.Forms.Panel panel2;
+    }
+}

@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[RMSAdmin.sln]
+SCC_Aux_Path = "\\Ibacs-server\Logs"
+SCC_Project_Name = "$/RMSAdmin/RMSAdmin", HCBAAAAA
+
+[RMSAdmin.csproj]
+SCC_Aux_Path = "\\Ibacs-server\Logs"
+SCC_Project_Name = "$/RMSAdmin/RMSAdmin/RMSAdmin", RHBAAAAA

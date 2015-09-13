@@ -1,0 +1,8 @@
+E:\Projects\RMS\RMSClient\Logger\bin\Debug\Config\SQLDBHandlerConfig.xml
+E:\Projects\RMS\RMSClient\Logger\bin\Debug\Config\FileHandlerConfig.xml
+E:\Projects\RMS\RMSClient\Logger\bin\Debug\Config\LoggerConfig.xml
+E:\Projects\RMS\RMSClient\Logger\bin\Debug\Logger.dll
+E:\Projects\RMS\RMSClient\Logger\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\RMS\RMSClient\Logger\obj\Debug\Logger.dll
+E:\Projects\RMS\RMSClient\Logger\obj\Debug\Logger.pdb
+E:\Projects\RMS\RMSClient\Logger\bin\Debug\Logger.pdb

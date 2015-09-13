@@ -1,0 +1,5 @@
+SCC = This is a Source Code Control file
+
+[Logger.csproj]
+SCC_Aux_Path = "\\Ibacs-server\Logs"
+SCC_Project_Name = "$/RMSClient/RMSClient/Logger", AGAAAAAA

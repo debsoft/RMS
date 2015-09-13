@@ -1,0 +1,45 @@
+D:\RMS\RMSAdminFinal\RMSAdmin\Logger\bin\Debug\Logger.dll
+D:\RMS\RMSAdminFinal\RMSAdmin\Logger\bin\Debug\Logger.pdb
+D:\RMS\RMSAdminFinal\RMSAdmin\Logger\obj\Debug\ResolveAssemblyReference.cache
+D:\RMS\RMSAdminFinal\RMSAdmin\Logger\obj\Debug\Logger.dll
+D:\RMS\RMSAdminFinal\RMSAdmin\Logger\obj\Debug\Logger.pdb
+D:\RMS\RMSAdminFinal\Logger\bin\Debug\Logger.dll
+D:\RMS\RMSAdminFinal\Logger\bin\Debug\Logger.pdb
+D:\RMS\RMSAdminFinal\Logger\obj\Debug\ResolveAssemblyReference.cache
+D:\RMS\RMSAdminFinal\Logger\obj\Debug\Logger.dll
+D:\RMS\RMSAdminFinal\Logger\obj\Debug\Logger.pdb
+D:\RMS BD\RMSAdminFinal\Logger\bin\Debug\Logger.dll
+D:\RMS BD\RMSAdminFinal\Logger\bin\Debug\Logger.pdb
+D:\RMS BD\RMSAdminFinal\Logger\obj\Debug\ResolveAssemblyReference.cache
+D:\RMS BD\RMSAdminFinal\Logger\obj\Debug\Logger.dll
+D:\RMS BD\RMSAdminFinal\Logger\obj\Debug\Logger.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@13012012\RMSAdminFinal\Logger\bin\Debug\Logger.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@13012012\RMSAdminFinal\Logger\bin\Debug\Logger.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@13012012\RMSAdminFinal\Logger\obj\Debug\ResolveAssemblyReference.cache
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@13012012\RMSAdminFinal\Logger\obj\Debug\Logger.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@13012012\RMSAdminFinal\Logger\obj\Debug\Logger.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@18012012\RMSAdminFinal\Logger\bin\Debug\Logger.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@18012012\RMSAdminFinal\Logger\bin\Debug\Logger.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@18012012\RMSAdminFinal\Logger\obj\Debug\ResolveAssemblyReference.cache
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@18012012\RMSAdminFinal\Logger\obj\Debug\Logger.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@18012012\RMSAdminFinal\Logger\obj\Debug\Logger.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@19062012\RMSAdminFinal\Logger\bin\Debug\Logger.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@19062012\RMSAdminFinal\Logger\bin\Debug\Logger.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@19062012\RMSAdminFinal\Logger\obj\Debug\ResolveAssemblyReference.cache
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@19062012\RMSAdminFinal\Logger\obj\Debug\Logger.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@19062012\RMSAdminFinal\Logger\obj\Debug\Logger.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@21062012\RMSAdminFinal\Logger\bin\Debug\Logger.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@21062012\RMSAdminFinal\Logger\bin\Debug\Logger.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@21062012\RMSAdminFinal\Logger\obj\Debug\ResolveAssemblyReference.cache
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@21062012\RMSAdminFinal\Logger\obj\Debug\Logger.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@21062012\RMSAdminFinal\Logger\obj\Debug\Logger.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Logger\bin\Debug\Logger.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Logger\bin\Debug\Logger.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Logger\obj\Debug\ResolveAssemblyReference.cache
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Logger\obj\Debug\Logger.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Logger\obj\Debug\Logger.pdb
+D:\Umme_working\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Logger\bin\Debug\Logger.dll
+D:\Umme_working\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Logger\bin\Debug\Logger.pdb
+D:\Umme_working\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Logger\obj\Debug\ResolveAssemblyReference.cache
+D:\Umme_working\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Logger\obj\Debug\Logger.dll
+D:\Umme_working\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Logger\obj\Debug\Logger.pdb

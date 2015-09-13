@@ -1,0 +1,482 @@
+﻿namespace RMS.Common
+{
+    partial class KitchenVoidForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KitchenVoidForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.BackButton = new RMSUI.FunctionalButton();
+            this.grpCurrent = new System.Windows.Forms.GroupBox();
+            this.lsvCurrent = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.grpRemovable = new System.Windows.Forms.GroupBox();
+            this.lsvRemovable = new System.Windows.Forms.ListView();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnRemove = new RMSUI.FunctionalButton();
+            this.btnReturn = new RMSUI.FunctionalButton();
+            this.dgvCurrentOrders = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSelectAll = new RMSUI.FunctionalButton();
+            this.btnDeselectAll = new RMSUI.FunctionalButton();
+            this.btnVoidItem = new RMSUI.FunctionalButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.grpCurrent.SuspendLayout();
+            this.grpRemovable.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCurrentOrders)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // BackButton
+            // 
+            this.BackButton.BackColor = System.Drawing.Color.Transparent;
+            this.BackButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BackButton.BackgroundImage")));
+            this.BackButton.BgImageOnMouseDown = ((System.Drawing.Image)(resources.GetObject("BackButton.BgImageOnMouseDown")));
+            this.BackButton.BgImageOnMouseUp = ((System.Drawing.Image)(resources.GetObject("BackButton.BgImageOnMouseUp")));
+            this.BackButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.BackButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BackButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackButton.Font = new System.Drawing.Font("Arial", 8F);
+            this.BackButton.ForeColorOnMouseDown = System.Drawing.Color.White;
+            this.BackButton.ForeColorOnMouseUp = System.Drawing.Color.Black;
+            this.BackButton.FunctionType = RMSUI.RMSUIConstants.FunctionType.Back;
+            this.BackButton.Image = ((System.Drawing.Image)(resources.GetObject("BackButton.Image")));
+            this.BackButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BackButton.Location = new System.Drawing.Point(552, 421);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(134, 40);
+            this.BackButton.TabIndex = 17;
+            this.BackButton.Text = "Back To Settings";
+            this.BackButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BackButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BackButton.UseVisualStyleBackColor = false;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
+            // grpCurrent
+            // 
+            this.grpCurrent.BackColor = System.Drawing.Color.Transparent;
+            this.grpCurrent.Controls.Add(this.lsvCurrent);
+            this.grpCurrent.ForeColor = System.Drawing.Color.White;
+            this.grpCurrent.Location = new System.Drawing.Point(94, 227);
+            this.grpCurrent.Name = "grpCurrent";
+            this.grpCurrent.Size = new System.Drawing.Size(253, 187);
+            this.grpCurrent.TabIndex = 18;
+            this.grpCurrent.TabStop = false;
+            this.grpCurrent.Text = "Current Items";
+            // 
+            // lsvCurrent
+            // 
+            this.lsvCurrent.CheckBoxes = true;
+            this.lsvCurrent.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader9,
+            this.columnHeader11});
+            this.lsvCurrent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsvCurrent.GridLines = true;
+            this.lsvCurrent.Location = new System.Drawing.Point(3, 16);
+            this.lsvCurrent.Name = "lsvCurrent";
+            this.lsvCurrent.Size = new System.Drawing.Size(247, 168);
+            this.lsvCurrent.TabIndex = 0;
+            this.lsvCurrent.UseCompatibleStateImageBehavior = false;
+            this.lsvCurrent.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Product Name";
+            this.columnHeader1.Width = 181;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Qty";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 59;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Price";
+            this.columnHeader5.Width = 0;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Product ID";
+            this.columnHeader6.Width = 0;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Order DetailID";
+            this.columnHeader9.Width = 0;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Food Type";
+            this.columnHeader11.Width = 0;
+            // 
+            // grpRemovable
+            // 
+            this.grpRemovable.BackColor = System.Drawing.Color.Transparent;
+            this.grpRemovable.Controls.Add(this.lsvRemovable);
+            this.grpRemovable.ForeColor = System.Drawing.Color.White;
+            this.grpRemovable.Location = new System.Drawing.Point(420, 227);
+            this.grpRemovable.Name = "grpRemovable";
+            this.grpRemovable.Size = new System.Drawing.Size(263, 187);
+            this.grpRemovable.TabIndex = 19;
+            this.grpRemovable.TabStop = false;
+            this.grpRemovable.Text = "Removable Items";
+            // 
+            // lsvRemovable
+            // 
+            this.lsvRemovable.CheckBoxes = true;
+            this.lsvRemovable.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader10,
+            this.columnHeader12});
+            this.lsvRemovable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsvRemovable.GridLines = true;
+            this.lsvRemovable.Location = new System.Drawing.Point(3, 16);
+            this.lsvRemovable.Name = "lsvRemovable";
+            this.lsvRemovable.Size = new System.Drawing.Size(257, 168);
+            this.lsvRemovable.TabIndex = 1;
+            this.lsvRemovable.UseCompatibleStateImageBehavior = false;
+            this.lsvRemovable.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Product Name";
+            this.columnHeader3.Width = 187;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Qty";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 68;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Price";
+            this.columnHeader7.Width = 0;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Product ID";
+            this.columnHeader8.Width = 0;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Width = 0;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "Food Type";
+            this.columnHeader12.Width = 0;
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.BackColor = System.Drawing.Color.Transparent;
+            this.btnRemove.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRemove.BackgroundImage")));
+            this.btnRemove.BgImageOnMouseDown = ((System.Drawing.Image)(resources.GetObject("btnRemove.BgImageOnMouseDown")));
+            this.btnRemove.BgImageOnMouseUp = ((System.Drawing.Image)(resources.GetObject("btnRemove.BgImageOnMouseUp")));
+            this.btnRemove.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnRemove.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnRemove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemove.Font = new System.Drawing.Font("Arial", 10F);
+            this.btnRemove.ForeColorOnMouseDown = System.Drawing.Color.White;
+            this.btnRemove.ForeColorOnMouseUp = System.Drawing.Color.Black;
+            this.btnRemove.FunctionType = RMSUI.RMSUIConstants.FunctionType.Next;
+            this.btnRemove.Image = ((System.Drawing.Image)(resources.GetObject("btnRemove.Image")));
+            this.btnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRemove.Location = new System.Drawing.Point(353, 243);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(52, 54);
+            this.btnRemove.TabIndex = 20;
+            this.btnRemove.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRemove.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
+            // btnReturn
+            // 
+            this.btnReturn.BackColor = System.Drawing.Color.Transparent;
+            this.btnReturn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReturn.BackgroundImage")));
+            this.btnReturn.BgImageOnMouseDown = ((System.Drawing.Image)(resources.GetObject("btnReturn.BgImageOnMouseDown")));
+            this.btnReturn.BgImageOnMouseUp = ((System.Drawing.Image)(resources.GetObject("btnReturn.BgImageOnMouseUp")));
+            this.btnReturn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnReturn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnReturn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReturn.Font = new System.Drawing.Font("Arial", 10F);
+            this.btnReturn.ForeColorOnMouseDown = System.Drawing.Color.White;
+            this.btnReturn.ForeColorOnMouseUp = System.Drawing.Color.Black;
+            this.btnReturn.FunctionType = RMSUI.RMSUIConstants.FunctionType.Previous;
+            this.btnReturn.Image = ((System.Drawing.Image)(resources.GetObject("btnReturn.Image")));
+            this.btnReturn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReturn.Location = new System.Drawing.Point(353, 304);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(52, 54);
+            this.btnReturn.TabIndex = 21;
+            this.btnReturn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReturn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            // 
+            // dgvCurrentOrders
+            // 
+            this.dgvCurrentOrders.AllowUserToAddRows = false;
+            this.dgvCurrentOrders.AllowUserToDeleteRows = false;
+            this.dgvCurrentOrders.AllowUserToResizeColumns = false;
+            this.dgvCurrentOrders.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCurrentOrders.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvCurrentOrders.ColumnHeadersHeight = 25;
+            this.dgvCurrentOrders.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCurrentOrders.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvCurrentOrders.Location = new System.Drawing.Point(96, 66);
+            this.dgvCurrentOrders.Name = "dgvCurrentOrders";
+            this.dgvCurrentOrders.ReadOnly = true;
+            this.dgvCurrentOrders.RowHeadersVisible = false;
+            this.dgvCurrentOrders.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
+            this.dgvCurrentOrders.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvCurrentOrders.Size = new System.Drawing.Size(478, 155);
+            this.dgvCurrentOrders.TabIndex = 22;
+            this.dgvCurrentOrders.SelectionChanged += new System.EventHandler(this.dgvCurrentOrders_SelectionChanged);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Order ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "Order Name";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Online Order ID";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Visible = false;
+            // 
+            // btnSelectAll
+            // 
+            this.btnSelectAll.BackColor = System.Drawing.Color.Transparent;
+            this.btnSelectAll.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSelectAll.BackgroundImage")));
+            this.btnSelectAll.BgImageOnMouseDown = ((System.Drawing.Image)(resources.GetObject("btnSelectAll.BgImageOnMouseDown")));
+            this.btnSelectAll.BgImageOnMouseUp = ((System.Drawing.Image)(resources.GetObject("btnSelectAll.BgImageOnMouseUp")));
+            this.btnSelectAll.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnSelectAll.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSelectAll.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSelectAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelectAll.Font = new System.Drawing.Font("Arial", 10F);
+            this.btnSelectAll.ForeColorOnMouseDown = System.Drawing.Color.White;
+            this.btnSelectAll.ForeColorOnMouseUp = System.Drawing.Color.Black;
+            this.btnSelectAll.FunctionType = RMSUI.RMSUIConstants.FunctionType.Normal;
+            this.btnSelectAll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSelectAll.Location = new System.Drawing.Point(94, 420);
+            this.btnSelectAll.Name = "btnSelectAll";
+            this.btnSelectAll.Size = new System.Drawing.Size(121, 40);
+            this.btnSelectAll.TabIndex = 23;
+            this.btnSelectAll.Text = "Select All";
+            this.btnSelectAll.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSelectAll.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSelectAll.UseVisualStyleBackColor = false;
+            this.btnSelectAll.Visible = false;
+            this.btnSelectAll.Click += new System.EventHandler(this.btnSelectAll_Click);
+            // 
+            // btnDeselectAll
+            // 
+            this.btnDeselectAll.BackColor = System.Drawing.Color.Transparent;
+            this.btnDeselectAll.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDeselectAll.BackgroundImage")));
+            this.btnDeselectAll.BgImageOnMouseDown = ((System.Drawing.Image)(resources.GetObject("btnDeselectAll.BgImageOnMouseDown")));
+            this.btnDeselectAll.BgImageOnMouseUp = ((System.Drawing.Image)(resources.GetObject("btnDeselectAll.BgImageOnMouseUp")));
+            this.btnDeselectAll.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnDeselectAll.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDeselectAll.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnDeselectAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeselectAll.Font = new System.Drawing.Font("Arial", 10F);
+            this.btnDeselectAll.ForeColorOnMouseDown = System.Drawing.Color.White;
+            this.btnDeselectAll.ForeColorOnMouseUp = System.Drawing.Color.Black;
+            this.btnDeselectAll.FunctionType = RMSUI.RMSUIConstants.FunctionType.Normal;
+            this.btnDeselectAll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeselectAll.Location = new System.Drawing.Point(232, 419);
+            this.btnDeselectAll.Name = "btnDeselectAll";
+            this.btnDeselectAll.Size = new System.Drawing.Size(121, 40);
+            this.btnDeselectAll.TabIndex = 24;
+            this.btnDeselectAll.Text = "De-select All";
+            this.btnDeselectAll.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeselectAll.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDeselectAll.UseVisualStyleBackColor = false;
+            this.btnDeselectAll.Visible = false;
+            this.btnDeselectAll.Click += new System.EventHandler(this.btnDeselectAll_Click);
+            // 
+            // btnVoidItem
+            // 
+            this.btnVoidItem.BackColor = System.Drawing.Color.Transparent;
+            this.btnVoidItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVoidItem.BackgroundImage")));
+            this.btnVoidItem.BgImageOnMouseDown = ((System.Drawing.Image)(resources.GetObject("btnVoidItem.BgImageOnMouseDown")));
+            this.btnVoidItem.BgImageOnMouseUp = ((System.Drawing.Image)(resources.GetObject("btnVoidItem.BgImageOnMouseUp")));
+            this.btnVoidItem.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnVoidItem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnVoidItem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnVoidItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoidItem.Font = new System.Drawing.Font("Arial", 10F);
+            this.btnVoidItem.ForeColorOnMouseDown = System.Drawing.Color.White;
+            this.btnVoidItem.ForeColorOnMouseUp = System.Drawing.Color.Black;
+            this.btnVoidItem.FunctionType = RMSUI.RMSUIConstants.FunctionType.NormalCenter;
+            this.btnVoidItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVoidItem.Location = new System.Drawing.Point(420, 420);
+            this.btnVoidItem.Name = "btnVoidItem";
+            this.btnVoidItem.Size = new System.Drawing.Size(125, 40);
+            this.btnVoidItem.TabIndex = 25;
+            this.btnVoidItem.Text = "Void Items";
+            this.btnVoidItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnVoidItem.UseVisualStyleBackColor = false;
+            this.btnVoidItem.Click += new System.EventHandler(this.btnVoidItem_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(110, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 13);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Current Order List";
+            // 
+            // KitchenVoidForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnVoidItem);
+            this.Controls.Add(this.btnDeselectAll);
+            this.Controls.Add(this.btnSelectAll);
+            this.Controls.Add(this.dgvCurrentOrders);
+            this.Controls.Add(this.btnReturn);
+            this.Controls.Add(this.btnRemove);
+            this.Controls.Add(this.grpRemovable);
+            this.Controls.Add(this.grpCurrent);
+            this.Controls.Add(this.BackButton);
+            this.Name = "KitchenVoidForm";
+            this.ScreenTitle = "Kitchen Void Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "KitchenVoidForm";
+            this.Activated += new System.EventHandler(this.KitchenVoidForm_Activated);
+            this.Load += new System.EventHandler(this.KitchenVoidForm_Load);
+            this.Controls.SetChildIndex(this.BackButton, 0);
+            this.Controls.SetChildIndex(this.grpCurrent, 0);
+            this.Controls.SetChildIndex(this.grpRemovable, 0);
+            this.Controls.SetChildIndex(this.btnRemove, 0);
+            this.Controls.SetChildIndex(this.btnReturn, 0);
+            this.Controls.SetChildIndex(this.dgvCurrentOrders, 0);
+            this.Controls.SetChildIndex(this.btnSelectAll, 0);
+            this.Controls.SetChildIndex(this.btnDeselectAll, 0);
+            this.Controls.SetChildIndex(this.btnVoidItem, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.grpCurrent.ResumeLayout(false);
+            this.grpRemovable.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCurrentOrders)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.GroupBox grpCurrent;
+        private System.Windows.Forms.GroupBox grpRemovable;
+        private System.Windows.Forms.DataGridView dgvCurrentOrders;
+        private System.Windows.Forms.ListView lsvCurrent;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ListView lsvRemovable;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
+        private RMSUI.FunctionalButton BackButton;
+        private RMSUI.FunctionalButton btnVoidItem;
+        private RMSUI.FunctionalButton btnSelectAll;
+        private RMSUI.FunctionalButton btnDeselectAll;
+        private RMSUI.FunctionalButton btnRemove;
+        private RMSUI.FunctionalButton btnReturn;
+    }
+}

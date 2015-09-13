@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CDalConfig>
+  <ConfigName>database</ConfigName>
+
+  <!-- "SqlServer" or "Oracle" or "OleDb" or "ODBC" -->
+  <Provider>SqlServer</Provider>
+
+  <ShowMouse>true</ShowMouse>
+  <!-- Data: "Manual" or "Auto" or blank ("") data as default. Default means 'Auto' -->
+  <PoolType>Auto</PoolType>
+
+</CDalConfig>

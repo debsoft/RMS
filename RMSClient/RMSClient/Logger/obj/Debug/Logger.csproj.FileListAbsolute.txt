@@ -1,0 +1,16 @@
+F:\rms\RMSClient\RMSClient\Logger\bin\Debug\Config\SQLDBHandlerConfig.xml
+F:\rms\RMSClient\RMSClient\Logger\bin\Debug\Config\FileHandlerConfig.xml
+F:\rms\RMSClient\RMSClient\Logger\bin\Debug\Config\LoggerConfig.xml
+F:\rms\RMSClient\RMSClient\Logger\bin\Debug\Logger.dll
+F:\rms\RMSClient\RMSClient\Logger\bin\Debug\Logger.pdb
+F:\rms\RMSClient\RMSClient\Logger\obj\Debug\ResolveAssemblyReference.cache
+F:\rms\RMSClient\RMSClient\Logger\obj\Debug\Logger.dll
+F:\rms\RMSClient\RMSClient\Logger\obj\Debug\Logger.pdb
+D:\rms\RMSClient\RMSClient\Logger\bin\Debug\Config\SQLDBHandlerConfig.xml
+D:\rms\RMSClient\RMSClient\Logger\bin\Debug\Config\FileHandlerConfig.xml
+D:\rms\RMSClient\RMSClient\Logger\bin\Debug\Config\LoggerConfig.xml
+D:\rms\RMSClient\RMSClient\Logger\bin\Debug\Logger.dll
+D:\rms\RMSClient\RMSClient\Logger\bin\Debug\Logger.pdb
+D:\rms\RMSClient\RMSClient\Logger\obj\Debug\ResolveAssemblyReference.cache
+D:\rms\RMSClient\RMSClient\Logger\obj\Debug\Logger.dll
+D:\rms\RMSClient\RMSClient\Logger\obj\Debug\Logger.pdb

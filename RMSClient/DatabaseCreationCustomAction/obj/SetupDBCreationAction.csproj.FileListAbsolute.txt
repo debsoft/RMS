@@ -1,0 +1,7 @@
+E:\Projects\RMS\RMSClient\DatabaseCreationCustomAction\bin\Debug\CellBazaarSvcSetupDBCreationAction.dll
+E:\Projects\RMS\RMSClient\DatabaseCreationCustomAction\bin\Debug\CellBazaarSvcSetupDBCreationAction.pdb
+E:\Projects\RMS\RMSClient\DatabaseCreationCustomAction\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\RMS\RMSClient\DatabaseCreationCustomAction\obj\Debug\CellBazaarSvcSetupDBCreationAction.App_Tables.sql
+E:\Projects\RMS\RMSClient\DatabaseCreationCustomAction\obj\Debug\CellBazaarSvcSetupDBCreationAction.App_Database.sql
+E:\Projects\RMS\RMSClient\DatabaseCreationCustomAction\obj\Debug\CellBazaarSvcSetupDBCreationAction.dll
+E:\Projects\RMS\RMSClient\DatabaseCreationCustomAction\obj\Debug\CellBazaarSvcSetupDBCreationAction.pdb

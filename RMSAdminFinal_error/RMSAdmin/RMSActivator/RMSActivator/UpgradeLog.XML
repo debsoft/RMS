@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="RMSActivator">
+</Property><Property Name="Solution File" Value="D:\RMS\RMSActivator\RMSActivator\RMSActivator.sln">
+</Property><Property Name="Date" Value="Wednesday, April 22, 2009">
+</Property><Property Name="Time" Value="16:48 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="RMSActivator.sln" Description="File successfully backed up as D:\RMS\RMSActivator\RMSActivator\Backup\RMSActivator.sln">
+</Event><Event ErrorLevel="0" Project="Activator" Source="TrialMaker\Activator.csproj" Description="Project file successfully backed up as D:\RMS\RMSActivator\RMSActivator\Backup\TrialMaker\Activator.csproj">
+</Event><Event ErrorLevel="0" Project="Activator" Source="TrialMaker\Encryption.cs" Description="File successfully backed up as D:\RMS\RMSActivator\RMSActivator\Backup\TrialMaker\Encryption.cs">
+</Event><Event ErrorLevel="0" Project="Activator" Source="TrialMaker\FileReadWrite.cs" Description="File successfully backed up as D:\RMS\RMSActivator\RMSActivator\Backup\TrialMaker\FileReadWrite.cs">
+</Event><Event ErrorLevel="0" Project="Activator" Source="TrialMaker\frmDialog.cs" Description="File successfully backed up as D:\RMS\RMSActivator\RMSActivator\Backup\TrialMaker\frmDialog.cs">
+</Event><Event ErrorLevel="0" Project="Activator" Source="TrialMaker\frmDialog.Designer.cs" Description="File successfully backed up as D:\RMS\RMSActivator\RMSActivator\Backup\TrialMaker\frmDialog.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Activator" Source="TrialMaker\Properties\Resources.Designer.cs" Description="File successfully backed up as D:\RMS\RMSActivator\RMSActivator\Backup\TrialMaker\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Activator" Source="TrialMaker\SystemInfo.cs" Description="File successfully backed up as D:\RMS\RMSActivator\RMSActivator\Backup\TrialMaker\SystemInfo.cs">
+</Event><Event ErrorLevel="0" Project="Activator" Source="TrialMaker\TimeExpiredForm.cs" Description="File successfully backed up as D:\RMS\RMSActivator\RMSActivator\Backup\TrialMaker\TimeExpiredForm.cs">
+</Event><Event ErrorLevel="0" Project="Activator" Source="TrialMaker\TimeExpiredForm.Designer.cs" Description="File successfully backed up as D:\RMS\RMSActivator\RMSActivator\Backup\TrialMaker\TimeExpiredForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Activator" Source="TrialMaker\TrialMaker.cs" Description="File successfully backed up as D:\RMS\RMSActivator\RMSActivator\Backup\TrialMaker\TrialMaker.cs">
+</Event><Event ErrorLevel="0" Project="Activator" Source="TrialMaker\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\RMS\RMSActivator\RMSActivator\Backup\TrialMaker\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Activator" Source="TrialMaker\Resources\tick.png" Description="File successfully backed up as D:\RMS\RMSActivator\RMSActivator\Backup\TrialMaker\Resources\tick.png">
+</Event><Event ErrorLevel="0" Project="Activator" Source="TrialMaker\LockUsage.txt" Description="File successfully backed up as D:\RMS\RMSActivator\RMSActivator\Backup\TrialMaker\LockUsage.txt">
+</Event><Event ErrorLevel="0" Project="Activator" Source="TrialMaker\frmDialog.resx" Description="File successfully backed up as D:\RMS\RMSActivator\RMSActivator\Backup\TrialMaker\frmDialog.resx">
+</Event><Event ErrorLevel="0" Project="Activator" Source="TrialMaker\Properties\Resources.resx" Description="File successfully backed up as D:\RMS\RMSActivator\RMSActivator\Backup\TrialMaker\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="Activator" Source="TrialMaker\TimeExpiredForm.resx" Description="File successfully backed up as D:\RMS\RMSActivator\RMSActivator\Backup\TrialMaker\TimeExpiredForm.resx">
+</Event><Event ErrorLevel="0" Project="Activator" Source="TrialMaker\Activator.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Activator" Source="TrialMaker\Activator.csproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="TestActivator" Source="..\..\App_Activation\TrialMaker Example\TrialMaker Example\TestActivator.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="2" Project="TestActivator" Source="..\..\App_Activation\TrialMaker Example\TrialMaker Example\TestActivator.csproj" Description="Unable to open project file to perform upgrade.  ">
+</Event><Event ErrorLevel="0" Project="" Source="RMSActivator.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="RMSActivator.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Activator" Source="TrialMaker\Activator.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

@@ -1,0 +1,176 @@
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\bin\Debug\SampleFiles\Config.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\bin\Debug\SampleFiles\ConfigCollectionTest.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\bin\Debug\SampleFiles\ConfigTest.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\bin\Debug\Config\Config.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\bin\Debug\Config\FileHandlerConfig.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\bin\Debug\Config\LoggerConfig.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\bin\Debug\Config\SQLDBHandlerConfig.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\bin\Debug\Common.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\bin\Debug\ConfigService.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\bin\Debug\RmsRemote.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\bin\Debug\RMSServer.exe
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\bin\Debug\Logger.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\bin\Debug\Managers.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\bin\Debug\DAL.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\bin\Debug\Logger.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\bin\Debug\Common.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\bin\Debug\ConfigService.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\bin\Debug\Managers.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\bin\Debug\DAL.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\bin\Debug\RmsRemote.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\bin\Debug\RMSServer.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\obj\Debug\WindowsApplication1.Form1.resources
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\obj\Debug\WindowsApplication1.Properties.Resources.resources
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\obj\Debug\WindowsApplication1.csproj.GenerateResource.Cache
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\bin\Debug\SampleFiles\Config.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\bin\Debug\SampleFiles\ConfigCollectionTest.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\bin\Debug\SampleFiles\ConfigTest.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\bin\Debug\Config\Config.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\bin\Debug\Config\FileHandlerConfig.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\bin\Debug\Config\LoggerConfig.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\bin\Debug\Config\SQLDBHandlerConfig.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\bin\Debug\Common.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\bin\Debug\ConfigService.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\bin\Debug\RmsRemote.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\bin\Debug\RMSServer.exe
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\bin\Debug\Logger.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\bin\Debug\Managers.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\bin\Debug\DAL.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\bin\Debug\Logger.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\bin\Debug\Common.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\bin\Debug\ConfigService.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\bin\Debug\Managers.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\bin\Debug\DAL.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\bin\Debug\RmsRemote.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\bin\Debug\RMSServer.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\obj\Debug\WindowsApplication1.Form1.resources
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\obj\Debug\WindowsApplication1.Properties.Resources.resources
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\obj\Debug\WindowsApplication1.csproj.GenerateResource.Cache
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+E:\Projects\RMSSERVICE\WindowsApplication1\bin\Debug\SampleFiles\Config.xml
+E:\Projects\RMSSERVICE\WindowsApplication1\bin\Debug\SampleFiles\ConfigCollectionTest.xml
+E:\Projects\RMSSERVICE\WindowsApplication1\bin\Debug\SampleFiles\ConfigTest.xml
+E:\Projects\RMSSERVICE\WindowsApplication1\bin\Debug\Config\Config.xml
+E:\Projects\RMSSERVICE\WindowsApplication1\bin\Debug\Config\FileHandlerConfig.xml
+E:\Projects\RMSSERVICE\WindowsApplication1\bin\Debug\Config\LoggerConfig.xml
+E:\Projects\RMSSERVICE\WindowsApplication1\bin\Debug\Config\SQLDBHandlerConfig.xml
+E:\Projects\RMSSERVICE\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+E:\Projects\RMSSERVICE\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+E:\Projects\RMSSERVICE\WindowsApplication1\bin\Debug\Common.dll
+E:\Projects\RMSSERVICE\WindowsApplication1\bin\Debug\ConfigService.dll
+E:\Projects\RMSSERVICE\WindowsApplication1\bin\Debug\RmsRemote.dll
+E:\Projects\RMSSERVICE\WindowsApplication1\bin\Debug\RMSServer.exe
+E:\Projects\RMSSERVICE\WindowsApplication1\bin\Debug\Logger.dll
+E:\Projects\RMSSERVICE\WindowsApplication1\bin\Debug\Managers.dll
+E:\Projects\RMSSERVICE\WindowsApplication1\bin\Debug\DAL.dll
+E:\Projects\RMSSERVICE\WindowsApplication1\bin\Debug\Logger.pdb
+E:\Projects\RMSSERVICE\WindowsApplication1\bin\Debug\Common.pdb
+E:\Projects\RMSSERVICE\WindowsApplication1\bin\Debug\ConfigService.pdb
+E:\Projects\RMSSERVICE\WindowsApplication1\bin\Debug\Managers.pdb
+E:\Projects\RMSSERVICE\WindowsApplication1\bin\Debug\DAL.pdb
+E:\Projects\RMSSERVICE\WindowsApplication1\bin\Debug\RmsRemote.pdb
+E:\Projects\RMSSERVICE\WindowsApplication1\bin\Debug\RMSServer.pdb
+E:\Projects\RMSSERVICE\WindowsApplication1\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\RMSSERVICE\WindowsApplication1\obj\Debug\WindowsApplication1.Form1.resources
+E:\Projects\RMSSERVICE\WindowsApplication1\obj\Debug\WindowsApplication1.Properties.Resources.resources
+E:\Projects\RMSSERVICE\WindowsApplication1\obj\Debug\WindowsApplication1.csproj.GenerateResource.Cache
+E:\Projects\RMSSERVICE\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+E:\Projects\RMSSERVICE\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\SampleFiles\Config.xml
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\SampleFiles\ConfigCollectionTest.xml
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\SampleFiles\ConfigTest.xml
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\Config\Config.xml
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\Config\FileHandlerConfig.xml
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\Config\LoggerConfig.xml
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\Config\SQLDBHandlerConfig.xml
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\Common.dll
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\ConfigService.dll
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\RmsRemote.dll
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\RMSServer.exe
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\Logger.dll
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\Managers.dll
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\DAL.dll
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\Logger.pdb
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\Common.pdb
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\ConfigService.pdb
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\Managers.pdb
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\DAL.pdb
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\RmsRemote.pdb
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\RMSServer.pdb
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\obj\Debug\WindowsApplication1.Form1.resources
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\obj\Debug\WindowsApplication1.Properties.Resources.resources
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\obj\Debug\WindowsApplication1.csproj.GenerateResource.Cache
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+E:\Projects\RMS\RMSSERVICE\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+D:\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\SampleFiles\Config.xml
+D:\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\SampleFiles\ConfigCollectionTest.xml
+D:\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\SampleFiles\ConfigTest.xml
+D:\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\Config\Config.xml
+D:\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\Config\FileHandlerConfig.xml
+D:\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\Config\LoggerConfig.xml
+D:\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\Config\SQLDBHandlerConfig.xml
+D:\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+D:\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+D:\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\Common.dll
+D:\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\ConfigService.dll
+D:\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\RmsRemote.dll
+D:\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\RMSServer.exe
+D:\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\Logger.dll
+D:\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\Managers.dll
+D:\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\DAL.dll
+D:\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\Logger.pdb
+D:\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\Common.pdb
+D:\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\ConfigService.pdb
+D:\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\Managers.pdb
+D:\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\DAL.pdb
+D:\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\RmsRemote.pdb
+D:\RMS\RMSSERVICE\WindowsApplication1\bin\Debug\RMSServer.pdb
+D:\RMS\RMSSERVICE\WindowsApplication1\obj\Debug\ResolveAssemblyReference.cache
+D:\RMS\RMSSERVICE\WindowsApplication1\obj\Debug\WindowsApplication1.Form1.resources
+D:\RMS\RMSSERVICE\WindowsApplication1\obj\Debug\WindowsApplication1.Properties.Resources.resources
+D:\RMS\RMSSERVICE\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+D:\RMS\RMSSERVICE\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+D:\rms\RMSSERVICE\WindowsApplication1\obj\Debug\GenerateResource-ResGen.read.1.tlog
+D:\rms\RMSSERVICE\WindowsApplication1\obj\Debug\GenerateResource-ResGen.write.1.tlog
+D:\RMS BD\RMSSERVICE\WindowsApplication1\bin\Debug\SampleFiles\Config.xml
+D:\RMS BD\RMSSERVICE\WindowsApplication1\bin\Debug\SampleFiles\ConfigCollectionTest.xml
+D:\RMS BD\RMSSERVICE\WindowsApplication1\bin\Debug\SampleFiles\ConfigTest.xml
+D:\RMS BD\RMSSERVICE\WindowsApplication1\bin\Debug\Config\SQLDBHandlerConfig.xml
+D:\RMS BD\RMSSERVICE\WindowsApplication1\bin\Debug\Config\FileHandlerConfig.xml
+D:\RMS BD\RMSSERVICE\WindowsApplication1\bin\Debug\Config\LoggerConfig.xml
+D:\RMS BD\RMSSERVICE\WindowsApplication1\bin\Debug\Config\Config.xml
+D:\RMS BD\RMSSERVICE\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+D:\RMS BD\RMSSERVICE\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+D:\RMS BD\RMSSERVICE\WindowsApplication1\bin\Debug\Common.dll
+D:\RMS BD\RMSSERVICE\WindowsApplication1\bin\Debug\ConfigService.dll
+D:\RMS BD\RMSSERVICE\WindowsApplication1\bin\Debug\RmsRemote.dll
+D:\RMS BD\RMSSERVICE\WindowsApplication1\bin\Debug\RMSServer.exe
+D:\RMS BD\RMSSERVICE\WindowsApplication1\bin\Debug\Logger.dll
+D:\RMS BD\RMSSERVICE\WindowsApplication1\bin\Debug\Managers.dll
+D:\RMS BD\RMSSERVICE\WindowsApplication1\bin\Debug\DAL.dll
+D:\RMS BD\RMSSERVICE\WindowsApplication1\bin\Debug\Common.pdb
+D:\RMS BD\RMSSERVICE\WindowsApplication1\bin\Debug\ConfigService.pdb
+D:\RMS BD\RMSSERVICE\WindowsApplication1\bin\Debug\RmsRemote.pdb
+D:\RMS BD\RMSSERVICE\WindowsApplication1\bin\Debug\RMSServer.pdb
+D:\RMS BD\RMSSERVICE\WindowsApplication1\bin\Debug\Logger.pdb
+D:\RMS BD\RMSSERVICE\WindowsApplication1\bin\Debug\Managers.pdb
+D:\RMS BD\RMSSERVICE\WindowsApplication1\bin\Debug\DAL.pdb
+D:\RMS BD\RMSSERVICE\WindowsApplication1\obj\Debug\ResolveAssemblyReference.cache
+D:\RMS BD\RMSSERVICE\WindowsApplication1\obj\Debug\WindowsApplication1.Form1.resources
+D:\RMS BD\RMSSERVICE\WindowsApplication1\obj\Debug\WindowsApplication1.Properties.Resources.resources
+D:\RMS BD\RMSSERVICE\WindowsApplication1\obj\Debug\GenerateResource-ResGen.read.1.tlog
+D:\RMS BD\RMSSERVICE\WindowsApplication1\obj\Debug\GenerateResource-ResGen.write.1.tlog
+D:\RMS BD\RMSSERVICE\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+D:\RMS BD\RMSSERVICE\WindowsApplication1\obj\Debug\WindowsApplication1.pdb

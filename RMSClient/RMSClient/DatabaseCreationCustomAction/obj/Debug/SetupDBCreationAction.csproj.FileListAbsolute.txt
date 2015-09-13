@@ -1,0 +1,10 @@
+F:\rms\RMSClient\RMSClient\DatabaseCreationCustomAction\bin\Debug\CellBazaarSvcSetupDBCreationAction.dll
+F:\rms\RMSClient\RMSClient\DatabaseCreationCustomAction\bin\Debug\CellBazaarSvcSetupDBCreationAction.pdb
+F:\rms\RMSClient\RMSClient\DatabaseCreationCustomAction\obj\Debug\ResolveAssemblyReference.cache
+F:\rms\RMSClient\RMSClient\DatabaseCreationCustomAction\obj\Debug\CellBazaarSvcSetupDBCreationAction.dll
+F:\rms\RMSClient\RMSClient\DatabaseCreationCustomAction\obj\Debug\CellBazaarSvcSetupDBCreationAction.pdb
+D:\rms\RMSClient\RMSClient\DatabaseCreationCustomAction\bin\Debug\CellBazaarSvcSetupDBCreationAction.dll
+D:\rms\RMSClient\RMSClient\DatabaseCreationCustomAction\bin\Debug\CellBazaarSvcSetupDBCreationAction.pdb
+D:\rms\RMSClient\RMSClient\DatabaseCreationCustomAction\obj\Debug\ResolveAssemblyReference.cache
+D:\rms\RMSClient\RMSClient\DatabaseCreationCustomAction\obj\Debug\CellBazaarSvcSetupDBCreationAction.dll
+D:\rms\RMSClient\RMSClient\DatabaseCreationCustomAction\obj\Debug\CellBazaarSvcSetupDBCreationAction.pdb

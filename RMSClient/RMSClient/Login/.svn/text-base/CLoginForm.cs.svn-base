@@ -1,0 +1,452 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using RMS.Common;
+using Managers.User;
+using RMS.Common.ObjectModel;
+using RMS.Main;
+using RmsRemote;
+using RMS.Common.Config;
+using Managers.TableInfo;
+using System.Net;
+using System.Data.SqlTypes;
+using System.Xml;
+using System.IO.Ports;
+using Managers.Customer;
+using System.IO;
+using RMSUI;
+
+namespace RMS.Login
+{
+
+    public partial class CLoginForm : BaseForm
+    {
+        private const int MAX_USER_BUTTON = 24;
+       // private UserButton[] buttons;
+        private UserLoginButton[] buttons;
+        private int m_iStartingPoint=0;
+        private bool _Trial;
+        private SerialPort comPort = new SerialPort();
+        private string comPortName = String.Empty;
+        private string baudRate = String.Empty;
+        private string m_callerIDCommand = String.Empty;
+
+        public CLoginForm(bool IsTrial)
+        {
+            InitializeComponent();
+            this.ScreenTitle = "User Login";
+
+            //Timetimer.Start();                       //starts the timer to show time dynamically
+
+            //ConfigManager.Init();
+            //ConfigManager.ReloadConfig();
+            //CCommonConstants oTempConstant = ConfigManager.GetConfig<CCommonConstants>();
+            //MessageBox.Show(oTempConstant.DBConnection);
+           // Guid g = Guid.NewGuid();
+           // MessageBox.Show(g.ToString());
+            _Trial = IsTrial;
+            loadVatRegDescription();
+          
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                this.SetModemConfiguration();
+                RMSGlobal.m_phoneNumber = "There is no call";
+                RMSGlobal.m_CallerName = "There is no call";
+                RMSGlobal.m_CallerAddress = "There is no call";
+                RMSGlobal.m_isCallAccepted = true;//Initially called is considered as accepted
+                tmrCallerID.Start();//Starting the caller timer
+            }
+            catch (Exception exp)
+            {
+                RMSGlobal.m_connectionStatus = "Disconnected";
+            }
+        }
+
+        private void SetModemConfiguration()
+        {
+
+            //Showing the current city
+            XmlDocument xmlDoc = new XmlDocument();
+
+            string executableName = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            FileInfo executableFileInfo = new FileInfo(executableName);
+            string currentDirectory = executableFileInfo.DirectoryName + "\\Config";
+            xmlDoc.Load(currentDirectory + "\\CommonConstants.xml");
+
+            this.DisablePort();
+
+            XmlNode appSettingsNode =
+            xmlDoc.SelectSingleNode("CCommonConstants/ComportName");
+            comPortName = appSettingsNode.InnerText;
+            comPort.PortName = comPortName;
+
+            appSettingsNode =
+            xmlDoc.SelectSingleNode("CCommonConstants/ComportBaudRate");
+            baudRate = appSettingsNode.InnerText;
+            comPort.BaudRate = Convert.ToInt32("0" + baudRate);
+
+            comPort.BaudRate = Convert.ToInt32("0" + baudRate);
+            comPort.DataBits = 8;
+            comPort.StopBits = System.IO.Ports.StopBits.One;
+            comPort.Parity = System.IO.Ports.Parity.None;
+            comPort.ReadTimeout = 0;
+            RMSGlobal.m_comPortName = comPortName;
+
+            appSettingsNode =
+            xmlDoc.SelectSingleNode("CCommonConstants/CallerIDCommand");
+            m_callerIDCommand = appSettingsNode.InnerText;
+
+            this.EnablePort();
+
+            m_callerIDCommand = m_callerIDCommand + "\r\n";
+
+            //comPort.Write("AT#CID=1\r\n"); //Executing  at the caller id enable port for receiing caller ID
+            comPort.Write(m_callerIDCommand);
+            comPort.DataReceived += new SerialDataReceivedEventHandler(comPort_DataReceived);
+
+        }
+
+        void comPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            string dataFromPort = comPort.ReadExisting();
+            string[] callerData = new string[0];
+            callerData = dataFromPort.Split('=');
+            string[] retrievedNumber = new string[0];
+            if (callerData.Length > 3)
+            {
+                retrievedNumber = callerData[4].ToString().Split('\r');
+                RMSGlobal.m_phoneNumber = Convert.ToString(retrievedNumber[0]);
+            }
+            else if ((callerData.Length == 1) && !callerData[0].ToString().Contains("RING"))
+            {
+                RMSGlobal.m_phoneNumber = "There is no call";
+            }
+            RMSGlobal.m_phoneNumber = RMSGlobal.m_phoneNumber.Replace("-", "");
+            RMSGlobal.m_isCallAccepted = false;
+        }
+
+        //Added by Baruri
+        public void EnablePort()
+        {
+            if (!comPort.IsOpen)
+                comPort.Open();
+        }
+        //Added by Baruri
+        public void DisablePort()
+        {
+            if (comPort.IsOpen)
+                comPort.Close();
+        }
+
+        private void LoadUserButtons()
+        {
+            
+            try
+            {
+                CUserManager tempUserManager = new CUserManager();
+                List<CUserInfo> tempUserList = new List<CUserInfo>();
+                tempUserList = (List<CUserInfo>)tempUserManager.GetAllUser().Data;
+
+                int buttonCount = tempUserList.Count;
+                //buttons = new UserButton[buttonCount];
+                buttons = new UserLoginButton[buttonCount]; 
+                for (int counter = 0; counter < buttonCount; counter++)
+                {
+                    if (tempUserList[counter].Status == 1)
+                    {                       
+                        // NAIN.K modified 06/01/2009                       
+
+                        string webuser = "Web User";
+
+                        if (tempUserList[counter].UserName.Replace(" "," ").ToUpper()!= webuser.Replace(" "," ").ToUpper())
+                        {
+                       // buttons[counter] = new UserButton();
+                        buttons[counter] = new UserLoginButton();
+                       // buttons[counter].Gender = tempUserList[counter].Gender;
+                        if (tempUserList[counter].Gender == "Female")
+                        {
+                            buttons[counter].setFemale(true);
+                        }
+
+                        //buttons[counter].TouchButton.Text = tempUserList[counter].UserName;
+                        buttons[counter].Text = tempUserList[counter].UserName;
+                        buttons[counter].Click += new System.EventHandler(this.LogInUserButton_Click);
+
+                        buttons[counter].Show();
+                        }
+                    }
+                }
+
+                LoadUserPanel();
+                if (buttons.Length > MAX_USER_BUTTON)
+                {
+                    UpButton.Visible = true;
+                    DownButton.Visible = true;
+                }
+            }
+            catch (Exception ee)
+            {
+            }
+        }
+        private void LoadUserPanel()
+        {
+            UserButtonPanel.Controls.Clear();
+            for (int userCounter = m_iStartingPoint; userCounter < m_iStartingPoint + MAX_USER_BUTTON && userCounter < buttons.Length; userCounter++)
+            {
+                UserButtonPanel.Controls.Add(buttons[userCounter]);
+            }
+        }
+
+        private void LogInUserButton_Click(object sender, EventArgs e)
+        {
+           // CCurrentUser.User_name = ((UserButton)sender).rmsUserName.Text;
+            CCurrentUser.User_name = ((UserLoginButton)sender).Text;
+            /*UserLabel.Text = CCurrentUser.User_name;
+            UserLabel.Show(); */
+           // AuthenticationForm objAuthentication = AuthenticationForm.CreateInstance(((UserButton)sender).rmsUserName.Text);
+            AuthenticationForm objAuthentication = AuthenticationForm.CreateInstance(((UserLoginButton)sender).Text);
+            objAuthentication.ActionMethod = new LoginAction(objAuthentication.PasswordFiled, objAuthentication.LabelErrorMessage);
+            DialogResult drResult= objAuthentication.ShowDialog();
+
+            if (drResult == DialogResult.OK)
+            {
+                CMainForm m = new CMainForm();
+                m.Show();
+                CFormManager.Forms.Push(this);
+                this.Hide();
+            }
+        }
+
+       
+       
+        private void EnterButton_Click(object sender, EventArgs e)
+        {
+          /*  try
+            {
+               // string password =RMSGlobal.Encrypt(LoginTextBox.Text,true);
+
+                string password = LoginTextBox.Text;
+
+                CUserManager tempUserManager = new CUserManager();
+                CUserInfo tempUserInfo = new CUserInfo();
+
+                CCommonConstants oConstant = ConfigManager.GetConfig<CCommonConstants>();
+
+                tempUserInfo = (CUserInfo)tempUserManager.GetUserInfoByUsername(CCurrentUser.User_name).Data;
+
+                CLogin oLogin = new CLogin();
+                CUserInfo oUserInfo = new CUserInfo();
+
+                CPcInfoManager tempPcInfoManager = new CPcInfoManager();
+                IPHostEntry ipEntry = System.Net.Dns.GetHostByName(Dns.GetHostName());
+
+                CPcInfo tempPcInfo = (CPcInfo)tempPcInfoManager.PcInfoByPcIP(ipEntry.AddressList[0].ToString()).Data;
+
+                oUserInfo.UserName = CCurrentUser.User_name;
+                RMSGlobal.LoginUserName = CCurrentUser.User_name;
+                RMSGlobal.m_iLoginUserID = tempUserInfo.UserID;
+                oUserInfo.Password = password;
+
+                oUserInfo.PCID = tempPcInfo.PcID;
+                RMSGlobal.m_connectionString = oConstant.DBConnection;
+                oLogin = (RmsRemote.CLogin)Activator.GetObject(typeof(RmsRemote.CLogin), oConstant.RemoteURL);
+
+                CResult oResult = oLogin.ProcessLogin(oUserInfo);
+
+                if (oResult.IsSuccess && oResult.Data != null)
+                {
+                    CUserLogin oUserLogin = (CUserLogin)oResult.Data;
+
+                    oConstant.UserInfo = oUserLogin.UserInfo;
+                    g_ErrorLabel.Hide();
+                }
+                else
+                {
+                    string tempStr = oResult.Message;
+                    if (!tempStr.Equals(String.Empty))
+                    {
+                        g_ErrorLabel.Text = tempStr;
+                    }
+
+                    g_ErrorLabel.Show();
+                    return;
+                }
+
+                CCurrentUser.User_id = tempUserInfo.UserID;
+                CCurrentUser.Type = tempUserInfo.Type;
+
+
+                CMainForm m = new CMainForm();
+                m.Show();
+
+               
+                CFormManager.Forms.Push(this);
+                this.Hide();
+            }
+            catch (Exception exp)
+            {
+                throw exp;
+            } */
+        }
+
+        private void UpButton_Click(object sender, EventArgs e)
+        {
+            if (m_iStartingPoint > 0)
+                m_iStartingPoint--;
+            LoadUserPanel();
+        }
+        private void DownButton_Click(object sender, EventArgs e)
+        {
+            if (m_iStartingPoint < buttons.Length - MAX_USER_BUTTON)
+                m_iStartingPoint++;
+            LoadUserPanel();
+        }
+
+        private void LoginTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CLoginForm_Paint(object sender, PaintEventArgs e)
+        {
+            //e.Graphics.DrawLine(new Pen(new SolidBrush(this.ForeColor)), new Point(730, 60), new Point(730, 500));
+        }
+
+        private void CLoginForm_Activated(object sender, EventArgs e)
+        {
+            Timetimer.Start();
+
+            CMouseConfig tempCommonConstants = ConfigManager.GetConfig<CMouseConfig>();
+            if (tempCommonConstants.ShowMouse)
+                Cursor.Show();
+            else
+                Cursor.Hide();
+
+           // DateLabel.Text = System.DateTime.Today.Date.ToString("MMM dd");       //shows current date
+           // DayLabel.Text = System.DateTime.Today.Date.DayOfWeek.ToString();      //shows current day of the week
+           // TimeLabel.Text = System.DateTime.Now.ToLongTimeString();              //shows current time  
+            lblRMSVersion.Text = RMSGlobal.m_rmsVersionNumber;
+
+            try
+            {
+                LoadUserButtons();
+            }
+            catch (Exception exp)
+            {
+                throw exp;
+            }
+        }
+
+        private void CLoginForm_Deactivate(object sender, EventArgs e)
+        {
+            Timetimer.Stop();
+        }
+
+        private void LoginTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                EnterButton_Click(sender, e);
+            }
+        }
+
+        private void tmrCallerID_Tick(object sender, EventArgs e)
+        {
+            if ((RMSGlobal.m_phoneNumber.Replace(" ", "").ToUpper() == "There is no call".Replace(" ", "").ToUpper()) || (RMSGlobal.m_phoneNumber == String.Empty)) //If there is no call
+            {
+                lblPhoneNumber.Text = RMSGlobal.m_phoneNumber;
+                lblPhoneNumber.Visible = false;
+                lblCallingStatus.Visible = false;
+                lblCustomerName.Visible = false;
+                grpCallerInfo.Visible = false;
+            }
+            else if (RMSGlobal.m_isCallAccepted == true)
+            {
+                lblPhoneNumber.Visible = false;
+                lblCallingStatus.Visible = false;
+                lblCustomerName.Visible = false;
+                grpCallerInfo.Visible = false;
+            }
+            else
+            {
+                lblPhoneNumber.Visible = true;
+                lblCallingStatus.Visible = true;
+                lblCustomerName.Visible = true;
+                grpCallerInfo.Visible = true;
+
+                CCustomerManager tempCustomerManager = new CCustomerManager();
+                CCustomerInfo tempCustomerInfo = new CCustomerInfo();
+                CResult oResult = tempCustomerManager.CustomerInfoGetByPhone(RMSGlobal.m_phoneNumber.Replace("-", ""));//Collect the customer information
+
+                if (oResult.IsSuccess && oResult.Data != null)
+                {
+                    tempCustomerInfo = (CCustomerInfo)oResult.Data;
+                    if (tempCustomerInfo.CustomerName.Length > 0)
+                    {
+                        lblPhoneNumber.Text = tempCustomerInfo.CustomerPhone;
+                        lblCustomerName.Text = tempCustomerInfo.CustomerName;
+                        RMSGlobal.m_CallerName = tempCustomerInfo.CustomerName;
+                        RMSGlobal.m_CallerAddress = tempCustomerInfo.StreetName.Replace("-","");
+                    }
+                    else
+                    {
+                        lblPhoneNumber.Text = RMSGlobal.m_phoneNumber;
+                        RMSGlobal.m_CallerName = RMSConstant.UnknownCustomer;
+                        RMSGlobal.m_CallerAddress = RMSConstant.UnknownArea;
+                        lblCustomerName.Text = RMSGlobal.m_CallerName;
+                    }
+                    RMSGlobal.m_phoneNumber = lblPhoneNumber.Text;
+                }
+            }
+        }
+
+        private void CLoginForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                if (comPort.IsOpen)
+                {
+                    comPort.ReadExisting();
+                    comPort.Close();
+                }
+            }
+
+            catch (Exception ex)
+            {
+                Console.Write(ex.Message);
+            }
+        }
+
+        public void loadVatRegDescription()
+        {
+
+            if (Program.vatRegDes.Contains("[vat reg no]"))
+            {
+                string des = "";
+                DataSet tempDataSet;
+                try
+                {
+                    tempDataSet = new DataSet();
+                    tempDataSet.ReadXml("Config/VatRegisterNo.xml");
+                    des = tempDataSet.Tables[0].Rows[0]["des"].ToString();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+
+                Program.vatRegDes = des;
+            }
+
+        }
+    }
+}

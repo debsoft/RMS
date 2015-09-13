@@ -1,0 +1,75 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <parent_category>
+    <parent_cat_id>31</parent_cat_id>
+    <Parent_Category_Name>STARTERS</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </parent_category>
+  <parent_category>
+    <parent_cat_id>37</parent_cat_id>
+    <Parent_Category_Name>FRIED &amp; BBQ</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </parent_category>
+  <parent_category>
+    <parent_cat_id>38</parent_cat_id>
+    <Parent_Category_Name>SUSHI &amp; SASHIMI</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </parent_category>
+  <parent_category>
+    <parent_cat_id>39</parent_cat_id>
+    <Parent_Category_Name>BOWLS &amp; POTS</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </parent_category>
+  <parent_category>
+    <parent_cat_id>40</parent_cat_id>
+    <Parent_Category_Name>MAINS</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </parent_category>
+  <parent_category>
+    <parent_cat_id>41</parent_cat_id>
+    <Parent_Category_Name>DINING ADVENTURES</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </parent_category>
+  <parent_category>
+    <parent_cat_id>42</parent_cat_id>
+    <Parent_Category_Name>EXTRAS &amp; GLOSSARY</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </parent_category>
+  <parent_category>
+    <parent_cat_id>43</parent_cat_id>
+    <Parent_Category_Name>ONE MORE THING.....</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </parent_category>
+  <parent_category>
+    <parent_cat_id>44</parent_cat_id>
+    <Parent_Category_Name>LUNCH</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </parent_category>
+  <parent_category>
+    <parent_cat_id>45</parent_cat_id>
+    <Parent_Category_Name>CHEFS SPECIAL</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </parent_category>
+  <parent_category>
+    <parent_cat_id>47</parent_cat_id>
+    <Parent_Category_Name>gsg</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </parent_category>
+  <parent_category>
+    <parent_cat_id>48</parent_cat_id>
+    <Parent_Category_Name>rhwe</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </parent_category>
+</DocumentElement>

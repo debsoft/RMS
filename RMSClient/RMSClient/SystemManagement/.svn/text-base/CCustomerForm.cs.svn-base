@@ -1,0 +1,312 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using RMS.DataAccess;
+using System.Data.SqlClient;
+using RMS.Common;
+using RMS.Common.ObjectModel;
+using Managers.Customer;
+using RMS.TakeAway;
+using RMSUI;
+
+namespace RMS.SystemManagement
+{
+    public partial class CCustomerForm : BaseForm
+    {       
+        public CCustomerForm()
+        {
+            InitializeComponent();
+            CustomerDataGridView.RowCount = 17;
+            LoadAllCustomerList();            
+        }
+
+        private void LoadAllCustomerList()
+        {
+            try
+            {
+                string sSql = SqlQueries.GetQuery(Query.CustomerInfoGetAll);
+                CCommonConstants oConstants = ConfigManager.GetConfig<CCommonConstants>();
+                SqlDataAdapter tempSqlDataAdapter = new SqlDataAdapter(sSql, oConstants.DBConnection);
+                DataSet tempCustomerDataSet = new DataSet();
+                tempSqlDataAdapter.Fill(tempCustomerDataSet);
+                
+                CustomerDataGridView.Rows.Clear();
+                for (int rowIndex = 0; rowIndex < tempCustomerDataSet.Tables[0].Rows.Count; rowIndex++)
+                {
+                    string[] newRow =
+                        {
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["Name"].ToString(),
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["floororapt_number"].ToString(),
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["building_name"].ToString(),
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["house_number"].ToString(),
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["phone"].ToString(),
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["postal_code"].ToString(),
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["town"].ToString(),
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["country"].ToString()
+                        };
+                    CustomerDataGridView.Rows.Add(newRow); 
+                }
+
+                CustomerDataGridView.Update();
+                if (CustomerDataGridView.RowCount < 17)
+                    CustomerDataGridView.RowCount = 17;
+                tempSqlDataAdapter.Dispose();
+            }
+            catch (Exception exp)
+            {
+                Console.Write(exp.Message);
+            }
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Form tempForm = CFormManager.Forms.Pop();
+                tempForm.Show();
+                this.Close();
+            }
+            catch (Exception exp)
+            {
+                Console.Write(exp.Message);
+            }
+        }
+
+        private void NameTextBox_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CWinKeyboardForm tempKeyboardForm = new CWinKeyboardForm("Search", "Enter Customer Name to search");
+                tempKeyboardForm.ShowDialog();
+
+                if (CWinKeyboardForm.Content.Equals("Cancel"))
+                {
+                    NameTextBox.Clear();
+                    return;
+                }
+
+                NameTextBox.Text = CWinKeyboardForm.Content;
+            }
+            catch (Exception exp)
+            {
+                Console.Write(exp.Message);
+            }
+        }
+
+        private void PhoneTextBox_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CWinKeyboardForm tempKeyboardForm = new CWinKeyboardForm("Search", "Enter Customer Name to search");
+                tempKeyboardForm.ShowDialog();
+
+                if (CWinKeyboardForm.Content.Equals("Cancel"))
+                {
+                    PhoneTextBox.Clear();
+                    return;
+                }
+                PhoneTextBox.Text = CWinKeyboardForm.Content;
+            }
+            catch (Exception exp)
+            {
+                Console.Write(exp.Message);
+            }
+        }
+
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string sqlCommand;
+                CCommonConstants oConstants;
+                SqlDataAdapter tempSqlDataAdapter;
+                DataSet tempCustomerDataSet;
+                CustomerDataGridView.Rows.Clear();
+                if (!NameTextBox.Text.Trim().Equals("") && PhoneTextBox.Text.Trim().Equals(""))
+                {
+                    sqlCommand = String.Format(SqlQueries.GetQuery(Query.CustomerInfoGetByName),NameTextBox.Text.Trim());
+                    oConstants = ConfigManager.GetConfig<CCommonConstants>();
+                    tempSqlDataAdapter = new SqlDataAdapter(sqlCommand, oConstants.DBConnection);
+                    tempCustomerDataSet = new DataSet();
+                    tempSqlDataAdapter.Fill(tempCustomerDataSet);
+
+
+                    for (int rowIndex = 0; rowIndex < tempCustomerDataSet.Tables[0].Rows.Count; rowIndex++)
+                    {
+                        string[] newRow =
+                        {
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["Name"].ToString(),
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["floororapt_number"].ToString(),
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["building_name"].ToString(),
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["house_number"].ToString(),
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["phone"].ToString(),
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["postal_code"].ToString(),
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["town"].ToString(),
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["country"].ToString()
+                        };
+                        CustomerDataGridView.Rows.Add(newRow);
+                    }
+                    tempSqlDataAdapter.Dispose();
+                }
+                else if (NameTextBox.Text.Trim().Equals("") && !PhoneTextBox.Text.Trim().Equals(""))
+                {
+                    sqlCommand = String.Format(SqlQueries.GetQuery(Query.CustomerInfoGetByPhone),PhoneTextBox.Text.Trim());
+                    oConstants = ConfigManager.GetConfig<CCommonConstants>();
+                    tempSqlDataAdapter = new SqlDataAdapter(sqlCommand, oConstants.DBConnection);
+                    tempCustomerDataSet = new DataSet();
+                    tempSqlDataAdapter.Fill(tempCustomerDataSet);
+
+                    for (int rowIndex = 0; rowIndex < tempCustomerDataSet.Tables[0].Rows.Count; rowIndex++)
+                    {
+                        string[] newRow =
+                        {
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["Name"].ToString(),
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["floororapt_number"].ToString(),
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["building_name"].ToString(),
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["house_number"].ToString(),
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["phone"].ToString(),
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["postal_code"].ToString(),
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["town"].ToString(),
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["country"].ToString()
+                        };
+                        CustomerDataGridView.Rows.Add(newRow);
+                    }
+                    tempSqlDataAdapter.Dispose();
+                }
+                else if (!NameTextBox.Text.Trim().Equals("") && !PhoneTextBox.Text.Trim().Equals(""))
+                {
+                    sqlCommand = String.Format(SqlQueries.GetQuery(Query.CustomerInfoGetByNameNPhone),NameTextBox.Text.Trim(),PhoneTextBox.Text.Trim());
+                    oConstants = ConfigManager.GetConfig<CCommonConstants>();
+                    tempSqlDataAdapter = new SqlDataAdapter(sqlCommand, oConstants.DBConnection);
+                    tempCustomerDataSet = new DataSet();
+                    tempSqlDataAdapter.Fill(tempCustomerDataSet);
+
+                    for (int rowIndex = 0; rowIndex < tempCustomerDataSet.Tables[0].Rows.Count; rowIndex++)
+                    {
+                        string[] newRow =
+                        {
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["Name"].ToString(),
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["floororapt_number"].ToString(),
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["building_name"].ToString(),
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["house_number"].ToString(),
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["phone"].ToString(),
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["postal_code"].ToString(),
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["town"].ToString(),
+                            tempCustomerDataSet.Tables[0].Rows[rowIndex]["country"].ToString()
+                        };
+                        CustomerDataGridView.Rows.Add(newRow);
+                    }
+                    tempSqlDataAdapter.Dispose();
+                }
+               
+                CustomerDataGridView.Update();
+                if (CustomerDataGridView.RowCount < 17)
+                {
+                    CustomerDataGridView.RowCount = 17;
+                }
+            }
+            catch (Exception exp)
+            {
+                Console.Write(exp.Message);
+            }
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CustomerListForm.m_phoneNumber = String.Empty;
+                CCustomerInfoForm tempCustomerInfoForm = new CCustomerInfoForm("Add", null);
+                tempCustomerInfoForm.Show();
+                CFormManager.Forms.Push(this);
+                this.Hide();               
+            }
+            catch (Exception exp)
+            {
+                Console.Write(exp.Message);
+            }
+        }
+
+        /// <summary>
+        /// Modified by Baruri at 12.12.2008 for the new customer address format
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void UpdateButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                for (int rowIndex = 0; rowIndex < CustomerDataGridView.Rows.Count; rowIndex++)
+                {
+                    if (CustomerDataGridView.Rows[rowIndex].Selected == true && CustomerDataGridView.Rows[rowIndex].Cells["PhoneNumber"].Value != null)
+                    {
+                        string phone = CustomerDataGridView.Rows[rowIndex].Cells[4].Value.ToString(); //for phone number
+                        CCustomerManager tempCustomerManager = new CCustomerManager();
+                        CCustomerInfo tempCustomerInfo = new CCustomerInfo();
+                        CResult tempResult = tempCustomerManager.CustomerInfoGetByPhone(phone);
+
+                        if (tempResult.IsSuccess)
+                        {
+                            CCustomerInfoForm tempCustomerInfoForm = new CCustomerInfoForm("Update", (CCustomerInfo)tempResult.Data);
+                            tempCustomerInfoForm.Show();
+                            CFormManager.Forms.Push(this);
+                            this.Hide();                           
+                        }
+                        break;
+                    }
+                }
+            }
+            catch (Exception exp)
+            {
+                Console.Write(exp.Message);
+            }
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                for (int recordCounter = 0; recordCounter < CustomerDataGridView.Rows.Count; recordCounter++)
+                {
+                    if (CustomerDataGridView.Rows[recordCounter].Selected == true && CustomerDataGridView.Rows[recordCounter].Cells["PhoneColumn"].Value != null)
+                    {
+                        DialogResult tempDialogResult = MessageBox.Show("WARNING!!!\nDeleting this Customer may also delete some other information.\nAre you sure to delete this Customer?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        if (tempDialogResult.Equals(DialogResult.No)) return;
+                        else
+                        {
+                            string phone = CustomerDataGridView.Rows[recordCounter].Cells[4].Value.ToString();
+                            CCustomerManager tempCustomerManager = new CCustomerManager();
+                            CCustomerInfo tempCustomerInfo = new CCustomerInfo();
+                            CResult tempResult = tempCustomerManager.CustomerInfoGetByPhone(phone);
+
+                            if (tempResult.IsSuccess)
+                            {
+                                tempCustomerManager.DeleteCustomerInfo((CCustomerInfo)tempResult.Data);
+                                this.LoadAllCustomerList();
+                            }
+                        }
+                        break;
+                    }
+                }
+            }
+            catch (Exception exp)
+            {
+                Console.Write(exp.Message);
+            }
+        }
+
+        private void CCustomerForm_VisibleChanged(object sender, EventArgs e)
+        {
+            LoadAllCustomerList();
+        }
+
+        private void ViewAllButton_Click(object sender, EventArgs e)
+        {
+            this.LoadAllCustomerList();
+        }
+    }
+}

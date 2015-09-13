@@ -1,0 +1,737 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+using RMS.Common.ObjectModel;
+using System.Data;
+using RMS.Common;
+using RMS.Common.DataAccess;
+using System.Data.SqlClient;
+
+namespace RMS.DataAccess
+{
+    class COrderShowDAO : BaseDAO, IOrderShowDAO //Changed
+    {
+        public Int64 m_oStartTime;
+        public Int64 m_oEndTime;
+
+        public COrderShowDAO()
+        {
+        }
+
+        #region IOrderShowDAO Members
+
+        public List<COrderShow> OrderListShowByStatus(string sStatus)
+        {
+            List<COrderShow> oOrderShowList = new List<COrderShow>();
+            sStatus = sStatus.Replace("''", "'");
+            sStatus = sStatus.Replace("'", "''");
+
+            try
+            {
+                CCommonConstants oTempConstant = ConfigManager.GetConfig<CCommonConstants>();
+
+                this.OpenConnection();
+                string sqlCommand = string.Format(SqlQueries.GetQuery(Query.OrderShowByStatus), sStatus);
+
+                IDataReader oReader = this.ExecuteReader(sqlCommand);
+                if (oReader != null)
+                {
+                    while (oReader.Read())
+                    {
+                        COrderShow oOrderShow = ReaderToOrderShow(oReader);
+                        oOrderShowList.Add(oOrderShow);
+                    }
+                }
+
+                sqlCommand = string.Format(SqlQueries.GetQuery(Query.GetOnlineOrders)); //If there is any online orders
+
+                oReader.Close();
+                oReader = this.ExecuteReader(sqlCommand);
+                if (oReader != null)
+                {
+                    while (oReader.Read())
+                    {
+                        COrderShow oOrderShow = ReaderToOrderShow(oReader);
+                        oOrderShowList.Add(oOrderShow);
+                    }
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.Write("###" + ex + "###");
+                Logger.Write("Exception : " + ex + " in OrderListShowByStatus()", LogLevel.Error, "Database");
+                if (ex.GetType().Equals(typeof(SqlException)))
+                {
+                    SqlException oSQLEx = ex as SqlException;
+                    if (oSQLEx.Number != 7619)
+                        throw new Exception("Exception occure at OrderListShowByStatus()", ex);
+                }
+                else
+                {
+                    throw new Exception("Exception occure at OrderListShowByStatus()", ex);
+                }
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return oOrderShowList;
+        }
+
+        public CResult UpdateDBForTransfer(String inOrderID, int inOldTableNumber, int inNewTableNumber, int inOldTableGuestCount)
+        {
+            CResult tempResult = new CResult();
+            try
+            {
+                CCommonConstants oTempConstant = ConfigManager.GetConfig<CCommonConstants>();
+
+                this.OpenConnection();
+                String sSql = String.Empty;
+                sSql = string.Format(SqlQueries.GetQuery(Query.InsertDBForTransfer), inNewTableNumber, inOldTableGuestCount);
+                this.ExecuteReader(sSql);
+                this.CloseConnection();
+
+                //this.OpenConnection();
+                this.OpenConnectionWithTransection();
+                sSql = string.Format(SqlQueries.GetQuery(Query.UpdateDBForTransfer), inOrderID, inOldTableNumber, inNewTableNumber);
+                //this.ExecuteReader(sSql);
+                this.ExecuteNonQuery(sSql);
+                this.CommitTransection();
+                tempResult.IsSuccess = true;
+            }
+            catch (Exception ex)
+            {
+                tempResult.IsException = true;
+                this.RollBackTransection();
+                Console.Write("###" + ex + "###");
+                Logger.Write("Exception : " + ex + " in UpdateDBForTransfer()", LogLevel.Error, "Database");
+                if (ex.GetType().Equals(typeof(SqlException)))
+                {
+                    SqlException oSQLEx = ex as SqlException;
+                    if (oSQLEx.Number != 7619)
+                        throw new Exception("Exception occure at UpdateDBForTransfer()", ex);
+                }
+                else
+                {
+                    throw new Exception("Exception occure at UpdateDBForTransfer()", ex);
+                }
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return tempResult;
+        }
+
+        public CResult UpdateDBForVoid(String inOrderID, int inTableNumber, String inTableType, bool inReportTableVoid)
+        {
+            CResult tempResult = new CResult();
+            try
+            {
+                CCommonConstants oTempConstant = ConfigManager.GetConfig<CCommonConstants>();
+                inTableType = inTableType.Replace("''", "'");
+                inTableType = inTableType.Replace("'", "''");
+
+                //this.OpenConnection();
+                this.OpenConnectionWithTransection();
+
+                String sSql = "";
+                if (!inReportTableVoid) sSql = string.Format(SqlQueries.GetQuery(Query.UpdateDBForVoid), inOrderID, inTableNumber, inTableType);
+                else sSql = string.Format(SqlQueries.GetQuery(Query.UpdateDBForVoidReport), inOrderID, inTableNumber, inTableType);
+                //this.ExecuteReader(sSql);
+                this.ExecuteNonQuery(sSql);
+
+                this.CommitTransection();
+                tempResult.IsSuccess = true;
+            }
+            catch (Exception ex)
+            {
+                tempResult.IsException = true;
+                this.RollBackTransection();
+
+                Console.Write("###" + ex + "###");
+                Logger.Write("Exception : " + ex + " in UpdateDBForVoid()", LogLevel.Error, "Database");
+                if (ex.GetType().Equals(typeof(SqlException)))
+                {
+                    SqlException oSQLEx = ex as SqlException;
+                    if (oSQLEx.Number != 7619)
+                        throw new Exception("Exception occure at UUpdateDBForVoid()", ex);
+                }
+                else
+                {
+                    throw new Exception("Exception occure at UpdateDBForTransfer()", ex);
+                }
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return tempResult;
+        }
+
+        public CResult UpdateDBForUnlock(int inTableNumber)
+        {
+            CResult tempResult = new CResult();
+            try
+            {
+                CCommonConstants oTempConstant = ConfigManager.GetConfig<CCommonConstants>();
+
+                this.OpenConnection();
+
+                String sSql = string.Format(SqlQueries.GetQuery(Query.UpdateDBForUnlock), inTableNumber);
+                this.ExecuteReader(sSql);
+                tempResult.IsSuccess = true;
+            }
+            catch (Exception ex)
+            {
+                tempResult.IsException = true;
+                Console.Write("###" + ex + "###");
+                Logger.Write("Exception : " + ex + " in UpdateDBForUnlock()", LogLevel.Error, "Database");
+                if (ex.GetType().Equals(typeof(SqlException)))
+                {
+                    SqlException oSQLEx = ex as SqlException;
+                    if (oSQLEx.Number != 7619)
+                        throw new Exception("Exception occure at UpdateDBForUnlock()", ex);
+                }
+                else
+                {
+                    throw new Exception("Exception occure at UpdateDBForUnlock()", ex);
+                }
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return tempResult;
+        }
+
+        public CResult UpdateDBForMerge(String[] inOrderID, String inMasterOrderID, int[] inTableNumber, int inMasterTableNumber, int inTotalGuestCount)
+        {
+            CResult tempResult = new CResult();
+            List<COrderDetails> tempOrderDetailsList = new List<COrderDetails>();
+
+            try
+            {
+                CCommonConstants oTempConstant = ConfigManager.GetConfig<CCommonConstants>();
+
+                String sqlCommand = String.Empty;
+
+                this.OpenConnectionWithTransection();
+
+                for (int i = 0; i < inOrderID.Length; i++)
+                {
+                    if (!inOrderID[i].Equals(inMasterOrderID))
+                    {
+                        //this.OpenConnection();
+                        sqlCommand = String.Format(SqlQueries.GetQuery(Query.DeleteDBForMerge), inOrderID[i], inTableNumber[i], inMasterOrderID);
+                        //this.ExecuteReader(sSql);
+                        this.ExecuteNonQuery(sqlCommand);
+                        //this.CloseConnection();
+                    }
+                }
+
+                //this.OpenConnection();
+                sqlCommand = String.Format(SqlQueries.GetQuery(Query.UpdateDBForMerge), inMasterOrderID, inMasterTableNumber, inTotalGuestCount);
+                //this.ExecuteReader(sSql);
+                this.ExecuteNonQuery(sqlCommand);
+
+                this.CommitTransection();
+
+                sqlCommand = String.Format(SqlQueries.GetQuery(Query.GetMergeItems), inMasterOrderID);
+                IDataReader oReader = this.ExecuteReader(sqlCommand);
+                if (oReader != null)
+                {
+                    while (oReader.Read())
+                    {
+                        COrderDetails tempOrderDetails = ReaderToMergeDetails(oReader);
+                        tempOrderDetailsList.Add(tempOrderDetails);
+                    }
+                }
+                oReader.Close();
+
+                sqlCommand = String.Format(SqlQueries.GetQuery(Query.DeleteMergeItems), inMasterOrderID);
+                this.ExecuteNonQuery(sqlCommand);
+
+                //this.CommitTransection();
+
+                for (int itemIndex = 0; itemIndex < tempOrderDetailsList.Count; itemIndex++)
+                {
+                    sqlCommand = String.Format(SqlQueries.GetQuery(Query.SaveMergeItems), tempOrderDetailsList[itemIndex].OrderID, tempOrderDetailsList[itemIndex].ProductID, tempOrderDetailsList[itemIndex].OrderQuantity, tempOrderDetailsList[itemIndex].OrderAmount, tempOrderDetailsList[itemIndex].OrderRemarks, tempOrderDetailsList[itemIndex].OrderFoodType, tempOrderDetailsList[itemIndex].CategoryLevel, tempOrderDetailsList[itemIndex].PrintedQuantity);
+                    this.ExecuteNonQuery(sqlCommand);
+                }
+
+
+                tempResult.IsSuccess = true;
+                //String sSql = string.Format(SqlQueries.GetQuery(Query.UpdateDBForUnlock), inTableNumber);
+                //this.ExecuteReader(sSql);
+            }
+            catch (Exception ex)
+            {
+                tempResult.IsException = true;
+                this.RollBackTransection();
+
+                Console.Write("###" + ex + "###");
+                Logger.Write("Exception : " + ex + " in UpdateDBForMerge()", LogLevel.Error, "Database");
+                if (ex.GetType().Equals(typeof(SqlException)))
+                {
+                    SqlException oSQLEx = ex as SqlException;
+                    if (oSQLEx.Number != 7619)
+                        throw new Exception("Exception occure at UpdateDBForMerge()", ex);
+                }
+                else
+                {
+                    throw new Exception("Exception occure at UpdateDBForMerge()", ex);
+                }
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return tempResult;
+        }
+
+        private COrderDetails ReaderToMergeDetails(IDataReader inReader)
+        {
+            COrderDetails tempOrderDetails = new COrderDetails();
+
+            if (inReader["order_id"] != null)
+                tempOrderDetails.OrderID = int.Parse(inReader["order_id"].ToString());
+
+            if (inReader["product_id"] != null)
+                tempOrderDetails.ProductID = Int32.Parse(inReader["product_id"].ToString());
+
+            if (inReader["quantity"] != null)
+                tempOrderDetails.OrderQuantity = Int32.Parse(inReader["quantity"].ToString());
+
+            if (inReader["amount"] != null)
+                tempOrderDetails.OrderAmount = Double.Parse(inReader["amount"].ToString());
+
+            if (inReader["remarks"] != null)
+                tempOrderDetails.OrderRemarks = inReader["remarks"].ToString();
+
+            if (inReader["food_type"] != null)
+                tempOrderDetails.OrderFoodType = inReader["food_type"].ToString();
+
+            if (inReader["cat_level"] != null)
+                tempOrderDetails.CategoryLevel = Int32.Parse(inReader["cat_level"].ToString());
+
+            if (inReader["print_send"] != null)
+                tempOrderDetails.PrintedQuantity = Int32.Parse(inReader["print_send"].ToString());
+
+            return tempOrderDetails;
+        }
+
+
+        public CResult OrderListShowByStatusNDate(string sStatus, DateTime inCurrentDate)
+        {
+            CResult tempResult = new CResult();
+            GetTimeSpan(inCurrentDate);
+            List<COrderShow> oOrderShowList = new List<COrderShow>();
+            try
+            {
+                CCommonConstants oTempConstant = ConfigManager.GetConfig<CCommonConstants>();
+                sStatus = sStatus.Replace("''", "'");
+                sStatus = sStatus.Replace("'", "''");
+
+                this.OpenConnection();
+                string sSql = string.Format(SqlQueries.GetQuery(Query.OrderShowByStatusNDate), m_oStartTime, m_oEndTime, sStatus);
+
+                IDataReader oReader = this.ExecuteReader(sSql);
+                if (oReader != null)
+                {
+                    while (oReader.Read())
+                    {
+                        COrderShow oOrderShow = ReaderToReportOrderShow(oReader);
+                        oOrderShowList.Add(oOrderShow);
+                    }
+                }
+                tempResult.Data = oOrderShowList;
+                tempResult.IsSuccess = true;
+            }
+            catch (Exception ex)
+            {
+                tempResult.IsException = true;
+                Console.Write("###" + ex + "###");
+                Logger.Write("Exception : " + ex + " in OrderListShowByStatus()", LogLevel.Error, "Database");
+                if (ex.GetType().Equals(typeof(SqlException)))
+                {
+                    SqlException oSQLEx = ex as SqlException;
+                    if (oSQLEx.Number != 7619)
+                        throw new Exception("Exception occure at OrderListShowByStatus()", ex);
+                }
+                else
+                {
+                    throw new Exception("Exception occure at OrderListShowByStatus()", ex);
+                }
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return tempResult;
+        }
+
+        public CResult OrderListForTransfer(bool inMerge)
+        {
+            CResult tempResult = new CResult();
+            GetTimeSpan(DateTime.Now);
+            List<CTransferOrderShow> oOrderShowList = new List<CTransferOrderShow>();
+            try
+            {
+                CCommonConstants oTempConstant = ConfigManager.GetConfig<CCommonConstants>();
+
+                string sSql = String.Empty;
+                this.OpenConnection();
+                if (inMerge == false) sSql = string.Format(SqlQueries.GetQuery(Query.OrderListForTransfer), m_oStartTime, m_oEndTime);
+                else sSql = string.Format(SqlQueries.GetQuery(Query.OrderListForMerge), m_oStartTime, m_oEndTime);
+
+                IDataReader oReader = this.ExecuteReader(sSql);
+                if (oReader != null)
+                {
+                    while (oReader.Read())
+                    {
+                        CTransferOrderShow oTransferOrderShow = ReaderToTransferOrderShow(oReader);
+                        oOrderShowList.Add(oTransferOrderShow);
+                    }
+                }
+                tempResult.Data = oOrderShowList;
+                tempResult.IsSuccess = true;
+            }
+            catch (Exception ex)
+            {
+                tempResult.IsException = true;
+                Console.Write("###" + ex + "###");
+                Logger.Write("Exception : " + ex + " in OrderListForTransfer()", LogLevel.Error, "Database");
+                if (ex.GetType().Equals(typeof(SqlException)))
+                {
+                    SqlException oSQLEx = ex as SqlException;
+                    if (oSQLEx.Number != 7619)
+                        throw new Exception("Exception occure at OrderListForTransfer()", ex);
+                }
+                else
+                {
+                    throw new Exception("Exception occure at OrderListForTransfer()", ex);
+                }
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return tempResult;
+        }
+
+        public CResult AvailableTableForTransfer()
+        {
+            CResult tempResult = new CResult();
+            List<CTableInfo> tempAvailableTableListForTransfer = new List<CTableInfo>();
+            try
+            {
+                CCommonConstants oTempConstant = ConfigManager.GetConfig<CCommonConstants>();
+
+                this.OpenConnection();
+                string sSql = string.Format(SqlQueries.GetQuery(Query.ShowAvailableTableForTransfer));
+
+                IDataReader oReader = this.ExecuteReader(sSql);
+                if (oReader != null)
+                {
+                    while (oReader.Read())
+                    {
+                        CTableInfo tempTable = ReaderToAvailableTable(oReader);
+                        tempAvailableTableListForTransfer.Add(tempTable);
+                    }
+                }
+                tempResult.Data = tempAvailableTableListForTransfer;
+                tempResult.IsSuccess = true;
+            }
+            catch (Exception ex)
+            {
+                tempResult.IsException = true;
+                Console.Write("###" + ex + "###");
+                Logger.Write("Exception : " + ex + " in AvailableTableForTransfer()", LogLevel.Error, "Database");
+                if (ex.GetType().Equals(typeof(SqlException)))
+                {
+                    SqlException oSQLEx = ex as SqlException;
+                    if (oSQLEx.Number != 7619)
+                        throw new Exception("Exception occure at AvailableTableForTransfer()", ex);
+                }
+                else
+                {
+                    throw new Exception("Exception occure at AvailableTableForTransfer()", ex);
+                }
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return tempResult;
+        }
+
+        public CResult AvailableTableForUnlock()
+        {
+            CResult tempResult = new CResult();
+            GetTimeSpan(DateTime.Now);
+            List<CTransferOrderShow> tempAvailableTableListForUnlock = new List<CTransferOrderShow>();
+            try
+            {
+                CCommonConstants oTempConstant = ConfigManager.GetConfig<CCommonConstants>();
+
+                this.OpenConnection();
+                string sSql = string.Format(SqlQueries.GetQuery(Query.ShowAvailableTableForUnlock), m_oStartTime, m_oEndTime);
+
+                IDataReader oReader = this.ExecuteReader(sSql);
+                if (oReader != null)
+                {
+                    while (oReader.Read())
+                    {
+                        CTransferOrderShow tempTableForUnlock = ReaderToTransferOrderShow(oReader);
+                        tempAvailableTableListForUnlock.Add(tempTableForUnlock);
+                    }
+                }
+                tempResult.Data = tempAvailableTableListForUnlock;
+                tempResult.IsSuccess = true;
+            }
+            catch (Exception ex)
+            {
+                tempResult.IsException = true;
+                Console.Write("###" + ex + "###");
+                Logger.Write("Exception : " + ex + " in AvailableTableForUnlock()", LogLevel.Error, "Database");
+                if (ex.GetType().Equals(typeof(SqlException)))
+                {
+                    SqlException oSQLEx = ex as SqlException;
+                    if (oSQLEx.Number != 7619)
+                        throw new Exception("Exception occure at AvailableTableForTUnlock()", ex);
+                }
+                else
+                {
+                    throw new Exception("Exception occure at AvailableTableForUnlock()", ex);
+                }
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return tempResult;
+        }
+
+        public CResult AvailableTableForVoid()
+        {
+            CResult tempResult = new CResult();
+            GetTimeSpan(DateTime.Now);
+            List<CTransferOrderShow> tempAvailableTableListForVoid = new List<CTransferOrderShow>();
+            try
+            {
+                CCommonConstants oTempConstant = ConfigManager.GetConfig<CCommonConstants>();
+
+                this.OpenConnection();
+                string sSql = string.Format(SqlQueries.GetQuery(Query.ShowAvailableTableForVoid), m_oStartTime, m_oEndTime);
+
+                IDataReader oReader = this.ExecuteReader(sSql);
+                if (oReader != null)
+                {
+                    while (oReader.Read())
+                    {
+                        CTransferOrderShow tempTableForVoid = ReaderToTransferOrderShow(oReader);
+                        tempAvailableTableListForVoid.Add(tempTableForVoid);
+                    }
+                }
+                tempResult.Data = tempAvailableTableListForVoid;
+                tempResult.IsSuccess = true;
+            }
+            catch (Exception ex)
+            {
+                tempResult.IsException = true;
+                Console.Write("###" + ex + "###");
+                Logger.Write("Exception : " + ex + " in AvailableTableForVoid()", LogLevel.Error, "Database");
+                if (ex.GetType().Equals(typeof(SqlException)))
+                {
+                    SqlException oSQLEx = ex as SqlException;
+                    if (oSQLEx.Number != 7619)
+                        throw new Exception("Exception occure at AvailableTableForVoid()", ex);
+                }
+                else
+                {
+                    throw new Exception("Exception occure at AvailableTableForUnlock()", ex);
+                }
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return tempResult;
+        }
+
+        #endregion
+
+        /// <summary>
+        ///This method converts the reader object to the data object        
+        /// </summary>
+        /// <param name="oReader"></param>
+        /// <returns></returns>
+        private COrderShow ReaderToOrderShow(IDataReader oReader)
+        {
+            COrderShow oOrderShow = new COrderShow();
+
+            if (oReader["order_id"] != null)
+            {
+                oOrderShow.OrderID = Int64.Parse(oReader["order_id"].ToString());
+            }
+
+            if (oReader["order_type"] != null)
+            {
+                oOrderShow.OrderType = oReader["order_type"].ToString();
+            }
+
+            if (oReader["status"] != null)
+            {
+                oOrderShow.Status = oReader["status"].ToString();
+            }
+
+            if (oReader["guest_count"] != null)
+            {
+                oOrderShow.GuestCount = int.Parse(oReader["guest_count"].ToString());
+            }
+
+            if (oReader["table_number"] != null)
+            {
+                oOrderShow.TableNumber = Int64.Parse(oReader["table_number"].ToString());
+            }
+
+            if (oReader["table_name"] != null)
+            {
+                oOrderShow.TableName = oReader["table_name"].ToString();
+            }
+
+            if (oReader["user_name"] != null)
+            {
+                oOrderShow.UserName = oReader["user_name"].ToString();
+            }
+
+            if (oReader["online_orderid"] != null)
+            {
+                oOrderShow.OnlineOrderID = Convert.ToInt64("0" + oReader["online_orderid"]); //Online order status .i.e whether it came from online or local order. If 1 then come from online otherwise local order
+            }
+            return oOrderShow;
+        }
+
+        private COrderShow ReaderToReportOrderShow(IDataReader oReader)
+        {
+            COrderShow oOrderShow = new COrderShow();
+
+            if (oReader["order_id"] != null)
+                oOrderShow.OrderID = Int64.Parse(oReader["order_id"].ToString());
+
+            if (oReader["order_type"] != null)
+                oOrderShow.OrderType = oReader["order_type"].ToString();
+
+            if (oReader["table_number"] != null)
+                oOrderShow.TableNumber = int.Parse(oReader["table_number"].ToString());
+
+
+            return oOrderShow;
+
+        }
+
+        private CTransferOrderShow ReaderToTransferOrderShow(IDataReader oReader)
+        {
+            CTransferOrderShow oTransferOrderShow = new CTransferOrderShow();
+
+            if (oReader["order_id"] != null)
+                oTransferOrderShow.OrderID = Int64.Parse(oReader["order_id"].ToString());
+
+            if (oReader["guest_count"] != null)
+                oTransferOrderShow.GuestCount = int.Parse(oReader["guest_count"].ToString());
+
+            if (oReader["order_type"] != null)
+                oTransferOrderShow.OrderType = oReader["order_type"].ToString();
+
+            if (oReader["table_number"] != null)
+                oTransferOrderShow.TableNumber = Int64.Parse(oReader["table_number"].ToString());
+
+            if (oReader["customer_name"] != null)
+                oTransferOrderShow.CustomerName = oReader["customer_name"].ToString();
+
+            return oTransferOrderShow;
+
+        }
+
+        private CTableInfo ReaderToAvailableTable(IDataReader oReader)
+        {
+            CTableInfo tempAvailableTable = new CTableInfo();
+
+            if (oReader["table_number"] != null)
+            {
+                tempAvailableTable.TableNumber = int.Parse(oReader["table_number"].ToString());
+            }
+
+            if (oReader["capacity"] != null)
+            {
+                tempAvailableTable.Capacity = int.Parse(oReader["capacity"].ToString());
+            }
+
+            if (oReader["status"] != null)
+            {
+                tempAvailableTable.Status = int.Parse(oReader["status"].ToString());
+            }
+
+            if (oReader["table_type"] != null)
+            {
+                tempAvailableTable.TableType = oReader["table_type"].ToString();
+            }
+
+            return tempAvailableTable;
+
+        }
+
+        public void GetTimeSpan(DateTime inCurrentDate)//Changed
+        {
+            Int64 tempStartTime = inCurrentDate.Ticks;
+            Int64 tempEndTime = inCurrentDate.AddDays(1).Ticks;
+
+            Int64 tempCheckTime = (inCurrentDate.Date.AddHours(8)).Ticks;
+
+            if (inCurrentDate.Ticks < tempCheckTime)
+            {
+                tempStartTime = tempCheckTime - 864000000000;
+                tempEndTime = tempCheckTime;
+            }
+
+            else if (inCurrentDate.Ticks >= tempCheckTime)
+            {
+                tempStartTime = tempCheckTime;
+                tempEndTime = tempCheckTime + 864000000000;
+            }
+
+            m_oStartTime = tempStartTime;
+            m_oEndTime = tempEndTime;
+
+        }
+
+        //public void GetTimeSpan(DateTime inCurrentDate)
+        //{
+        //    DateTime tempStartTime = inCurrentDate;
+        //    DateTime tempEndTime = inCurrentDate.AddDays(1);
+
+        //    DateTime tempRight = DateTime.Parse(inCurrentDate.ToString("MM/dd/yyyy") + " 8:00:00 AM");
+        //    DateTime tempLeft = DateTime.Parse(inCurrentDate.ToString("MM/dd/yyyy")+" "+inCurrentDate.ToLongTimeString());
+
+        //    int tempBool = DateTime.Compare(tempLeft, tempRight);
+        //    if (tempBool == -1)
+        //    {
+        //        tempStartTime = DateTime.Parse(inCurrentDate.AddDays(-1).ToString("MM/dd/yyyy") + " 8:00:00 AM");
+        //        tempEndTime = DateTime.Parse(inCurrentDate.ToString("MM/dd/yyyy") + " 8:00:00 AM");
+        //    }
+        //    else if (tempBool == 0 || tempBool == 1)
+        //    {
+        //        tempStartTime = DateTime.Parse(inCurrentDate.ToString("MM/dd/yyyy") + " 8:00:00 AM");
+        //        tempEndTime = DateTime.Parse(inCurrentDate.AddDays(1).ToString("MM/dd/yyyy") + " 8:00:00 AM");
+        //    }
+        //    else ;
+        //    m_oStartTime = tempStartTime;
+        //    m_oEndTime = tempEndTime;
+        //}
+
+    }
+
+}

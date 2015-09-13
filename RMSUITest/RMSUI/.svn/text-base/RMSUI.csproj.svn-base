@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4BBBEC3B-580D-4BB6-B4AB-7DD39D13517F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RMSUI</RootNamespace>
+    <AssemblyName>RMSUI</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="RMSUI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\RMSUI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CurrencyKeyPad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CurrencyKeyPad.Designer.cs">
+      <DependentUpon>CurrencyKeyPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="keyboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="keyboard.designer.cs">
+      <DependentUpon>keyboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeyButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KeyButton.Designer.cs">
+      <DependentUpon>KeyButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RMSToogleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FunctionalButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Interfaces\DialogueFormInterface.cs" />
+    <Compile Include="IRDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LobbyItemButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LobbyItemButton.Designer.cs">
+      <DependentUpon>LobbyItemButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NumericInputButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NumericKeyPad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NumericKeyPad.Designer.cs">
+      <DependentUpon>NumericKeyPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RMSUIConstants.cs" />
+    <Compile Include="RMSGenericButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InputTextButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PopCloseButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DialogueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogueForm.Designer.cs">
+      <DependentUpon>DialogueForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserLoginButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CurrencyKeyPad.resx">
+      <DependentUpon>CurrencyKeyPad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IRDialogForm.resx">
+      <DependentUpon>IRDialogForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="keyboard.resx">
+      <DependentUpon>keyboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LobbyItemButton.resx">
+      <DependentUpon>LobbyItemButton.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumericKeyPad.resx">
+      <DependentUpon>NumericKeyPad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogueForm.resx">
+      <DependentUpon>DialogueForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-login-icon-f.png" />
+    <None Include="Resources\user-login-icon-m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pop-bottom-right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pop-close-down.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pop-close-up.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-login-bg-down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-login-bg-up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inp-btn-img-down-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inp-button-img-up-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dialogbox-btn-down-green.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dialogbox-btn-down-red.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dialogbox-btn-up.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\base-form-title-bg-common.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\base-form-title-bg-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\base-form-title-bg-right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rms-logo-client.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock-widget-bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-tb_ordered.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-tb_seated.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-tb_waiting-forpayment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-tw_barservice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-tw_delevery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-tb_waiting-collections.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-tb_waiting-waiting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_control.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_option.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_reload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inp-button-img-down-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\numericInputButton1.BackgroundImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

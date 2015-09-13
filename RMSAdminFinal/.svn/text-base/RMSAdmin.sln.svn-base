@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMSAdmin", "RMSAdmin\RMSAdmin.csproj", "{C99F765F-BB45-4380-A48C-F8473B2DA66B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{2369A141-F9C8-40F3-93DD-0F87352F868C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigService", "ConfigService\ConfigService.csproj", "{8882985F-D4BC-4405-B0F6-19FC244B82A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{AD11806A-0E5C-4084-9C37-2543A2E772C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Logger\Logger.csproj", "{17A2A613-6DD4-4501-B9F0-E64F43A224B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Managers", "Managers\Managers.csproj", "{5164BF02-8013-4369-9F96-95373FF4C397}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RmsRemote", "RmsRemote\RmsRemote.csproj", "{071DA655-D580-47CE-B1F8-66CC8D308601}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "RMSAdminInstaller", "RMSAdminInstaller\RMSAdminInstaller.vdproj", "{42294ABB-5B55-48AD-8687-42925399E5D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C99F765F-BB45-4380-A48C-F8473B2DA66B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C99F765F-BB45-4380-A48C-F8473B2DA66B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C99F765F-BB45-4380-A48C-F8473B2DA66B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C99F765F-BB45-4380-A48C-F8473B2DA66B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2369A141-F9C8-40F3-93DD-0F87352F868C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2369A141-F9C8-40F3-93DD-0F87352F868C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2369A141-F9C8-40F3-93DD-0F87352F868C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2369A141-F9C8-40F3-93DD-0F87352F868C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8882985F-D4BC-4405-B0F6-19FC244B82A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8882985F-D4BC-4405-B0F6-19FC244B82A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8882985F-D4BC-4405-B0F6-19FC244B82A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8882985F-D4BC-4405-B0F6-19FC244B82A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD11806A-0E5C-4084-9C37-2543A2E772C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD11806A-0E5C-4084-9C37-2543A2E772C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD11806A-0E5C-4084-9C37-2543A2E772C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD11806A-0E5C-4084-9C37-2543A2E772C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17A2A613-6DD4-4501-B9F0-E64F43A224B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17A2A613-6DD4-4501-B9F0-E64F43A224B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17A2A613-6DD4-4501-B9F0-E64F43A224B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17A2A613-6DD4-4501-B9F0-E64F43A224B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5164BF02-8013-4369-9F96-95373FF4C397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5164BF02-8013-4369-9F96-95373FF4C397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5164BF02-8013-4369-9F96-95373FF4C397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5164BF02-8013-4369-9F96-95373FF4C397}.Release|Any CPU.Build.0 = Release|Any CPU
+		{071DA655-D580-47CE-B1F8-66CC8D308601}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{071DA655-D580-47CE-B1F8-66CC8D308601}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{071DA655-D580-47CE-B1F8-66CC8D308601}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{071DA655-D580-47CE-B1F8-66CC8D308601}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42294ABB-5B55-48AD-8687-42925399E5D0}.Debug|Any CPU.ActiveCfg = Debug
+		{42294ABB-5B55-48AD-8687-42925399E5D0}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = 
+	EndGlobalSection
+EndGlobal

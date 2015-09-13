@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CCommonConstants>
+
+ 
+
+  <PrintStyleID>1</PrintStyleID>
+  <!-- donot change the below one-->
+ 
+
+  <!--  DMY  for day month year format,  MDY for month day year format in the database-->
+  <SqlQueryDateFormat>MDY</SqlQueryDateFormat>
+
+  <RemoteURL>tcp://192.168.250.31:8085/RMSSERVER</RemoteURL>
+
+
+  
+  
+</CCommonConstants>

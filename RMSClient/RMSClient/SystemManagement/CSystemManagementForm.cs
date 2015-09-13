@@ -1,0 +1,855 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using PayRoll.Forms;
+using RMS.Common;
+using RMS.Common.ObjectModel;
+using Managers.PaymentSummaryManager;
+using System.Xml;
+using RMS.Common.Config;
+using RMS.MemberShipCardManage;
+using RMS.MemberShipCardNoManage;
+using RmsRemote;
+using WebChart;
+using System.Data.SqlClient;
+using Managers.TableInfo;
+using System.Net;
+using Managers.Payment;
+using RMS.DataAccess;
+using Managers.User;
+using RMSUI;
+using RMS.Reports;
+using RMS.StockManagement;
+
+
+
+namespace RMS.SystemManagement
+{
+    public partial class CSystemManagementForm : BaseForm
+    {
+
+        Int64 m_oStartTime;
+        Int64 m_oEndTime;
+
+        public CSystemManagementForm()
+        {
+            InitializeComponent();   
+            
+            CMouseConfig tempMouseConfig = ConfigManager.GetConfig<CMouseConfig>();
+            CCommonConstants tempCommonConstants = ConfigManager.GetConfig<CCommonConstants>();
+
+            CUserAccess tempUserAccess = tempCommonConstants.UserInfo.UserAccess;
+            ExitButton.Enabled = tempUserAccess.ExitRms == 1;
+            MergeTableButton.Enabled = tempUserAccess.MergeTable == 1;
+            OpenDrawerButton.Enabled = tempUserAccess.OpenDrawer == 1;
+            ReviewTransactionButton.Enabled = tempUserAccess.ReviewTransaction == 1;
+            TillReportingButton.Enabled = tempUserAccess.TillReporting == 1;
+            TransfertableButton.Enabled = tempUserAccess.TransferTable == 1;
+            ViewReportButton.Enabled = tempUserAccess.ViewReport == 1;
+            VoidTableButton.Enabled = tempUserAccess.VoidTable == 1;
+            UnlockTableButton.Enabled = tempUserAccess.UnlockTable == 1;
+            BookingButton.Enabled = tempUserAccess.Booking == 1;
+
+            //if (tempUserAccess.Users == 1)
+            //    UserButton.Enabled = true;
+
+            CustomerButton.Enabled = tempUserAccess.Customers == 1;
+            DepositButton.Enabled = tempUserAccess.Deposit == 1;
+            UpdateItemsButton.Enabled = tempUserAccess.UpdateItems == 1;
+
+
+            //if (tempUserAccess.LogRegister == 1)
+            //    btnLogRecords.Enabled = true;
+
+            //For Log register this code will be optimized later
+            CUserManager tempUserManager = new CUserManager();
+            CUserAccess tempUserAccess2 = (CUserAccess)tempUserManager.GetUserAccess(tempCommonConstants.UserInfo).Data;
+            //if (tempUserAccess2.LogRegister == 1)
+            //    btnLogRecords.Enabled = true;
+            //if (tempUserAccess2.ProcessDeliveryTime == 1)
+            //{
+            //    btnSetDefaultTime.Enabled = true;
+            //}
+            //if (tempUserAccess2.KitchenText == 1)
+            //{
+            //    btnKitchenText.Enabled = true;
+            //}
+            btnSystemSettings.Enabled = tempUserAccess2.SystemSettings == 1;
+
+           // LoadGraph();
+
+            //lblVersionNumber.Text = RMSGlobal.m_rmsVersionNumber;
+        }
+
+        public void ConvertTime(ref DataSet inDataSet)
+        {
+            for (int rowIndex = 0; rowIndex < inDataSet.Tables[0].Rows.Count; rowIndex++)
+            {
+                Int64 oldFormat =Int64.Parse(inDataSet.Tables[0].Rows[rowIndex]["Time"].ToString());
+
+                DateTime newFormat = new DateTime(oldFormat);
+                inDataSet.Tables[0].Rows[rowIndex]["NewTime"] = newFormat.Hour+":"+newFormat.Minute;
+
+            }
+        }
+        public void LoadGraph()
+        {
+            ChartEngine tempChartEngine = new ChartEngine();
+          //  tempChartEngine.Size = GraphPictureBox.Size;
+            tempChartEngine.ShowXValues = true;
+            tempChartEngine.ShowYValues = true;
+
+            
+            ChartText tempChartText = new ChartText();
+            tempChartText.Text = "Hourly Sales";
+            tempChartEngine.Title = tempChartText;
+
+            CPaymentManager tempPaymentManager = new CPaymentManager();
+            CResult oResult = tempPaymentManager.GetSortedPayment(DateTime.Now);
+            double MaxAmount = 0.0;
+            if (oResult.IsSuccess && oResult.Data != null)
+            {
+                MaxAmount = (double)oResult.Data;
+            }
+            tempChartEngine.YValuesInterval =(int)Math.Floor(MaxAmount/5);
+            
+            
+            ChartCollection tempChartCollection = new ChartCollection(tempChartEngine);
+            tempChartEngine.Charts = tempChartCollection;
+            DateTime inCurrentDate =DateTime.Now;
+            GetTimeSpan(inCurrentDate);
+
+
+            //Data Access
+
+            try
+            {
+                CPcInfoManager tempPcInfoManager = new CPcInfoManager();
+                IPHostEntry ipEntry = System.Net.Dns.GetHostByName(Dns.GetHostName());
+                CPcInfo tempPcInfo = (CPcInfo)tempPcInfoManager.PcInfoByPcIP(ipEntry.AddressList[0].ToString()).Data;
+
+                DataSet tempHourlySaleDataSet = new DataSet();
+                CCommonConstants oConstants = ConfigManager.GetConfig<CCommonConstants>();
+                String sSql = String.Format("select 'NewTime' as \"NewTime\",bill_print_time.payment_time as \"Time\",payment.total_amount as \"Amount\" from payment,bill_print_time where payment.order_id=bill_print_time.order_id and bill_print_time.payment_time>={0} and bill_print_time.payment_time<{1} and payment.pc_id={2}", m_oStartTime, m_oEndTime,tempPcInfo.PcID);
+                SqlDataAdapter tempSqlDataAdapter = new SqlDataAdapter(sSql, oConstants.DBConnection);
+                tempSqlDataAdapter.Fill(tempHourlySaleDataSet);
+
+                sSql = String.Format("select 'NewTime' as \"NewTime\",deposit_time as \"Time\",total_amount as \"Amount\" from deposit where deposit_time >= {0} and deposit_time < {1} and deposit.pc_id={2}", m_oStartTime, m_oEndTime, tempPcInfo.PcID);
+                tempSqlDataAdapter = new SqlDataAdapter(sSql, oConstants.DBConnection);
+                tempSqlDataAdapter.Fill(tempHourlySaleDataSet);
+
+
+                ConvertTime(ref tempHourlySaleDataSet);
+
+                //start dummy time
+                DataRow row1 = tempHourlySaleDataSet.Tables[0].NewRow();
+                row1["NewTime"] = "0:00";
+                row1["Amount"] = "0.000";
+
+                //end dummy time
+                DataRow row2 = tempHourlySaleDataSet.Tables[0].NewRow();
+                row2["NewTime"] = "23:59";
+                row2["Amount"] = "0.000";
+
+                tempHourlySaleDataSet.Tables[0].Rows.Add(row1);
+                tempHourlySaleDataSet.Tables[0].Rows.Add(row2);
+
+
+
+                Chart tempLineChart = new LineChart();
+                tempLineChart.Line.Color = Color.Red;
+                tempLineChart.ShowLineMarkers = false;
+                tempLineChart.Line.Width = (float)2.0;
+                
+                DataTableReader oReader = tempHourlySaleDataSet.Tables[0].CreateDataReader();
+
+                tempLineChart.DataSource = oReader;
+                
+                tempLineChart.DataXValueField = "NewTime";
+                tempLineChart.DataYValueField = "Amount";
+                tempLineChart.DataBind();
+                tempChartCollection.Add(tempLineChart);
+
+
+                Image image = tempChartEngine.GetBitmap();
+               // GraphPictureBox.Image = image;
+               // GraphPictureBox.Update();
+            }
+            catch (Exception exp)
+            {
+                throw exp;
+            }
+        }
+
+        public void GetTimeSpan(DateTime inCurrentDate)
+        {
+            Int64 tempStartTime = inCurrentDate.Ticks;
+            Int64 tempEndTime = inCurrentDate.AddDays(1).Ticks;
+
+            Int64 tempCheckTime = (inCurrentDate.Date.AddHours(8)).Ticks;
+
+            if (inCurrentDate.Ticks < tempCheckTime)
+            {
+                tempStartTime = tempCheckTime - 864000000000;
+                tempEndTime = tempCheckTime;
+            }
+
+            else if (inCurrentDate.Ticks >= tempCheckTime)
+            {
+                tempStartTime = tempCheckTime;
+                tempEndTime = tempCheckTime + 864000000000;
+            }
+
+            m_oStartTime = tempStartTime;
+            m_oEndTime = tempEndTime;
+
+        }        
+        private void OpenDrawerButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CPrintMethods tempPrintMethods = new CPrintMethods();
+
+                tempPrintMethods.OpenDrawer();
+
+            }
+            catch (Exception exp)
+            {
+                throw exp;
+            }
+        }
+        private void VoidTableButton_Click(object sender, EventArgs e)
+        {
+            CVoidTableForm tempVoidTableForm = new CVoidTableForm();
+
+            DialogResult dr = tempVoidTableForm.ShowDialog();
+            /* tempVoidTableForm.Show();
+            CFormManager.Forms.Push(this);
+            this.Hide();*/
+        }
+        private void TransfertableButton_Click(object sender, EventArgs e)
+        {
+            CTransferTableForm tempTransferTableForm = new CTransferTableForm();
+            tempTransferTableForm.Show();
+            CFormManager.Forms.Push(this);
+            this.Hide();
+        }
+        private void MergeTableButton_Click(object sender, EventArgs e)
+        {
+
+            OrderVoidReport aReport =new OrderVoidReport();
+            aReport.ShowDialog();
+
+            //VoidOrderReportForm v = new VoidOrderReportForm();
+            //v.Show();
+            //CMergeTableForm tempMergeTableForm = new CMergeTableForm();
+            //tempMergeTableForm.Show();
+            //CFormManager.Forms.Push(this);
+            //this.Hide();
+        }
+        private void ReviewTransactionButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CReviewTransactionForm tempReviewTransactionForm = new CReviewTransactionForm();
+                tempReviewTransactionForm.Show();
+                CFormManager.Forms.Push(this);
+                this.Hide();
+            }
+            catch (Exception exp)
+            {
+                Console.Write(exp.Message);
+            }
+        }
+        private void UnlockTableButton_Click(object sender, EventArgs e)
+        {
+            CUnlockTableForm tempUnlockTableForm = new CUnlockTableForm();
+
+            DialogResult dr = tempUnlockTableForm.ShowDialog();
+            //tempUnlockTableForm.Show();
+           // CFormManager.Forms.Push(this);
+           // this.Hide();
+        }
+        private void ViewReportButton_Click(object sender, EventArgs e)
+        {
+            
+            ViewReport tempViewReportForm = new ViewReport();
+            tempViewReportForm.Show();
+            CFormManager.Forms.Push(this);
+            this.Hide();
+             
+            /*
+            CViewReportForm tempViewReportForm = new CViewReportForm();
+            tempViewReportForm.Show();
+            CFormManager.Forms.Push(this);
+            this.Hide();
+            */
+        }
+
+        private void TillReportingButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CPcInfoManager tempPcInfoManager = new CPcInfoManager();
+                IPHostEntry ipEntry = System.Net.Dns.GetHostByName(Dns.GetHostName());
+                CPcInfo tempPcInfo = (CPcInfo)tempPcInfoManager.PcInfoByPcIP(ipEntry.AddressList[0].ToString()).Data;
+                CPrintMethodsEXT tempPrintMethods = new CPrintMethodsEXT();
+
+                string serialHeader = "IBACS RMS";
+                string serialFooter = "";
+
+                string serialBody = "";
+                serialBody += "                 Till Report";
+                String DateString = "Date: " + DateTime.Now.ToLongDateString();
+                serialBody += "\r\n".PadRight((int)(45 - DateString.Length) / 2) + DateString + "\r\n\r\n";
+
+                CPaymentSummaryManager tempSummaryByOrderManager = new CPaymentSummaryManager();
+                List<CPaymentSummaryByOrder> tempSummaryByOrder = (List<CPaymentSummaryByOrder>)tempSummaryByOrderManager.GetTotalPaymentSummaryForViewReportByPC(DateTime.Now, tempPcInfo.PcID).Data;
+                CPaymentSummaryByOrder[] tempSummaryByOrderArray = tempSummaryByOrder.ToArray();
+
+                serialBody += "SL  Order    Table   Payment       Total";
+                serialBody += "\r\n    Type     Number   Type";
+                serialBody += "\r\n--- -------- ---- ---------------  ------";
+                for (int i = 0; i < tempSummaryByOrderArray.Length; i++)
+                {
+                    bool tempbool = false;
+                    float tempAccPayment = 0;
+                    float tempCashPayment = 0;
+                    float tempChequePayment = 0;
+                    float tempVoucherPayment = 0;
+                    float tempDiscount = 0;
+                    float tempDepositePayment = 0;
+                    float tempEFTPayment = 0;
+                    float tempServicePayment = 0;
+
+
+                    float.TryParse(tempSummaryByOrderArray[i].TotalAccPayment.ToString(), out tempAccPayment);
+                    float.TryParse(tempSummaryByOrderArray[i].TotalCashPayment.ToString(), out tempCashPayment);
+                    float.TryParse(tempSummaryByOrderArray[i].TotalChequePayment.ToString(), out tempChequePayment);
+                    float.TryParse(tempSummaryByOrderArray[i].TotalVoucherPayment.ToString(), out tempVoucherPayment);
+                    float.TryParse(tempSummaryByOrderArray[i].TotalDepositePayment.ToString(), out tempDepositePayment);
+                    float.TryParse(tempSummaryByOrderArray[i].TotalEFTPayment.ToString(), out tempEFTPayment);
+                    float.TryParse(tempSummaryByOrderArray[i].TotalServicePayment.ToString(), out tempServicePayment);
+                    float.TryParse(tempSummaryByOrderArray[i].Discount.ToString(), out tempDiscount);
+
+                    //Modified By Baruri on 30/07/2008 for discarding table number for take way.
+                    if (tempSummaryByOrderArray[i].OrderType.Trim().ToUpper().Replace(" ", "") == "Take Away".Trim().ToUpper().Replace(" ", ""))
+                    {
+                        serialBody += "\r\n" + ((int)(i + 1)).ToString().PadRight(3) + " " + (tempSummaryByOrderArray[i].OrderType.Trim()).PadRight(9, ' ') + " " + " ".PadRight(4, ' ') + " ";// +tempPayString.Trim().PadRight(13, ' ') + "  " + tempSummaryByOrderArray[i].TotalPayment;
+                    }
+                    else
+                    {
+                        serialBody += "\r\n" + ((int)(i + 1)).ToString().PadRight(3) + " " + (tempSummaryByOrderArray[i].OrderType.Trim()).PadRight(9, ' ') + " " + tempSummaryByOrderArray[i].TableNumber.ToString().PadRight(4, ' ') + " ";// +tempPayString.Trim().PadRight(13, ' ') + "  " + tempSummaryByOrderArray[i].TotalPayment;
+                    }
+                    
+                    if (tempCashPayment > 0)
+                    {
+                        string temp = "Cash:(" + tempCashPayment.ToString("F02") + ")";
+                        if (!tempbool)
+                        {
+                            serialBody += temp.PadRight(15, ' ') + " " + tempSummaryByOrderArray[i].TotalPayment.ToString("F02") + "\r\n";
+                            tempbool = true;
+                        }
+                        else
+                        {
+                            serialBody += "                  " + temp.PadRight(15, ' ') + "\r\n";
+                        }
+                    }
+                    if (tempChequePayment > 0)
+                    {
+                        string temp = "Cheque(" + tempChequePayment.ToString("F02") + ")";
+                        if (!tempbool)
+                        {
+                            serialBody += temp.PadRight(15, ' ') + " " + tempSummaryByOrderArray[i].TotalPayment.ToString("F02") + "\r\n";
+                            tempbool = true;
+                        }
+                        else
+                        {
+                            serialBody += "                  " + temp.PadRight(15, ' ') + "\r\n";
+                        }
+                    }
+                    if (tempVoucherPayment > 0)
+                    {
+                        string temp = "Voucher(" + tempVoucherPayment.ToString("F02") + ")";
+                        if (!tempbool)
+                        {
+                            serialBody += temp.PadRight(15, ' ') + " " + tempSummaryByOrderArray[i].TotalPayment.ToString("F02") + "\r\n";
+                            tempbool = true;
+                        }
+                        else
+                        {
+                            serialBody += "                  " + temp.PadRight(15, ' ') + "\r\n";
+                        }
+                    }
+                    if (tempEFTPayment > 0)
+                    {
+                        string temp = "EFT(" + tempEFTPayment.ToString("F02") + ")";
+                        if (!tempbool)
+                        {
+                            serialBody += temp.PadRight(15, ' ') + " " + tempSummaryByOrderArray[i].TotalPayment.ToString("F02") + "\r\n";
+                            tempbool = true;
+                        }
+                        else
+                        {
+                            serialBody += "                  " + temp.PadRight(15, ' ') + "\r\n";
+                        }
+                    }
+
+                    if (tempAccPayment > 0)
+                    {
+                        string temp = "ACC(" + tempAccPayment.ToString("F02") + ")";
+                        if (!tempbool)
+                        {
+                            serialBody += temp.PadRight(15, ' ') + " " + tempSummaryByOrderArray[i].TotalPayment.ToString("F02") + "\r\n";
+                            tempbool = true;
+                        }
+                        else
+                        {
+                            serialBody += "                  " + temp.PadRight(15, ' ') + "\r\n";
+                        }
+                    }
+
+
+                    if (tempServicePayment > 0)
+                    {
+                        string temp = "Sevice(" + tempServicePayment.ToString("F02") + ")";
+                        if (!tempbool)
+                        {
+                            serialBody += temp.PadRight(15, ' ') + " " + tempSummaryByOrderArray[i].TotalPayment.ToString("F02") + "\r\n";
+                            tempbool = true;
+                        }
+                        else
+                        {
+                            serialBody += "                  " + temp.PadRight(15, ' ') + "\r\n";
+                        }
+                    }
+                    if (tempDiscount > 0)
+                    {
+                        string temp = "Discount(" + tempDiscount.ToString("F02") + ")";
+                        if (!tempbool)
+                        {
+                            serialBody += temp.PadRight(15, ' ') + " " + tempSummaryByOrderArray[i].TotalPayment.ToString("F02") + "\r\n";
+                            tempbool = true;
+                        }
+                        else
+                        {
+                            serialBody += "                  " + temp.PadRight(15, ' ') + "\r\n";
+                        }
+                    }
+                    if (tempDepositePayment > 0)
+                    {
+                        string temp = "Deposit(" + tempDepositePayment.ToString("F02") + ")";
+                        if (!tempbool)
+                        {
+                            serialBody += temp.PadRight(15, ' ') + " " + tempSummaryByOrderArray[i].TotalPayment.ToString("F02") + "\r\n";
+                            tempbool = true;
+                        }
+                        else
+                        {
+                            serialBody += "                  " + temp.PadRight(15, ' ') + "\r\n";
+                        }
+                    }
+                }
+
+                CPaymentSummaryManager tempPaymentSummaryManager = new CPaymentSummaryManager();
+                CPaymentSummary tempPayamentSummary = new CPaymentSummary();
+                tempPayamentSummary = (CPaymentSummary)tempPaymentSummaryManager.GetTotalPaymentSummaryByPC(DateTime.Now, tempPcInfo.PcID).Data;
+
+                if (tempPayamentSummary != null)
+                {
+                    serialBody += "\r\n\r\nCash Pay: " + tempPayamentSummary.TotalCashPayment;
+                    serialBody += "\r\nEFT Pay: " + tempPayamentSummary.TotalEFTPayment;
+                   // serialBody += "\r\nCheque Pay: " + tempPayamentSummary.TotalChequePayment;
+                   // serialBody += "\r\nVoucher Pay: " + tempPayamentSummary.TotalVoucherPayment;
+                    serialBody += "\r\nDiscount: " + tempPayamentSummary.TotalDiscount;
+                    serialBody += "\r\nDeposite Used: " + tempPayamentSummary.TotalDepositePayment;
+                    serialBody += "\r\n\r\nTotal Pay: " + tempPayamentSummary.TotalPayment;
+                }
+
+               // tempPrintMethods.SerialPrint(PRINTER_TYPES.NORMAL_PRINTER, serialHeader, serialBody, serialFooter, "");
+                tempPrintMethods.USBPrint(serialBody, PrintDestiNation.CLIENT, false);
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message);
+            }
+        }
+
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            Form tempForm = CFormManager.Forms.Pop();
+            tempForm.Show();
+            this.Close();
+        }
+        private void ExitButton_Click(object sender, EventArgs e)
+        {            
+            DialogResult tempDialogResult = MessageBox.Show("Are you sure you want to exit?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (tempDialogResult.Equals(DialogResult.No)) return;
+
+            CCommonConstants m_oCommonConstants = ConfigManager.GetConfig<CCommonConstants>();
+            CLogin oLogin = new CLogin();
+            CUserInfo oUserInfo = new CUserInfo();
+            oUserInfo.UserID = m_oCommonConstants.UserInfo.UserID;
+            CCommonConstants oConstant = ConfigManager.GetConfig<CCommonConstants>();
+
+            oLogin = (RmsRemote.CLogin)Activator.GetObject(typeof(RmsRemote.CLogin), oConstant.RemoteURL);
+
+            CResult oResult = oLogin.ProcessLogout(oUserInfo);
+
+            if (oResult.IsSuccess)
+            {
+                Application.Exit();
+            }
+        }
+
+        public void PopulateSummaryDataGridView(CPaymentSummary inPaymentSummary)
+        {
+            try
+            {
+                string[] row1 = new string[] { "Total", ((float)(inPaymentSummary.TotalPayment)).ToString("F02") };
+                string[] row2 = new string[] { "Cash Paymnet", ((float)(inPaymentSummary.TotalCashPayment)).ToString("F02") };
+                string[] row3 = new string[] { "EFT Payment", ((float)(inPaymentSummary.TotalEFTPayment)).ToString("F02") };
+                string[] row4 = new string[] { "Cheque Payment", ((float)(inPaymentSummary.TotalChequePayment)).ToString("F02") };
+                string[] row5 = new string[] { "Voucher Payment", ((float)(inPaymentSummary.TotalVoucherPayment)).ToString("F02") };
+                string[] row6 = new string[] { "Deposit Payment", ((float)(inPaymentSummary.TotalDepositePayment)).ToString("F02") };
+                string[] row7 = new string[] { "Food Sales", ((float)(inPaymentSummary.PaymentFoodType)).ToString("F02") };
+                string[] row8 = new string[] { "Non Food Sales", ((float)(inPaymentSummary.PaymentNonFoodType)).ToString("F02") };
+                string[] row9 = new string[] { "Other Payments", ((float)(inPaymentSummary.TotalOtherPayment)).ToString("F02") };
+                string[] row10 = new string[] { "Tables Served", ((int)(inPaymentSummary.TableServedCount)).ToString() };
+                string[] row11 = new string[] { "Guests Served", ((int)(inPaymentSummary.GuestServedCount)).ToString() };
+                string[] row12 = new string[] { "Service Charge", ((float)(inPaymentSummary.TotalServicePayment)).ToString("F02") };
+                string[] row13 = new string[] { "Discount", ((float)(inPaymentSummary.TotalDiscount)).ToString("F02") };
+
+                object[] rows = new object[] { row1, row6, row2, row3, row4, row5, row7, row8, row9, row10, row11, row12, row13 };
+
+                PaymentSummaryDataGridView.Rows.Clear();
+                foreach (string[] rowArray in rows)
+                {
+                    PaymentSummaryDataGridView.Rows.Add(rowArray);
+                }
+                PaymentSummaryDataGridView.AllowUserToResizeRows = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void CSystemManagementForm_Activated(object sender, EventArgs e)
+        {
+            try
+            {
+                CPcInfoManager tempPcInfoManager = new CPcInfoManager();
+                IPHostEntry ipEntry = System.Net.Dns.GetHostByName(Dns.GetHostName());
+                CPcInfo tempPcInfo = (CPcInfo)tempPcInfoManager.PcInfoByPcIP(ipEntry.AddressList[0].ToString()).Data;
+
+                CPaymentSummaryManager tempPaymentSummaryManager = new CPaymentSummaryManager();
+                CPaymentSummary tempPayamentSummary = new CPaymentSummary();
+                tempPayamentSummary = (CPaymentSummary)tempPaymentSummaryManager.GetTotalPaymentSummaryByPC(DateTime.Now, tempPcInfo.PcID).Data;
+
+                if (tempPayamentSummary != null) PopulateSummaryDataGridView(tempPayamentSummary);
+                PaymentSummaryDataGridView.Update();
+               // LoadGraph();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void AboutButton_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show("ibacs RMS "+RMSGlobal.m_rmsVersionNumber, "About...",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            Bank_Transaction aBankTransactionForm=new Bank_Transaction();
+            aBankTransactionForm.ShowDialog();
+        }
+
+        private void CustomerButton_Click(object sender, EventArgs e)
+        {
+            CCustomerForm tempCustomerForm = new CCustomerForm();
+            tempCustomerForm.Show();
+            CFormManager.Forms.Push(this);
+            this.Hide();
+        }                
+
+        private void BokkingButton_Click(object sender, EventArgs e)
+        {
+            ItemVoidReport aItemVoidReport=new ItemVoidReport();
+            aItemVoidReport.ShowDialog();
+            //VoidItemReportForm v = new VoidItemReportForm();
+            //v.Show();
+            //CBookingForm tempBookingForm = new CBookingForm();
+            //tempBookingForm.Show();
+            //CFormManager.Forms.Push(this);
+            //this.Hide();
+        }
+
+        private void DepositButton_Click(object sender, EventArgs e)
+        {
+            CDepositForm tempDepositForm = new CDepositForm();
+            tempDepositForm.Show();
+            CFormManager.Forms.Push(this);
+            this.Hide();
+        }
+
+        private void UpdateItemsButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Program.initDataSet = new DataSet();
+                CCommonConstants oTempConstant = ConfigManager.GetConfig<CCommonConstants>();
+
+
+                String ConnectionString = oTempConstant.DBConnection;
+
+                SqlDataAdapter tempSqlDataAdapter = new SqlDataAdapter(SqlQueries.GetQuery(Query.ButtonAccessGetAll), ConnectionString);
+                tempSqlDataAdapter.Fill(Program.initDataSet, "ButtonAccess");
+                tempSqlDataAdapter.Dispose();
+
+                SqlDataAdapter tempSqlDataAdapter2 = new SqlDataAdapter(SqlQueries.GetQuery(Query.ButtonColorGetAll), ConnectionString);
+                tempSqlDataAdapter2.Fill(Program.initDataSet, "ButtonColor");
+                tempSqlDataAdapter2.Dispose();
+
+                SqlDataAdapter tempSqlDataAdapter3 = new SqlDataAdapter(SqlQueries.GetQuery(Query.ParentCategoryGetAll), ConnectionString);
+                tempSqlDataAdapter3.Fill(Program.initDataSet, "ParentCategory");
+                tempSqlDataAdapter3.Dispose();
+
+                SqlDataAdapter tempSqlDataAdapter4 = new SqlDataAdapter(SqlQueries.GetQuery(Query.Category1GetAll), ConnectionString);
+                tempSqlDataAdapter4.Fill(Program.initDataSet, "Category1");
+                tempSqlDataAdapter4.Dispose();
+
+                SqlDataAdapter tempSqlDataAdapter5 = new SqlDataAdapter(SqlQueries.GetQuery(Query.Category2GetAll), ConnectionString);
+                tempSqlDataAdapter5.Fill(Program.initDataSet, "Category2");
+                tempSqlDataAdapter5.Dispose();
+
+                SqlDataAdapter tempSqlDataAdapter6 = new SqlDataAdapter(SqlQueries.GetQuery(Query.Category3GetAll), ConnectionString);
+                tempSqlDataAdapter6.Fill(Program.initDataSet, "Category3");
+                tempSqlDataAdapter6.Dispose();
+
+                SqlDataAdapter tempSqlDataAdapter7 = new SqlDataAdapter(SqlQueries.GetQuery(Query.Category4GetAll), ConnectionString);
+                tempSqlDataAdapter7.Fill(Program.initDataSet, "Category4");
+                tempSqlDataAdapter7.Dispose();
+
+                Program.initDataSet.Relations.Add("parent_category_to_category1",
+                    Program.initDataSet.Tables["ParentCategory"].Columns["parent_cat_id"],
+                    Program.initDataSet.Tables["Category1"].Columns["parent_cat_id"], false);
+
+                Program.initDataSet.Relations.Add("category1_to_category2",
+                    Program.initDataSet.Tables["Category1"].Columns["cat1_id"],
+                    Program.initDataSet.Tables["Category2"].Columns["cat1_id"], false);
+
+                Program.initDataSet.Relations.Add("category2_to_category3",
+                   Program.initDataSet.Tables["Category2"].Columns["cat2_id"],
+                   Program.initDataSet.Tables["Category3"].Columns["cat2_id"], false);
+
+                Program.initDataSet.Relations.Add("category3_to_category4",
+                   Program.initDataSet.Tables["Category3"].Columns["cat3_id"],
+                   Program.initDataSet.Tables["Category4"].Columns["cat3_id"], false);
+
+                Program.initDataSet.Relations.Add("button_color_to_button_access",
+                   Program.initDataSet.Tables["ButtonColor"].Columns["button_id"],
+                   Program.initDataSet.Tables["ButtonAccess"].Columns["button_id"], false);
+
+
+                MessageBox.Show("Items information updated to recent times.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+             
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.Message+"Error updating item information.",
+                    "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void UserButton_Click(object sender, EventArgs e)
+        {
+            CUsersForm tempUsersForm = new CUsersForm();
+            tempUsersForm.Show();
+            CFormManager.Forms.Push(this);
+            this.Hide();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnLogRecords_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                LogRegisterForm tempLogForm = new LogRegisterForm();
+                tempLogForm.Show();
+                CFormManager.Forms.Push(this);
+                this.Hide();
+            }
+            catch (Exception exp)
+            {
+                Console.Write(exp.Message);
+            }
+        }
+
+        private void btnSetDefaultTime_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DefaultTimeForm objDefault = DefaultTimeForm.CreateInstance();
+                objDefault.ShowDialog();
+            }
+            catch (Exception exp)
+            {
+                Console.Write(exp.Message);
+            }
+        }
+
+        private void btnKitchenText_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                KitchenTextForm objKitchenText = new KitchenTextForm();
+                objKitchenText.Show();
+            }
+            catch (Exception exp)
+            {
+                throw exp;
+            }
+        }
+
+        private void btnWebPageCalling_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OnlineMenuManagementForm objOnlineMenu = new OnlineMenuManagementForm();
+                objOnlineMenu.ShowDialog(this);
+
+            }
+            catch (Exception exp)
+            {
+                throw exp;
+            }
+        }
+
+        private void btnSystemSettings_Click(object sender, EventArgs e)
+        {
+            CSystemSettingsForm tempSystemSettingsForm = new CSystemSettingsForm();
+            tempSystemSettingsForm.Show();
+            CFormManager.Forms.Push(this);
+            this.Hide();
+        }
+
+        private void btnShowStatistics_Click(object sender, EventArgs e)
+        {
+            ShowStatisticsForm objStatistcs = new ShowStatisticsForm();
+            objStatistcs.ShowDialog();
+        }
+
+        private void btnStockManagement_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                ProductForm proDuctManagement = new ProductForm(ProductViewMode.LIST, 0);
+               proDuctManagement.ShowDialog(this);
+                //proDuctManagement.Show();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void functionalButton1_Click(object sender, EventArgs e)
+        {
+            SalesReport sp = new SalesReport();
+            sp.Show();
+
+            CFormManager.Forms.Push(this);
+            this.Hide();
+
+        }
+
+        private void CSystemManagementForm_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void functionalButton2_Click(object sender, EventArgs e)
+        {
+
+          
+            RawMat sp = new RawMat();
+          sp.Show();
+
+      CFormManager.Forms.Push(this);
+       this.Hide();
+
+        }
+
+        private void functionalButton3_Click(object sender, EventArgs e)
+        {
+            //ParentCategory p = new ParentCategory();
+            //p.Show();
+
+            PartyReservationForm aPartyReservationForm = new PartyReservationForm();
+            aPartyReservationForm.ShowDialog();
+        }
+
+        private void functionalButton4_Click(object sender, EventArgs e)
+        {
+            //DBForm d = new DBForm();
+            //d.Show();
+
+            ReservationReport aReservationReport = new ReservationReport();
+            aReservationReport.ShowDialog();
+        }
+
+        private void reservationbutton_Click(object sender, EventArgs e)
+        {
+            //PartyReservationForm aPartyReservationForm=new PartyReservationForm();
+            //aPartyReservationForm.ShowDialog();
+        }
+
+        private void reservationreportfunctionalButton_Click(object sender, EventArgs e)
+        {
+            //ReservationReport aReservationReport=new ReservationReport();
+            //aReservationReport.ShowDialog();
+        }
+
+        private void btnMembershipCard1_Click(object sender, EventArgs e)
+        {
+            //CMemberShipCardForm tempCMemberShipCardForm = new CMemberShipCardForm();
+            //tempCMemberShipCardForm.ShowDialog();
+            //CFormManager.Forms.Push(this);
+            //this.Hide();
+        }
+
+        private void btnMembership_Click(object sender, EventArgs e)
+        {
+            WelcomeForm aWelcomeForm =new WelcomeForm("","");
+            aWelcomeForm.ShowDialog();
+            //CMemberShipForm tempCMemberShipForm = new CMemberShipForm();
+            //tempCMemberShipForm.ShowDialog();
+            //CFormManager.Forms.Push(this);
+            //this.Hide();
+        }
+
+        private void functionalButton5_Click(object sender, EventArgs e)
+        {
+            CMemberShipForm tempCMemberShipForm = new CMemberShipForm();
+            tempCMemberShipForm.ShowDialog();
+        }
+
+        private void functionalButton6_Click(object sender, EventArgs e)
+        {
+            CMemberShipCardForm tempCMemberShipCardForm = new CMemberShipCardForm();
+            tempCMemberShipCardForm.ShowDialog();
+        }      
+    }
+}

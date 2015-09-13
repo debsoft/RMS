@@ -1,0 +1,99 @@
+D:\RMS\RMSAdminFinal\RMSAdmin\Database\obj\Debug\ResolveAssemblyReference.cache
+D:\RMS\RMSAdminFinal\RMSAdmin\Database\bin\Debug\Database.dll
+D:\RMS\RMSAdminFinal\RMSAdmin\Database\bin\Debug\Database.pdb
+D:\RMS\RMSAdminFinal\RMSAdmin\Database\bin\Debug\Common.dll
+D:\RMS\RMSAdminFinal\RMSAdmin\Database\bin\Debug\ConfigService.dll
+D:\RMS\RMSAdminFinal\RMSAdmin\Database\bin\Debug\Logger.dll
+D:\RMS\RMSAdminFinal\RMSAdmin\Database\bin\Debug\Common.pdb
+D:\RMS\RMSAdminFinal\RMSAdmin\Database\bin\Debug\ConfigService.pdb
+D:\RMS\RMSAdminFinal\RMSAdmin\Database\bin\Debug\Logger.pdb
+D:\RMS\RMSAdminFinal\RMSAdmin\Database\obj\Debug\Database.dll
+D:\RMS\RMSAdminFinal\RMSAdmin\Database\obj\Debug\Database.pdb
+D:\RMS\RMSAdminFinal\Database\bin\Debug\Database.dll
+D:\RMS\RMSAdminFinal\Database\bin\Debug\Database.pdb
+D:\RMS\RMSAdminFinal\Database\bin\Debug\Common.dll
+D:\RMS\RMSAdminFinal\Database\bin\Debug\ConfigService.dll
+D:\RMS\RMSAdminFinal\Database\bin\Debug\Logger.dll
+D:\RMS\RMSAdminFinal\Database\bin\Debug\Common.pdb
+D:\RMS\RMSAdminFinal\Database\bin\Debug\ConfigService.pdb
+D:\RMS\RMSAdminFinal\Database\bin\Debug\Logger.pdb
+D:\RMS\RMSAdminFinal\Database\obj\Debug\ResolveAssemblyReference.cache
+D:\RMS\RMSAdminFinal\Database\obj\Debug\Database.dll
+D:\RMS\RMSAdminFinal\Database\obj\Debug\Database.pdb
+D:\RMS BD\RMSAdminFinal\Database\bin\Debug\Database.dll
+D:\RMS BD\RMSAdminFinal\Database\bin\Debug\Database.pdb
+D:\RMS BD\RMSAdminFinal\Database\bin\Debug\Common.dll
+D:\RMS BD\RMSAdminFinal\Database\bin\Debug\ConfigService.dll
+D:\RMS BD\RMSAdminFinal\Database\bin\Debug\Logger.dll
+D:\RMS BD\RMSAdminFinal\Database\bin\Debug\Common.pdb
+D:\RMS BD\RMSAdminFinal\Database\bin\Debug\ConfigService.pdb
+D:\RMS BD\RMSAdminFinal\Database\bin\Debug\Logger.pdb
+D:\RMS BD\RMSAdminFinal\Database\obj\Debug\ResolveAssemblyReference.cache
+D:\RMS BD\RMSAdminFinal\Database\obj\Debug\Database.dll
+D:\RMS BD\RMSAdminFinal\Database\obj\Debug\Database.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@13012012\RMSAdminFinal\Database\bin\Debug\Database.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@13012012\RMSAdminFinal\Database\bin\Debug\Database.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@13012012\RMSAdminFinal\Database\bin\Debug\Common.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@13012012\RMSAdminFinal\Database\bin\Debug\ConfigService.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@13012012\RMSAdminFinal\Database\bin\Debug\Logger.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@13012012\RMSAdminFinal\Database\bin\Debug\Common.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@13012012\RMSAdminFinal\Database\bin\Debug\ConfigService.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@13012012\RMSAdminFinal\Database\bin\Debug\Logger.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@13012012\RMSAdminFinal\Database\obj\Debug\ResolveAssemblyReference.cache
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@13012012\RMSAdminFinal\Database\obj\Debug\Database.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@13012012\RMSAdminFinal\Database\obj\Debug\Database.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@18012012\RMSAdminFinal\Database\obj\Debug\ResolveAssemblyReference.cache
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@18012012\RMSAdminFinal\Database\obj\Debug\Database.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@18012012\RMSAdminFinal\Database\bin\Debug\Database.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@18012012\RMSAdminFinal\Database\bin\Debug\Database.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@18012012\RMSAdminFinal\Database\bin\Debug\Common.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@18012012\RMSAdminFinal\Database\bin\Debug\ConfigService.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@18012012\RMSAdminFinal\Database\bin\Debug\Logger.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@18012012\RMSAdminFinal\Database\bin\Debug\Common.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@18012012\RMSAdminFinal\Database\bin\Debug\ConfigService.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@18012012\RMSAdminFinal\Database\bin\Debug\Logger.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@18012012\RMSAdminFinal\Database\obj\Debug\Database.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@19062012\RMSAdminFinal\Database\bin\Debug\Database.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@19062012\RMSAdminFinal\Database\bin\Debug\Database.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@19062012\RMSAdminFinal\Database\bin\Debug\Common.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@19062012\RMSAdminFinal\Database\bin\Debug\ConfigService.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@19062012\RMSAdminFinal\Database\bin\Debug\Logger.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@19062012\RMSAdminFinal\Database\bin\Debug\Common.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@19062012\RMSAdminFinal\Database\bin\Debug\ConfigService.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@19062012\RMSAdminFinal\Database\bin\Debug\Logger.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@19062012\RMSAdminFinal\Database\obj\Debug\ResolveAssemblyReference.cache
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@19062012\RMSAdminFinal\Database\obj\Debug\Database.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@19062012\RMSAdminFinal\Database\obj\Debug\Database.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@21062012\RMSAdminFinal\Database\bin\Debug\Database.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@21062012\RMSAdminFinal\Database\bin\Debug\Database.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@21062012\RMSAdminFinal\Database\bin\Debug\Common.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@21062012\RMSAdminFinal\Database\bin\Debug\ConfigService.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@21062012\RMSAdminFinal\Database\bin\Debug\Logger.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@21062012\RMSAdminFinal\Database\bin\Debug\Common.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@21062012\RMSAdminFinal\Database\bin\Debug\ConfigService.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@21062012\RMSAdminFinal\Database\bin\Debug\Logger.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@21062012\RMSAdminFinal\Database\obj\Debug\ResolveAssemblyReference.cache
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@21062012\RMSAdminFinal\Database\obj\Debug\Database.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@21062012\RMSAdminFinal\Database\obj\Debug\Database.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Database\obj\Debug\ResolveAssemblyReference.cache
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Database\bin\Debug\Database.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Database\bin\Debug\Database.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Database\bin\Debug\Common.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Database\bin\Debug\ConfigService.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Database\bin\Debug\Logger.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Database\bin\Debug\Common.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Database\bin\Debug\ConfigService.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Database\bin\Debug\Logger.pdb
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Database\obj\Debug\Database.dll
+E:\Development Project\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Database\obj\Debug\Database.pdb
+D:\Umme_working\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Database\bin\Debug\Database.dll
+D:\Umme_working\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Database\bin\Debug\Database.pdb
+D:\Umme_working\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Database\bin\Debug\Common.dll
+D:\Umme_working\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Database\bin\Debug\ConfigService.dll
+D:\Umme_working\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Database\bin\Debug\Logger.dll
+D:\Umme_working\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Database\bin\Debug\Common.pdb
+D:\Umme_working\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Database\bin\Debug\ConfigService.pdb
+D:\Umme_working\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Database\bin\Debug\Logger.pdb
+D:\Umme_working\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Database\obj\Debug\ResolveAssemblyReference.cache
+D:\Umme_working\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Database\obj\Debug\Database.dll
+D:\Umme_working\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\Database\obj\Debug\Database.pdb

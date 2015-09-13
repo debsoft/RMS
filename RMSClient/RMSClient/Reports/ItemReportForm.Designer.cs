@@ -1,0 +1,515 @@
+﻿using RMSUI;
+namespace RMS.Reports
+{
+    partial class ItemReportForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItemReportForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnFPPrintSummary = new RMSUI.FunctionalButton();
+            this.btnRPPrintSummary = new RMSUI.FunctionalButton();
+            this.btnPrint = new RMSUI.FunctionalButton();
+            this.btnBack = new RMSUI.FunctionalButton();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblPriceFood = new System.Windows.Forms.Label();
+            this.lblPriceNonFood = new System.Windows.Forms.Label();
+            this.lblPriceTotal = new System.Windows.Forms.Label();
+            this.lblQtySoldFood = new System.Windows.Forms.Label();
+            this.lblQtySoldNonFood = new System.Windows.Forms.Label();
+            this.lblQtySoldTotal = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblOrderCount = new System.Windows.Forms.Label();
+            this.gridViewNonFood = new RMSUI.SimpleGrid();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridViewFood = new RMSUI.SimpleGrid();
+            this.ProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PricePerUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QuantitySold = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewNonFood)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewFood)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 94);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 17);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Food Items";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 309);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(178, 17);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Non Food Items(Beverage)";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.btnFPPrintSummary);
+            this.panel1.Controls.Add(this.btnRPPrintSummary);
+            this.panel1.Controls.Add(this.btnPrint);
+            this.panel1.Controls.Add(this.btnBack);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 522);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(823, 63);
+            this.panel1.TabIndex = 4;
+            // 
+            // btnFPPrintSummary
+            // 
+            this.btnFPPrintSummary.BackColor = System.Drawing.Color.LightGray;
+            this.btnFPPrintSummary.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFPPrintSummary.BackgroundImage")));
+            this.btnFPPrintSummary.BgImageOnMouseDown = ((System.Drawing.Image)(resources.GetObject("btnFPPrintSummary.BgImageOnMouseDown")));
+            this.btnFPPrintSummary.BgImageOnMouseUp = ((System.Drawing.Image)(resources.GetObject("btnFPPrintSummary.BgImageOnMouseUp")));
+            this.btnFPPrintSummary.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnFPPrintSummary.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnFPPrintSummary.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnFPPrintSummary.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnFPPrintSummary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFPPrintSummary.Font = new System.Drawing.Font("Arial", 10F);
+            this.btnFPPrintSummary.ForeColorOnMouseDown = System.Drawing.Color.White;
+            this.btnFPPrintSummary.ForeColorOnMouseUp = System.Drawing.Color.Black;
+            this.btnFPPrintSummary.FunctionType = RMSUI.RMSUIConstants.FunctionType.Print;
+            this.btnFPPrintSummary.Image = ((System.Drawing.Image)(resources.GetObject("btnFPPrintSummary.Image")));
+            this.btnFPPrintSummary.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFPPrintSummary.Location = new System.Drawing.Point(528, 11);
+            this.btnFPPrintSummary.Name = "btnFPPrintSummary";
+            this.btnFPPrintSummary.Size = new System.Drawing.Size(168, 38);
+            this.btnFPPrintSummary.TabIndex = 10;
+            this.btnFPPrintSummary.Text = "Print Summary (FP)";
+            this.btnFPPrintSummary.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFPPrintSummary.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFPPrintSummary.UseVisualStyleBackColor = false;
+            this.btnFPPrintSummary.Visible = false;
+            this.btnFPPrintSummary.Click += new System.EventHandler(this.btnFPPrintSummary_Click);
+            // 
+            // btnRPPrintSummary
+            // 
+            this.btnRPPrintSummary.BackColor = System.Drawing.Color.LightGray;
+            this.btnRPPrintSummary.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRPPrintSummary.BackgroundImage")));
+            this.btnRPPrintSummary.BgImageOnMouseDown = ((System.Drawing.Image)(resources.GetObject("btnRPPrintSummary.BgImageOnMouseDown")));
+            this.btnRPPrintSummary.BgImageOnMouseUp = ((System.Drawing.Image)(resources.GetObject("btnRPPrintSummary.BgImageOnMouseUp")));
+            this.btnRPPrintSummary.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnRPPrintSummary.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnRPPrintSummary.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnRPPrintSummary.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnRPPrintSummary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRPPrintSummary.Font = new System.Drawing.Font("Arial", 10F);
+            this.btnRPPrintSummary.ForeColorOnMouseDown = System.Drawing.Color.White;
+            this.btnRPPrintSummary.ForeColorOnMouseUp = System.Drawing.Color.Black;
+            this.btnRPPrintSummary.FunctionType = RMSUI.RMSUIConstants.FunctionType.Print;
+            this.btnRPPrintSummary.Image = ((System.Drawing.Image)(resources.GetObject("btnRPPrintSummary.Image")));
+            this.btnRPPrintSummary.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRPPrintSummary.Location = new System.Drawing.Point(354, 11);
+            this.btnRPPrintSummary.Name = "btnRPPrintSummary";
+            this.btnRPPrintSummary.Size = new System.Drawing.Size(168, 38);
+            this.btnRPPrintSummary.TabIndex = 9;
+            this.btnRPPrintSummary.Text = "Print Summary (RP)";
+            this.btnRPPrintSummary.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRPPrintSummary.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRPPrintSummary.UseVisualStyleBackColor = false;
+            this.btnRPPrintSummary.Click += new System.EventHandler(this.btnRPPrintSummary_Click);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.BackColor = System.Drawing.Color.LightGray;
+            this.btnPrint.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPrint.BackgroundImage")));
+            this.btnPrint.BgImageOnMouseDown = ((System.Drawing.Image)(resources.GetObject("btnPrint.BgImageOnMouseDown")));
+            this.btnPrint.BgImageOnMouseUp = ((System.Drawing.Image)(resources.GetObject("btnPrint.BgImageOnMouseUp")));
+            this.btnPrint.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnPrint.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Font = new System.Drawing.Font("Arial", 10F);
+            this.btnPrint.ForeColorOnMouseDown = System.Drawing.Color.White;
+            this.btnPrint.ForeColorOnMouseUp = System.Drawing.Color.Black;
+            this.btnPrint.FunctionType = RMSUI.RMSUIConstants.FunctionType.Print;
+            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
+            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.Location = new System.Drawing.Point(227, 11);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(121, 38);
+            this.btnPrint.TabIndex = 8;
+            this.btnPrint.Text = "Print Details";
+            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.LightGray;
+            this.btnBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBack.BackgroundImage")));
+            this.btnBack.BgImageOnMouseDown = ((System.Drawing.Image)(resources.GetObject("btnBack.BgImageOnMouseDown")));
+            this.btnBack.BgImageOnMouseUp = ((System.Drawing.Image)(resources.GetObject("btnBack.BgImageOnMouseUp")));
+            this.btnBack.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnBack.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Arial", 10F);
+            this.btnBack.ForeColorOnMouseDown = System.Drawing.Color.White;
+            this.btnBack.ForeColorOnMouseUp = System.Drawing.Color.Black;
+            this.btnBack.FunctionType = RMSUI.RMSUIConstants.FunctionType.NormalCenter;
+            this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBack.Location = new System.Drawing.Point(702, 11);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(114, 38);
+            this.btnBack.TabIndex = 7;
+            this.btnBack.Text = "Close";
+            this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.85991F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.14009F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 442F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 160F));
+            this.tableLayoutPanel1.Controls.Add(this.lblPriceFood, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblPriceNonFood, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblPriceTotal, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblQtySoldFood, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblQtySoldNonFood, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblQtySoldTotal, 2, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(14, 48);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(797, 40);
+            this.tableLayoutPanel1.TabIndex = 5;
+            // 
+            // lblPriceFood
+            // 
+            this.lblPriceFood.AutoSize = true;
+            this.lblPriceFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriceFood.Location = new System.Drawing.Point(4, 20);
+            this.lblPriceFood.Name = "lblPriceFood";
+            this.lblPriceFood.Size = new System.Drawing.Size(116, 17);
+            this.lblPriceFood.TabIndex = 7;
+            this.lblPriceFood.Text = "Price Total Food:";
+            // 
+            // lblPriceNonFood
+            // 
+            this.lblPriceNonFood.AutoSize = true;
+            this.lblPriceNonFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriceNonFood.Location = new System.Drawing.Point(169, 20);
+            this.lblPriceNonFood.Name = "lblPriceNonFood";
+            this.lblPriceNonFood.Size = new System.Drawing.Size(146, 17);
+            this.lblPriceNonFood.TabIndex = 6;
+            this.lblPriceNonFood.Text = "Price Total Non Food:";
+            // 
+            // lblPriceTotal
+            // 
+            this.lblPriceTotal.AutoSize = true;
+            this.lblPriceTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriceTotal.Location = new System.Drawing.Point(356, 20);
+            this.lblPriceTotal.Name = "lblPriceTotal";
+            this.lblPriceTotal.Size = new System.Drawing.Size(80, 17);
+            this.lblPriceTotal.TabIndex = 5;
+            this.lblPriceTotal.Text = "Total Price:";
+            // 
+            // lblQtySoldFood
+            // 
+            this.lblQtySoldFood.AutoSize = true;
+            this.lblQtySoldFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQtySoldFood.Location = new System.Drawing.Point(4, 1);
+            this.lblQtySoldFood.Name = "lblQtySoldFood";
+            this.lblQtySoldFood.Size = new System.Drawing.Size(102, 17);
+            this.lblQtySoldFood.TabIndex = 2;
+            this.lblQtySoldFood.Text = "Qty Sold Food:";
+            // 
+            // lblQtySoldNonFood
+            // 
+            this.lblQtySoldNonFood.AutoSize = true;
+            this.lblQtySoldNonFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQtySoldNonFood.Location = new System.Drawing.Point(169, 1);
+            this.lblQtySoldNonFood.Name = "lblQtySoldNonFood";
+            this.lblQtySoldNonFood.Size = new System.Drawing.Size(132, 17);
+            this.lblQtySoldNonFood.TabIndex = 3;
+            this.lblQtySoldNonFood.Text = "Qty Slod Non Food:";
+            // 
+            // lblQtySoldTotal
+            // 
+            this.lblQtySoldTotal.AutoSize = true;
+            this.lblQtySoldTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQtySoldTotal.Location = new System.Drawing.Point(356, 1);
+            this.lblQtySoldTotal.Name = "lblQtySoldTotal";
+            this.lblQtySoldTotal.Size = new System.Drawing.Size(102, 17);
+            this.lblQtySoldTotal.TabIndex = 4;
+            this.lblQtySoldTotal.Text = "Qty Sold Total:";
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.Location = new System.Drawing.Point(17, 18);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(82, 17);
+            this.lblDate.TabIndex = 6;
+            this.lblDate.Text = "Date From: ";
+            // 
+            // lblOrderCount
+            // 
+            this.lblOrderCount.AutoSize = true;
+            this.lblOrderCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrderCount.Location = new System.Drawing.Point(572, 18);
+            this.lblOrderCount.Name = "lblOrderCount";
+            this.lblOrderCount.Size = new System.Drawing.Size(90, 17);
+            this.lblOrderCount.TabIndex = 7;
+            this.lblOrderCount.Text = "Order Count:";
+            // 
+            // gridViewNonFood
+            // 
+            this.gridViewNonFood.AllowUserToAddRows = false;
+            this.gridViewNonFood.AllowUserToDeleteRows = false;
+            this.gridViewNonFood.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.gridViewNonFood.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridViewNonFood.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridViewNonFood.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.gridViewNonFood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridViewNonFood.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.gridViewNonFood.GridColor = System.Drawing.Color.Gray;
+            this.gridViewNonFood.Location = new System.Drawing.Point(12, 332);
+            this.gridViewNonFood.Name = "gridViewNonFood";
+            this.gridViewNonFood.ReadOnly = true;
+            this.gridViewNonFood.RowHeadersVisible = false;
+            this.gridViewNonFood.Size = new System.Drawing.Size(799, 179);
+            this.gridViewNonFood.TabIndex = 2;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "product_id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Item ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "ItemName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Item Name";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 300;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "PricePerUnit";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Price Per Unit";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 130;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "QuantitySold";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Quantity Sold";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 130;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "TotalPrice";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Total Price";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 120;
+            // 
+            // gridViewFood
+            // 
+            this.gridViewFood.AllowUserToAddRows = false;
+            this.gridViewFood.AllowUserToDeleteRows = false;
+            this.gridViewFood.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.gridViewFood.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridViewFood.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridViewFood.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.gridViewFood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridViewFood.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ProductID,
+            this.ItemName,
+            this.PricePerUnit,
+            this.QuantitySold,
+            this.TotalPrice});
+            this.gridViewFood.GridColor = System.Drawing.Color.Gray;
+            this.gridViewFood.Location = new System.Drawing.Point(12, 116);
+            this.gridViewFood.Name = "gridViewFood";
+            this.gridViewFood.ReadOnly = true;
+            this.gridViewFood.RowHeadersVisible = false;
+            this.gridViewFood.Size = new System.Drawing.Size(799, 179);
+            this.gridViewFood.TabIndex = 0;
+            // 
+            // ProductID
+            // 
+            this.ProductID.DataPropertyName = "product_id";
+            this.ProductID.HeaderText = "Item ID";
+            this.ProductID.Name = "ProductID";
+            this.ProductID.ReadOnly = true;
+            // 
+            // ItemName
+            // 
+            this.ItemName.DataPropertyName = "ItemName";
+            this.ItemName.HeaderText = "Item Name";
+            this.ItemName.Name = "ItemName";
+            this.ItemName.ReadOnly = true;
+            this.ItemName.Width = 300;
+            // 
+            // PricePerUnit
+            // 
+            this.PricePerUnit.DataPropertyName = "PricePerUnit";
+            this.PricePerUnit.HeaderText = "Price Per Unit";
+            this.PricePerUnit.Name = "PricePerUnit";
+            this.PricePerUnit.ReadOnly = true;
+            this.PricePerUnit.Width = 130;
+            // 
+            // QuantitySold
+            // 
+            this.QuantitySold.DataPropertyName = "QuantitySold";
+            this.QuantitySold.HeaderText = "Quantity Sold";
+            this.QuantitySold.Name = "QuantitySold";
+            this.QuantitySold.ReadOnly = true;
+            this.QuantitySold.Width = 130;
+            // 
+            // TotalPrice
+            // 
+            this.TotalPrice.DataPropertyName = "TotalPrice";
+            this.TotalPrice.HeaderText = "Total Price";
+            this.TotalPrice.Name = "TotalPrice";
+            this.TotalPrice.ReadOnly = true;
+            this.TotalPrice.Width = 120;
+            // 
+            // ItemReportForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(823, 585);
+            this.Controls.Add(this.lblOrderCount);
+            this.Controls.Add(this.lblDate);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.gridViewNonFood);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.gridViewFood);
+            this.Name = "ItemReportForm";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Item Wise Report Form";
+            this.TopMost = true;
+            this.panel1.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewNonFood)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewFood)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PricePerUnit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QuantitySold;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalPrice;
+        private SimpleGrid gridViewFood;
+        private System.Windows.Forms.Label label1;
+        private SimpleGrid gridViewNonFood;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
+        private FunctionalButton btnPrint;
+        private FunctionalButton btnBack;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label lblPriceNonFood;
+        private System.Windows.Forms.Label lblPriceTotal;
+        private System.Windows.Forms.Label lblQtySoldTotal;
+        private System.Windows.Forms.Label lblQtySoldFood;
+        private System.Windows.Forms.Label lblQtySoldNonFood;
+        private System.Windows.Forms.Label lblPriceFood;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblOrderCount;
+        private FunctionalButton btnFPPrintSummary;
+        private FunctionalButton btnRPPrintSummary;
+
+    }
+}

@@ -1,0 +1,185 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel
+END
+CButtonColor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/CButtonColor.cs
+END
+vssver2.scc
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/vssver2.scc
+END
+CPayment.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/CPayment.cs
+END
+CCustomerInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/CCustomerInfo.cs
+END
+CPrintStyle.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/CPrintStyle.cs
+END
+CPcInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/CPcInfo.cs
+END
+CResult.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/CResult.cs
+END
+COrderDetails.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/COrderDetails.cs
+END
+CDelivery.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/CDelivery.cs
+END
+CStock.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/CStock.cs
+END
+CRemotingTest.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/CRemotingTest.cs
+END
+CParentCategory.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/CParentCategory.cs
+END
+COrderInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/COrderInfo.cs
+END
+CComboBoxItem.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/CComboBoxItem.cs
+END
+CTerminalPrint.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/CTerminalPrint.cs
+END
+CUserInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/CUserInfo.cs
+END
+CExceptionHandler.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/CExceptionHandler.cs
+END
+CButtonAccess.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/CButtonAccess.cs
+END
+CCategory1.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/CCategory1.cs
+END
+StringTokenizer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/StringTokenizer.cs
+END
+CCategory2.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/CCategory2.cs
+END
+CCategory3.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/CCategory3.cs
+END
+CUserAccess.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/CUserAccess.cs
+END
+CCategory4.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/CCategory4.cs
+END
+CPrintQueue.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/CPrintQueue.cs
+END
+CKitchenPrint.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/CKitchenPrint.cs
+END
+CPrintingFormat.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/CPrintingFormat.cs
+END
+CTableInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/CTableInfo.cs
+END
+CDeposit.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/CDeposit.cs
+END
+CUserLogin.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/ObjectModel/CUserLogin.cs
+END

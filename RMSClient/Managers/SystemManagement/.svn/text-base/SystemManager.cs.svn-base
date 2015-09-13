@@ -1,0 +1,319 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Collections;
+using System.Text;
+using System.Data;
+using RMS.Common.ObjectModel;
+using RMS.DataAccess;
+using RMS.Common;
+using RMS;
+
+namespace Managers.SystemManagement
+{
+  public  class SystemManager
+    {
+      private CResult m_oResult= new CResult();
+      /// <summary>
+      /// Saves the default takeaway time
+      /// </summary>
+      /// <param name="p_timeInMinutes"></param>
+      /// <returns></returns>
+      public CResult SvaeTakeawayDefaultTime(double p_timeInMinutes)
+      {
+          try
+          {
+              Database.Instance.SaveDefaultTime.SaveDefaultTime(p_timeInMinutes);
+              m_oResult.IsSuccess = true;
+              m_oResult.Message = "Data Updated Successfully";
+
+          }
+          catch (Exception ex)
+          {
+              System.Console.WriteLine("Exception occuer at UpdateOrderInfo() : " + ex.Message);
+              m_oResult.IsException = true;
+              m_oResult.Action = EERRORNAME.EXCEPTION_OCCURE;
+
+              m_oResult.Message = ex.Message;
+              Logger.Write("Exception : " + ex + " in UpdateOrderInfo()", LogLevel.Error, "COrderManager");
+          }
+          return m_oResult;
+      }
+
+      public CResult SaveKitchenText(SortedList slKitchenText)
+      {
+          try
+          {
+              Database.Instance.SaveDefaultTime.SaveKitchenText(slKitchenText);
+              m_oResult.IsSuccess = true;
+              m_oResult.Message = "Data Updated Successfully";
+
+          }
+          catch (Exception ex)
+          {
+              System.Console.WriteLine("Exception occuer at SaveKitchenText() : " + ex.Message);
+              m_oResult.IsException = true;
+              m_oResult.Action = EERRORNAME.EXCEPTION_OCCURE;
+
+              m_oResult.Message = ex.Message;
+              Logger.Write("Exception : " + ex + " in SaveKitchenText()", LogLevel.Error, "COrderManager");
+          }
+          return m_oResult;
+      }
+
+
+
+
+      public CResult UpdateKitchenText(Int32 p_kitchenTextID,string p_kitchenText)
+      {
+          try
+          {
+              Database.Instance.SaveDefaultTime.UpdateKitchenText(p_kitchenTextID,p_kitchenText);
+              m_oResult.IsSuccess = true;
+              m_oResult.Message = "Data Updated Successfully";
+          }
+          catch (Exception ex)
+          {
+              System.Console.WriteLine("Exception occuer at UpdateKitchenText() : " + ex.Message);
+              m_oResult.IsException = true;
+              m_oResult.Action = EERRORNAME.EXCEPTION_OCCURE;
+
+              m_oResult.Message = ex.Message;
+              Logger.Write("Exception : " + ex + " in UpdateKitchenText()", LogLevel.Error, "COrderManager");
+          }
+          return m_oResult;
+      }
+
+      public CResult DeleteKitchenText(Int32 p_kitchenTextID)
+      {
+          try
+          {
+              Database.Instance.SaveDefaultTime.DeleteKitchenText(p_kitchenTextID);
+              m_oResult.IsSuccess = true;
+              m_oResult.Message = "Data Updated Successfully";
+
+          }
+          catch (Exception ex)
+          {
+              System.Console.WriteLine("Exception occuer at DeleteKitchenText() : " + ex.Message);
+              m_oResult.IsException = true;
+              m_oResult.Action = EERRORNAME.EXCEPTION_OCCURE;
+
+              m_oResult.Message = ex.Message;
+              Logger.Write("Exception : " + ex + " in DeleteKitchenText()", LogLevel.Error, "COrderManager");
+          }
+          return m_oResult;
+      }
+
+
+
+      public CResult GetAllKitchenText()
+      {
+          try
+          {
+              m_oResult=Database.Instance.SaveDefaultTime.GetKitchenText();
+              m_oResult.IsSuccess = true;
+              m_oResult.Message = "Data Updated Successfully";
+
+          }
+          catch (Exception ex)
+          {
+              System.Console.WriteLine("Exception occuer at UpdateOrderInfo() : " + ex.Message);
+              m_oResult.IsException = true;
+              m_oResult.Action = EERRORNAME.EXCEPTION_OCCURE;
+
+              m_oResult.Message = ex.Message;
+              Logger.Write("Exception : " + ex + " in UpdateOrderInfo()", LogLevel.Error, "COrderManager");
+          }
+          return m_oResult;
+      }
+
+
+      public CResult UpdateSpecialText(Int32 p_specialTextID, string p_specialText)
+      {
+          try
+          {
+              Database.Instance.SaveDefaultTime.UpdateKitchenText(p_specialTextID, p_specialText);
+              m_oResult.IsSuccess = true;
+              m_oResult.Message = "Data Updated Successfully";
+          }
+          catch (Exception ex)
+          {
+              System.Console.WriteLine("Exception occuer at UpdateKitchenText() : " + ex.Message);
+              m_oResult.IsException = true;
+              m_oResult.Action = EERRORNAME.EXCEPTION_OCCURE;
+
+              m_oResult.Message = ex.Message;
+              Logger.Write("Exception : " + ex + " in UpdateKitchenText()", LogLevel.Error, "COrderManager");
+          }
+          return m_oResult;
+      }
+
+
+      public CResult DeleteSpecialText(Int32 p_specialTextID)
+      {
+          try
+          {
+              Database.Instance.SaveDefaultTime.DeleteSpecialModifyText(p_specialTextID);
+              m_oResult.IsSuccess = true;
+              m_oResult.Message = "Data Updated Successfully";
+
+          }
+          catch (Exception ex)
+          {
+              System.Console.WriteLine("Exception occuer at DeleteSpecialText() : " + ex.Message);
+              m_oResult.IsException = true;
+              m_oResult.Action = EERRORNAME.EXCEPTION_OCCURE;
+
+              m_oResult.Message = ex.Message;
+              Logger.Write("Exception : " + ex + " in DeleteSpecialText()", LogLevel.Error, "COrderManager");
+          }
+          return m_oResult;
+      }
+
+
+      public CResult SaveSpecialText(SortedList slKitchenText)
+      {
+          try
+          {
+              Database.Instance.SaveDefaultTime.SaveSpecialModifyText(slKitchenText);
+              m_oResult.IsSuccess = true;
+              m_oResult.Message = "Data Updated Successfully";
+
+          }
+          catch (Exception ex)
+          {
+              System.Console.WriteLine("Exception occuer at SaveSpecialModifyText() : " + ex.Message);
+              m_oResult.IsException = true;
+              m_oResult.Action = EERRORNAME.EXCEPTION_OCCURE;
+
+              m_oResult.Message = ex.Message;
+              Logger.Write("Exception : " + ex + " in SaveSpecialModifyText()", LogLevel.Error, "COrderManager");
+          }
+          return m_oResult;
+      }
+
+
+      public CResult GetAllSpecialModifyText()
+      {
+          try
+          {
+              m_oResult = Database.Instance.SaveDefaultTime.GetSpecialModifyText();
+              m_oResult.IsSuccess = true;
+              m_oResult.Message = "Data Updated Successfully";
+
+          }
+          catch (Exception ex)
+          {
+              System.Console.WriteLine("Exception occuer at UpdateOrderInfo() : " + ex.Message);
+              m_oResult.IsException = true;
+              m_oResult.Action = EERRORNAME.EXCEPTION_OCCURE;
+
+              m_oResult.Message = ex.Message;
+              Logger.Write("Exception : " + ex + " in UpdateOrderInfo()", LogLevel.Error, "COrderManager");
+          }
+          return m_oResult;
+      }
+
+      /// <summary>
+      /// Collecting the sales records
+      /// </summary>
+      /// <param name="p_fromDate"></param>
+      /// <param name="p_toDate"></param>
+      /// <returns></returns>
+      public CResult GetSalesRecords(Int64 p_fromDate,Int64 p_toDate)
+      {
+          try
+          {
+              m_oResult = Database.Instance.SaveDefaultTime.CollectSalesReportRecords(p_fromDate,p_toDate);
+              m_oResult.IsSuccess = true;
+              m_oResult.Message = "Data Read Successfully";
+
+          }
+          catch (Exception ex)
+          {
+              System.Console.WriteLine("Exception occuered at GetSalesRecords() : " + ex.Message);
+              m_oResult.IsException = true;
+              m_oResult.Action = EERRORNAME.EXCEPTION_OCCURE;
+
+              m_oResult.Message = ex.Message;
+              Logger.Write("Exception : " + ex + " in GetSalesRecords()", LogLevel.Error, "COrderManager");
+          }
+          return m_oResult;
+      }
+
+
+      public List<CSearchOrderInfo> GetOrderInfo2(Int64 p_startDate, Int64 p_endDate)
+      {
+          List<CSearchOrderInfo> oItemList = new List<CSearchOrderInfo>();
+
+          try
+          {
+              oItemList = Database.Instance.SaveDefaultTime.GetOrderInfo(p_startDate, p_endDate);
+              // m_oResult.Data = oItemList;
+              // m_oResult.IsSuccess = true;
+              // m_oResult.Message = "Data Read Successful";
+
+          }
+          catch (Exception ex)
+          {
+              System.Console.WriteLine("Exception occuered at GetOrderInfo() : " + ex.Message);
+              m_oResult.IsException = true;
+              m_oResult.Action = EERRORNAME.EXCEPTION_OCCURE;
+
+              m_oResult.Message = ex.Message;
+              Logger.Write("Exception : " + ex + " in GetOrderInfo()", LogLevel.Error, "COrderManager");
+          }
+          return oItemList;
+      }
+
+      public DataTable GetItemWiseSales(Int64 fromOID, Int64 toOID, string foodType, Byte showAll)
+      {
+          DataTable dt=new DataTable();
+          CResult cResult;
+          
+          try
+          {
+              cResult = Database.Instance.SaveDefaultTime.GetItemWiseSalesReport(fromOID, toOID, foodType, showAll);
+
+              dt = (DataTable)cResult.Data;
+
+          }
+          catch (Exception ex)
+          {
+              System.Console.WriteLine("Exception occuered at GetOrderInfo() : " + ex.Message);
+              m_oResult.IsException = true;
+              m_oResult.Action = EERRORNAME.EXCEPTION_OCCURE;
+
+              m_oResult.Message = ex.Message;
+              Logger.Write("Exception : " + ex + " in GetItemWiseSalesReport()", LogLevel.Error, "GetItemWiseSalesReport");
+          }
+          return dt;
+      }
+
+
+      public List<CArchiveItemDetails> GetOrderDetailInfo(Int32 p_OrderID)
+      {
+          List<CArchiveItemDetails> oItemList = new List<CArchiveItemDetails>();
+
+          try
+          {
+              oItemList = Database.Instance.SaveDefaultTime.GetOrderDetailInfo(p_OrderID);
+          }
+          catch (Exception ex)
+          {
+              System.Console.WriteLine("Exception occuered at GetOrderDetailInfo() : " + ex.Message);
+              m_oResult.IsException = true;
+              m_oResult.Action = EERRORNAME.EXCEPTION_OCCURE;
+
+              m_oResult.Message = ex.Message;
+              Logger.Write("Exception : " + ex + " in GetOrderDetailInfo()", LogLevel.Error, "CSystemManager");
+          }
+          return oItemList;
+      }
+
+
+
+
+      
+    }
+}

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CErrorStrings>
+ 
+
+ 
+ 
+  
+
+  <USER_EXIST>  User already registered with {0} number. </USER_EXIST>
+
+  <EXCEPTION_OCCURE>  Exception occure at: {0}. </EXCEPTION_OCCURE>
+
+  
+  <NONE>  Error. Please try again! </NONE>
+  
+
+
+
+</CErrorStrings>

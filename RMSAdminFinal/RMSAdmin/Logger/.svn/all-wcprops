@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/RMSAdmin/Logger
+END
+Constants.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/RMSAdmin/Logger/Constants.cs
+END
+vssver2.scc
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/RMSAdmin/Logger/vssver2.scc
+END
+AHandler.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/RMSAdmin/Logger/AHandler.cs
+END
+Logger.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/RMSAdmin/Logger/Logger.cs
+END
+LogEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/RMSAdmin/Logger/LogEvent.cs
+END
+LoggerConfig.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/RMSAdmin/Logger/LoggerConfig.cs
+END
+mssccprj.scc
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/RMSAdmin/Logger/mssccprj.scc
+END
+Logger.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/RMSAdmin/Logger/Logger.csproj
+END
+Logger.csproj.vspscc
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/RMSAdmin/Logger/Logger.csproj.vspscc
+END

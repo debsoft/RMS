@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Logger
+END
+Constants.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Logger/Constants.cs
+END
+AHandler.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Logger/AHandler.cs
+END
+Logger.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Logger/Logger.cs
+END
+LogEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Logger/LogEvent.cs
+END
+LoggerConfig.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Logger/LoggerConfig.cs
+END
+Logger.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Logger/Logger.csproj
+END

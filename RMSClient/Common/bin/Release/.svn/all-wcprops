@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/Common/bin/Release
+END
+ConfigService.dll
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/Common/bin/Release/ConfigService.dll
+END
+Common.dll
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/Common/bin/Release/Common.dll
+END
+Logger.pdb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/Common/bin/Release/Logger.pdb
+END
+Logger.dll
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/Common/bin/Release/Logger.dll
+END
+ConfigService.pdb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/Common/bin/Release/ConfigService.pdb
+END
+Common.pdb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/Common/bin/Release/Common.pdb
+END

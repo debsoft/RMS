@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+  </configSections>
+  <connectionStrings>
+    <add name="RMS.Properties.Settings.RMSDBConnectionString" connectionString="Data Source=IBACSBD-WS-19;Initial Catalog=RMSDB;Persist Security Info=True;User ID=sa;Password=" providerName="System.Data.SqlClient"/>
+
+    <!--<add name="RMS.Properties.Settings.RMSDBConnectionString" connectionString="Data Source=localhost;Initial Catalog=RMSDB;Integrated Security=True"
+        providerName="System.Data.SqlClient" />-->
+  </connectionStrings>
+</configuration>

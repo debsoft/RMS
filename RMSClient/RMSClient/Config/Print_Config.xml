@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<CPrintConfig>
+  <OtherPrinter>\\SUVO-PC\EPSON TM-U220 Receipt</OtherPrinter>
+  <OtherNonFoodPrinter>\\SUVO-PC\EPSON TM-U220 Receipt</OtherNonFoodPrinter>
+  <PrintPaymentBill>true</PrintPaymentBill>
+  <KitchenPrinterName>\\SUVO-PC\EPSON TM-U220 Receipt</KitchenPrinterName>
+  <BeveragePrinterName>\\SUVO-PC\EPSON TM-U220 Receipt</BeveragePrinterName>
+  <ClientPrinterName>\\SUVO-PC\EPSON TM-U220 Receipt</ClientPrinterName>
+  <EnableSerialPortPrinting>False</EnableSerialPortPrinting>
+</CPrintConfig>

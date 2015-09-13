@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+    </configSections>
+    <connectionStrings>
+        <add name="RMS.Properties.Settings.RMSDBConnectionString" connectionString="Data Source=IBACS-14;Initial Catalog=RMSDB;User ID=sa"
+            providerName="System.Data.SqlClient" />
+        <add name="RMS.Properties.Settings.RMSDBConnectionString1" connectionString="Data Source=IBACS-15;Initial Catalog=RMSDB;User ID=sa"
+            providerName="System.Data.SqlClient" />
+    </connectionStrings>
+</configuration>

@@ -1,0 +1,209 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel
+END
+CReport.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CReport.cs
+END
+CPrintStyle.cs
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CPrintStyle.cs
+END
+CPayment.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CPayment.cs
+END
+CCustomerInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CCustomerInfo.cs
+END
+CResult.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CResult.cs
+END
+CPcInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CPcInfo.cs
+END
+CStock.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CStock.cs
+END
+CDelivery.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CDelivery.cs
+END
+CTerminalPrint.cs
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CTerminalPrint.cs
+END
+CPaymentSummary.cs
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CPaymentSummary.cs
+END
+CButtonAccess.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CButtonAccess.cs
+END
+StringTokenizer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/StringTokenizer.cs
+END
+CCategory2.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CCategory2.cs
+END
+CCategory4.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CCategory4.cs
+END
+CKitchenPrint.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CKitchenPrint.cs
+END
+CTableInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CTableInfo.cs
+END
+CCat3Rank.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CCat3Rank.cs
+END
+CDeposit.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CDeposit.cs
+END
+CUserLogin.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CUserLogin.cs
+END
+CButtonColor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CButtonColor.cs
+END
+CCategoryAncestor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CCategoryAncestor.cs
+END
+COrderDetails.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/COrderDetails.cs
+END
+CParentCategory.cs
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CParentCategory.cs
+END
+COrderInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/COrderInfo.cs
+END
+CComboBoxItem.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CComboBoxItem.cs
+END
+CUserInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CUserInfo.cs
+END
+CExceptionHandler.cs
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CExceptionHandler.cs
+END
+CCategory1.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CCategory1.cs
+END
+CUserAccess.cs
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CUserAccess.cs
+END
+CCategory3.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CCategory3.cs
+END
+CPrintQueue.cs
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CPrintQueue.cs
+END
+CPrintingFormat.cs
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CPrintingFormat.cs
+END
+CCat2Rank.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CCat2Rank.cs
+END
+CCat4Rank.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/ObjectModel/CCat4Rank.cs
+END

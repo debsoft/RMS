@@ -1,0 +1,146 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using RMSUI;
+
+namespace RMSUI
+{
+    public partial class CurrencyKeyPad : UserControl
+    {
+
+        private TextBox textbox;
+        private string currency = "£";
+        public CurrencyKeyPad()
+        {
+            InitializeComponent();
+        }
+
+
+        public TextBox ControlToInputText
+        {
+            get { return this.textbox; }
+            set
+            {
+                this.textbox = value;
+                                    
+
+            }
+        }
+        public string CurrencySign
+        {
+            set { currency = value; }
+        }
+
+
+        public TextBox textBox { get; set; }
+        
+        private void SetNumber(int inDigit)
+        {
+            if (textbox.Text.Length > 10)
+                return;
+            Double tempInput = Double.Parse(textbox.Text.Substring(currency.Length));
+            textbox.Text = currency + ((Double)(tempInput * 10 + inDigit * 0.01)).ToString("F02");
+        }
+
+
+        private void Click_1(object sender, EventArgs e)
+        {
+                       
+          SetNumber(1);
+           
+        }
+
+        private void SetNumber(double p)
+        {
+            throw new NotImplementedException();
+        }
+
+       
+
+        private void Click_2(object sender, EventArgs e)
+        {
+            SetNumber(2);
+        }
+
+        private void Click_3(object sender, EventArgs e)
+        {
+            SetNumber(3);
+        }
+
+        private void Click_4(object sender, EventArgs e)
+        {
+            SetNumber(4);
+        }
+
+        private void Click_5(object sender, EventArgs e)
+        {
+            SetNumber(5);
+        }
+
+        private void Click_6(object sender, EventArgs e)
+        {
+            SetNumber(6);
+        }
+
+        private void Click_7(object sender, EventArgs e)
+        {
+            SetNumber(7);
+        }
+
+        private void Click_8(object sender, EventArgs e)
+        {
+            SetNumber(8);
+        }
+
+        private void Click_9(object sender, EventArgs e)
+        {
+            SetNumber(9);
+        }
+
+        private void Click_0(object sender, EventArgs e)
+        {
+            SetNumber(0);
+        }
+
+        private void Click_clear(object sender, EventArgs e)
+        {
+            
+            textbox.Text = currency+"0.00";
+            
+        }
+
+        private void Click_00(object sender, EventArgs e)
+        {
+            SetNumber(0);
+            SetNumber(0);
+        }
+
+        private void Click_20p(object sender, EventArgs e)
+        {
+            
+            textbox.Text = currency+"1000.00";
+        }
+
+        private void Click_10p(object sender, EventArgs e)
+        {
+            textbox.Text = currency+"500.00";
+        }
+
+        private void Click_5p(object sender, EventArgs e)
+        {
+            textbox.Text = currency+"100.00";
+        }
+
+
+
+         
+
+     
+    }
+
+}

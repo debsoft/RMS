@@ -1,0 +1,275 @@
+namespace RMS.SystemManagement
+{
+    partial class CMergeTableForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CMergeTableForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.MergeTableButton = new RMSUI.FunctionalButton();
+            this.MergeTableDataGridView = new System.Windows.Forms.DataGridView();
+            this.OrderIDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TableTypeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TableNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GuestQuantityColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MergeCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.BackButton = new RMSUI.FunctionalButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MergeTableDataGridView)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.MergeTableButton);
+            this.panel1.Controls.Add(this.MergeTableDataGridView);
+            this.panel1.Controls.Add(this.BackButton);
+            this.panel1.Location = new System.Drawing.Point(3, 50);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 600);
+            this.panel1.TabIndex = 1;
+            // 
+            // MergeTableButton
+            // 
+            this.MergeTableButton.BackColor = System.Drawing.Color.Transparent;
+            this.MergeTableButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MergeTableButton.BackgroundImage")));
+            this.MergeTableButton.BgImageOnMouseDown = ((System.Drawing.Image)(resources.GetObject("MergeTableButton.BgImageOnMouseDown")));
+            this.MergeTableButton.BgImageOnMouseUp = ((System.Drawing.Image)(resources.GetObject("MergeTableButton.BgImageOnMouseUp")));
+            this.MergeTableButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.MergeTableButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.MergeTableButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.MergeTableButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MergeTableButton.Font = new System.Drawing.Font("Arial", 10F);
+            this.MergeTableButton.ForeColorOnMouseDown = System.Drawing.Color.White;
+            this.MergeTableButton.ForeColorOnMouseUp = System.Drawing.Color.Black;
+            this.MergeTableButton.FunctionType = RMSUI.RMSUIConstants.FunctionType.NormalCenter;
+            this.MergeTableButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MergeTableButton.Location = new System.Drawing.Point(583, 478);
+            this.MergeTableButton.Name = "MergeTableButton";
+            this.MergeTableButton.Size = new System.Drawing.Size(120, 40);
+            this.MergeTableButton.TabIndex = 22;
+            this.MergeTableButton.Text = "Merge";
+            this.MergeTableButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.MergeTableButton.UseVisualStyleBackColor = false;
+            this.MergeTableButton.Click += new System.EventHandler(this.MergeTableButton_Click);
+            // 
+            // MergeTableDataGridView
+            // 
+            this.MergeTableDataGridView.AllowUserToAddRows = false;
+            this.MergeTableDataGridView.AllowUserToDeleteRows = false;
+            this.MergeTableDataGridView.AllowUserToResizeColumns = false;
+            this.MergeTableDataGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Linen;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.PaleTurquoise;
+            this.MergeTableDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.MergeTableDataGridView.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.MergeTableDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.MergeTableDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MergeTableDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.MergeTableDataGridView.ColumnHeadersHeight = 25;
+            this.MergeTableDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.MergeTableDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.OrderIDColumn,
+            this.TableTypeColumn,
+            this.TableNumberColumn,
+            this.GuestQuantityColumn,
+            this.MergeCheckBoxColumn});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.MergeTableDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            this.MergeTableDataGridView.Location = new System.Drawing.Point(92, 41);
+            this.MergeTableDataGridView.Name = "MergeTableDataGridView";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.MergeTableDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.MergeTableDataGridView.RowHeadersVisible = false;
+            this.MergeTableDataGridView.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.MergeTableDataGridView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.MergeTableDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MergeTableDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.MergeTableDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
+            this.MergeTableDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.MergeTableDataGridView.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.MergeTableDataGridView.RowTemplate.Height = 20;
+            this.MergeTableDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.MergeTableDataGridView.Size = new System.Drawing.Size(611, 419);
+            this.MergeTableDataGridView.TabIndex = 20;
+            this.MergeTableDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MergeTableDataGridView_CellContentClick);
+            // 
+            // OrderIDColumn
+            // 
+            this.OrderIDColumn.HeaderText = "OrderID";
+            this.OrderIDColumn.Name = "OrderIDColumn";
+            this.OrderIDColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.OrderIDColumn.Visible = false;
+            // 
+            // TableTypeColumn
+            // 
+            this.TableTypeColumn.HeaderText = "Table Type";
+            this.TableTypeColumn.Name = "TableTypeColumn";
+            this.TableTypeColumn.ReadOnly = true;
+            this.TableTypeColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.TableTypeColumn.Width = 130;
+            // 
+            // TableNumberColumn
+            // 
+            this.TableNumberColumn.HeaderText = "Table Number";
+            this.TableNumberColumn.Name = "TableNumberColumn";
+            this.TableNumberColumn.ReadOnly = true;
+            this.TableNumberColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.TableNumberColumn.Width = 130;
+            // 
+            // GuestQuantityColumn
+            // 
+            this.GuestQuantityColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GuestQuantityColumn.HeaderText = "Guest Quantity";
+            this.GuestQuantityColumn.Name = "GuestQuantityColumn";
+            this.GuestQuantityColumn.ReadOnly = true;
+            this.GuestQuantityColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // MergeCheckBoxColumn
+            // 
+            this.MergeCheckBoxColumn.FalseValue = "False";
+            this.MergeCheckBoxColumn.HeaderText = "   Merge";
+            this.MergeCheckBoxColumn.Name = "MergeCheckBoxColumn";
+            this.MergeCheckBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MergeCheckBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.MergeCheckBoxColumn.TrueValue = "True";
+            this.MergeCheckBoxColumn.Width = 132;
+            // 
+            // BackButton
+            // 
+            this.BackButton.BackColor = System.Drawing.Color.Transparent;
+            this.BackButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BackButton.BackgroundImage")));
+            this.BackButton.BgImageOnMouseDown = ((System.Drawing.Image)(resources.GetObject("BackButton.BgImageOnMouseDown")));
+            this.BackButton.BgImageOnMouseUp = ((System.Drawing.Image)(resources.GetObject("BackButton.BgImageOnMouseUp")));
+            this.BackButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.BackButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BackButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackButton.Font = new System.Drawing.Font("Arial", 10F);
+            this.BackButton.ForeColorOnMouseDown = System.Drawing.Color.White;
+            this.BackButton.ForeColorOnMouseUp = System.Drawing.Color.Black;
+            this.BackButton.FunctionType = RMSUI.RMSUIConstants.FunctionType.Back;
+            this.BackButton.Image = ((System.Drawing.Image)(resources.GetObject("BackButton.Image")));
+            this.BackButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BackButton.Location = new System.Drawing.Point(457, 478);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(120, 40);
+            this.BackButton.TabIndex = 19;
+            this.BackButton.Text = "Back";
+            this.BackButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BackButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BackButton.UseVisualStyleBackColor = false;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(92, 66);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(611, 22);
+            this.panel2.TabIndex = 23;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(240, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(133, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Allocated Table List";
+            // 
+            // CMergeTableForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlText;
+            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.panel1);
+            this.Name = "CMergeTableForm";
+            this.ScreenTitle = "Merge Table";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Load += new System.EventHandler(this.CMergeTableForm_Load);
+            this.Controls.SetChildIndex(this.panel1, 0);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.MergeTableDataGridView)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView MergeTableDataGridView;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OrderIDColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TableTypeColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TableNumberColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GuestQuantityColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn MergeCheckBoxColumn;
+        private RMSUI.FunctionalButton MergeTableButton;
+        private RMSUI.FunctionalButton BackButton;
+
+    }
+}

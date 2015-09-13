@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Drawing.Printing;
+using System.IO;
+
+namespace RMS.Reports
+{
+    public class TextDocument : PrintDocument
+    {
+        private string[] text;
+
+        public string[] Text;
+
+        public int PageNumber;
+
+        public int Offset;
+
+
+        public TextDocument(string str)
+        {
+            this.Text = new string[10000];
+            StringReader reader = new StringReader(str);
+            string line;
+            int i=0;;
+            while ((line = reader.ReadLine()) != null)
+            {
+
+                this.Text[i] += line;
+                i++;
+            }
+        }
+    }
+      
+}

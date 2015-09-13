@@ -1,0 +1,66 @@
+﻿<RecentFiles>
+  <RecentFiles>
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:SystemManagement/f:PartyReservationForm.cs" caret="8005" fromTop="0" />
+    <File id="4BBBEC3B-580D-4BB6-B4AB-7DD39D13517F/f:LobbyItemButton.cs" caret="5186" fromTop="167" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:ReportForms/f:CreditVoucherExpenseWiseReport.cs" caret="1586" fromTop="17" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:ReportForms/f:StockOutInvoiceReport.Designer.cs" caret="0" fromTop="0" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Account Form/f:StockOutEmployeeReport.cs" caret="346" fromTop="0" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:ReportForms/f:StockOutInvoiceReport.cs" caret="2178" fromTop="11" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:ReportForms/f:StockOutChallenReport.cs" caret="2182" fromTop="20" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/f:Program.cs" caret="9643" fromTop="13" />
+    <File id="1AD97A32-2C57-41FE-BA55-0DFD4A8E0A17/d:DataAccess/f:IOrderInfoDAO.cs" caret="967" fromTop="15" />
+    <File id="6F2812B3-A416-4178-8A8A-DDC01C74E198/d:TableInfo/f:COrderManager.cs" caret="60774" fromTop="20" />
+    <File id="3A48D462-2F08-4C11-8D80-81AF2D9494F2/d:Base/f:BaseDAO.cs" caret="7295" fromTop="15" />
+    <File id="1AD97A32-2C57-41FE-BA55-0DFD4A8E0A17/d:ObjectModel/f:COrderDetails.cs" caret="2176" fromTop="25" />
+    <File id="6F2812B3-A416-4178-8A8A-DDC01C74E198/d:Payment/f:CPaymentManager.cs" caret="582" fromTop="19" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Common/f:CPaymentForm.cs" caret="69636" fromTop="18" />
+    <File id="1AD97A32-2C57-41FE-BA55-0DFD4A8E0A17/d:ObjectModel/f:COrderDiscount.cs" caret="688" fromTop="19" />
+    <File id="1AD97A32-2C57-41FE-BA55-0DFD4A8E0A17/d:ObjectModel/f:CPayment.cs" caret="6229" fromTop="24" />
+    <File id="3A48D462-2F08-4C11-8D80-81AF2D9494F2/f:CPaymentDAO.cs" caret="973" fromTop="11" />
+    <File id="1AD97A32-2C57-41FE-BA55-0DFD4A8E0A17/d:ObjectModel/f:CSearchOrderInfo.cs" caret="6124" fromTop="25" />
+    <File id="6F2812B3-A416-4178-8A8A-DDC01C74E198/d:SystemManagement/f:SystemManager.cs" caret="10339" fromTop="20" />
+    <File id="3A48D462-2F08-4C11-8D80-81AF2D9494F2/f:SysytemManagementDAO.cs" caret="32782" fromTop="7" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Common/f:CDiscountForm.cs" caret="1445" fromTop="16" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:ViewReport.cs" caret="17954" fromTop="16" />
+    <File id="3A48D462-2F08-4C11-8D80-81AF2D9494F2/f:COrderDetailsDAO.cs" caret="14548" fromTop="20" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Account Form/f:WelcomeForm.cs" caret="20164" fromTop="9" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:ReportForms/f:LeaveReportForm.cs" caret="1210" fromTop="12" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Account Form/f:LeaveForm.cs" caret="6389" fromTop="7" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:ReportForms/f:WarningLetter.cs" caret="311" fromTop="10" />
+    <File id="3A48D462-2F08-4C11-8D80-81AF2D9494F2/d:Queries/f:SqlQueries.cs" caret="32262" fromTop="8" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:TableOrder/f:CTableOrderForm.cs" caret="455048" fromTop="17" />
+    <File id="3A48D462-2F08-4C11-8D80-81AF2D9494F2/f:COrderInfoDAO.cs" caret="40489" fromTop="13" />
+  </RecentFiles>
+  <RecentEdits>
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:TableOrder/f:CTableOrderForm.cs" caret="329238" fromTop="26" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:TableOrder/f:CTableOrderForm.cs" caret="329122" fromTop="23" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Common/f:CPaymentForm.cs" caret="46772" fromTop="22" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Common/f:CPaymentForm.cs" caret="47179" fromTop="27" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Common/f:CPaymentForm.cs" caret="46474" fromTop="13" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Common/f:CPaymentForm.cs" caret="46246" fromTop="9" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Common/f:CPaymentForm.cs" caret="46681" fromTop="18" />
+    <File id="1AD97A32-2C57-41FE-BA55-0DFD4A8E0A17/d:ObjectModel/f:CPayment.cs" caret="6268" fromTop="24" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Common/f:CPaymentForm.cs" caret="64265" fromTop="7" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Common/f:CPaymentForm.cs" caret="64043" fromTop="3" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Common/f:CPaymentForm.cs" caret="64252" fromTop="8" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Common/f:CPaymentForm.cs" caret="67432" fromTop="24" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Common/f:CPaymentForm.cs" caret="72425" fromTop="5" />
+    <File id="3A48D462-2F08-4C11-8D80-81AF2D9494F2/f:CPaymentDAO.cs" caret="1986" fromTop="21" />
+    <File id="3A48D462-2F08-4C11-8D80-81AF2D9494F2/d:Queries/f:SqlQueries.cs" caret="34814" fromTop="15" />
+    <File id="1AD97A32-2C57-41FE-BA55-0DFD4A8E0A17/d:ObjectModel/f:CSearchOrderInfo.cs" caret="6124" fromTop="25" />
+    <File id="3A48D462-2F08-4C11-8D80-81AF2D9494F2/f:SysytemManagementDAO.cs" caret="32997" fromTop="18" />
+    <File id="3A48D462-2F08-4C11-8D80-81AF2D9494F2/f:SysytemManagementDAO.cs" caret="32913" fromTop="12" />
+    <File id="3A48D462-2F08-4C11-8D80-81AF2D9494F2/f:SysytemManagementDAO.cs" caret="240084" fromTop="7" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:ViewReport.cs" caret="11021" fromTop="19" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:ViewReport.cs" caret="18402" fromTop="26" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Account Form/f:LeaveForm.cs" caret="8503" fromTop="14" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:ReportForms/f:LeaveReportForm.cs" caret="760" fromTop="9" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:ReportForms/f:LeaveReportForm.cs" caret="1693" fromTop="28" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:ReportForms/f:LeaveReportForm.cs" caret="1455" fromTop="19" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:ReportForms/f:LeaveReportForm.cs" caret="610" fromTop="21" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:ReportForms/f:LeaveReportForm.cs" caret="1009" fromTop="1" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Account Form/f:WelcomeForm.cs" caret="20446" fromTop="16" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:ReportForms/f:LeaveReportForm.cs" caret="1210" fromTop="12" />
+    <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:ReportForms/f:LeaveReportForm.cs" caret="1716" fromTop="12" />
+  </RecentEdits>
+</RecentFiles>

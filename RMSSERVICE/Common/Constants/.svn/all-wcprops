@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/Constants
+END
+vssver2.scc
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/Constants/vssver2.scc
+END
+ObjectComparator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/Constants/ObjectComparator.cs
+END
+YieldMember.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/Constants/YieldMember.cs
+END
+CPrinterConstants.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/Constants/CPrinterConstants.cs
+END
+RMSServiceGlobal.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/Constants/RMSServiceGlobal.cs
+END
+CErrorStrings.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/Constants/CErrorStrings.cs
+END
+CCommonConstants.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/Constants/CCommonConstants.cs
+END
+Enumerations.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/Common/Constants/Enumerations.cs
+END

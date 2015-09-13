@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <food_category_name>
+    <cat2_id>302</cat2_id>
+    <Category2_Name>SALAD</Category2_Name>
+    <Category1_Name>THAI SALAD</Category1_Name>
+    <Category2_Order>1</Category2_Order>
+    <Parent_Category_Name>THAI CUISINE</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+</DocumentElement>

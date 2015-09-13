@@ -1,0 +1,7 @@
+bin\Debug\RMS.exe
+bin\Debug\RMS.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\RMS.Properties.Resources.resources
+obj\Debug\RMS.csproj.GenerateResource.Cache
+obj\Debug\RMS.exe
+obj\Debug\RMS.pdb

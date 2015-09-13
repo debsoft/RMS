@@ -1,0 +1,5 @@
+SCC = This is a Source Code Control file
+
+[Activator.csproj]
+SCC_Aux_Path = "\\Ibacs-server\VSS\VSS_DB"
+SCC_Project_Name = "$/RMS/RMSActivator/RMSActivator/TrialMaker", PLEAAAAA

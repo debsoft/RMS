@@ -1,0 +1,1318 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+using RMS.DataAccess;
+using RMS.Common.DataAccess;
+using RMS.Common.ObjectModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Collections;
+using RMS.Common;
+
+
+namespace RMS.DataAccess
+{
+    public class COrderDetailsDAO : BaseDAO, IOrderDetailsDAO
+    {
+        #region IOrderDetails members
+
+        public COrderDetails OrderDetailsInsert(COrderDetails inOrderDetails)
+        {
+            COrderDetails tempOrderDetails = inOrderDetails;
+                        
+            inOrderDetails.OrderRemarks = inOrderDetails.OrderRemarks.Replace("''", "'");
+            inOrderDetails.OrderRemarks = inOrderDetails.OrderRemarks.Replace("'", "''");
+
+            try
+            {
+                this.OpenConnection();
+                string sqlCommand = string.Format(SqlQueries.GetQuery(Query.OrderDetailsInsert),
+                    inOrderDetails.OrderID, inOrderDetails.ProductID, inOrderDetails.OrderQuantity, inOrderDetails.OrderAmount, inOrderDetails.OrderRemarks, inOrderDetails.OrderFoodType, inOrderDetails.CategoryLevel, inOrderDetails.ItemOrderTime, RMSGlobal.m_iLoginUserID, inOrderDetails.UnitPrice, inOrderDetails.VatTotal, inOrderDetails.Amount_with_vat,inOrderDetails.Product_Name, inOrderDetails.UOM,inOrderDetails.Product_Type);
+
+                this.ExecuteNonQuery(sqlCommand);
+                sqlCommand = SqlQueries.GetQuery(Query.ScopeIdentity);
+
+                IDataReader oReader = this.ExecuteReader(sqlCommand);
+                if (oReader != null)
+                {
+                    bool bIsRead = oReader.Read();
+                    if (bIsRead)
+                    {
+
+                        tempOrderDetails.OrderDetailsID = Int64.Parse(oReader[0].ToString());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Write("Exception : " + ex + " in OrderDetailsInsert()", LogLevel.Error, "Database");
+
+                throw new Exception("Exception occure at OrderDetailsInsert()", ex);
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return tempOrderDetails;
+        }
+
+        public void OrderDetailsUpdate(COrderDetails inOrderDetails)
+        {
+            inOrderDetails.OrderRemarks = inOrderDetails.OrderRemarks.Replace("''", "'");
+            inOrderDetails.OrderRemarks = inOrderDetails.OrderRemarks.Replace("'", "''");
+            try
+            {
+                this.OpenConnection();
+
+
+                string sqlCommand = string.Format(SqlQueries.GetQuery(Query.OrderDetailsUpdate),
+                    inOrderDetails.OrderID, inOrderDetails.ProductID, inOrderDetails.OrderQuantity, inOrderDetails.OrderAmount, inOrderDetails.OrderRemarks, inOrderDetails.OrderFoodType, inOrderDetails.CategoryLevel, inOrderDetails.OrderDetailsID, inOrderDetails.PrintedQuantity, inOrderDetails.VatTotal, inOrderDetails.Amount_with_vat);
+
+                this.ExecuteNonQuery(sqlCommand);
+            }
+            catch (Exception ex)
+            {
+                Console.Write("###" + ex.ToString() + "###");
+                Logger.Write("Exception : " + ex + " in OrderDetailsUpdate()", LogLevel.Error, "Database");
+
+                throw new Exception("Exception occure at OrderDetailsUpdate()", ex);
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+        }
+
+        public void OrderDetailsDelete(Int64 inOrderDetailsID)
+        {
+            try
+            {
+                this.OpenConnection();
+                string sqlCommand = string.Format(SqlQueries.GetQuery(Query.OrderDetailsDelete),
+                    inOrderDetailsID);
+
+                this.ExecuteNonQuery(sqlCommand);
+            }
+            catch (Exception ex)
+            {
+                Logger.Write("Exception : " + ex + " in OrderDetailsDelete()", LogLevel.Error, "Database");
+
+                throw new Exception("Exception occure at OrderDetailsDelete()", ex);
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+        }
+
+        public List<COrderDetails> OrderDetailsGetAll()
+        {
+            List<COrderDetails> tempOrderDetailsList = new List<COrderDetails>();
+            try
+            {
+                this.OpenConnection();
+                string sqlCommand = SqlQueries.GetQuery(Query.OrderDetailsGetAll);
+                IDataReader oReader = this.ExecuteReader(sqlCommand);
+                if (oReader != null)
+                {
+                    while (oReader.Read())
+                    {
+                        COrderDetails tempOrderDetails = ReaderToOrderDetails(oReader);
+                        tempOrderDetailsList.Add(tempOrderDetails);
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Write("Exception : " + ex + " in GetOrderDetailsAll()", LogLevel.Error, "Database");
+                if (ex.GetType().Equals(typeof(SqlException)))
+                {
+                    SqlException oSQLEx = ex as SqlException;
+                    if (oSQLEx.Number != 7619)
+                        throw new Exception("Exception occured at GetOrderDetailsAll()", ex);
+                }
+                else
+                {
+                    throw new Exception("Exception occure at GetOrderDetailsAll()", ex);
+                }
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return tempOrderDetailsList;
+        }
+
+        public CResult OrderDetailsGetByOrderID(Int64 inOrderID)
+        {
+            CResult tempResult = new CResult();
+            List<COrderDetails> tempOrderDetailsList = new List<COrderDetails>();
+            try
+            {
+                this.OpenConnection();
+                string sqlCommand = String.Format(SqlQueries.GetQuery(Query.OrderDetailsGetByOrderId), inOrderID);
+                IDataReader oReader = this.ExecuteReader(sqlCommand);
+                if (oReader != null)
+                {
+                    while (oReader.Read())
+                    {
+                        COrderDetails tempOrderDetails = ReaderToOrderDetails(oReader);
+                        tempOrderDetailsList.Add(tempOrderDetails);
+
+                    }
+                } 
+                oReader.Close();//New addition By Baruri for changing the order status 
+                sqlCommand = "update order_info set onlinestatus=2 where order_id=" + inOrderID;
+                this.ExecuteNonQuery(sqlCommand);
+
+                tempResult.Data = tempOrderDetailsList;
+                tempResult.IsSuccess = true;
+            }
+            catch (Exception ex)
+            {
+                tempResult.IsException = true;
+                Console.Write("###" + ex.ToString() + "###");
+                Logger.Write("Exception : " + ex + " in OrderDetailsGetByOrderID()", LogLevel.Error, "Database");
+                if (ex.GetType().Equals(typeof(SqlException)))
+                {
+                    SqlException oSQLEx = ex as SqlException;
+                    if (oSQLEx.Number != 7619)
+                        throw new Exception("Exception occured at OrderDetailsGetByOrderID()", ex);
+                }
+                else
+                {
+                    throw new Exception("Exception occure at OrderDetailsGetByOrderID()", ex);
+                }
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return tempResult;
+        }
+
+        public CResult OrderDetailsArchiveGetByOrderID(Int64 inOrderID) //New Added
+        {
+            CResult tempResult = new CResult();
+            List<COrderDetails> tempOrderDetailsList = new List<COrderDetails>();
+            try
+            {
+                this.OpenConnection();
+                string sqlCommand = String.Format(SqlQueries.GetQuery(Query.OrderDetailsArchiveGetByOrderId), inOrderID);
+                IDataReader oReader = this.ExecuteReader(sqlCommand);
+                if (oReader != null)
+                {
+                    while (oReader.Read())
+                    {
+                        COrderDetails tempOrderDetails = ReaderToOrderDetails(oReader);
+                        tempOrderDetailsList.Add(tempOrderDetails);
+
+                    }
+                }
+                tempResult.Data = tempOrderDetailsList;
+                tempResult.IsSuccess = true;
+            }
+            catch (Exception ex)
+            {
+                tempResult.IsException = true;
+                Console.Write("###" + ex.ToString() + "###");
+                Logger.Write("Exception : " + ex + " in OrderDetailsGetByOrderID()", LogLevel.Error, "Database");
+                if (ex.GetType().Equals(typeof(SqlException)))
+                {
+                    SqlException oSQLEx = ex as SqlException;
+                    if (oSQLEx.Number != 7619)
+                        throw new Exception("Exception occured at OrderDetailsGetByOrderID()", ex);
+                }
+                else
+                {
+                    throw new Exception("Exception occure at OrderDetailsGetByOrderID()", ex);
+                }
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return tempResult;
+        }
+
+        public COrderDetails OrderDetailsGetByOrderDetailID(Int64 inOrderDetailID)
+        {
+            COrderDetails tempOrderDetails = new COrderDetails();
+            try
+            {
+                this.OpenConnection();
+                string sqlCommand = String.Format(SqlQueries.GetQuery(Query.OrderDetailsGetByOrderDetailID), inOrderDetailID.ToString());
+                IDataReader oReader = this.ExecuteReader(sqlCommand);
+                if (oReader != null)
+                {
+                    while (oReader.Read())
+                    {
+                        tempOrderDetails = ReaderToOrderDetails(oReader);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.Write("###" + ex.ToString() + "###");
+                Logger.Write("Exception : " + ex + " in OrderDetailsGetByOrderDetailID()", LogLevel.Error, "Database");
+                if (ex.GetType().Equals(typeof(SqlException)))
+                {
+                    SqlException oSQLEx = ex as SqlException;
+                    if (oSQLEx.Number != 7619)
+                        throw new Exception("Exception occured at OrderDetailsGetByOrderDetailID()", ex);
+                }
+                else
+                {
+                    throw new Exception("Exception occure at OrderDetailsGetByOrderDetailID()", ex);
+                }
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return tempOrderDetails;
+        }
+
+        #endregion
+
+        private COrderDetails ReaderToOrderDetails(IDataReader inReader)
+        {
+           // COrderDetails tempOrderDetails = new COrderDetails();
+            COrderDetails tempOrderDetails = new COrderDetails();
+
+            if (inReader["order_detail_id"] != null)
+                tempOrderDetails.OrderDetailsID = int.Parse(inReader["order_detail_id"].ToString());
+
+            if (inReader["order_id"] != null)
+                tempOrderDetails.OrderID = int.Parse(inReader["order_id"].ToString());
+
+            if (inReader["product_id"] != null)
+                tempOrderDetails.ProductID = Int32.Parse(inReader["product_id"].ToString());
+
+            if (inReader["quantity"] != null)
+                tempOrderDetails.OrderQuantity = Int32.Parse(inReader["quantity"].ToString());
+
+            if (inReader["amount"] != null)
+                tempOrderDetails.OrderAmount = Double.Parse(inReader["amount"].ToString());
+
+            if (inReader["remarks"] != null)
+                tempOrderDetails.OrderRemarks = inReader["remarks"].ToString();
+
+            if (inReader["food_type"] != null)
+                tempOrderDetails.OrderFoodType = inReader["food_type"].ToString();
+
+            if (inReader["cat_level"] != null)
+                tempOrderDetails.CategoryLevel = Int32.Parse(inReader["cat_level"].ToString());
+            try
+            {
+                //if (inReader["print_send"] != null)
+                    tempOrderDetails.PrintedQuantity = Int32.Parse(inReader["print_send"].ToString());
+            }
+            catch { }
+
+
+            try
+            {
+                //if (inReader["itemUnitPrice"] != null)
+                    tempOrderDetails.UnitPrice = Convert.ToDouble(inReader["itemUnitPrice"].ToString());
+            }
+            catch (Exception ex) { }
+
+            try
+            {
+                //if (inReader["amount_with_vat"] != null)
+                {
+                    tempOrderDetails.Amount_with_vat = Convert.ToDouble(inReader["amount_with_vat"]);
+                }
+
+            }
+            catch { }
+
+            try
+            {
+                //if (inReader["vatTotal"] != null)
+                {
+                    tempOrderDetails.VatTotal = Convert.ToDouble(inReader["vatTotal"]);
+                }
+
+            }
+            catch { }
+
+
+            try
+            {
+                //if (inReader["guest_print_qnty"] != null)
+                {
+                    tempOrderDetails.GuestPrintQuantity = Convert.ToInt32(inReader["guest_print_qnty"]);
+                }
+
+            }
+            catch
+            {
+            }
+
+            try
+            {
+                //if (inReader["kitchen_quantity"] != null)
+                {
+                    tempOrderDetails.KitchenQuantity = Convert.ToInt32(inReader["kitchen_quantity"]);
+                }
+
+            }
+            catch
+            {
+            }
+
+            try
+               {
+                //if (inReader["kitchen_quantity"] != null)
+                {
+                    tempOrderDetails.DiscountAmount = Convert.ToDouble(inReader["item_discount"]);
+                }
+
+            }
+            catch
+            {
+
+
+            }
+
+           // tempOrderDetails.OrderAmount = tempOrderDetails.OrderAmount - tempOrderDetails.DiscountAmount;
+
+
+            return tempOrderDetails;
+
+        }
+
+        /// <summary>
+        /// Added by Baruri
+        /// </summary>
+        /// <param name="inReader"></param>
+        /// <returns></returns>
+        private COrderDetails ReaderToOnlineOrderDetails(IDataReader inReader)
+        {
+            COrderDetails tempOrderDetails = new COrderDetails();
+            if (inReader["order_details_id"] != null)
+                tempOrderDetails.OrderDetailsID = int.Parse(inReader["order_details_id"].ToString());
+
+            if (inReader["order_id"] != null)
+                tempOrderDetails.OrderID = int.Parse(inReader["order_id"].ToString());
+
+            if (inReader["item_name"] != null)
+                tempOrderDetails.ItemName = Convert.ToString(inReader["item_name"].ToString());
+
+            if (inReader["quantity"] != null)
+                tempOrderDetails.OrderQuantity = Int32.Parse(inReader["quantity"].ToString());
+
+            if (inReader["amount"] != null)
+                tempOrderDetails.OrderAmount = Double.Parse(inReader["amount"].ToString());
+
+            if (inReader["cat_rank"] != null)
+                tempOrderDetails.Rank = Convert.ToInt64(inReader["cat_rank"].ToString());
+
+            if (inReader["cat_id"] != null)
+                tempOrderDetails.CategoryID= Convert.ToInt64(inReader["cat_id"].ToString()); 
+
+            if (inReader["cat_level"] != null)
+                tempOrderDetails.CategoryLevel = Int32.Parse(inReader["cat_level"].ToString());
+
+            if (inReader["printed_quantity"] != null)
+                tempOrderDetails.PrintedQuantity = Int32.Parse(inReader["printed_quantity"].ToString());
+
+            if (inReader["food_type"] != null)
+                tempOrderDetails.OrderFoodType = Convert.ToString(inReader["food_type"]);
+
+            if (inReader["remarks"] != null)
+                tempOrderDetails.OrderRemarks = Convert.ToString(inReader["remarks"]);
+
+            if (inReader["item_order_number"] != null)
+                tempOrderDetails.OnlineItemSequenceNumber = Convert.ToInt64("0"+inReader["item_order_number"]);
+            try
+            {
+                if (inReader["amount_with_vat"] != null)
+                {
+                    tempOrderDetails.Amount_with_vat = Convert.ToDouble(inReader["amount_with_vat"]);
+                }
+
+            }
+            catch { }
+
+            try
+            {
+                if (inReader["vatTotal"] != null)
+                {
+                    tempOrderDetails.VatTotal = Convert.ToDouble(inReader["vatTotal"]);
+                }
+
+            }
+            catch { }
+
+            try
+            {
+                if (inReader["guest_print_qnty"] != null)
+                {
+                    tempOrderDetails.GuestPrintQuantity = Convert.ToInt32(inReader["guest_print_qnty"]);
+                }
+
+            }
+            catch
+            {
+
+
+            }
+            
+            return tempOrderDetails;
+
+        }
+
+        /// <summary>
+        /// Getting the online order details.Added By Baruri
+        /// </summary>
+        /// <param name="inOrderID"></param>
+        /// <returns></returns>
+        public CResult GetOnlineOrderDetailsByOrderID(long inOrderID)
+        {
+            CResult tempResult = new CResult();
+            COrderDetails tempOrderDetails = new COrderDetails();
+            List<COrderDetails> tempOrderDetailsList = new List<COrderDetails>();
+            try
+            {
+                this.OpenConnection();
+                string sqlCommand = String.Format(SqlQueries.GetQuery(Query.OnlineOrderDetailsByOrderID), inOrderID.ToString());
+                IDataReader oReader = this.ExecuteReader(sqlCommand);
+                if (oReader != null)
+                {
+                    while (oReader.Read())
+                    {
+                        tempOrderDetails = this.ReaderToOnlineOrderDetails(oReader);
+                        tempOrderDetailsList.Add(tempOrderDetails);
+                    }
+                }
+                tempResult.Data = tempOrderDetailsList;
+                tempResult.IsSuccess = true;
+            }
+            catch (Exception ex)
+            {
+                Console.Write("###" + ex.ToString() + "###");
+                Logger.Write("Exception : " + ex + " in OrderDetailsGetByOrderDetailID()", LogLevel.Error, "Database");
+                if (ex.GetType().Equals(typeof(SqlException)))
+                {
+                    SqlException oSQLEx = ex as SqlException;
+                    if (oSQLEx.Number != 7619)
+                        throw new Exception("Exception occured at OrderDetailsGetByOrderDetailID()", ex);
+                }
+                else
+                {
+                    throw new Exception("Exception occure at OrderDetailsGetByOrderDetailID()", ex);
+                }
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return tempResult;
+        }
+
+        #region IOrderDetailsDAO Members
+        /// <summary>
+        /// Added By Baruri
+        /// </summary>
+        /// <param name="inOrderDetails"></param>
+
+        public void UpdateOnlineOrderDetails(COrderDetails inOrderDetails)
+        {
+            try
+            {
+                this.OpenConnection();
+                string sqlCommand = string.Format(SqlQueries.GetQuery(Query.UpdateOnlineOrdersDetails),
+                    inOrderDetails.OrderQuantity, inOrderDetails.OrderAmount, inOrderDetails.OnlineItemSequenceNumber);
+
+                this.ExecuteNonQuery(sqlCommand);
+            }
+            catch (Exception ex)
+            {
+                Console.Write("###" + ex.ToString() + "###");
+                Logger.Write("Exception : " + ex + " in OrderDetailsUpdate()", LogLevel.Error, "Database");
+
+                throw new Exception("Exception occure at OrderDetailsUpdate()", ex);
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+        }
+
+
+        /// <summary>
+        /// Added by Baruri
+        /// </summary>
+        /// <param name="p_itemsOrderNumber"></param>
+        void IOrderDetailsDAO.DeleteOnlineOrderDetails(long p_itemsOrderNumber)
+        {
+            try
+            {
+                this.OpenConnection();
+                string sqlCommand = string.Format(SqlQueries.GetQuery(Query.DeleteOnlineOrders), p_itemsOrderNumber);
+
+                this.ExecuteNonQuery(sqlCommand);
+            }
+            catch (Exception ex)
+            {
+                Logger.Write("Exception : " + ex + " in OrderDetailsDelete()", LogLevel.Error, "Database");
+
+                throw new Exception("Exception occure at OrderDetailsDelete()", ex);
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+        }
+
+
+        #endregion
+
+
+
+        #region IOrderDetailsDAO Members
+
+/// <summary>
+/// Added by Baruri
+/// </summary>
+/// <param name="p_onlineOrderDetails"></param>
+      void  IOrderDetailsDAO.AddNewOnlineProducts(COrderDetails p_onlineOrderDetails)
+        {
+            try
+            {
+                this.OpenConnection();
+                string sqlCommand = string.Format(SqlQueries.GetQuery(Query.AddNewOnlineOrderedItem), p_onlineOrderDetails.OrderQuantity, p_onlineOrderDetails.OrderAmount, p_onlineOrderDetails.OnlineItemSequenceNumber);
+
+                this.ExecuteNonQuery(sqlCommand);
+            }
+            catch (Exception ex)
+            {
+                Logger.Write("Exception : " + ex + " in AddNewOnlineProducts()", LogLevel.Error, "Database");
+
+                throw new Exception("Exception occure at AddNewOnlineProducts()", ex);
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+        }
+
+        #endregion
+
+        #region IOrderDetailsDAO Members
+
+        /// <summary>
+        /// Added by Baruri at 10.01.2009
+        /// </summary>
+        /// <param name="p_onlineOrderDetails"></param>
+      public void AddNewLocalProducts(COrderDetails p_orderDetails)
+      {
+          try
+          {
+              this.OpenConnection();
+              string sqlCommand = string.Format(SqlQueries.GetQuery(Query.AddNewLocalProducts), p_orderDetails.OrderQuantity, p_orderDetails.OrderAmount,
+                  p_orderDetails.ProductID, p_orderDetails.OrderID, p_orderDetails.OrderDetailsID, p_orderDetails.VatTotal,p_orderDetails.Amount_with_vat);
+
+              this.ExecuteNonQuery(sqlCommand);
+          }
+          catch (Exception ex)
+          {
+              Logger.Write("Exception : " + ex + " in AddNewOnlineProducts()", LogLevel.Error, "Database");
+
+              throw new Exception("Exception occure at AddNewOnlineProducts()", ex);
+          }
+          finally
+          {
+              this.CloseConnection();
+          }
+      }
+
+      #endregion
+
+      #region IOrderDetailsDAO Members
+
+        /// <summary>
+        /// Insert online ordered items
+        /// </summary>
+        /// <param name="inOrderDetails"></param>
+        /// <returns></returns>
+      public COrderDetails InsertOnlineOrderDetails(COrderDetails inOrderDetails)
+      {
+          COrderDetails tempOrderDetails = inOrderDetails;
+
+          inOrderDetails.OrderRemarks = inOrderDetails.OrderRemarks.Replace("''", "'");
+          inOrderDetails.OrderRemarks = inOrderDetails.OrderRemarks.Replace("'", "''");
+
+          try
+          {
+              this.OpenConnection();
+              string sqlCommandName = String.Empty;
+              sqlCommandName =string.Format(SqlQueries.GetQuery(Query.SelectOnlineOrderDetailsDetailsByIDFromOrderTable), inOrderDetails.OrderID);
+              IDataReader oReader = this.ExecuteReader(sqlCommandName);
+              while (oReader.Read())
+              {
+                  sqlCommandName = string.Format(SqlQueries.GetQuery(Query.SelectOnlineOrderDetailsDetailsByIDFromOnlineOrderTable),  Convert.ToInt64("0" + oReader["online_orderid"]));
+              }
+              oReader.Close();
+
+              oReader = this.ExecuteReader(sqlCommandName);
+              if (oReader != null)
+              {
+                  bool bIsRead = oReader.Read();
+                  if (bIsRead)
+                  {
+                   sqlCommandName = string.Format(SqlQueries.GetQuery(Query.InsertOnlineOrderDetails),
+                   Convert.ToInt64("0" + oReader["order_id"]), Convert.ToInt64("0" + oReader["customer_id"]), Convert.ToString(oReader["user_id"]), Convert.ToString(oReader["order_type"]), Convert.ToInt64("0" + oReader["order_time"]), Convert.ToString(oReader["status"]), Convert.ToInt32("0" + oReader["guest_count"]), Convert.ToInt64("0" + oReader["table_number"]), Convert.ToString(oReader["table_name"]), Convert.ToInt32("0" + oReader["terminal_id"]), Convert.ToInt64("0" + oReader["online_orderid"]), Convert.ToString(oReader["webstatus"]), Convert.ToString(oReader["webstatusnote"]), Convert.ToInt32("0" + oReader["OnlineStatus"]), inOrderDetails.OrderQuantity, inOrderDetails.OrderAmount, "", Convert.ToString(inOrderDetails.OrderFoodType), Convert.ToString(oReader["pcat_name"]), Convert.ToString(oReader["cat1_name"]), Convert.ToString(oReader["cat2_name"]), inOrderDetails.ItemName);
+                  }
+              }
+              oReader.Close();
+              this.ExecuteNonQuery(sqlCommandName);
+
+              sqlCommandName = SqlQueries.GetQuery(Query.GetOnlineItemOrderMaxNumber);
+              oReader = this.ExecuteReader(sqlCommandName);
+              while (oReader.Read())
+              {
+                  tempOrderDetails.OnlineItemSequenceNumber = Convert.ToInt64("0" + oReader["item_order_number"].ToString());
+              }
+              oReader.Close();
+
+          }
+          catch (Exception ex)
+          {
+              Logger.Write("Exception : " + ex + " in InsertOnlineOrderDetails()", LogLevel.Error, "Database");
+
+              throw new Exception("Exception occure at InsertOnlineOrderDetails()", ex);
+          }
+          finally
+          {
+              this.CloseConnection();
+          }
+
+          return tempOrderDetails;
+      }
+
+      #endregion
+
+      #region IOrderDetailsDAO Members
+
+
+      public void UpdatePrintedQuantity(SortedList p_printedItemList)
+      {
+          try
+          {
+              this.OpenConnection();
+              string sqlCommandName = String.Empty;
+
+              foreach (PrintedItems objItems in p_printedItemList.Values)
+              {
+                  sqlCommandName = string.Format(SqlQueries.GetQuery(Query.UpdatePrintedQuantity), objItems.TotalQuantity, objItems.ProductID,objItems.OrderID,objItems.OrderDetailsID,DateTime.Now.Ticks) ;
+                  this.ExecuteNonQuery(sqlCommandName);
+              }
+          }
+          catch (Exception ex)
+          {
+              Logger.Write("Exception : " + ex + " in UpdatePrintedQuantity()", LogLevel.Error, "Database");
+
+              throw new Exception("Exception occure at UpdatePrintedQuantity()", ex);
+          }
+          finally
+          {
+              this.CloseConnection();
+          }
+      }
+
+      #endregion
+
+      #region IOrderDetailsDAO Members
+
+        /// <summary>
+        /// Changes the printed quantity column
+        /// </summary>
+        /// <param name="p_printedItemList"></param>
+      public void UpdateOnlineOrderPrintedQuantity(SortedList p_printedItemList)
+      {
+          try
+          {
+              this.OpenConnection();
+              string sqlCommandName = String.Empty;
+
+              foreach (PrintedItems objItems in p_printedItemList.Values)
+              {
+                  sqlCommandName = string.Format(SqlQueries.GetQuery(Query.UpdateOnlineOrderPrintedQuantity), objItems.TotalQuantity, objItems.OnlineItemOrderNumber,objItems.OrderID,DateTime.Now.Ticks);
+                  this.ExecuteNonQuery(sqlCommandName);
+              }
+          }
+          catch (Exception ex)
+          {
+              Logger.Write("Exception : " + ex + " in UpdatePrintedQuantity()", LogLevel.Error, "Database");
+
+              throw new Exception("Exception occure at UpdatePrintedQuantity()", ex);
+          }
+          finally
+          {
+              this.CloseConnection();
+          }
+      }
+
+      #endregion
+
+      #region IOrderDetailsDAO Members
+
+        /// <summary>
+        /// Special modification for online items
+        /// </summary>
+        /// <param name="inOrderDetails"></param>
+      public void UpdateOnlineItemSpecial(COrderDetails inOrderDetails)
+      {
+          try
+          {
+              this.OpenConnection();
+              string sqlCommandName = String.Empty;
+              sqlCommandName = string.Format(SqlQueries.GetQuery(Query.UpdateOnlineItemSpecial), inOrderDetails.OrderRemarks, inOrderDetails.OnlineItemSequenceNumber);
+              this.ExecuteNonQuery(sqlCommandName);
+             
+          }
+          catch (Exception ex)
+          {
+              Logger.Write("Exception : " + ex + " in UpdateOnlineItemSpecial()", LogLevel.Error, "Database");
+
+              throw new Exception("Exception occure at UpdateOnlineItemSpecial()", ex);
+          }
+          finally
+          {
+              this.CloseConnection();
+          }
+      }
+
+      #endregion
+
+      #region IOrderDetailsDAO Members
+
+      //public CResult AddPLUToProduct(COrderDetails inOrderDetails)
+      //{
+      //}
+
+      #endregion
+
+      #region IOrderDetailsDAO Members
+
+
+      public CResult GetPluDataByProductPLU(string product_plu, int priceTakeType, long orderID)
+      {
+          CResult tempResult = new CResult();
+          //List<COrderDetails> tempOrderDetailsList = new List<COrderDetails>();
+          
+
+          try
+          {
+
+            //int  returnVal = ExecuteStoredProcedure(product_plu,priceTakeType,orderID);
+             //tempResult.Data = returnVal;
+              //this.OpenConnection();
+
+              //string sSql = String.Format(SqlQueries.GetQuery(Query.CheckAndGetProductPLU), product_plu, priceTakeType,orderID);
+
+              //IDataReader oReader = this.ExecuteReader(sSql);
+              //if (oReader != null)
+              //{
+              //    while (oReader.Read())
+              //    {
+              //        COrderDetails tempOrderDetails = ReaderToOrderDetails(oReader);
+              //        tempOrderDetailsList.Add(tempOrderDetails);
+
+              //    }
+              //}
+              //tempResult.Data = tempOrderDetailsList;
+             tempResult.IsSuccess = true;
+          }
+          catch (Exception ex)
+          {
+              tempResult.IsException = true;
+              Console.Write("###" + ex.ToString() + "###");
+              Logger.Write("Exception : " + ex + " in OrderDetailsGetByOrderID()", LogLevel.Error, "Database");
+              if (ex.GetType().Equals(typeof(SqlException)))
+              {
+                  SqlException oSQLEx = ex as SqlException;
+                  if (oSQLEx.Number != 7619)
+                      throw new Exception("Exception occured at OrderDetailsGetByOrderID()", ex);
+              }
+              else
+              {
+                  throw new Exception("Exception occure at OrderDetailsGetByOrderID()", ex);
+              }
+          }
+          finally
+          {
+              this.CloseConnection();
+          }
+          return tempResult;
+      }
+
+      #endregion
+
+
+        #region Execute Store Procedure (return value) 
+
+
+      private int  ExecuteStoredProcedure(Int32 product_plu, int priceTakeType, Int64 order_id,int productQuantity)
+      {
+          CCommonConstants objCommon = ConfigManager.GetConfig<CCommonConstants>();
+          SqlConnection connection = new SqlConnection(objCommon.DBConnection);
+
+          string storedProcedureName;
+          if (priceTakeType != -99)
+          {
+              storedProcedureName = "sp_AddPluProduct";
+          }
+          else
+          {
+              // Add bar product PLU
+              storedProcedureName = "sp_AddPluProductForBar";
+          }
+          // Command - specify as StoredProcedure
+          SqlCommand command = new SqlCommand(storedProcedureName, connection);
+          command.CommandType = CommandType.StoredProcedure;
+
+
+          SqlParameter param0 = new SqlParameter("@product_plu", SqlDbType.Int);
+          param0.Value = product_plu;
+          command.Parameters.Add(param0);
+          
+          SqlParameter param1 = new SqlParameter("@priceTakeType", SqlDbType.Int);
+          param1.Value = priceTakeType;
+          command.Parameters.Add(param1);
+
+          SqlParameter param2 = new SqlParameter("@order_id", SqlDbType.BigInt);
+          param2.Value = order_id;
+          command.Parameters.Add(param2);
+
+          SqlParameter param3 = new SqlParameter("@productQuantity", SqlDbType.Int);
+          param3.Value = productQuantity;
+          command.Parameters.Add(param3);
+
+
+          SqlParameter paramcurrentDate = new SqlParameter("@currentdate", SqlDbType.BigInt);
+          paramcurrentDate.Value = DateTime.Now.Ticks;
+          command.Parameters.Add(paramcurrentDate);
+
+
+          SqlParameter paramUserID = new SqlParameter("@userid", SqlDbType.Int);
+          paramUserID.Value = RMSGlobal.m_iLoginUserID;
+          command.Parameters.Add(paramUserID);
+
+
+
+          // Return value as parameter
+          SqlParameter returnValue = new SqlParameter("@returnVal", SqlDbType.Int);
+          returnValue.Direction = ParameterDirection.Output;
+          command.Parameters.Add(returnValue);    
+          // Execute the stored procedure
+
+
+          connection.Open();
+          command.ExecuteNonQuery();
+          connection.Close();
+
+          return Convert.ToInt32(returnValue.Value);
+      }
+
+        #endregion
+
+
+
+
+      #region IOrderDetailsDAO Members
+
+
+      public CResult GetPluDataByProductPLU(Int32 product_plu, int priceTakeType, long orderID, int productQuantity)
+      {
+          CResult tempResult = new CResult();
+
+          try
+          {
+              int returnVal = ExecuteStoredProcedure(product_plu, priceTakeType, orderID, productQuantity);
+              tempResult.Data = returnVal;
+              tempResult.IsSuccess = true;
+          }
+          catch (Exception ex)
+          {
+              tempResult.IsException = true;
+              Console.Write("###" + ex.ToString() + "###");
+              Logger.Write("Exception : " + ex + " in OrderDetailsGetByOrderID()", LogLevel.Error, "Database");
+              if (ex.GetType().Equals(typeof(SqlException)))
+              {
+                  SqlException oSQLEx = ex as SqlException;
+                  if (oSQLEx.Number != 7619)
+                      throw new Exception("Exception occured at OrderDetailsGetByOrderID()", ex);
+              }
+              else
+              {
+                  throw new Exception("Exception occure at OrderDetailsGetByOrderID()", ex);
+              }
+          }
+          finally
+          {
+              this.CloseConnection();
+          }
+          return tempResult;
+      }
+
+      #endregion
+
+      #region IOrderDetailsDAO Members
+
+        /// <summary>
+        /// This function returns the product name of the plu
+        /// </summary>
+        /// <param name="product_plu"></param>
+        /// <returns></returns>
+      public CResult GetProductByProductPLU(int product_plu)
+      {
+          CResult objResult = new CResult();
+          string productName = String.Empty;
+          int productId = 0;
+          double vat = 0.0;
+          try
+          {
+              this.OpenConnection();
+                  string sqlCommandName = String.Empty;
+                  sqlCommandName = string.Format(SqlQueries.GetQuery(Query.CollectProduct3ByPLU), product_plu);
+
+                  IDataReader oReader = this.ExecuteReader(sqlCommandName);
+                  if (oReader != null)
+                  {
+                      while (oReader.Read())
+                      {
+                          productName = Convert.ToString(oReader["cat3_name"]);
+                          productId = Convert.ToInt32(oReader["cat3_id"]);
+                          try
+                          {
+                              vat = Convert.ToDouble(oReader["vat_Rate"]);
+                          }
+                          catch
+                          {
+                              vat = 0.0;
+
+                          }
+                      }
+                  }
+                  oReader.Close();
+
+                  if (productName.Length < 1)
+                  {
+                      sqlCommandName = String.Empty;
+                      sqlCommandName = string.Format(SqlQueries.GetQuery(Query.CollectProduct4ByPLU), product_plu);
+
+                      oReader = this.ExecuteReader(sqlCommandName);
+                      if (oReader != null)
+                      {
+                          while (oReader.Read())
+                          {
+                              productName = Convert.ToString(oReader["cat4_name"]);
+                              productId = Convert.ToInt32(oReader["cat4_id"]);
+
+                              try
+                              {
+                                  vat = Convert.ToDouble(oReader["vat_Rate"]);
+                              }
+                              catch
+                              {
+                                  vat = 0.0;
+
+                              }
+                          }
+                      }
+                  }
+                  if (productName.Length > 0)
+                  {
+                      objResult.Data = productName;
+                      objResult.Productid = productId;
+                      objResult.VateRate = vat;
+                  }
+                  else
+                  {
+                      objResult.Data = "NO";
+                  }
+          }
+          catch (Exception ex)
+          {
+              Logger.Write("Exception : " + ex + " in UpdatePrintedQuantity()", LogLevel.Error, "Database");
+
+              throw new Exception("Exception occure at UpdatePrintedQuantity()", ex);
+          }
+          finally
+          {
+              this.CloseConnection();
+          }
+          return objResult;
+      }
+
+      #endregion
+
+
+      public CResult UpdateOrderDetailsPricebyPLUProductTablePrice(int product_plu, long orderID, int orderType)
+      {
+          CResult result = new CResult();
+
+          try
+          {
+              
+
+              this.OpenConnection();
+
+              string sqlCommand = "";
+              if (orderType == 1)
+              {
+                  sqlCommand = string.Format(SqlQueries.GetQuery(Query.UpdateOrderDetailsPricebyPLUProductTablePrice),
+                    product_plu, orderID, product_plu);
+              }
+              else if (orderType == 2)
+              {
+                  sqlCommand = string.Format(SqlQueries.GetQuery(Query.UpdateOrderDetailsPricebyPLUProductTakeAwayPrice),
+                    product_plu, orderID, product_plu);
+              }
+              else if (orderType == 3)
+              {
+                  sqlCommand = string.Format(SqlQueries.GetQuery(Query.UpdateOrderDetailsPricebyPLUProductBarPrice),
+                    product_plu, orderID, product_plu);
+              }
+
+              this.ExecuteNonQuery(sqlCommand);
+            
+
+              result.Message = "Successfully updated order details price";
+              result.IsSuccess = true;
+          }
+          catch (Exception ex)
+          {
+
+
+              Logger.Write("Exception : " + ex + " in UpdateOrderDetailsPricebyPLUProductTablePrice()", LogLevel.Error, "Database");
+
+              throw new Exception("Exception occure at UpdateOrderDetailsPricebyPLUProductTablePrice()", ex);
+          }
+          finally
+          {
+              this.CloseConnection();
+          }
+
+          return result;
+      }
+
+        public double GetOrderAmount(int orderId)
+        {
+            double totalamount = 0;
+            try
+            {
+                this.OpenConnection();
+                string sqlCommand = String.Format(SqlQueries.GetQuery(Query.OrderDetailsGetByOrderId), orderId);
+                IDataReader oReader = this.ExecuteReader(sqlCommand);
+                if (oReader != null)
+                {
+                    while (oReader.Read())
+                    {
+                        double amount = 0;
+                        try
+                        {
+                            amount = Double.Parse(oReader["amount"].ToString());
+                        }
+                        catch (Exception)
+                        {
+                            
+            
+                        }
+                        totalamount += amount;
+
+
+
+                    }
+                }
+               
+
+                
+            }
+            catch (Exception ex)
+            {
+               
+                Console.Write("###" + ex.ToString() + "###");
+                Logger.Write("Exception : " + ex + " in OrderDetailsGetByOrderID()", LogLevel.Error, "Database");
+                if (ex.GetType().Equals(typeof(SqlException)))
+                {
+                    SqlException oSQLEx = ex as SqlException;
+                    if (oSQLEx.Number != 7619)
+                        throw new Exception("Exception occured at OrderDetailsGetByOrderID()", ex);
+                }
+                else
+                {
+                    throw new Exception("Exception occure at OrderDetailsGetByOrderID()", ex);
+                }
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return totalamount;
+        }
+
+        public string UpdateItemWiseDiscountForItem(COrderDetails aCOrderDetailses)
+        {
+            string result = "";
+            try
+            {
+                this.OpenConnection();
+
+                string sqlCommand = string.Format(SqlQueries.GetQuery(Query.UpdateItemWiseDiscount), aCOrderDetailses.OrderDetailsID, aCOrderDetailses.DiscountAmount);
+                    this.ExecuteNonQuery(sqlCommand);
+                
+               
+                result = "Result Added Successfully";
+            }
+            catch (Exception ex)
+            {
+                result = "failed try Again";
+                Console.Write("###" + ex.ToString() + "###");
+                Logger.Write("Exception : " + ex + " in UpdateItemWiseDiscount()", LogLevel.Error, "Database");
+
+                throw new Exception("Exception occure at UpdateItemWiseDiscount()", ex);
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+
+            return result;
+        }
+
+
+        public string UpdateItemWiseDiscount(List<COrderDetails> aCOrderDetailses)
+        {
+            string result = "";
+            try
+            {
+                this.OpenConnection();
+                foreach (COrderDetails details in aCOrderDetailses)
+                {
+                    string sqlCommand = string.Format(SqlQueries.GetQuery(Query.UpdateItemWiseDiscount), details.OrderDetailsID, details.DiscountAmount);
+                    this.ExecuteNonQuery(sqlCommand);
+                }
+
+                result = "Result Added Successfully";
+            }
+            catch (Exception ex)
+            {
+                result = "failed try Again";
+                Console.Write("###" + ex.ToString() + "###");
+                Logger.Write("Exception : " + ex + " in UpdateItemWiseDiscount()", LogLevel.Error, "Database");
+
+                throw new Exception("Exception occure at UpdateItemWiseDiscount()", ex);
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+
+            return result;
+        }
+
+        public void UpdateGuestQuantity(Int64 orderId)
+        {
+            List<COrderDetails> aList = new List<COrderDetails>();
+            COrderDetailsDAO aDao = new COrderDetailsDAO();
+            aList = aDao.OrderDetailsGetByOrderIDForUpdateGuestQuantity(orderId);
+            try
+            {
+                this.OpenConnection();
+                foreach (COrderDetails details in aList)
+                {
+                    string sqlCommand = String.Format(SqlQueries.GetQuery(Query.UpdateGuestQuantity), details.OrderID,
+                                                      details.ProductID, details.OrderQuantity);
+                    this.ExecuteNonQuery(sqlCommand);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Database error for UpdateGuestQuantity()", ex);
+
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+
+        }
+
+        private List<COrderDetails> OrderDetailsGetByOrderIDForUpdateGuestQuantity(long orderId)
+        {
+            // CResult tempResult = new CResult();
+            List<COrderDetails> tempOrderDetailsList = new List<COrderDetails>();
+            try
+            {
+                this.OpenConnection();
+                string sqlCommand = String.Format(SqlQueries.GetQuery(Query.OrderDetailsGetByOrderId), orderId);
+                IDataReader oReader = this.ExecuteReader(sqlCommand);
+                if (oReader != null)
+                {
+                    while (oReader.Read())
+                    {
+                        COrderDetails tempOrderDetails = ReaderToOrderDetails(oReader);
+                        tempOrderDetailsList.Add(tempOrderDetails);
+
+                    }
+                }
+                oReader.Close();//New addition By DEB for track guest bill print
+
+            }
+            catch (Exception ex)
+            {
+
+                Console.Write("###" + ex.ToString() + "###");
+                Logger.Write("Exception : " + ex + " OrderDetailsGetByOrderIDForUpdateGuestQuantity()", LogLevel.Error, "Database");
+                if (ex.GetType().Equals(typeof(SqlException)))
+                {
+                    SqlException oSQLEx = ex as SqlException;
+                    if (oSQLEx.Number != 7619)
+                        throw new Exception("Exception occured at OrderDetailsGetByOrderIDForUpdateGuestQuantity()", ex);
+                }
+                else
+                {
+                    throw new Exception("Exception occure at OrderDetailsGetByOrderIDForUpdateGuestQuantity", ex);
+                }
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return tempOrderDetailsList;
+
+        }
+
+        public void UpdateKitchenQuantity(COrderDetails orderDetails)
+        {
+            bool success = false;
+            try
+            {
+                this.OpenConnection();
+                string sqlCommand = string.Format(SqlQueries.GetQuery(Query.UpdateKitchenQuantity), orderDetails.OrderID, orderDetails.ProductID, orderDetails.OrderQuantity - orderDetails.KitchenQuantity);
+                this.ExecuteNonQuery(sqlCommand);
+                success = true;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error Occuring", ex);
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            // return success;
+        }
+
+
+    }
+}

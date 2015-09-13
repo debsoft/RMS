@@ -1,0 +1,2 @@
+new field add into other_transaction_tbl which name Purpose
+

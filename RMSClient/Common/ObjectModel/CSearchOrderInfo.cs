@@ -1,0 +1,242 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace RMS.Common.ObjectModel
+{
+    public class CSearchOrderInfo
+    {
+
+        private Int64 m_iOrderID;
+        private int m_iTableNumber;
+        private String m_sOrderType;
+        private DateTime m_oOrderTime;
+        private int m_iCovers;
+        private Decimal m_iTotalAmount;
+        private Decimal m_iDiscount;
+        private Decimal m_iServiceChargeCash;
+        private Decimal m_iFoodPrice;
+        private Decimal m_iNonfoodPrice;
+        private Decimal m_iTotalIncVat;
+        private Decimal m_iTotalExVat;
+        private Decimal m_iVat;
+        private Decimal m_iTotalWithVat;
+        private string m_serialNo;
+
+        private Decimal m_iCashPaid;
+        private Decimal m_iEftpaid;
+        private string m_vatImposed;
+        private string m_orderCreatedBy;
+        private DateTime m_paymentdate;
+        private string m_terminalID;
+        private string m_orderStat;
+
+        private string m_guestBill;
+
+        private string m_EFTCardName;
+
+        private bool m_vat_stat = true;
+        private double tipsamount = 0.0;
+        private double m_dueBill;
+     //   private DateTime m_oTime;
+       
+
+
+
+
+
+        public CSearchOrderInfo()
+        {
+            m_iOrderID = 0;
+            m_sOrderType = String.Empty;
+            m_oOrderTime = CCommonConstants.DefaultDateTime;
+            m_iCovers = 0;
+            m_iTableNumber = 0;
+            m_iTotalAmount = 0;
+            m_iDiscount = 0;
+            m_iServiceChargeCash = 0;
+            m_iNonfoodPrice = 0;
+            m_iFoodPrice = 0;
+            m_iTotalIncVat = 0;
+            m_iTotalExVat = 0;
+            m_iVat = 0;
+            m_iTotalWithVat = 0;
+            tipsamount = 0.0;
+            DueBill = 0.0;
+
+        }
+
+
+
+
+     
+        public Int64 OrderID
+        {
+            get { return m_iOrderID; }
+            set { m_iOrderID = value; }
+        }
+         public string SerialNumber
+        {
+            get{return m_serialNo;}
+             set{m_serialNo=value;}
+        }
+
+         public DateTime OrderDateTime
+        {
+            get { return m_oOrderTime; }
+            set { m_oOrderTime = value; }
+        }
+
+        public String OrderType
+        {
+            get { return m_sOrderType; }
+            set { m_sOrderType = value; }
+        }
+
+         public int TableNumber
+        {
+            get { return m_iTableNumber; }
+            set { m_iTableNumber = value; }
+        }
+        public int Covers
+        {
+            get { return m_iCovers; }
+            set { m_iCovers = value; }
+        }
+
+        public Decimal FoodTotal
+        {
+            get { return m_iFoodPrice; }
+            set { m_iFoodPrice = value; }
+        }
+
+        public Decimal NonfoodTotal
+        {
+            get { return m_iNonfoodPrice; }
+            set { m_iNonfoodPrice = value; }
+        }
+
+        public Decimal OrderTotal
+        {
+            get { return m_iTotalAmount; }
+            set { m_iTotalAmount = value; }
+        }
+
+
+        public Decimal Discount
+        {
+            get { return m_iDiscount; }
+            set { m_iDiscount = value; }
+        }
+
+
+        public Decimal ServiceChargeCash
+        {
+            get { return m_iServiceChargeCash; }
+            set { m_iServiceChargeCash = value; }
+        }
+
+
+
+        public Decimal TotalPaidIncludingVat
+        {
+            get { return m_iTotalIncVat; }
+            set { m_iTotalIncVat = value; }
+        }
+
+        public Decimal TotalPaidExcludingVat
+        {
+               get { return m_iTotalExVat; }
+              set { m_iTotalExVat = value; }
+        }
+
+
+        public Decimal VatPaid
+        {
+            get { return m_iVat; }
+            set { m_iVat = value; }
+        }
+
+        public Decimal CashPaid
+        {
+            get { return m_iCashPaid; }
+            set { m_iCashPaid = value; }
+        }
+
+        public Decimal EFTPaid
+        {
+            get { return m_iEftpaid; }
+            set { m_iEftpaid = value; }
+        }
+
+        public string EFTCardName
+        {
+            get { return m_EFTCardName; }
+            set { m_EFTCardName = value; }
+        }
+
+        public String VatImposed
+        {
+            get { return m_vatImposed; }
+            set { m_vatImposed = value; }
+        }
+
+        public String OrderCreatedBy
+        {
+            get { return m_orderCreatedBy; }
+            set { m_orderCreatedBy = value; }
+        }
+        public DateTime PaymentDateTime
+        {
+            get { return m_paymentdate; }
+            set { m_paymentdate = value; }
+        }
+
+        public string TerminalID
+        {
+            get { return m_terminalID; }
+            set { m_terminalID = value; }
+        }
+
+        public string OrderStatus
+        {
+            get { return m_orderStat; }
+            set { m_orderStat = value; }
+        }
+        public string GuestBill
+        {
+            get { return m_guestBill; }
+            set { m_guestBill = value; }
+        }
+
+        public bool Vat_stat
+        {
+            get { return m_vat_stat; }
+            set { m_vat_stat = value; }
+        }
+        public double TotalCost { set; get; }
+        public string Waiter { set; get; }
+
+        public double TipsAmount
+        {
+            get { return tipsamount; }
+            set { tipsamount = value; }
+        }
+
+        public double DueBill                //Add for due bill findout
+        {
+            get { return m_dueBill; }
+            set { m_dueBill = value; }
+        }
+
+        public double MembershipDiscount { set; get; }
+        public string ComplementoryMessage { set; get; }
+        public string DueMessage { set; get; }
+
+        public string PaymentPerson { set; get; }
+        public Decimal DuePaid { set; get; }
+        public Decimal ComplementoryPaid { set; get; }
+        public double ItemDiscount { set; get; }
+
+    }
+}

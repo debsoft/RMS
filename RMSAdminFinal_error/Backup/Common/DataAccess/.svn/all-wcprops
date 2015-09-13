@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/DataAccess
+END
+ICategory1DAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/DataAccess/ICategory1DAO.cs
+END
+IItemDAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/DataAccess/IItemDAO.cs
+END
+ICategory2DAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/DataAccess/ICategory2DAO.cs
+END
+ICategory3DAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/DataAccess/ICategory3DAO.cs
+END
+ICategory4DAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/DataAccess/ICategory4DAO.cs
+END
+IInventroySalesReportDAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/DataAccess/IInventroySalesReportDAO.cs
+END
+IParentCategoryDAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/DataAccess/IParentCategoryDAO.cs
+END
+IButtonColorDAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/DataAccess/IButtonColorDAO.cs
+END
+IUserInfoDAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/DataAccess/IUserInfoDAO.cs
+END
+IReportDAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/DataAccess/IReportDAO.cs
+END
+ICategoryAncestorDAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/DataAccess/ICategoryAncestorDAO.cs
+END
+IButtonAccessDAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/DataAccess/IButtonAccessDAO.cs
+END
+IPrintStyleDAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSAdminFinal/Backup/Common/DataAccess/IPrintStyleDAO.cs
+END

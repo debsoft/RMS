@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="RMSUITest">
+</Property><Property Name="Solution File" Value="D:\RMSUITest\RMSUITest.sln">
+</Property><Property Name="Date" Value="Wednesday, June 09, 2010">
+</Property><Property Name="Time" Value="13:34 PM">
+</Property></Properties><Event ErrorLevel="0" Project="RMSUITest" Source="RMSUITest\RMSUITest.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="RMSUITest" Source="RMSUITest\RMSUITest.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="RMSUI" Source="RMSUI\RMSUI.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="RMSUI" Source="RMSUI\RMSUI.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="RMSUITest.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="RMSUITest.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="RMSUITest" Source="RMSUITest\RMSUITest.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="RMSUI" Source="RMSUI\RMSUI.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

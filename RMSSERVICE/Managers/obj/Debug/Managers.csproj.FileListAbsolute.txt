@@ -1,0 +1,114 @@
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\Managers\bin\Debug\SampleFiles\Config.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\Managers\bin\Debug\SampleFiles\ConfigCollectionTest.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\Managers\bin\Debug\SampleFiles\ConfigTest.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\Managers\bin\Debug\Config\SQLDBHandlerConfig.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\Managers\bin\Debug\Config\FileHandlerConfig.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\Managers\bin\Debug\Config\LoggerConfig.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\Managers\bin\Debug\Managers.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\Managers\bin\Debug\Managers.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\Managers\bin\Debug\Common.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\Managers\bin\Debug\ConfigService.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\Managers\bin\Debug\DAL.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\Managers\bin\Debug\Logger.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\Managers\bin\Debug\Logger.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\Managers\bin\Debug\Common.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\Managers\bin\Debug\ConfigService.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\Managers\bin\Debug\DAL.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\Managers\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\Managers\obj\Debug\Managers.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\Managers\obj\Debug\Managers.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\Managers\bin\Debug\SampleFiles\Config.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\Managers\bin\Debug\SampleFiles\ConfigCollectionTest.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\Managers\bin\Debug\SampleFiles\ConfigTest.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\Managers\bin\Debug\Config\SQLDBHandlerConfig.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\Managers\bin\Debug\Config\FileHandlerConfig.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\Managers\bin\Debug\Config\LoggerConfig.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\Managers\bin\Debug\Managers.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\Managers\bin\Debug\Managers.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\Managers\bin\Debug\Common.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\Managers\bin\Debug\ConfigService.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\Managers\bin\Debug\DAL.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\Managers\bin\Debug\Logger.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\Managers\bin\Debug\Logger.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\Managers\bin\Debug\Common.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\Managers\bin\Debug\ConfigService.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\Managers\bin\Debug\DAL.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\Managers\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\Managers\obj\Debug\Managers.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\Managers\obj\Debug\Managers.pdb
+E:\Projects\RMSSERVICE\Managers\bin\Debug\SampleFiles\Config.xml
+E:\Projects\RMSSERVICE\Managers\bin\Debug\SampleFiles\ConfigCollectionTest.xml
+E:\Projects\RMSSERVICE\Managers\bin\Debug\SampleFiles\ConfigTest.xml
+E:\Projects\RMSSERVICE\Managers\bin\Debug\Config\SQLDBHandlerConfig.xml
+E:\Projects\RMSSERVICE\Managers\bin\Debug\Config\FileHandlerConfig.xml
+E:\Projects\RMSSERVICE\Managers\bin\Debug\Config\LoggerConfig.xml
+E:\Projects\RMSSERVICE\Managers\bin\Debug\Managers.dll
+E:\Projects\RMSSERVICE\Managers\bin\Debug\Managers.pdb
+E:\Projects\RMSSERVICE\Managers\bin\Debug\Common.dll
+E:\Projects\RMSSERVICE\Managers\bin\Debug\ConfigService.dll
+E:\Projects\RMSSERVICE\Managers\bin\Debug\DAL.dll
+E:\Projects\RMSSERVICE\Managers\bin\Debug\Logger.dll
+E:\Projects\RMSSERVICE\Managers\bin\Debug\Logger.pdb
+E:\Projects\RMSSERVICE\Managers\bin\Debug\Common.pdb
+E:\Projects\RMSSERVICE\Managers\bin\Debug\ConfigService.pdb
+E:\Projects\RMSSERVICE\Managers\bin\Debug\DAL.pdb
+E:\Projects\RMSSERVICE\Managers\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\RMSSERVICE\Managers\obj\Debug\Managers.dll
+E:\Projects\RMSSERVICE\Managers\obj\Debug\Managers.pdb
+E:\Projects\RMS\RMSSERVICE\Managers\bin\Debug\SampleFiles\Config.xml
+E:\Projects\RMS\RMSSERVICE\Managers\bin\Debug\SampleFiles\ConfigCollectionTest.xml
+E:\Projects\RMS\RMSSERVICE\Managers\bin\Debug\SampleFiles\ConfigTest.xml
+E:\Projects\RMS\RMSSERVICE\Managers\bin\Debug\Config\SQLDBHandlerConfig.xml
+E:\Projects\RMS\RMSSERVICE\Managers\bin\Debug\Config\FileHandlerConfig.xml
+E:\Projects\RMS\RMSSERVICE\Managers\bin\Debug\Config\LoggerConfig.xml
+E:\Projects\RMS\RMSSERVICE\Managers\bin\Debug\Managers.dll
+E:\Projects\RMS\RMSSERVICE\Managers\bin\Debug\Managers.pdb
+E:\Projects\RMS\RMSSERVICE\Managers\bin\Debug\Common.dll
+E:\Projects\RMS\RMSSERVICE\Managers\bin\Debug\ConfigService.dll
+E:\Projects\RMS\RMSSERVICE\Managers\bin\Debug\DAL.dll
+E:\Projects\RMS\RMSSERVICE\Managers\bin\Debug\Logger.dll
+E:\Projects\RMS\RMSSERVICE\Managers\bin\Debug\Logger.pdb
+E:\Projects\RMS\RMSSERVICE\Managers\bin\Debug\Common.pdb
+E:\Projects\RMS\RMSSERVICE\Managers\bin\Debug\ConfigService.pdb
+E:\Projects\RMS\RMSSERVICE\Managers\bin\Debug\DAL.pdb
+E:\Projects\RMS\RMSSERVICE\Managers\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\RMS\RMSSERVICE\Managers\obj\Debug\Managers.dll
+E:\Projects\RMS\RMSSERVICE\Managers\obj\Debug\Managers.pdb
+D:\RMS\RMSSERVICE\Managers\bin\Debug\SampleFiles\Config.xml
+D:\RMS\RMSSERVICE\Managers\bin\Debug\SampleFiles\ConfigCollectionTest.xml
+D:\RMS\RMSSERVICE\Managers\bin\Debug\SampleFiles\ConfigTest.xml
+D:\RMS\RMSSERVICE\Managers\bin\Debug\Config\SQLDBHandlerConfig.xml
+D:\RMS\RMSSERVICE\Managers\bin\Debug\Config\FileHandlerConfig.xml
+D:\RMS\RMSSERVICE\Managers\bin\Debug\Config\LoggerConfig.xml
+D:\RMS\RMSSERVICE\Managers\bin\Debug\Managers.dll
+D:\RMS\RMSSERVICE\Managers\bin\Debug\Managers.pdb
+D:\RMS\RMSSERVICE\Managers\bin\Debug\Common.dll
+D:\RMS\RMSSERVICE\Managers\bin\Debug\ConfigService.dll
+D:\RMS\RMSSERVICE\Managers\bin\Debug\DAL.dll
+D:\RMS\RMSSERVICE\Managers\bin\Debug\Logger.dll
+D:\RMS\RMSSERVICE\Managers\bin\Debug\Common.pdb
+D:\RMS\RMSSERVICE\Managers\bin\Debug\DAL.pdb
+D:\RMS\RMSSERVICE\Managers\bin\Debug\ConfigService.pdb
+D:\RMS\RMSSERVICE\Managers\bin\Debug\Logger.pdb
+D:\RMS\RMSSERVICE\Managers\obj\Debug\ResolveAssemblyReference.cache
+D:\RMS\RMSSERVICE\Managers\obj\Debug\Managers.dll
+D:\RMS\RMSSERVICE\Managers\obj\Debug\Managers.pdb
+D:\RMS BD\RMSSERVICE\Managers\bin\Debug\SampleFiles\Config.xml
+D:\RMS BD\RMSSERVICE\Managers\bin\Debug\SampleFiles\ConfigCollectionTest.xml
+D:\RMS BD\RMSSERVICE\Managers\bin\Debug\SampleFiles\ConfigTest.xml
+D:\RMS BD\RMSSERVICE\Managers\bin\Debug\Config\SQLDBHandlerConfig.xml
+D:\RMS BD\RMSSERVICE\Managers\bin\Debug\Config\FileHandlerConfig.xml
+D:\RMS BD\RMSSERVICE\Managers\bin\Debug\Config\LoggerConfig.xml
+D:\RMS BD\RMSSERVICE\Managers\bin\Debug\Managers.dll
+D:\RMS BD\RMSSERVICE\Managers\bin\Debug\Managers.pdb
+D:\RMS BD\RMSSERVICE\Managers\bin\Debug\Common.dll
+D:\RMS BD\RMSSERVICE\Managers\bin\Debug\ConfigService.dll
+D:\RMS BD\RMSSERVICE\Managers\bin\Debug\DAL.dll
+D:\RMS BD\RMSSERVICE\Managers\bin\Debug\Logger.dll
+D:\RMS BD\RMSSERVICE\Managers\bin\Debug\Common.pdb
+D:\RMS BD\RMSSERVICE\Managers\bin\Debug\ConfigService.pdb
+D:\RMS BD\RMSSERVICE\Managers\bin\Debug\DAL.pdb
+D:\RMS BD\RMSSERVICE\Managers\bin\Debug\Logger.pdb
+D:\RMS BD\RMSSERVICE\Managers\obj\Debug\ResolveAssemblyReference.cache
+D:\RMS BD\RMSSERVICE\Managers\obj\Debug\Managers.dll
+D:\RMS BD\RMSSERVICE\Managers\obj\Debug\Managers.pdb

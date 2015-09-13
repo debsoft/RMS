@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ConfigTest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<ConfigProp1>prop1</ConfigProp1>
+	<ConfigProp2>prop2</ConfigProp2>
+</ConfigTest>

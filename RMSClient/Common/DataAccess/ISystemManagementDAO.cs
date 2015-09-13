@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Collections;
+using System.Text;
+using System.Data;
+using RMS.Common.ObjectModel;
+
+namespace RMS.Common.DataAccess
+{
+   public interface ISystemManagementDAO
+    {
+       CResult CollectRawMat(Int64 p_fromDate, Int64 p_toDate);
+       CResult SaveDefaultTime(double p_minutes);
+       CResult SaveKitchenText(SortedList slKitchenText);
+       CResult GetKitchenText();
+       CResult UpdateKitchenText(Int32 p_kitchenTextId, string p_kitchenText);
+       CResult DeleteKitchenText(Int32 p_kitchenTextId);
+
+
+       CResult SaveSpecialModifyText(SortedList slSpecialModifyText);
+       CResult GetSpecialModifyText();
+       CResult UpdateSpecialModifyText(Int32 p_SpecialModifyTextId, string p_SpecialModifyText);
+       CResult DeleteSpecialModifyText(Int32 p_SpecialModifyTextId);
+
+       CResult SynchronizeOnlineOrders();
+       CResult CollectSalesReportRecordsForInv(Int64 p_fromDate, Int64 p_toDate);
+       CResult CollectSalesReportRecords(Int64 p_fromDate, Int64 p_toDate);
+
+       List<CSearchOrderInfo> GetOrderInfo(Int64 startDate, Int64 endDate);
+       CResult GetItemWiseSalesReport(Int64 fromOID, Int64 toOID, string foodType, Byte showAll);
+
+       List<CArchiveItemDetails> GetOrderDetailInfo(Int32 orderID);
+       
+
+    }
+}

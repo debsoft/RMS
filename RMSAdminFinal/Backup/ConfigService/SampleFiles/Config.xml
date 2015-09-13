@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Config>
+  <ConfigFile>
+    <Filename>ConfigFiles/ConfigTest.xml</Filename>
+    <Typename>ConfigServiceSamples.ConfigTest, ConfigService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</Typename>
+    <IsCollection>false</IsCollection>
+    <CollectionRootElement></CollectionRootElement>
+  </ConfigFile>
+
+  <ConfigFile>
+    <Filename>ConfigFiles/ConfigCollectionTest.xml</Filename>
+    <Typename>ConfigServiceSamples.ConfigTest, ConfigService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</Typename>
+    <IsCollection>true</IsCollection>
+    <CollectionRootElement>MyCollection</CollectionRootElement>
+  </ConfigFile>
+
+</Config>

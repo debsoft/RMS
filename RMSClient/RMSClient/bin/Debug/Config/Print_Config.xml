@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<CPrintConfig>
+  <OtherPrinter>\\DEB-PC\Microsoft XPS Document Writer</OtherPrinter>
+  <OtherNonFoodPrinter>\\DEB-PC\Microsoft XPS Document Writer</OtherNonFoodPrinter>
+  <PrintPaymentBill>true</PrintPaymentBill>
+  <KitchenPrinterName>\\DEB-PC\Microsoft XPS Document Writer</KitchenPrinterName>
+  <BeveragePrinterName>\\DEB-PC\Microsoft XPS Document Writer</BeveragePrinterName>
+  <ClientPrinterName>\\DEB-PC\Microsoft XPS Document Writer</ClientPrinterName>
+  <EnableSerialPortPrinting>False</EnableSerialPortPrinting>
+</CPrintConfig>

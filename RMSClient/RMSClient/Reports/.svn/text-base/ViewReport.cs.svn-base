@@ -1,0 +1,671 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using RMSUI;
+using Managers.SystemManagement;
+using RMS.Common.ObjectModel;
+using System.Collections;
+using RMS.Common;
+using System.Linq;
+using System.Drawing.Printing;
+using Managers.Payment;
+
+namespace RMS.Reports
+{
+    public partial class ViewReport : BaseForm
+    {
+        private List<CSearchOrderInfo> oItemList;
+        private StringPrintFormater stringPrintFormater;
+
+
+        private CPaymentManager paymentManager;
+        public ViewReport()
+        {
+            InitializeComponent();
+            radioButtonCheat.Checked = EnableCheatReport();
+
+            paymentManager = new CPaymentManager();
+
+            txtBoxCheatPercent.Text = GetCheatPercent().ToString();
+            Int64 startDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 0, 0, 0).Ticks;
+            DateTime dtTemp = DateTime.Now.AddDays(1);
+            Int64 endDate = new DateTime(dtTemp.Year, dtTemp.Month, dtTemp.Day, 0, 0, 0).Ticks;
+            cheatPanel.Visible = false;
+            this.showAllData(startDate, endDate);  
+        }
+
+        private void ViewReport_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Int64 startDate = new DateTime(dtpStart.Value.Year, dtpStart.Value.Month, dtpStart.Value.Day, 0, 0, 0).Ticks;
+            DateTime dtTemp = dtpEnd.Value.AddDays(1);
+            Int64 endDate = new DateTime(dtTemp.Year, dtTemp.Month, dtTemp.Day, 0, 0, 0).Ticks;
+
+            this.showAllData(startDate, endDate);
+        }
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Form tempForm = CFormManager.Forms.Pop();
+            tempForm.Show();
+            this.Close();
+             
+        }
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int rowIndex = int.Parse(e.RowIndex.ToString());
+            if (rowIndex >= 0)
+            {
+
+                if (dataGridView1.Columns[e.ColumnIndex].HeaderText == "Vat_stat")
+                {
+                    CSearchOrderInfo searchItem = (CSearchOrderInfo)dataGridView1.Rows[e.RowIndex].DataBoundItem;
+                    paymentManager.UpdateVatStatInPayment(!searchItem.Vat_stat, searchItem.OrderID);
+                  
+                }
+              
+            }        
+        }
+
+
+        private void showAllData(Int64 startDate, Int64 endDate)
+        {
+            
+            SystemManager sysManager = new SystemManager();
+            oItemList = new List<CSearchOrderInfo>();
+            oItemList = sysManager.GetOrderInfo2(startDate, endDate);
+
+            if (radioButtonCheat.Checked)
+            {
+                if (ManualCheatReport())
+                {
+                    txtBoxCheatPercent.Visible = false;
+                    oItemList = getManulCheatOrderList(oItemList);
+                }
+                else
+                {
+                    oItemList = getAutoCheatOrderList(oItemList);
+                }
+            
+            }
+           
+          if(rbtnTable.Checked)
+          {
+              var filter = from searchItem in oItemList
+                           where searchItem.OrderType == "Table"
+                           select searchItem;
+
+              oItemList = filter.ToList();
+          
+          }
+
+          if (rbtnTakeAway.Checked)
+          {
+              var filter = from searchItem in oItemList
+                           where searchItem.OrderType == "TakeAway"
+                           select searchItem;
+
+              oItemList = filter.ToList();
+          }
+
+          if (txtBoxSerialNumber.Text != string.Empty)
+          {
+
+              var filter = from searchItem in oItemList
+                           where searchItem.SerialNumber == txtBoxSerialNumber.Text
+                           select searchItem;
+
+              oItemList = filter.ToList();
+          }
+
+
+          
+
+            
+            int totalCovers = (from item in oItemList
+                      select item.Covers).Sum();
+            lelGuest_Value.Text = totalCovers.ToString();
+
+            decimal totalFood = (from item in oItemList
+                               select item.FoodTotal).Sum();
+            lelFoodPrice_Value.Text = totalFood.ToString();
+
+            decimal totalNonFood = (from item in oItemList
+                                 select item.NonfoodTotal).Sum();
+            lelNonfoodPrice_Value.Text = totalNonFood.ToString();
+
+            decimal totaltableFood = (from item in oItemList
+                                         where item.OrderType=="Table"
+                                    select item.FoodTotal).Sum();
+            lelTableFoodPrice_Value.Text = totaltableFood.ToString();
+
+
+            decimal totaltableNonFood = (from item in oItemList
+                                         where item.OrderType == "Table"
+                                         select item.NonfoodTotal).Sum();
+            lelTableNonfoodPrice_Value.Text = totaltableNonFood.ToString();
+
+
+            decimal totalTakeWayFood = (from item in oItemList
+                                           where item.OrderType == "TakeAway"
+                                           select item.FoodTotal).Sum();
+            lelTakeAwayFoodPrice_Value.Text = totalTakeWayFood.ToString();
+
+
+            decimal totalTakeWayNonFood = (from item in oItemList
+                                        where item.OrderType == "TakeAway"
+                                        select item.NonfoodTotal).Sum();
+            lelTakeAwayNonfoodPrice_Value.Text = totalTakeWayNonFood.ToString();
+
+
+
+            decimal totalbarWayFood = (from item in oItemList
+                                        where item.OrderType == "Bars"
+                                        select item.FoodTotal).Sum();
+            lelTabsFoodPrice_Value.Text = totalbarWayFood.ToString();
+
+
+            decimal totalBarWayNonFood = (from item in oItemList
+                                           where item.OrderType == "Bars"
+                                           select item.NonfoodTotal).Sum();
+            lelTabsNonfoodPrice_Value.Text = totalBarWayNonFood.ToString();
+
+
+            decimal totalDisCount = (from item in oItemList
+                                    select item.Discount).Sum();
+            lelDiscount_Value.Text = totalDisCount.ToString();
+
+            decimal totalSerViceCharge = (from item in oItemList
+                                     select item.ServiceChargeCash).Sum();
+            lelServiceCharge_Value.Text = totalSerViceCharge.ToString();
+
+            decimal totalOrderTotal = (from item in oItemList
+                                          select item.OrderTotal).Sum();
+            lelOrderTotal_Value.Text = totalOrderTotal.ToString();
+
+            decimal totalpaidExvat = (from item in oItemList
+                                       select item.TotalPaidExcludingVat).Sum();
+            lelTotalpaidEXVAT_value.Text = totalpaidExvat.ToString();
+
+            decimal totalpaidIncvat = (from item in oItemList
+                                      select item.TotalPaidIncludingVat).Sum();
+            lelTotalpaidIncVAT_value.Text = totalpaidIncvat.ToString();
+
+            decimal totalpaidvat = (from item in oItemList
+                                       select item.VatPaid).Sum();
+            lelVat_Value.Text = totalpaidvat.ToString();
+
+
+            decimal totalcash = (from item in oItemList
+                                    select item.CashPaid).Sum();
+            lelCashTotal_value.Text = totalcash.ToString();
+          
+            decimal totaleft = (from item in oItemList
+                                 select item.EFTPaid).Sum();
+            lelEftTotal_value.Text = totaleft.ToString();
+
+
+            dataGridView1.DataSource = oItemList;
+
+            dataGridView1.Columns["Vat_stat"].Visible = !radioButtonCheat.Checked;
+            
+
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            try
+            {
+
+                Font printFont = new Font("Lucida Console", 7);
+                // e.Graphics.DrawString(printBody, printFont, Brushes.Black, 0, 0);
+
+                int printHeight;
+
+                printHeight = ((PrintDocument)sender).DefaultPageSettings.PaperSize.Height - ((PrintDocument)sender).DefaultPageSettings.Margins.Top - ((PrintDocument)sender).DefaultPageSettings.Margins.Bottom;
+
+                StringFormat format = new StringFormat(StringFormatFlags.FitBlackBox);
+
+                RectangleF printArea = new RectangleF(0, 0, 1150, printHeight);
+                e.Graphics.DrawString(PrintReport(oItemList), printFont, Brushes.Black, printArea, format);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Sorry! Problem occured." + ex.ToString());
+            }
+
+        }
+
+
+        private void Doc_PrintPage(object sender, PrintPageEventArgs e)
+        {
+
+            try
+            {
+
+                TextDocument doc = (TextDocument)sender;
+
+                Font font = new Font("Lucida Console", 7);
+
+                float lineHeight = font.GetHeight(e.Graphics);
+
+                float x = e.MarginBounds.Left;
+                float y = e.MarginBounds.Top;
+
+                doc.PageNumber += 1;
+
+                while ((y + lineHeight) < e.MarginBounds.Bottom && doc.Offset <= doc.Text.GetUpperBound(0))
+                {
+                    e.Graphics.DrawString(doc.Text[doc.Offset], font, Brushes.Black, 0, y);
+                    doc.Offset += 1;
+                    y += lineHeight;
+                }
+
+                if (doc.Offset < doc.Text.GetUpperBound(0))
+                {
+                    e.HasMorePages = true;
+                }
+                else
+                {
+                    doc.Offset = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Sorry! Problem occured." + ex.ToString());
+            }
+
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+           /* printDocument1.DefaultPageSettings.Landscape = true;
+           
+            if (printDialog1.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.Print();
+            }
+
+
+            */
+
+            PrintDocument doc = new TextDocument(PrintReport(oItemList));
+            doc.PrintPage += this.Doc_PrintPage;
+
+            doc.DefaultPageSettings.Landscape = true;
+            PrintDialog dlgSettings = new PrintDialog();
+            dlgSettings.Document = doc;
+
+            if (dlgSettings.ShowDialog() == DialogResult.OK)
+            {
+                doc.Print();
+            }
+
+
+          
+        }
+
+        private void btn_go_Click(object sender, EventArgs e)
+        {
+            Int64 startDate = new DateTime(dtpStart.Value.Year, dtpStart.Value.Month, dtpStart.Value.Day, 0, 0, 0).Ticks;
+            DateTime dtTemp = dtpEnd.Value.AddDays(1);
+            Int64 endDate = new DateTime(dtTemp.Year, dtTemp.Month, dtTemp.Day, 0, 0, 0).Ticks;
+
+            this.showAllData(startDate, endDate);
+        }
+
+
+        private List<CSearchOrderInfo> getAutoCheatOrderList (List<CSearchOrderInfo> oItemList)
+        {
+
+            List<DayWiseReport> daywizeReportList = getCheatOrderListdayWize(oItemList);
+            List<CSearchOrderInfo> cheatOrderList = new List<CSearchOrderInfo>();
+
+
+            foreach (DayWiseReport daywizeReporItem in daywizeReportList)
+            {
+
+                List<CSearchOrderInfo> OrderList = daywizeReporItem.OrderListPerday;
+
+                decimal totalpaidVat = (from item in OrderList
+                                        select item.VatPaid).Sum();
+                double reducedvat = Double.Parse(totalpaidVat.ToString()) * (Double.Parse(txtBoxCheatPercent.Text.Replace("%", "")) / 100);
+
+                double temp = 0.0;
+
+                foreach (CSearchOrderInfo item in OrderList)
+                {
+                    if (temp < reducedvat)
+                    {
+                        temp += Double.Parse(item.VatPaid.ToString());
+                        cheatOrderList.Add(item);
+                    }
+                }
+            }
+
+            return cheatOrderList;
+        }
+
+
+        private List<CSearchOrderInfo> getManulCheatOrderList(List<CSearchOrderInfo> oItemList)
+        {
+
+            List<CSearchOrderInfo> cheatOrderList = new List<CSearchOrderInfo>();
+
+            var filter = from searchItem in oItemList
+                         where searchItem.Vat_stat !=false
+                         select searchItem;
+
+            cheatOrderList = filter.ToList();
+
+            return cheatOrderList;
+        
+        }
+
+        //private List<CSearchOrderInfo> getCheatOrderList(List<CSearchOrderInfo> oItemList)
+        //{
+        //    List<CSearchOrderInfo> cheatOrderList=new List<CSearchOrderInfo>();
+            
+        //    decimal totalpaidVat = (from item in oItemList
+        //                               select item.VatPaid).Sum();
+
+
+        //   double reducedvat = Double.Parse(totalpaidVat.ToString()) * (Double.Parse(txtBoxCheatPercent.Text.Replace("%",""))/100);
+
+        //   double temp=0.0;
+
+        //   foreach (CSearchOrderInfo item in oItemList)
+        //   {
+        //       if (temp < reducedvat)
+        //       {
+        //           temp += Double.Parse(item.VatPaid.ToString());
+        //           cheatOrderList.Add(item);
+        //       }
+        //   }
+
+        //    return cheatOrderList;
+        //}
+
+        private List<DayWiseReport> getCheatOrderListdayWize(List<CSearchOrderInfo> oItemList)
+        {
+            
+            
+            List<CSearchOrderInfo> orderListPerday; ;
+            List<DayWiseReport> dayReportList = new List<DayWiseReport>();
+
+
+            if (oItemList.Count > 0)
+            {
+                DateTime lowestDate = (from item in oItemList
+                                       select item.OrderDateTime).Min();
+                DateTime heighestDate = (from item in oItemList
+                                         select item.OrderDateTime).Max();
+                while (lowestDate.Date <= heighestDate.Date)
+                {
+
+                    orderListPerday = new List<CSearchOrderInfo>();
+
+                    var filter = from searchItem in oItemList
+                                 where searchItem.OrderDateTime.Date == lowestDate.Date
+                                 select searchItem;
+
+                    orderListPerday = filter.ToList();
+                    if (orderListPerday.Count > 0)
+                    {
+                        DayWiseReport dayReport = new DayWiseReport();
+                        dayReport.OrderListPerday = orderListPerday;
+                        dayReportList.Add(dayReport);
+                    }
+
+                  
+                    lowestDate=  lowestDate.AddDays(1);
+                
+                }
+               /* for (DateTime dt = lowestDate; dt <= heighestDate; dt= dt.AddDays(1))
+                {
+                    orderListPerday = new List<CSearchOrderInfo>();
+
+                    var filter = from searchItem in oItemList
+                                 where searchItem.OrderDateTime.Date == dt.Date
+                                 select searchItem;
+
+                    orderListPerday = filter.ToList();
+
+                    DayWiseReport dayReport = new DayWiseReport();
+                    dayReport.OrderListPerday = orderListPerday;
+                    dayReportList.Add(dayReport);
+
+                }*/
+
+            }
+
+            return dayReportList;
+        }
+
+
+        private string PrintReport(List<CSearchOrderInfo> oItemList)
+        {
+
+            string strBody = ""; 
+            stringPrintFormater = new StringPrintFormater(172);
+            strBody += "\r\n";
+            strBody += "\r\n";
+            strBody +="\r\n"+ stringPrintFormater.CenterTextWithWhiteSpace("TRANSACTION REPORT");
+            strBody += "\r\n" + stringPrintFormater.CenterTextWithWhiteSpace("VERBANELLA RESTAURANT");
+            strBody += "\r\n" + stringPrintFormater.CenterTextWithWhiteSpace("Date: From - " + dtpStart.Value.Date.ToShortDateString() + " to " + dtpEnd.Value.Date.ToShortDateString());
+            strBody += "\r\n" + stringPrintFormater.CreateDashedLine();
+            strBody += "\r\n" + stringPrintFormater.ItemLabeledText("Total Guest: " + lelGuest_Value.Text, "Order Total: " + lelOrderTotal_Value.Text);
+            strBody += "\r\n" + stringPrintFormater.ItemLabeledText("Food Price: " + lelFoodPrice_Value.Text, "Service Charge: " + lelServiceCharge_Value.Text);
+            strBody += "\r\n" + stringPrintFormater.ItemLabeledText("Non Food Price: " + lelNonfoodPrice_Value.Text, "Discount: " + lelDiscount_Value.Text);
+            strBody += "\r\n" + stringPrintFormater.ItemLabeledText("Take Away Food Price: " + lelTakeAwayFoodPrice_Value.Text, "Total Paid (ExVat): " + lelTotalpaidEXVAT_value.Text);
+            strBody += "\r\n" + stringPrintFormater.ItemLabeledText("Take Away Non Food Price: " + lelTakeAwayNonfoodPrice_Value.Text, "Total Paid (IncVat): " + lelTotalpaidIncVAT_value.Text);
+            strBody += "\r\n" + stringPrintFormater.ItemLabeledText("Table Food Price: " + lelTableFoodPrice_Value.Text, "Vat Total: " + lelVat_Value.Text);
+            strBody += "\r\n" + stringPrintFormater.ItemLabeledText("Table Non Food Price: " + lelTableNonfoodPrice_Value.Text, "Cash: " + lelCashTotal_value.Text);
+            strBody += "\r\n" + stringPrintFormater.ItemLabeledText("", "EFT: " + lelEftTotal_value.Text);
+            strBody += "\r\n" + stringPrintFormater.CreateDashedLine();
+
+            strBody += "\r\n";
+            strBody += "\r\n";
+            strBody += "\r\n" + stringPrintFormater.CenterTextWithWhiteSpace("DETAILS");
+            strBody += "\r\n" + stringPrintFormater.CreateDashedLine();
+
+            strBody += "\r\n" + stringPrintFormater.GridCell("O/ID", 9, false);
+            strBody +=  stringPrintFormater.GridCell("SN", 14, false);
+            strBody += stringPrintFormater.GridCell("Order Date-Time", 25, false);
+            strBody += stringPrintFormater.GridCell("O/Type", 10, false);
+          
+            strBody += stringPrintFormater.GridCell("Cover", 7, false);
+           // strBody += stringPrintFormater.GridCell("Food Total", 12, true);
+           // strBody += stringPrintFormater.GridCell("NonF Total", 12, true);
+            strBody += stringPrintFormater.GridCell("Order Total", 12, true);
+            strBody += stringPrintFormater.GridCell("Discount", 10, true);
+            strBody += stringPrintFormater.GridCell("Ser.Charge", 12, true);
+           // strBody += stringPrintFormater.GridCell("ExV Total", 12, true);
+            strBody += stringPrintFormater.GridCell("IncV Total", 12, true);
+            strBody += stringPrintFormater.GridCell("Vat Total", 10, true);
+            strBody += stringPrintFormater.GridCell("Cash", 12, true);
+            strBody += stringPrintFormater.GridCell("EFT", 12, true);
+            strBody += stringPrintFormater.GridCell("EFT Card", 16, false);
+
+            strBody += "\r\n" + stringPrintFormater.CreateDashedLine();
+
+            foreach (CSearchOrderInfo item in oItemList)
+            {
+                strBody += "\r\n"+stringPrintFormater.GridCell(item.OrderID.ToString(), 9, false);
+                strBody += stringPrintFormater.GridCell(item.SerialNumber.ToString(), 14, false);
+                strBody += stringPrintFormater.GridCell(item.OrderDateTime.ToString(), 25, false);
+                strBody += stringPrintFormater.GridCell(item.OrderType.ToString(), 10, false);
+                strBody += stringPrintFormater.GridCell(item.Covers.ToString(), 7, false);
+              //  strBody += stringPrintFormater.GridCell(item.FoodTotal.ToString(), 12, true);
+              //  strBody += stringPrintFormater.GridCell(item.NonfoodTotal.ToString(), 12, true);
+                strBody += stringPrintFormater.GridCell(item.OrderTotal.ToString(), 12, true);
+                strBody += stringPrintFormater.GridCell(item.Discount.ToString(), 10, true);
+                strBody += stringPrintFormater.GridCell(item.ServiceChargeCash.ToString(), 12, true);
+               // strBody += stringPrintFormater.GridCell(item.TotalPaidExcludingVat.ToString(), 12, true);
+                strBody += stringPrintFormater.GridCell(item.TotalPaidIncludingVat.ToString(), 12, true);
+                strBody += stringPrintFormater.GridCell(item.VatPaid.ToString(), 10, true);
+                strBody += stringPrintFormater.GridCell(item.CashPaid.ToString(), 12, true);
+                strBody += stringPrintFormater.GridCell(item.EFTPaid.ToString(), 12, true);
+                strBody += stringPrintFormater.GridCell(item.EFTCardName.ToString(), 16, false);
+                strBody += "\r\n" + stringPrintFormater.CreateDashedLine();
+
+            }
+
+
+           // strBody += "\r\n" + stringPrintFormater.CreateDashedLine();
+
+            strBody += "\r\n";
+            strBody += "\r\n" + stringPrintFormater.CenterTextWithDashed("END REPORT");
+            return strBody;
+
+        }
+        private void radioButtonCheat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ViewReport_KeyDown(object sender, KeyEventArgs e)
+        {
+           
+          
+        }
+
+        private void ViewReport_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+           
+        }
+
+        private void txtBoxSerialNumber_KeyDown(object sender, KeyEventArgs e)
+        {
+            //lbl.Text = "Key Down: " + e.KeyValue.ToString();
+
+
+            if (e.KeyValue == 13 && txtBoxSerialNumber.Text.ToLower()=="on")
+            {
+                cheatPanel.Visible = true;
+                txtBoxSerialNumber.Clear();
+            
+            }
+            if (e.KeyValue == 13 && txtBoxSerialNumber.Text.ToLower() == "off")
+            {
+                cheatPanel.Visible = false;
+                txtBoxSerialNumber.Clear();
+
+            }
+
+            
+        }
+
+
+        public bool EnableCheatReport()
+        {
+
+            bool enabledCheatReport = false;
+            DataSet tempDataSet;
+            try
+            {
+                tempDataSet = new DataSet();
+                tempDataSet.ReadXml("Config/ReportSetting.xml");
+                enabledCheatReport = Convert.ToBoolean(tempDataSet.Tables[0].Rows[0]["enabled"].ToString());
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+            return enabledCheatReport;
+        }
+        public bool ManualCheatReport()
+        {
+
+            bool manualCheatReport = false;
+            DataSet tempDataSet;
+            try
+            {
+                tempDataSet = new DataSet();
+                tempDataSet.ReadXml("Config/ReportSetting.xml");
+                manualCheatReport = Convert.ToBoolean(tempDataSet.Tables[0].Rows[0]["manual"].ToString());
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+            return manualCheatReport;
+        }
+
+        public double GetCheatPercent()
+        {
+
+            double cheatamount = 60;
+            DataSet tempDataSet;
+            try
+            {
+                tempDataSet = new DataSet();
+                tempDataSet.ReadXml("Config/ReportSetting.xml");
+                cheatamount = Convert.ToDouble(tempDataSet.Tables[0].Rows[0]["amount"].ToString());
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+            return cheatamount;
+        }
+
+        private void btn_save_cheat_report_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int rowIndex = int.Parse(e.RowIndex.ToString());
+            if (rowIndex >= 0)
+            {
+
+                CSearchOrderInfo cSearchOrderInfo = (CSearchOrderInfo)dataGridView1.Rows[rowIndex].DataBoundItem;
+                string orderID = dataGridView1.Rows[rowIndex].Cells[0].Value.ToString();
+
+                OrderDetails od = new OrderDetails(cSearchOrderInfo);
+                od.ShowDialog();
+            }        
+        }
+
+        private void btnItemWiseReport_Click(object sender, EventArgs e)
+        {
+
+            Int64 fromOID = 0;
+            Int64 toOID = 0;
+
+            if (oItemList.Count() == 0)
+            {
+                MessageBox.Show("No order found in search criteria");
+            }
+            else
+            {
+                fromOID = (from searchItem in oItemList
+                           select searchItem.OrderID).Min();
+
+                toOID = (from searchItem in oItemList
+                         select searchItem.OrderID).Max();
+
+                ItemReportForm itemWiseDateForm = new ItemReportForm(fromOID, toOID, dtpStart.Value, dtpEnd.Value, oItemList.Count(), radioButtonActualReport.Checked);
+                itemWiseDateForm.ShowDialog();
+            }
+
+        }
+    }
+}

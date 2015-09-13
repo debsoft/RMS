@@ -1,0 +1,108 @@
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\RmsRemote\bin\Debug\SampleFiles\Config.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\RmsRemote\bin\Debug\SampleFiles\ConfigCollectionTest.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\RmsRemote\bin\Debug\SampleFiles\ConfigTest.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\RmsRemote\bin\Debug\RmsRemote.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\RmsRemote\bin\Debug\RmsRemote.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\RmsRemote\bin\Debug\Common.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\RmsRemote\bin\Debug\ConfigService.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\RmsRemote\bin\Debug\DAL.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\RmsRemote\bin\Debug\Managers.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\RmsRemote\bin\Debug\Logger.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\RmsRemote\bin\Debug\Managers.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\RmsRemote\bin\Debug\Common.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\RmsRemote\bin\Debug\ConfigService.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\RmsRemote\bin\Debug\Logger.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\RmsRemote\bin\Debug\DAL.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\RmsRemote\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\RmsRemote\obj\Debug\RmsRemote.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\RMS\RMS\RmsRemote\obj\Debug\RmsRemote.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\RmsRemote\bin\Debug\SampleFiles\Config.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\RmsRemote\bin\Debug\SampleFiles\ConfigCollectionTest.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\RmsRemote\bin\Debug\SampleFiles\ConfigTest.xml
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\RmsRemote\bin\Debug\RmsRemote.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\RmsRemote\bin\Debug\RmsRemote.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\RmsRemote\bin\Debug\Common.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\RmsRemote\bin\Debug\ConfigService.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\RmsRemote\bin\Debug\DAL.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\RmsRemote\bin\Debug\Managers.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\RmsRemote\bin\Debug\Logger.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\RmsRemote\bin\Debug\Managers.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\RmsRemote\bin\Debug\Common.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\RmsRemote\bin\Debug\ConfigService.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\RmsRemote\bin\Debug\Logger.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\RmsRemote\bin\Debug\DAL.pdb
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\RmsRemote\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\RmsRemote\obj\Debug\RmsRemote.dll
+D:\Documents and Settings\Administrator.IBACS-06\Desktop\project\projects\RMS\RMS\RMS\RmsRemote\obj\Debug\RmsRemote.pdb
+E:\Projects\RMSSERVICE\RmsRemote\bin\Debug\SampleFiles\Config.xml
+E:\Projects\RMSSERVICE\RmsRemote\bin\Debug\SampleFiles\ConfigCollectionTest.xml
+E:\Projects\RMSSERVICE\RmsRemote\bin\Debug\SampleFiles\ConfigTest.xml
+E:\Projects\RMSSERVICE\RmsRemote\bin\Debug\RmsRemote.dll
+E:\Projects\RMSSERVICE\RmsRemote\bin\Debug\RmsRemote.pdb
+E:\Projects\RMSSERVICE\RmsRemote\bin\Debug\Common.dll
+E:\Projects\RMSSERVICE\RmsRemote\bin\Debug\ConfigService.dll
+E:\Projects\RMSSERVICE\RmsRemote\bin\Debug\DAL.dll
+E:\Projects\RMSSERVICE\RmsRemote\bin\Debug\Managers.dll
+E:\Projects\RMSSERVICE\RmsRemote\bin\Debug\Logger.dll
+E:\Projects\RMSSERVICE\RmsRemote\bin\Debug\Managers.pdb
+E:\Projects\RMSSERVICE\RmsRemote\bin\Debug\Common.pdb
+E:\Projects\RMSSERVICE\RmsRemote\bin\Debug\ConfigService.pdb
+E:\Projects\RMSSERVICE\RmsRemote\bin\Debug\Logger.pdb
+E:\Projects\RMSSERVICE\RmsRemote\bin\Debug\DAL.pdb
+E:\Projects\RMSSERVICE\RmsRemote\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\RMSSERVICE\RmsRemote\obj\Debug\RmsRemote.dll
+E:\Projects\RMSSERVICE\RmsRemote\obj\Debug\RmsRemote.pdb
+E:\Projects\RMS\RMSSERVICE\RmsRemote\bin\Debug\SampleFiles\Config.xml
+E:\Projects\RMS\RMSSERVICE\RmsRemote\bin\Debug\SampleFiles\ConfigCollectionTest.xml
+E:\Projects\RMS\RMSSERVICE\RmsRemote\bin\Debug\SampleFiles\ConfigTest.xml
+E:\Projects\RMS\RMSSERVICE\RmsRemote\bin\Debug\RmsRemote.dll
+E:\Projects\RMS\RMSSERVICE\RmsRemote\bin\Debug\RmsRemote.pdb
+E:\Projects\RMS\RMSSERVICE\RmsRemote\bin\Debug\Common.dll
+E:\Projects\RMS\RMSSERVICE\RmsRemote\bin\Debug\ConfigService.dll
+E:\Projects\RMS\RMSSERVICE\RmsRemote\bin\Debug\DAL.dll
+E:\Projects\RMS\RMSSERVICE\RmsRemote\bin\Debug\Managers.dll
+E:\Projects\RMS\RMSSERVICE\RmsRemote\bin\Debug\Logger.dll
+E:\Projects\RMS\RMSSERVICE\RmsRemote\bin\Debug\Managers.pdb
+E:\Projects\RMS\RMSSERVICE\RmsRemote\bin\Debug\Common.pdb
+E:\Projects\RMS\RMSSERVICE\RmsRemote\bin\Debug\ConfigService.pdb
+E:\Projects\RMS\RMSSERVICE\RmsRemote\bin\Debug\Logger.pdb
+E:\Projects\RMS\RMSSERVICE\RmsRemote\bin\Debug\DAL.pdb
+E:\Projects\RMS\RMSSERVICE\RmsRemote\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\RMS\RMSSERVICE\RmsRemote\obj\Debug\RmsRemote.dll
+E:\Projects\RMS\RMSSERVICE\RmsRemote\obj\Debug\RmsRemote.pdb
+D:\RMS\RMSSERVICE\RmsRemote\bin\Debug\SampleFiles\Config.xml
+D:\RMS\RMSSERVICE\RmsRemote\bin\Debug\SampleFiles\ConfigCollectionTest.xml
+D:\RMS\RMSSERVICE\RmsRemote\bin\Debug\SampleFiles\ConfigTest.xml
+D:\RMS\RMSSERVICE\RmsRemote\bin\Debug\RmsRemote.dll
+D:\RMS\RMSSERVICE\RmsRemote\bin\Debug\RmsRemote.pdb
+D:\RMS\RMSSERVICE\RmsRemote\bin\Debug\Common.dll
+D:\RMS\RMSSERVICE\RmsRemote\bin\Debug\ConfigService.dll
+D:\RMS\RMSSERVICE\RmsRemote\bin\Debug\DAL.dll
+D:\RMS\RMSSERVICE\RmsRemote\bin\Debug\Managers.dll
+D:\RMS\RMSSERVICE\RmsRemote\bin\Debug\Logger.dll
+D:\RMS\RMSSERVICE\RmsRemote\bin\Debug\Managers.pdb
+D:\RMS\RMSSERVICE\RmsRemote\bin\Debug\Common.pdb
+D:\RMS\RMSSERVICE\RmsRemote\bin\Debug\DAL.pdb
+D:\RMS\RMSSERVICE\RmsRemote\bin\Debug\ConfigService.pdb
+D:\RMS\RMSSERVICE\RmsRemote\bin\Debug\Logger.pdb
+D:\RMS\RMSSERVICE\RmsRemote\obj\Debug\ResolveAssemblyReference.cache
+D:\RMS\RMSSERVICE\RmsRemote\obj\Debug\RmsRemote.dll
+D:\RMS\RMSSERVICE\RmsRemote\obj\Debug\RmsRemote.pdb
+D:\RMS BD\RMSSERVICE\RmsRemote\bin\Debug\SampleFiles\Config.xml
+D:\RMS BD\RMSSERVICE\RmsRemote\bin\Debug\SampleFiles\ConfigCollectionTest.xml
+D:\RMS BD\RMSSERVICE\RmsRemote\bin\Debug\SampleFiles\ConfigTest.xml
+D:\RMS BD\RMSSERVICE\RmsRemote\bin\Debug\RmsRemote.dll
+D:\RMS BD\RMSSERVICE\RmsRemote\bin\Debug\RmsRemote.pdb
+D:\RMS BD\RMSSERVICE\RmsRemote\bin\Debug\Common.dll
+D:\RMS BD\RMSSERVICE\RmsRemote\bin\Debug\ConfigService.dll
+D:\RMS BD\RMSSERVICE\RmsRemote\bin\Debug\DAL.dll
+D:\RMS BD\RMSSERVICE\RmsRemote\bin\Debug\Managers.dll
+D:\RMS BD\RMSSERVICE\RmsRemote\bin\Debug\Logger.dll
+D:\RMS BD\RMSSERVICE\RmsRemote\bin\Debug\Common.pdb
+D:\RMS BD\RMSSERVICE\RmsRemote\bin\Debug\ConfigService.pdb
+D:\RMS BD\RMSSERVICE\RmsRemote\bin\Debug\DAL.pdb
+D:\RMS BD\RMSSERVICE\RmsRemote\bin\Debug\Managers.pdb
+D:\RMS BD\RMSSERVICE\RmsRemote\bin\Debug\Logger.pdb
+D:\RMS BD\RMSSERVICE\RmsRemote\obj\Debug\ResolveAssemblyReference.cache
+D:\RMS BD\RMSSERVICE\RmsRemote\obj\Debug\RmsRemote.dll
+D:\RMS BD\RMSSERVICE\RmsRemote\obj\Debug\RmsRemote.pdb

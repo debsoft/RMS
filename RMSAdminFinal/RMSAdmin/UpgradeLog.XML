@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="RMSAdmin">
+</Property><Property Name="Solution File" Value="D:\Umme_working\RMSBD(CarnivalLast-LaBamba)@26062012\RMSAdminFinal\RMSAdmin\RMSAdmin.sln">
+</Property><Property Name="Date" Value="Wednesday, August 29, 2012">
+</Property><Property Name="Time" Value="19:57 PM">
+</Property></Properties><Event ErrorLevel="2" Project="RMSAdmin" Source="RMSAdmin\RMSAdmin.csproj" Description="Unable to open project file to perform upgrade.  ">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\Common.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Common" Source="Common\Common.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ConfigService" Source="ConfigService\ConfigService.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ConfigService" Source="ConfigService\ConfigService.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Database" Source="Database\Database.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Database" Source="Database\Database.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Logger" Source="Logger\Logger.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Logger" Source="Logger\Logger.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Managers" Source="Managers\Managers.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Managers" Source="Managers\Managers.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="RmsRemote" Source="RmsRemote\RmsRemote.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="RmsRemote" Source="RmsRemote\RmsRemote.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="RMSAdmin.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="RMSAdmin.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\Common.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="ConfigService" Source="ConfigService\ConfigService.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Database" Source="Database\Database.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Logger" Source="Logger\Logger.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Managers" Source="Managers\Managers.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="RmsRemote" Source="RmsRemote\RmsRemote.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CCommonConstants>
+
+  
+  <!--  DMY  for day month year format,  MDY for month day year format in the database-->
+  <SqlQueryDateFormat>MDY</SqlQueryDateFormat>
+
+  <Port>8085</Port>
+  <!-- channel could Tcp or Http, please write either of these-->
+  <Channel>Tcp</Channel>
+
+  <!-- ThreadWaitTime in miliseconds -->
+<ThreadWaitTime>60000</ThreadWaitTime>
+<ThreadSleepTime>5000</ThreadSleepTime>
+
+  
+
+  <!--for normal installed printer,printer type=1-->
+  <LocalPrintingType>1</LocalPrintingType>
+  <!--if local printer type = 1, then must write the printer port name-->
+  <PrinterPortName>COM1</PrinterPortName>
+
+  <PrinterPortBaudRate>9600</PrinterPortBaudRate>
+  <PrinterPortParity>None</PrinterPortParity>
+  <PrinterPortDataBits>8</PrinterPortDataBits>
+  <PrinterPortStopBits>1</PrinterPortStopBits>
+
+  <!-- if local printer type=2, then must write the printer name-->
+  <LocalPrinterName>Lexmark E120n</LocalPrinterName>
+
+  <PaperCutCommand>29,86,1</PaperCutCommand>
+  <BeepCommand>27,30</BeepCommand>
+
+  <!--for network printer,printer type=1 and for server printer,printer type = 2
+  <NetworkPrinterType>1</NetworkPrinterType>
+   only write network printer name if you are using network printer, otherwise leave network printer name blank 
+  <NetworkPrinterName>Canon</NetworkPrinterName> -->
+
+
+</CCommonConstants>

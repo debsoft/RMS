@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/DAL/bin/Release
+END
+ConfigService.dll
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/DAL/bin/Release/ConfigService.dll
+END
+Common.dll
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/DAL/bin/Release/Common.dll
+END
+Logger.pdb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/DAL/bin/Release/Logger.pdb
+END
+DAL.pdb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/DAL/bin/Release/DAL.pdb
+END
+Logger.dll
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/DAL/bin/Release/Logger.dll
+END
+ConfigService.pdb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/DAL/bin/Release/ConfigService.pdb
+END
+DAL.dll
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/DAL/bin/Release/DAL.dll
+END
+Common.pdb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/DAL/bin/Release/Common.pdb
+END

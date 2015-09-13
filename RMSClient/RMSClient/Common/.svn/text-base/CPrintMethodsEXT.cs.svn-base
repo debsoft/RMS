@@ -1,0 +1,144 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Drawing.Printing;
+using System.Drawing;
+using RMS.DataAccess;
+using System.Data.SqlClient;
+using System.Data;
+using RMS.Common.ObjectModel;
+using RMS.SystemManagement;
+using System.Windows.Forms;
+
+namespace RMS.Common
+{
+    public class CPrintMethodsEXT : CPrintMethods
+    {
+        private PrintDocument printDoc;
+        private String printBody;
+        private PrinterConfig printerConfig;
+       
+        public CPrintMethodsEXT()
+        {
+            printerConfig = new PrinterConfig();
+            printDoc = new PrintDocument();
+            printDoc.PrintPage += new PrintPageEventHandler(printDoc_PrintPage);
+           
+        }
+
+        public void USBPrint(String printBody, PrintDestiNation printDestiNation, bool displayHeaderFooter)
+        {
+
+            if (displayHeaderFooter)
+            {
+                this.printBody = printBody.Insert(0, GetPrintDecorationText(PrintDecoration.HEADER)+"\r\n");
+                this.printBody +="\r\n"+ GetPrintDecorationText(PrintDecoration.FOOTER);
+            }
+            else
+            {
+                this.printBody = printBody;
+            }
+            try
+            {
+                switch (printDestiNation)
+                {
+                    case PrintDestiNation.KITCHEN:
+                        printDoc.DefaultPageSettings.PrinterSettings.PrinterName = printerConfig.KitchenPrinterName;
+
+                        break;
+                    case PrintDestiNation.BEVARAGE:
+                        printDoc.DefaultPageSettings.PrinterSettings.PrinterName = printerConfig.BeveragePrinterName;
+
+                        break;
+                    case PrintDestiNation.CLIENT:
+                        printDoc.DefaultPageSettings.PrinterSettings.PrinterName = printerConfig.ClientPrinterName;
+
+                        break;
+                }
+
+                printDoc.Print();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            
+             
+        }
+
+
+
+
+
+        private void printDoc_PrintPage(Object sender, PrintPageEventArgs e)
+        {
+            Font printFont = new Font("Lucida Console", 10);
+           // e.Graphics.DrawString(printBody, printFont, Brushes.Black, 0, 0);
+
+            int printHeight;
+            int printWidth;
+            printHeight = ((PrintDocument)sender).DefaultPageSettings.PaperSize.Height - ((PrintDocument)sender).DefaultPageSettings.Margins.Top - ((PrintDocument)sender).DefaultPageSettings.Margins.Bottom;
+            printWidth = ((PrintDocument)sender).DefaultPageSettings.PaperSize.Width - ((PrintDocument)sender).DefaultPageSettings.Margins.Left - ((PrintDocument)sender).DefaultPageSettings.Margins.Right;
+
+            StringFormat format = new StringFormat(StringFormatFlags.FitBlackBox);
+
+            RectangleF printArea = new RectangleF(0, 0, 260, printHeight);
+            e.Graphics.DrawString(printBody, printFont, Brushes.Black, printArea, format); 
+
+
+        }
+        private string GetPrintDecorationText(PrintDecoration printDecoration)
+        {
+            string firstString="[---]";
+           
+            string fieldName = printDecoration==PrintDecoration.HEADER? "header": "footer";
+            try
+            {
+
+                string HeaderContent = HeaderFooterDataset().Tables["PrintStyle"].Select("style_name = 'normal'")[0][fieldName].ToString();
+            StringTokenizer tempStringTokenizer = new StringTokenizer(HeaderContent, "\r\n");
+            firstString = tempStringTokenizer.NextToken();
+
+                while (tempStringTokenizer.HasMoreTokens())
+                {
+                    firstString+= "\r\n"+tempStringTokenizer.NextToken();
+             
+                }
+             }
+            catch (Exception esx)
+            { 
+            
+            
+            }
+
+            return firstString;
+        }
+
+
+        private DataSet HeaderFooterDataset()
+        {
+            DataSet tempDataSet = new DataSet();
+           
+                CCommonConstants oConstants = ConfigManager.GetConfig<CCommonConstants>();
+                string tempConnectionString = oConstants.DBConnection;
+                string sSql = SqlQueries.GetQuery(Query.GetPrintStyles);
+                SqlDataAdapter tempSqlAdapter = new SqlDataAdapter(sSql, tempConnectionString);
+                tempSqlAdapter.Fill(tempDataSet, "PrintStyle");
+            
+            
+                return tempDataSet;
+        }  
+
+    }
+    public enum PrintDecoration
+    {
+        HEADER,
+        FOOTER
+    }
+    public enum PrintDestiNation
+    {
+        KITCHEN,
+        BEVARAGE,
+        CLIENT
+    }
+}

@@ -1,0 +1,206 @@
+.spacing1 {
+	LETTER-SPACING: 1px
+}
+.nrm01 {
+	FONT-SIZE: 10px; FONT-FAMILY: verdana, Helvetica, sans-serif; fontsize: 10px
+}
+.nrm02 {
+	FONT-SIZE: 11px;
+	FONT-FAMILY: verdana, Helvetica, sans-serif;
+	fontsize: 11px;
+	
+	
+}
+.title {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #266AB5;
+}
+.title2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #FF9900;
+}
+
+
+.nrmlink {
+	
+	FONT-SIZE: 11px;
+	FONT-FAMILY: verdana, Helvetica, sans-serif,;
+	fontsize: 11px;
+	color: #44466F;
+}
+.nrmlink1 {
+	FONT-SIZE: 11px; FONT-FAMILY: verdana, Helvetica, sans-serif; fontsize: 11px
+}
+.link01:link {
+	FONT-WEIGHT: normal;
+	COLOR: #266AB5;
+	TEXT-DECORATION: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+.bodytxt {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+}
+.bodytxt1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #000000;
+}
+.link01:visited {
+	FONT-WEIGHT: normal;
+	COLOR: #266AB5;
+	TEXT-DECORATION: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+.link01:hover {
+	FONT-WEIGHT: normal;
+	COLOR: #FF6600;
+	TEXT-DECORATION: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+
+
+.link02:link {
+	COLOR: #666666; TEXT-DECORATION: none
+}
+.link02:visited {
+	COLOR: #666666; TEXT-DECORATION: none
+}
+.link02:hover {
+	COLOR: #FF6600; TEXT-DECORATION: none
+}
+.link03:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.link03:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.link03:hover {
+	COLOR: #FFFFFF; TEXT-DECORATION: none
+}
+
+
+.link04:link {
+	COLOR: #ff7200; TEXT-DECORATION: none
+}
+.link04:visited {
+	COLOR: #ff7200; TEXT-DECORATION: none
+}
+.link04:hover {
+	COLOR: #358cce; TEXT-DECORATION: none
+}
+
+
+.link05:link {
+	COLOR: #FFFFFF; TEXT-DECORATION: none
+}
+.link05:visited {
+	COLOR: #FFFFFF; TEXT-DECORATION: none
+}
+.link05:hover {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+
+
+.but:link {
+	COLOR: #ff7200; TEXT-DECORATION: none
+}
+.but:visited {
+	COLOR: #ff7200; TEXT-DECORATION: none
+}
+.but:hover {
+	COLOR: #358cce; TEXT-DECORATION: none
+}
+
+
+
+
+A:link {
+	COLOR: #358cce
+}
+A:visited {
+	COLOR: #358cce; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff7200; TEXT-DECORATION: none
+}
+.bdr {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #CCCCCC;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+}
+.r_bdr {
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: none;
+	
+	border-right-color: #0453A0;
+	border-bottom-color: #0453A0;
+	
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+}
+.l_bdr {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-top-color: #CCCCCC;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+}
+
+.btm_bar {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	
+	border-bottom-color:#0453A0;
+	
+}
+.maiin_bdr {
+	border: 1px solid #BCBCBC;
+}
+.TOP_BDR {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #CCCCCC;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+}

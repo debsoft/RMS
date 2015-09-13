@@ -1,0 +1,129 @@
+<Configuration>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="3A48D462-2F08-4C11-8D80-81AF2D9494F2/f:CPaymentDAO.cs" caret="0" fromTop="0" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:SystemManagement/f:OnlineMenuManagementForm.cs" caret="0" fromTop="0" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Common/f:CPrintMethods.cs" caret="0" fromTop="0" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:BarService/f:CBarServiceForm.cs" caret="69005" fromTop="14" />
+      <File id="28E91A6F-C409-4A3F-8779-7A97A2BF4999/f:ConfigManager.cs" caret="2771" fromTop="16" />
+      <File id="4BBBEC3B-580D-4BB6-B4AB-7DD39D13517F/f:RMSGenericButton.cs" caret="1507" fromTop="31" />
+      <File id="1AD97A32-2C57-41FE-BA55-0DFD4A8E0A17/d:ObjectModel/f:ServiceCharge.cs" caret="240" fromTop="5" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:SystemManagement/f:CSystemManagementForm.cs" caret="33081" fromTop="16" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:SystemManagement/f:CSystemSettingsForm.cs" caret="6805" fromTop="16" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:SystemManagement/f:PrinterSettingsForm.Designer.cs" caret="0" fromTop="0" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Common/f:CPaymentForm.cs" caret="44498" fromTop="9" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:SystemManagement/f:PrinterSettingsForm.cs" caret="3092" fromTop="11" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Config/f:CommonConstants.xml" caret="229" fromTop="6" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:StockManagement/f:ProductItemCtll.cs" caret="54984" fromTop="14" />
+      <File id="1AD97A32-2C57-41FE-BA55-0DFD4A8E0A17/d:ObjectModel/f:CSearchOrderInfo.cs" caret="2085" fromTop="14" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:RawMat.cs" caret="5677" fromTop="15" />
+      <File id="3A48D462-2F08-4C11-8D80-81AF2D9494F2/f:COrderDetailsDAO.cs" caret="844" fromTop="27" />
+      <File id="6F2812B3-A416-4178-8A8A-DDC01C74E198/d:TableInfo/f:COrderManager.cs" caret="18793" fromTop="14" />
+      <File id="3A48D462-2F08-4C11-8D80-81AF2D9494F2/d:Queries/f:SqlQueries.cs" caret="84078" fromTop="20" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:StockManagement/f:AddProductItemCtl.cs" caret="23536" fromTop="19" />
+      <File id="3A48D462-2F08-4C11-8D80-81AF2D9494F2/f:CCategory3DAO.cs" caret="19038" fromTop="14" />
+      <File id="6F2812B3-A416-4178-8A8A-DDC01C74E198/d:SystemManagement/f:SystemManager.cs" caret="3754" fromTop="17" />
+      <File id="3A48D462-2F08-4C11-8D80-81AF2D9494F2/f:SysytemManagementDAO.cs" caret="34828" fromTop="17" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Common/f:StringPrintFormater.cs" caret="240" fromTop="12" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:ItemReportForm.cs" caret="12923" fromTop="15" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:ViewReport.cs" caret="11820" fromTop="10" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Common/f:CPrintMethodsEXT.cs" caret="9886" fromTop="11" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:TableOrder/f:CTableOrderForm.cs" caret="224682" fromTop="14" />
+      <File id="3A48D462-2F08-4C11-8D80-81AF2D9494F2/f:COrderInfoDAO.cs" caret="26420" fromTop="26" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:SalesReport.cs" caret="66892" fromTop="14" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:SalesReport.cs" caret="88921" fromTop="15" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:SalesReport.cs" caret="16155" fromTop="28" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:SalesReport.cs" caret="1173" fromTop="21" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:SalesReport.cs" caret="79910" fromTop="9" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:SalesReport.cs" caret="76969" fromTop="12" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:SalesReport.cs" caret="14576" fromTop="25" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:SalesReport.cs" caret="15190" fromTop="27" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:SalesReport.cs" caret="13970" fromTop="8" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:SalesReport.cs" caret="13559" fromTop="18" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:ViewReport.cs" caret="42305" fromTop="23" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Common/f:CPrintMethodsEXT.cs" caret="9225" fromTop="16" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Common/f:CPrintMethodsEXT.cs" caret="9598" fromTop="15" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:TableOrder/f:CTableOrderForm.cs" caret="224682" fromTop="15" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Common/f:CPrintMethodsEXT.cs" caret="9886" fromTop="11" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:ViewReport.cs" caret="12771" fromTop="25" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:ViewReport.cs" caret="32606" fromTop="15" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:ViewReport.cs" caret="32219" fromTop="28" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:ViewReport.cs" caret="31398" fromTop="10" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:ViewReport.cs" caret="31680" fromTop="18" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:ViewReport.cs" caret="31270" fromTop="5" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:TableOrder/f:CTableOrderForm.cs" caret="340670" fromTop="17" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:TableOrder/f:CTableOrderForm.cs" caret="341160" fromTop="25" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:TableOrder/f:CTableOrderForm.cs" caret="340829" fromTop="14" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:TableOrder/f:CTableOrderForm.cs" caret="1239259" fromTop="14" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:ItemReportForm.cs" caret="14160" fromTop="13" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:ViewReport.cs" caret="12166" fromTop="15" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:ViewReport.cs" caret="11752" fromTop="7" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:ItemReportForm.cs" caret="30759" fromTop="12" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:ItemReportForm.cs" caret="13556" fromTop="7" />
+      <File id="53788615-0F07-4A3C-B22C-CAC631AEF38C/d:Reports/f:ItemReportForm.cs" caret="12923" fromTop="15" />
+    </RecentEdits>
+  </RecentFiles>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Qualified:RMS.Common.CSerialPrintContent">
+      <Item value="StringLine" priority="26" />
+      <Item value="Bold" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="CSharpCodeCompletionContext">
+      <Item value="true" priority="31" />
+      <Item value="cPrintMethods" priority="32" />
+      <Item value="new" priority="31" />
+      <Item value="CPrintMethods" priority="28" />
+      <Item value="decimal" priority="31" />
+      <Item value="double" priority="31" />
+      <Item value="Convert`0" priority="95" />
+      <Item value="lblVat" priority="127" />
+      <Item value="MessageBox`0" priority="31" />
+      <Item value="false" priority="63" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@RMS.Common.CPrintMethods">
+      <Item value="CentreAlign`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:RMS.Common.StringPrintFormater">
+      <Item value="CenterTextWithWhiteSpace`0" priority="53" />
+      <Item value="CreateDashedLine`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="ToDouble`0" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:RMS.Common.ObjectModel.ServiceCharge">
+      <Item value="ServiceChargeAmount" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Managers.TableInfo.COrderManager">
+      <Item value="UpdateOrderServiceCharge`0" priority="26" />
+      <Item value="InsertOrderServiceCharge`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Label">
+      <Item value="Text" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBox">
+      <Item value="Show`0" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewColumn">
+      <Item value="Visible" priority="26" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False" />
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+</Configuration>

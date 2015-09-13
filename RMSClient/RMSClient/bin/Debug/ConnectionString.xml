@@ -1,0 +1,9 @@
+<?xml version="1.0" standalone="yes"?>
+<configuration>
+  <UserId>sa</UserId>
+  <Password>123</Password>
+  <Database>RMSDB@19032013_Izumi</Database>
+  <DataSource>MITHU-PC\SQLEXPRESS</DataSource>
+  <Other>Pooling=True;Min Pool Size=5;Max Pool Size=50;</Other>
+  <ConnectionString>User ID=sa;Password=;Database=redchicken;Data Source=SUVO1-PC\SQLEXPRESS2005;Pooling=True;Min Pool Size=5;Max Pool Size=50;</ConnectionString>
+</configuration>

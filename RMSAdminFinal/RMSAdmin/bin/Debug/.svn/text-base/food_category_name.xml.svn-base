@@ -1,0 +1,210 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <food_category_name>
+    <cat2_id>124</cat2_id>
+    <Category2_Name>STARTER</Category2_Name>
+    <Category1_Name>STARTER</Category1_Name>
+    <Category2_Order>1</Category2_Order>
+    <Parent_Category_Name>Indian</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>125</cat2_id>
+    <Category2_Name>SEAFOOD STARTER</Category2_Name>
+    <Category1_Name>STARTER</Category1_Name>
+    <Category2_Order>2</Category2_Order>
+    <Parent_Category_Name>Indian</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>126</cat2_id>
+    <Category2_Name>TANDOORI MASSALA</Category2_Name>
+    <Category1_Name>MAIN COURSE</Category1_Name>
+    <Category2_Order>3</Category2_Order>
+    <Parent_Category_Name>Indian</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>127</cat2_id>
+    <Category2_Name>CHEFS SPEC DISHES</Category2_Name>
+    <Category1_Name>MAIN COURSE</Category1_Name>
+    <Category2_Order>4</Category2_Order>
+    <Parent_Category_Name>Indian</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>128</cat2_id>
+    <Category2_Name>TANDOORI MAINS</Category2_Name>
+    <Category1_Name>MAIN COURSE</Category1_Name>
+    <Category2_Order>5</Category2_Order>
+    <Parent_Category_Name>Indian</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>136</cat2_id>
+    <Category2_Name>BIRYANI DISHES</Category2_Name>
+    <Category1_Name>MAIN COURSE</Category1_Name>
+    <Category2_Order>6</Category2_Order>
+    <Parent_Category_Name>Indian</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>129</cat2_id>
+    <Category2_Name>CURRY DISHES</Category2_Name>
+    <Category1_Name>MAIN COURSE</Category1_Name>
+    <Category2_Order>7</Category2_Order>
+    <Parent_Category_Name>Indian</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>137</cat2_id>
+    <Category2_Name>BALTI DISHES</Category2_Name>
+    <Category1_Name>MAIN COURSE</Category1_Name>
+    <Category2_Order>8</Category2_Order>
+    <Parent_Category_Name>Indian</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>138</cat2_id>
+    <Category2_Name>SIDE DISHES</Category2_Name>
+    <Category1_Name>SIDE DISH</Category1_Name>
+    <Category2_Order>9</Category2_Order>
+    <Parent_Category_Name>Indian</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>139</cat2_id>
+    <Category2_Name>INDIAN BREADS</Category2_Name>
+    <Category1_Name>SUNDRISE</Category1_Name>
+    <Category2_Order>10</Category2_Order>
+    <Parent_Category_Name>Indian</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>140</cat2_id>
+    <Category2_Name>SUNDRIES</Category2_Name>
+    <Category1_Name>SUNDRISE</Category1_Name>
+    <Category2_Order>11</Category2_Order>
+    <Parent_Category_Name>Indian</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>141</cat2_id>
+    <Category2_Name>CONDIMENTS</Category2_Name>
+    <Category1_Name>STARTER</Category1_Name>
+    <Category2_Order>12</Category2_Order>
+    <Parent_Category_Name>Indian</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>142</cat2_id>
+    <Category2_Name>BUFFET</Category2_Name>
+    <Category1_Name>MAIN COURSE</Category1_Name>
+    <Category2_Order>13</Category2_Order>
+    <Parent_Category_Name>Indian</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>143</cat2_id>
+    <Category2_Name>RED WINES</Category2_Name>
+    <Category1_Name>DRINKS</Category1_Name>
+    <Category2_Order>14</Category2_Order>
+    <Parent_Category_Name>Indian</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>144</cat2_id>
+    <Category2_Name>WHITE WINES</Category2_Name>
+    <Category1_Name>DRINKS</Category1_Name>
+    <Category2_Order>15</Category2_Order>
+    <Parent_Category_Name>Indian</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>145</cat2_id>
+    <Category2_Name>ROSE WINES</Category2_Name>
+    <Category1_Name>DRINKS</Category1_Name>
+    <Category2_Order>16</Category2_Order>
+    <Parent_Category_Name>Indian</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>146</cat2_id>
+    <Category2_Name>CHAMPAGNE</Category2_Name>
+    <Category1_Name>DRINKS</Category1_Name>
+    <Category2_Order>17</Category2_Order>
+    <Parent_Category_Name>Indian</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>147</cat2_id>
+    <Category2_Name>SPIRITS</Category2_Name>
+    <Category1_Name>DRINKS</Category1_Name>
+    <Category2_Order>18</Category2_Order>
+    <Parent_Category_Name>Indian</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>148</cat2_id>
+    <Category2_Name>DRAUGHT BEER</Category2_Name>
+    <Category1_Name>DRINKS</Category1_Name>
+    <Category2_Order>19</Category2_Order>
+    <Parent_Category_Name>Indian</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>149</cat2_id>
+    <Category2_Name>BOTTLES</Category2_Name>
+    <Category1_Name>DRINKS</Category1_Name>
+    <Category2_Order>20</Category2_Order>
+    <Parent_Category_Name>Indian</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>150</cat2_id>
+    <Category2_Name>MINERALS</Category2_Name>
+    <Category1_Name>DRINKS</Category1_Name>
+    <Category2_Order>21</Category2_Order>
+    <Parent_Category_Name>Indian</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>151</cat2_id>
+    <Category2_Name>COFFEE</Category2_Name>
+    <Category1_Name>DRINKS</Category1_Name>
+    <Category2_Order>22</Category2_Order>
+    <Parent_Category_Name>Indian</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+  <food_category_name>
+    <cat2_id>152</cat2_id>
+    <Category2_Name>COCKTAILS</Category2_Name>
+    <Category1_Name>DRINKS</Category1_Name>
+    <Category2_Order>23</Category2_Order>
+    <Parent_Category_Name>Indian</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_category_name>
+</DocumentElement>

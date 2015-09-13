@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CCommonConstants>
+
+  <MAXIMUM_SEARCH_RESULT>50000</MAXIMUM_SEARCH_RESULT>
+  
+  <!-- donot chage the below one-->
+  <MAXIMUM_DISPLAY_RESULT>5</MAXIMUM_DISPLAY_RESULT>
+  <SMSLENGTH>160 </SMSLENGTH>
+  <CURRENCY>tk</CURRENCY>
+  <!-- state time in minutes, check interval in seconds-->
+  <STATE_TIME>2</STATE_TIME>
+  
+  <WIZARD_STATE_TIME>10</WIZARD_STATE_TIME>
+  <!-- not using WIZARD_STATE_TIME-->
+
+  <CHECK_INTERVAL>5</CHECK_INTERVAL>
+  
+  <MAX_SMS_PROCESS>100</MAX_SMS_PROCESS>
+  
+  <ITEM_EXPIRE_DAYS>10</ITEM_EXPIRE_DAYS>
+  <!-- description limit = 100 characters-->
+  <DESCRIPTION_LIMIT>80</DESCRIPTION_LIMIT>
+
+  <!-- REG_REF_KEY = ON/OFF-->
+  <REG_REF_KEY>ON</REG_REF_KEY>
+
+  <REG_REF_AMOUNT>5</REG_REF_AMOUNT>
+
+  <!--  DMY  for day month year format,  MDY for month day year format in the database-->
+  <SqlQueryDateFormat>MDY</SqlQueryDateFormat>
+
+
+  <!-- UPDATE: ShortNumber and MessageType added 7/6/2006 (REM) -->
+  <!-- The outgoing sms number for the application -->
+  <ShortNumber>2020</ShortNumber>
+
+  <!-- MessageType:
+  ASCII
+  RingTone
+  Logo
+  Unkown
+  -->
+  <MessageType>Unkown</MessageType>
+  
+</CCommonConstants>

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CErrorStrings>
+  <!--<FILTER_ERROR>Sorry the word {0} is not allowed in Cell Bazaar. Please use another word!</FILTER_ERROR>
+  
+  
+  <SYNTAX_SELL_ADD_ERROR>Syntax Error! To add an item send sell add [category] [sub_category] [sub_category2] [quantity] [price] (location) (description)</SYNTAX_SELL_ADD_ERROR>
+
+  <SYNTAX_SELL_DELETE_ERROR>Syntax Error! To delete an item send sell del serial_number</SYNTAX_SELL_DELETE_ERROR>
+
+  <SYNTAX_SELL_UPDATE_ERROR>Syntax Error! To update or delete an item send sell list, then to update an item send  sell upd [serial_number] [category] [sub_category] [sub_category2] [quantity] [price] (location) (description)</SYNTAX_SELL_UPDATE_ERROR>
+
+  <SYNTAX_ACCOUNT_DELETE_ERROR>Syntax Error! To delete account send account del</SYNTAX_ACCOUNT_DELETE_ERROR>
+
+  <SYNTAX_ACCOUNT_REG_ERROR>Syntax Error! To register send account reg [name] [address] [location].</SYNTAX_ACCOUNT_REG_ERROR>
+
+  <SYNTAX_ACCOUNT_UPDATE_ERROR>new Syntax Error! To update account send account upd [name] [address] [location].</SYNTAX_ACCOUNT_UPDATE_ERROR>
+
+  <SYNTAX_ALL_ACCOUNT_ERROR> new To register send account reg [name] [address] [location].
+To update account send account upd [name] [address] [location]. 
+To delete account send account del  </SYNTAX_ALL_ACCOUNT_ERROR>
+
+  <SYNTAX_ALL_SELL_ERROR>To add an item send sell add [category] [sub_category] [sub_category2] [quantity] [price] (location) (description)
+To update or delete an item send sell list, then to update an item send  sell upd [serial_number] [category] [sub_category] [sub_category2] [quantity] [price] (location) (description)
+to delete an item send  sell del 2
+  </SYNTAX_ALL_SELL_ERROR>
+
+  <SYNTAX_SELL_WIZARD_NUMBER_ERROR>new Invalid reply. Reply with number or send quit to exit the wizard!</SYNTAX_SELL_WIZARD_NUMBER_ERROR>
+
+  <SYNTAX_SELL_UPD_WIZARD_PRICE_ERROR>new Invalid reply. Reply with number or send quit to exit the wizard!</SYNTAX_SELL_UPD_WIZARD_PRICE_ERROR>
+
+  <SYNTAX_SELL_UPD_WIZARD_LOCATION_ERROR>new Invalid reply. Reply with number or send quit to exit the wizard!</SYNTAX_SELL_UPD_WIZARD_LOCATION_ERROR>
+
+  <SYNTAX_SELL_UPD_WIZARD_DESC_ERROR>new Invalid reply. Reply with number or send quit to exit the wizard!</SYNTAX_SELL_UPD_WIZARD_DESC_ERROR>
+
+  <SYNTAX_SELL_UPD_WIZARD_QUANTITY_ERROR>new Invalid reply. Reply with number or send quit to exit the wizard!</SYNTAX_SELL_UPD_WIZARD_QUANTITY_ERROR>
+  
+  <SYNTAX_ALL_HELP_ERROR>Send help sell for help about sell. 
+Send help account to get help about account.
+Send help buy to get help about buy operation</SYNTAX_ALL_HELP_ERROR>
+
+  <SYNTAX_SELL_LIST_ERROR> Syntax error! correct syntax is sell list  </SYNTAX_SELL_LIST_ERROR>
+
+  <SYNTAX_XML_ERROR>  Error in Syntax xml file!  </SYNTAX_XML_ERROR>
+
+  <SYNTAX_PRICE_ERROR> Syntax Error! The price should be a number.  </SYNTAX_PRICE_ERROR>
+
+  <SYNTAX_QUANTITY_ERROR>  Syntax Error! The quantity should be a number. Please try again! </SYNTAX_QUANTITY_ERROR>
+
+  <SYNTAX_SERIAL_ERROR>  Syntax Error! The serial_number should be a number. Please try again!  </SYNTAX_SERIAL_ERROR>
+
+  <SYNTAX_GENERAL_ERROR>  Welcome to CellBazaar! Car, mobile, TV, book, to-let... find/sell
+  anything
+  you must create a user account. Send REG [LOCATION] to 3838
+  Other Keywords:
+  SELL
+  BUY</SYNTAX_GENERAL_ERROR>
+  
+  <INVALID_CATEGORY>Invalid Category. Please try again!</INVALID_CATEGORY>
+
+  <INVALID_PRICE>Invalid Price. Please try again! </INVALID_PRICE>
+
+  <INVALID_SUB_CATEGORY>Invalid Sub-category. Please try again!</INVALID_SUB_CATEGORY>
+
+  <ITEM_NOT_FOUND>  No Item found. Please try again with different search. </ITEM_NOT_FOUND>
+
+  <SELLER_ITEM_NOT_FOUND>  No item found for seller {0} </SELLER_ITEM_NOT_FOUND>
+
+  <CATEGORY_NOT_FOUND>No category found with {0} - {1} - {2}.</CATEGORY_NOT_FOUND>
+  
+  <SUBCATEGORY_NOT_FOUND>No Sub category found with {0}</SUBCATEGORY_NOT_FOUND>
+
+  <LOCATION_NOT_FOUND>   No location found with {0}. </LOCATION_NOT_FOUND>
+
+  <USER_NOT_REGISTERED>  User is not registered with {0} number. </USER_NOT_REGISTERED>-->
+
+  <USER_EXIST>  User already registered with {0} number. </USER_EXIST>
+
+  <EXCEPTION_OCCURE>  Exception occure at: {0}. </EXCEPTION_OCCURE>
+
+  <!--<STATE_NOT_FOUND> There are no search before with this {0} number. </STATE_NOT_FOUND>
+
+  <MORE_REQUEST_FAILED>  Sorry, no more item found. </MORE_REQUEST_FAILED>
+
+  
+  <SERIAL_NOT_FOUND> No item found with {0} serial. Please try again. </SERIAL_NOT_FOUND>
+
+  <SYNTAX_SERIAL_ERROR>Syntax Error! The [item_no] should be a number. Please try again!</SYNTAX_SERIAL_ERROR>
+  <DESCRIPTION_LIMIT>Sorry, the description was too long. The limit on description is {0} characters. Please try again!</DESCRIPTION_LIMIT>-->
+
+  <NONE>  Error. Please try again! </NONE>
+  <!--<SYNTAX_ERROR>  Error. Please try again! </SYNTAX_ERROR>-->
+
+
+
+</CErrorStrings>

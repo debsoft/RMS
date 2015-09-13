@@ -1,0 +1,169 @@
+﻿namespace RMS
+{
+    partial class DateRangeReportForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DateRangeReportForm));
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnShow = new RMSUI.FunctionalButton();
+            this.btnClose = new RMSUI.FunctionalButton();
+            this.monthCalendarFrom = new System.Windows.Forms.MonthCalendar();
+            this.monthCalendarTo = new System.Windows.Forms.MonthCalendar();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(84, 159);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "From Date:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(380, 159);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "To Date:";
+            // 
+            // btnShow
+            // 
+            this.btnShow.BackColor = System.Drawing.Color.Transparent;
+            this.btnShow.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnShow.BackgroundImage")));
+            this.btnShow.BgImageOnMouseDown = ((System.Drawing.Image)(resources.GetObject("btnShow.BgImageOnMouseDown")));
+            this.btnShow.BgImageOnMouseUp = ((System.Drawing.Image)(resources.GetObject("btnShow.BgImageOnMouseUp")));
+            this.btnShow.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnShow.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnShow.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShow.Font = new System.Drawing.Font("Arial", 10F);
+            this.btnShow.ForeColorOnMouseDown = System.Drawing.Color.White;
+            this.btnShow.ForeColorOnMouseUp = System.Drawing.Color.Black;
+            this.btnShow.FunctionType = RMSUI.RMSUIConstants.FunctionType.Print;
+            this.btnShow.Image = ((System.Drawing.Image)(resources.GetObject("btnShow.Image")));
+            this.btnShow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShow.Location = new System.Drawing.Point(414, 374);
+            this.btnShow.Name = "btnShow";
+            this.btnShow.Size = new System.Drawing.Size(120, 40);
+            this.btnShow.TabIndex = 4;
+            this.btnShow.Text = "Print Report";
+            this.btnShow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShow.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnShow.UseVisualStyleBackColor = false;
+            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BgImageOnMouseDown = ((System.Drawing.Image)(resources.GetObject("btnClose.BgImageOnMouseDown")));
+            this.btnClose.BgImageOnMouseUp = ((System.Drawing.Image)(resources.GetObject("btnClose.BgImageOnMouseUp")));
+            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Arial", 10F);
+            this.btnClose.ForeColorOnMouseDown = System.Drawing.Color.White;
+            this.btnClose.ForeColorOnMouseUp = System.Drawing.Color.Black;
+            this.btnClose.FunctionType = RMSUI.RMSUIConstants.FunctionType.Back;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(288, 374);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(120, 40);
+            this.btnClose.TabIndex = 5;
+            this.btnClose.Text = "Back";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // monthCalendarFrom
+            // 
+            this.monthCalendarFrom.Location = new System.Drawing.Point(165, 159);
+            this.monthCalendarFrom.Name = "monthCalendarFrom";
+            this.monthCalendarFrom.TabIndex = 6;
+            // 
+            // monthCalendarTo
+            // 
+            this.monthCalendarTo.Location = new System.Drawing.Point(449, 159);
+            this.monthCalendarTo.Name = "monthCalendarTo";
+            this.monthCalendarTo.TabIndex = 7;
+            // 
+            // DateRangeReportForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.monthCalendarTo);
+            this.Controls.Add(this.monthCalendarFrom);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnShow);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.Black;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "DateRangeReportForm";
+            this.ScreenTitle = "Date Range Report";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Date Range Sales Report";
+            this.Load += new System.EventHandler(this.DateRangeReportForm_Load);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.btnShow, 0);
+            this.Controls.SetChildIndex(this.btnClose, 0);
+            this.Controls.SetChildIndex(this.monthCalendarFrom, 0);
+            this.Controls.SetChildIndex(this.monthCalendarTo, 0);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.MonthCalendar monthCalendarFrom;
+        private System.Windows.Forms.MonthCalendar monthCalendarTo;
+        private RMSUI.FunctionalButton btnShow;
+        private RMSUI.FunctionalButton btnClose;
+    }
+}

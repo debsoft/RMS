@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/DB%20Scripts
+END
+vssver.scc
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/DB%20Scripts/vssver.scc
+END
+SearchSchedule.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/DB%20Scripts/SearchSchedule.sql
+END
+cell_bazaar_backup
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/DB%20Scripts/cell_bazaar_backup
+END
+SearchIndexing.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/DB%20Scripts/SearchIndexing.sql
+END
+cb_dbscript.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/DB%20Scripts/cb_dbscript.sql
+END
+InboxOutbox.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSClient/DB%20Scripts/InboxOutbox.sql
+END

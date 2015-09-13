@@ -1,0 +1,195 @@
+using RMSUI;
+
+namespace RMS.Common
+{
+    partial class CKeyBoardForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CKeyBoardForm));
+            this.PromptLabel = new System.Windows.Forms.Label();
+            this.rdoFood = new System.Windows.Forms.RadioButton();
+            this.rdoNonFood = new System.Windows.Forms.RadioButton();
+            this.keyboard1 = new RMSUI.keyboard();
+            this.ContentTextBox = new System.Windows.Forms.TextBox();
+            this.SaveBtn = new RMSUI.FunctionalButton();
+            this.functionalButton2 = new RMSUI.FunctionalButton();
+            this.SuspendLayout();
+            // 
+            // PromptLabel
+            // 
+            this.PromptLabel.BackColor = System.Drawing.Color.Transparent;
+            this.PromptLabel.ForeColor = System.Drawing.Color.Black;
+            this.PromptLabel.Location = new System.Drawing.Point(148, 61);
+            this.PromptLabel.Name = "PromptLabel";
+            this.PromptLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.PromptLabel.Size = new System.Drawing.Size(476, 27);
+            this.PromptLabel.TabIndex = 45;
+            this.PromptLabel.Text = "PromptLabel";
+            this.PromptLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // rdoFood
+            // 
+            this.rdoFood.AutoSize = true;
+            this.rdoFood.BackColor = System.Drawing.Color.Transparent;
+            this.rdoFood.ForeColor = System.Drawing.Color.White;
+            this.rdoFood.Location = new System.Drawing.Point(298, 139);
+            this.rdoFood.Name = "rdoFood";
+            this.rdoFood.Size = new System.Drawing.Size(49, 17);
+            this.rdoFood.TabIndex = 46;
+            this.rdoFood.TabStop = true;
+            this.rdoFood.Text = "Food";
+            this.rdoFood.UseVisualStyleBackColor = false;
+            this.rdoFood.Visible = false;
+            // 
+            // rdoNonFood
+            // 
+            this.rdoNonFood.AutoSize = true;
+            this.rdoNonFood.BackColor = System.Drawing.Color.Transparent;
+            this.rdoNonFood.ForeColor = System.Drawing.Color.White;
+            this.rdoNonFood.Location = new System.Drawing.Point(428, 139);
+            this.rdoNonFood.Name = "rdoNonFood";
+            this.rdoNonFood.Size = new System.Drawing.Size(72, 17);
+            this.rdoNonFood.TabIndex = 47;
+            this.rdoNonFood.TabStop = true;
+            this.rdoNonFood.Text = "Non Food";
+            this.rdoNonFood.UseVisualStyleBackColor = false;
+            this.rdoNonFood.Visible = false;
+            // 
+            // keyboard1
+            // 
+            this.keyboard1.BackColor = System.Drawing.Color.White;
+            this.keyboard1.ControlToInputText = this.ContentTextBox;
+            this.keyboard1.Location = new System.Drawing.Point(33, 182);
+            this.keyboard1.Name = "keyboard1";
+            this.keyboard1.Size = new System.Drawing.Size(730, 248);
+            this.keyboard1.TabIndex = 48;
+            this.keyboard1.textBox = null;
+            // 
+            // ContentTextBox
+            // 
+            this.ContentTextBox.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContentTextBox.Location = new System.Drawing.Point(233, 91);
+            this.ContentTextBox.Multiline = true;
+            this.ContentTextBox.Name = "ContentTextBox";
+            this.ContentTextBox.Size = new System.Drawing.Size(330, 40);
+            this.ContentTextBox.TabIndex = 1;
+            // 
+            // SaveBtn
+            // 
+            this.SaveBtn.BackColor = System.Drawing.Color.Transparent;
+            this.SaveBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SaveBtn.BackgroundImage")));
+            this.SaveBtn.BgImageOnMouseDown = ((System.Drawing.Image)(resources.GetObject("SaveBtn.BgImageOnMouseDown")));
+            this.SaveBtn.BgImageOnMouseUp = ((System.Drawing.Image)(resources.GetObject("SaveBtn.BgImageOnMouseUp")));
+            this.SaveBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.SaveBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.SaveBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.SaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveBtn.Font = new System.Drawing.Font("Arial", 10F);
+            this.SaveBtn.ForeColorOnMouseDown = System.Drawing.Color.White;
+            this.SaveBtn.ForeColorOnMouseUp = System.Drawing.Color.Black;
+            this.SaveBtn.FunctionType = RMSUI.RMSUIConstants.FunctionType.Next;
+            this.SaveBtn.Image = ((System.Drawing.Image)(resources.GetObject("SaveBtn.Image")));
+            this.SaveBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.SaveBtn.Location = new System.Drawing.Point(298, 463);
+            this.SaveBtn.Name = "SaveBtn";
+            this.SaveBtn.Size = new System.Drawing.Size(90, 40);
+            this.SaveBtn.TabIndex = 49;
+            this.SaveBtn.Text = "Save";
+            this.SaveBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.SaveBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.SaveBtn.UseVisualStyleBackColor = false;
+            this.SaveBtn.Click += new System.EventHandler(this.functionalButton1_Click);
+            // 
+            // functionalButton2
+            // 
+            this.functionalButton2.BackColor = System.Drawing.Color.Transparent;
+            this.functionalButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("functionalButton2.BackgroundImage")));
+            this.functionalButton2.BgImageOnMouseDown = ((System.Drawing.Image)(resources.GetObject("functionalButton2.BgImageOnMouseDown")));
+            this.functionalButton2.BgImageOnMouseUp = ((System.Drawing.Image)(resources.GetObject("functionalButton2.BgImageOnMouseUp")));
+            this.functionalButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.functionalButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.functionalButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.functionalButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.functionalButton2.Font = new System.Drawing.Font("Arial", 10F);
+            this.functionalButton2.ForeColorOnMouseDown = System.Drawing.Color.White;
+            this.functionalButton2.ForeColorOnMouseUp = System.Drawing.Color.Black;
+            this.functionalButton2.FunctionType = RMSUI.RMSUIConstants.FunctionType.Back;
+            this.functionalButton2.Image = ((System.Drawing.Image)(resources.GetObject("functionalButton2.Image")));
+            this.functionalButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.functionalButton2.Location = new System.Drawing.Point(410, 463);
+            this.functionalButton2.Name = "functionalButton2";
+            this.functionalButton2.Size = new System.Drawing.Size(95, 40);
+            this.functionalButton2.TabIndex = 50;
+            this.functionalButton2.Text = "Cancle";
+            this.functionalButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.functionalButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.functionalButton2.UseVisualStyleBackColor = false;
+            this.functionalButton2.Click += new System.EventHandler(this.functionalButton2_Click);
+            // 
+            // CKeyBoardForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlText;
+            this.ClientSize = new System.Drawing.Size(794, 575);
+            this.Controls.Add(this.functionalButton2);
+            this.Controls.Add(this.SaveBtn);
+            this.Controls.Add(this.ContentTextBox);
+            this.Controls.Add(this.keyboard1);
+            this.Controls.Add(this.rdoNonFood);
+            this.Controls.Add(this.rdoFood);
+            this.Controls.Add(this.PromptLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Name = "CKeyBoardForm";
+            this.ScreenTitle = "Change Detail";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Title";
+            this.Controls.SetChildIndex(this.PromptLabel, 0);
+            this.Controls.SetChildIndex(this.rdoFood, 0);
+            this.Controls.SetChildIndex(this.rdoNonFood, 0);
+            this.Controls.SetChildIndex(this.keyboard1, 0);
+            this.Controls.SetChildIndex(this.ContentTextBox, 0);
+            this.Controls.SetChildIndex(this.SaveBtn, 0);
+            this.Controls.SetChildIndex(this.functionalButton2, 0);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label PromptLabel;
+        private System.Windows.Forms.RadioButton rdoFood;
+        private System.Windows.Forms.RadioButton rdoNonFood;
+        private RMSUI.keyboard keyboard1;
+        private System.Windows.Forms.TextBox ContentTextBox;
+        private FunctionalButton SaveBtn;
+        private FunctionalButton functionalButton2;
+
+    }
+}

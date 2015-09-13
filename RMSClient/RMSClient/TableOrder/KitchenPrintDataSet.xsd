@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="KitchenPrintDataSet" targetNamespace="http://tempuri.org/KitchenPrintDataSet.xsd" xmlns:mstns="http://tempuri.org/KitchenPrintDataSet.xsd" xmlns="http://tempuri.org/KitchenPrintDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="KitchenPrintDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="KitchenPrintDataSet" msprop:Generator_DataSetName="KitchenPrintDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Items" msprop:Generator_UserTableName="Items" msprop:Generator_RowDeletedName="ItemsRowDeleted" msprop:Generator_TableClassName="ItemsDataTable" msprop:Generator_RowChangedName="ItemsRowChanged" msprop:Generator_RowClassName="ItemsRow" msprop:Generator_RowChangingName="ItemsRowChanging" msprop:Generator_RowEvArgName="ItemsRowChangeEvent" msprop:Generator_RowEvHandlerName="ItemsRowChangeEventHandler" msprop:Generator_TablePropName="Items" msprop:Generator_TableVarName="tableItems" msprop:Generator_RowDeletingName="ItemsRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Item" msprop:Generator_UserColumnName="Item" msprop:Generator_ColumnPropNameInRow="Item" msprop:Generator_ColumnVarNameInTable="columnItem" msprop:Generator_ColumnPropNameInTable="ItemColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Qty" msprop:Generator_UserColumnName="Qty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInTable="QtyColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Price" msprop:Generator_UserColumnName="Price" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInTable="PriceColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

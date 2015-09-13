@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/ConsoleApplication1/bin/Debug/Config
+END
+vssver2.scc
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/ConsoleApplication1/bin/Debug/Config/vssver2.scc
+END
+FileHandlerConfig.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/ConsoleApplication1/bin/Debug/Config/FileHandlerConfig.xml
+END
+CommonConstants.xml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/ConsoleApplication1/bin/Debug/Config/CommonConstants.xml
+END
+Config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/ConsoleApplication1/bin/Debug/Config/Config.xml
+END
+DAL_Config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/ConsoleApplication1/bin/Debug/Config/DAL_Config.xml
+END
+LoggerConfig.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/ConsoleApplication1/bin/Debug/Config/LoggerConfig.xml
+END
+Error.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/ConsoleApplication1/bin/Debug/Config/Error.xml
+END
+SQLDBHandlerConfig.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/ConsoleApplication1/bin/Debug/Config/SQLDBHandlerConfig.xml
+END

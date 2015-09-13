@@ -1,0 +1,167 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/DAL
+END
+CDistrictDAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/DAL/CDistrictDAO.cs
+END
+Database.csproj.user
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/DAL/Database.csproj.user
+END
+vssver2.scc
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/DAL/vssver2.scc
+END
+CParentCategoryDAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/DAL/CParentCategoryDAO.cs
+END
+COrderInfoDAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/DAL/COrderInfoDAO.cs
+END
+CTerminalPrintDAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/DAL/CTerminalPrintDAO.cs
+END
+CUserInfoDAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/DAL/CUserInfoDAO.cs
+END
+CButtonAccessDAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/DAL/CButtonAccessDAO.cs
+END
+CItemDAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/DAL/CItemDAO.cs
+END
+CCategory1DAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/DAL/CCategory1DAO.cs
+END
+CCategory2DAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/DAL/CCategory2DAO.cs
+END
+mssccprj.scc
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/DAL/mssccprj.scc
+END
+CCategory3DAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/DAL/CCategory3DAO.cs
+END
+CCategory4DAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/DAL/CCategory4DAO.cs
+END
+CKitchenPrintDAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/DAL/CKitchenPrintDAO.cs
+END
+CTableInfoDAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/DAL/CTableInfoDAO.cs
+END
+CDepositDAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/DAL/CDepositDAO.cs
+END
+Database.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/DAL/Database.csproj
+END
+Database.csproj.vspscc
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/DAL/Database.csproj.vspscc
+END
+CButtonColorDAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/DAL/CButtonColorDAO.cs
+END
+CCustomerInfoDAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/DAL/CCustomerInfoDAO.cs
+END
+CPaymentDAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/DAL/CPaymentDAO.cs
+END
+CPrintStyleDAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/DAL/CPrintStyleDAO.cs
+END
+CPcInfoDAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/DAL/CPcInfoDAO.cs
+END
+COrderDetailsDAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/DAL/COrderDetailsDAO.cs
+END
+CStockDAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/DAL/CStockDAO.cs
+END
+CDeliveryDAO.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Dotnet/!svn/ver/232/RMSBD(verbanella)/RMSSERVICE/DAL/CDeliveryDAO.cs
+END

@@ -1,0 +1,51 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <food_type_name>
+    <cat1_id>81</cat1_id>
+    <Category1_Name>Starter</Category1_Name>
+    <Parent_Category_Name>Indian Food</Parent_Category_Name>
+    <Cat1_order_number>1</Cat1_order_number>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_type_name>
+  <food_type_name>
+    <cat1_id>83</cat1_id>
+    <Category1_Name>Main Course</Category1_Name>
+    <Parent_Category_Name>Indian Food</Parent_Category_Name>
+    <Cat1_order_number>3</Cat1_order_number>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_type_name>
+  <food_type_name>
+    <cat1_id>84</cat1_id>
+    <Category1_Name>Side Dishes</Category1_Name>
+    <Parent_Category_Name>Indian Food</Parent_Category_Name>
+    <Cat1_order_number>4</Cat1_order_number>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_type_name>
+  <food_type_name>
+    <cat1_id>85</cat1_id>
+    <Category1_Name>Sundrises</Category1_Name>
+    <Parent_Category_Name>Indian Food</Parent_Category_Name>
+    <Cat1_order_number>5</Cat1_order_number>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_type_name>
+  <food_type_name>
+    <cat1_id>88</cat1_id>
+    <Category1_Name>Deserts</Category1_Name>
+    <Parent_Category_Name>Indian Food</Parent_Category_Name>
+    <Cat1_order_number>7</Cat1_order_number>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_type_name>
+  <food_type_name>
+    <cat1_id>87</cat1_id>
+    <Category1_Name>drinks</Category1_Name>
+    <Parent_Category_Name>Indian Food</Parent_Category_Name>
+    <Cat1_order_number>8</Cat1_order_number>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </food_type_name>
+</DocumentElement>

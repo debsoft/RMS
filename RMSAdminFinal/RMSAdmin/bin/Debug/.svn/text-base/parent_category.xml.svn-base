@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <parent_category>
+    <parent_cat_id>9</parent_cat_id>
+    <Parent_Category_Name>Indian</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </parent_category>
+  <parent_category>
+    <parent_cat_id>10</parent_cat_id>
+    <Parent_Category_Name>English</Parent_Category_Name>
+    <up>UPDATE</up>
+    <del>DELETE</del>
+  </parent_category>
+</DocumentElement>
